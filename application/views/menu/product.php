@@ -17,14 +17,26 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			
 <?php $this->load->view('user/header') ?>
 <?php $this->load->view('user/mainnav') ?>
-<?php $this->load->view('user/headnav') ?>	
+
+<div id="custom-header">
+	<div class="custom-header-content">
+		<div class="container">
+			<h1 class="page-title">Produk</h1>
+			<div id="breadcrumb">
+				<div  aria-label="Breadcrumbs" class="breadcrumbs breadcrumb-trail">
+					<ul class="trail-items">
+						<li class="trail-item trail-begin"><span><u>Home</u></span></a></li>
+						<li class="trail-item trail-end"><span>Produk</span></li>
+					</ul>
+				</div> <!-- .breadcrumbs -->
+			</div> <!-- #breadcrumb -->
+		</div> <!-- .container -->
+	</div>  <!-- .custom-header-content -->
+</div> <!-- .custom-header -->	
 
 	
 								<aside class="section section-teams">
 									<div class="container"> <br>
-										<div class="section-title-wrap" style="text-align: center;">
-											<p class="section-subtitle"><strong>Berikut Produk Produk Kami</strong></p>
-										</div> <!-- .section-title-wrap -->
 										<div class="teams-section">
 											<div class="inner-wrapper">
 												<div class="col-grid-3 team-item">

@@ -17,14 +17,25 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			
 <?php $this->load->view('user/header') ?>
 <?php $this->load->view('user/mainnav') ?>
-<?php $this->load->view('user/headnav') ?>	
+
+<div id="custom-header">
+	<div class="custom-header-content">
+		<div class="container">
+			<h1 class="page-title">Testimonial</h1>
+			<div id="breadcrumb">
+				<div  aria-label="Breadcrumbs" class="breadcrumbs breadcrumb-trail">
+					<ul class="trail-items">
+						<li class="trail-item trail-begin"><span><u>Home</u></span></a></li>
+						<li class="trail-item trail-end"><span>Testimonial</span></li>
+					</ul>
+				</div> <!-- .breadcrumbs -->
+			</div> <!-- #breadcrumb -->
+		</div> <!-- .container -->
+	</div>  <!-- .custom-header-content -->
+</div> <!-- .custom-header -->
 
 							<aside class="section section-testimonial dark-background">
-									<div class="container">
-										<br>
-										<div class="section-title-wrap" style="text-align: center;">
-											<p class="section-subtitle"><strong>Hasil Testimonial Pelanggan</strong></p>
-										</div> <!-- .section-title-wrap -->
+									<div class="container"><br><br>
 										<div class="testimonial-carousel-wrapper iteam-col-3 section-carousel-enabled">
 											<div class="testimonial-item col-grid-6">
 												<div class="testimonial-wrapper">

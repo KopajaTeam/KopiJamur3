@@ -17,7 +17,24 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			
 <?php $this->load->view('user/header') ?>
 <?php $this->load->view('user/mainnav') ?>
-<?php $this->load->view('user/headnav') ?>	
+
+<div id="custom-header">
+	<div class="custom-header-content">
+		<div class="container">
+			<h1 class="page-title">Produk</h1>
+			<div id="breadcrumb">
+				<div  aria-label="Breadcrumbs" class="breadcrumbs breadcrumb-trail">
+					<ul class="trail-items">
+						<li class="trail-item trail-begin"><span><u>Home</u></span></a></li>
+						<li class="trail-item"><span>Produk</span></li>
+						<li class="trail-item trail-end"><span>Detail Produk</span></li>
+					</ul>
+				</div> <!-- .breadcrumbs -->
+			</div> <!-- #breadcrumb -->
+		</div> <!-- .container -->
+	</div>  <!-- .custom-header-content -->
+</div> <!-- .custom-header -->	
+	
 			<div id="content" class="site-content global-layout-no-sidebar">
 				<div class="container">
 					<div class="inner-wrapper">
@@ -30,7 +47,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 												<img style="width: 1000px; height: 350px " src="<?php echo base_url('assets/images')?>/portfolio/single-portfolio.jpg">
 											</div>
 											<div class="col-grid-6">
-											 <h3>M. Zainudin</h3>
+											 <h3> Produk 1</h3>
 											 <p>Berikut profil singkat saya. M zainudin sebaagai owner Kopi Jamur Prestasi.</p>
 											 <div class="portfolio-info">
 												 <ul class="list-check">
