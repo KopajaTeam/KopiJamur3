@@ -41,9 +41,7 @@
 			$this->db->where('reply_forum.id_forum', $id_forum);
 			return $this->db->get('reply_forum');
 		}
-		
 	}
-<<<<<<< HEAD
 	public function detailproduk($id_produk){
 		$this->db->join('kategori_produk','produk.id_kategori_produk = kategori_produk.id_kategori_produk', "LEFT");
 		$this->db->where('id_produk', $id_produk);
@@ -55,6 +53,5 @@
 		return $this->db->get('produk');
 	}
 }
-=======
->>>>>>> 40e2dd492b790a15be66a809dd002930b977b0a1
+
 ?>
