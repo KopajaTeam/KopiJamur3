@@ -91,6 +91,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											<a href="#" rel="next">Next</a>
 										</div>
 									</div>
+									
 								</nav>
 								<div id="comments" class="comments-area">
 									<h2 class="comments-title">Comments</h2>

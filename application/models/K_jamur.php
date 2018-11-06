@@ -41,5 +41,6 @@
 			$this->db->where('reply_forum.id_forum', $id_forum);
 			return $this->db->get('reply_forum');
 		}
+		
 	}
 ?>

@@ -14,6 +14,7 @@ class Forum extends CI_Controller {
 		$data = array(
 			"forum" => $this->K_jamur->detailforum($id_forum)->row(),
 			"reply" => $this->K_jamur->reply($id_forum)->result(),
+			
 		);
 
 		$this->load->view('menu/detailforum',$data);
