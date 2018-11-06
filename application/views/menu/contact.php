@@ -1,7 +1,22 @@
 <?php $this->load->view('user/head') ?>
 <?php $this->load->view('user/header') ?>
 <?php $this->load->view('user/mainnav') ?>
-<?php $this->load->view('user/headnav') ?>
+
+<div id="custom-header">
+	<div class="custom-header-content">
+		<div class="container">
+			<h1 class="page-title">Contact</h1>
+			<div id="breadcrumb">
+				<div  aria-label="Breadcrumbs" class="breadcrumbs breadcrumb-trail">
+					<ul class="trail-items">
+						<li class="trail-item trail-begin"><span><u>Home</u></span></a></li>
+						<li class="trail-item trail-end"><span>Contact</span></li>
+					</ul>
+				</div> <!-- .breadcrumbs -->
+			</div> <!-- #breadcrumb -->
+		</div> <!-- .container -->
+	</div>  <!-- .custom-header-content -->
+</div> <!-- .custom-header -->	
 
 <div id="content" class="site-content global-layout-no-sidebar">
 	<div class="container">
@@ -81,8 +96,8 @@
 				</main> <!-- #main -->
 			</div> <!-- #primary -->
 		</div> <!-- .inner-wrapper -->
-	<!-- </div> .container -->
-<!-- </div> -->
+	</div>
+</div>
 
 <?php $this->load->view('user/wiget') ?>
 <?php $this->load->view('user/sosmed') ?>

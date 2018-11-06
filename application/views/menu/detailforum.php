@@ -17,11 +17,26 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			
 <?php $this->load->view('user/header') ?>
 <?php $this->load->view('user/mainnav') ?>
-<!-- <div id="content" class="site-content global-layout-right-sidebar"> -->
+
+<div id="custom-header">
+	<div class="custom-header-content">
+		<div class="container">
+			<h1 class="page-title">Detail Forum</h1>
+			<div id="breadcrumb">
+				<div  aria-label="Breadcrumbs" class="breadcrumbs breadcrumb-trail">
+					<ul class="trail-items">
+						<li class="trail-item trail-begin"><span><u>Home</u></span></a></li>
+						<li class="trail-item"><span>Forum</span></li>
+						<li class="trail-item trail-end"><span>Detail Forum</span></li>
+					</ul>
+				</div> <!-- .breadcrumbs -->
+			</div> <!-- #breadcrumb -->
+		</div> <!-- .container -->
+	</div>  <!-- .custom-header-content -->
+</div> <!-- .custom-header -->
+
 				<div class="container">
 					<div class="section-title-wrap" style="text-align: center;">
-						<h2 class="section-title">Detail Forum</h2><span class="divider"></span>
-						<p class="section-subtitle"></p></div>	
 					<div class="inner-wrapper">
 						<div id="primary" class="content-area">
 							<main id="main" class="site-main" >
