@@ -12,9 +12,10 @@ class Forum extends CI_Controller {
 		$this->load->model('K_jamur');
 
 		$data = array(
+			"jml_forum" => $this->K_jamur->detailforum($id_forum)->num_rows(),
 			"forum" => $this->K_jamur->detailforum($id_forum)->row(),
 			"reply" => $this->K_jamur->reply($id_forum)->result(),
-			
+
 		);
 
 		$this->load->view('menu/detailforum',$data);
