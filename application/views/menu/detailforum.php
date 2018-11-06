@@ -3,25 +3,40 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
 <!DOCTYPE html>
 <html lang="en">
-	
+
 <?php $this->load->view('user/head') ?>
 
-	<body class="home header-v1">
-		<!-- <div id="fakeloader"></div> -->
-		<!-- <div class="color-switcher" id="choose_color"> -->
-			<!-- <a href="#." class="picker_close"><i class="fas fa-cog fa-spin"></i></a> -->
+<body class="home header-v1">
+	<!-- <div id="fakeloader"></div> -->
+	<!-- <div class="color-switcher" id="choose_color"> -->
+		<!-- <a href="#." class="picker_close"><i class="fas fa-cog fa-spin"></i></a> -->
 		<!-- </div> -->
 		<div id="page" class="site">
 			<!-- Mobile main menu -->
 			<a href="#" id="mobile-trigger"><i class="fa fa-list" aria-hidden="true"></i></a>
 			
-<?php $this->load->view('user/header') ?>
-<?php $this->load->view('user/mainnav') ?>
-<!-- <div id="content" class="site-content global-layout-right-sidebar"> -->
-				<div class="container">
-					<div class="section-title-wrap" style="text-align: center;">
-						<h2 class="section-title">Detail Forum</h2><span class="divider"></span>
-						<p class="section-subtitle"></p></div>	
+			<?php $this->load->view('user/header') ?>
+			<?php $this->load->view('user/mainnav') ?>
+
+			<div id="custom-header">
+				<div class="custom-header-content">
+					<div class="container">
+						<h1 class="page-title">Detail Forum</h1>
+						<div id="breadcrumb">
+							<div  aria-label="Breadcrumbs" class="breadcrumbs breadcrumb-trail">
+								<ul class="trail-items">
+									<li class="trail-item trail-begin"><span><u>Home</u></span></a></li>
+									<li class="trail-item"><span>Forum</span></li>
+									<li class="trail-item trail-end"><span>Detail Forum</span></li>
+								</ul>
+							</div> <!-- .breadcrumbs -->
+						</div> <!-- #breadcrumb -->
+					</div> <!-- .container -->
+				</div>  <!-- .custom-header-content -->
+			</div> <!-- .custom-header -->
+
+			<div class="container">
+				<div class="section-title-wrap" style="text-align: center;">
 					<div class="inner-wrapper">
 						<div id="primary" class="content-area">
 							<main id="main" class="site-main" >
@@ -128,27 +143,27 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 								<div id="sidebar-primary" class="sidebar widget-area" >
 									<div class="sidebar-widget-wrapper">
 										<aside class="widget">
-										<h3 class="widget-title"><span class="widget-title-wrapper">Search</span></h3>
-										<form action="http://anilbasnet.com/demo/biz-lina/." class="search-form" method="get" role="search">
+											<h3 class="widget-title"><span class="widget-title-wrapper">Search</span></h3>
+											<form action="http://anilbasnet.com/demo/biz-lina/." class="search-form" method="get" role="search">
 												<input type="search" title="Search:" name="s" value="" placeholder="Search..." class="search-field">
 												<input type="submit" value="Search" class="search-submit">
 											</form>
 										</aside> <!-- .widget -->
-</div>
-</div>
-</div>
-</div>
+									</div>
+								</div>
+							</div>
+						</div>
 
-<?php $this->load->view('user/wiget') ?>
-<?php $this->load->view('user/sosmed') ?>
+						<?php $this->load->view('user/wiget') ?>
+						<?php $this->load->view('user/sosmed') ?>
 
-<?php $this->load->view('user/footer') ?>	
-		
-		</div> <!--#page-->
-		<div id="btn-scrollup">
-			<a  title="Go Top"  class="scrollup" href="#"><i class="fas fa-angle-up"></i></a>
-		</div>
-<?php $this->load->view('user/jscript') ?>	
-	</body>
+						<?php $this->load->view('user/footer') ?>	
+						
+					</div> <!--#page-->
+					<div id="btn-scrollup">
+						<a  title="Go Top"  class="scrollup" href="#"><i class="fas fa-angle-up"></i></a>
+					</div>
+					<?php $this->load->view('user/jscript') ?>	
+				</body>
 
-</html>
+				</html>
