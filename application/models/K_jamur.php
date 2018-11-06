@@ -42,5 +42,15 @@ class K_jamur extends CI_Model
 		$this->db->where('id_reply', $id_reply);
 		$this->db->get('reply_forum');
 	}
+	public function detailproduk($id_produk){
+		$this->db->join('kategori_produk','produk.id_kategori_produk = kategori_produk.id_kategori_produk', "LEFT");
+		$this->db->where('id_produk', $id_produk);
+		return $this->db->get('produk');
+	}
+
+	public function produkall(){
+		$this->db->join('kategori_produk','produk.id_kategori_produk = kategori_produk.id_kategori_produk', "LEFT");
+		return $this->db->get('produk');
+	}
 }
 ?>
