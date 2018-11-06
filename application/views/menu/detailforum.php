@@ -81,27 +81,29 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 									<h2 class="comments-title">Comments</h2>
 									<ol class="comment-list">
 										<li  class="comment">
-											<article class="comment-body">
-												<footer class="comment-meta">
-													<div class="comment-author vcard">
-														<img alt="Author" src="<?php echo base_url('assets/images/blog-single')?>/author-2.jpg" class="avatar img-circle">
-														<b class="fn"><a href="#"  class="url"><?php echo $forum->nama; ?></a></b>
-														<span class="says">says:</span>
-														<div class="reply">
-															<a  class="comment-reply-link" href="#">Reply</a>
-														</div>
-													</div><!-- .comment-author -->
-													<div class="comment-metadata">
-														<a href="#">
-															<span><?php echo $forum ->tanggal; ?></span>
-														</a>
-													</div><!-- .comment-metadata -->
-												</footer><!-- .comment-meta -->
-												<div class="comment-content">
-													<p><?php echo "isi komentar"; ?></p>
-												</div><!-- .comment-content -->
+											<?php foreach ($reply as $data_reply) { ?>
+												<article class="comment-body">
+													<footer class="comment-meta">
+														<div class="comment-author vcard">
+															<img alt="Author" src="<?php echo base_url('assets/images/blog-single')?>/author-2.jpg" class="avatar img-circle">
+															<b class="fn"><a href="#"  class="url"><?php echo $data_reply->nama; ?></a></b>
+															<span class="says">says:</span>
+															<div class="reply">
+																<a  class="comment-reply-link" href="#">Reply</a>
+															</div>
+														</div><!-- .comment-author -->
+														<div class="comment-metadata">
+															<a href="#">
+																<span><?php echo $data_reply->tanggal; ?></span>
+															</a>
+														</div><!-- .comment-metadata -->
+													</footer><!-- .comment-meta -->
+													<div class="comment-content">
+														<p><?php echo $data_reply->isi_reply; ?></p>
+													</div><!-- .comment-content -->
 
-											</article><!-- .comment-body -->
+												</article><!-- .comment-body -->
+											<?php } ?>
 											<div id="respond" class="comment-respond">
 												<h3 id="reply-title" class="comment-reply-title">Leave a Reply
 													<small><a  id="cancel-comment-reply-link" href="#" >Cancel reply</a></small>

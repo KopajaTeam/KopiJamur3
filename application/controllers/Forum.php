@@ -11,14 +11,10 @@ class Forum extends CI_Controller {
 		//konten forum
 		$this->load->model('K_jamur');
 
-		$data ['forum'] =$this->K_jamur->detailforum($id_forum)->row();
-
-		$this->load->view('menu/detailforum',$data);
-	}
-	function reply($id_reply){
-		$this->load->model('K_jamur');
-
-		$data ['reply_forum'] =$this->K_jamur->reply($id_reply)->row();		
+		$data = array(
+			"forum" => $this->K_jamur->detailforum($id_forum)->row(),
+			"reply" => $this->K_jamur->reply($id_forum)->result(),
+		);
 
 		$this->load->view('menu/detailforum',$data);
 	}
