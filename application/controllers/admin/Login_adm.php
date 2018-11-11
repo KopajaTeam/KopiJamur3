@@ -1,13 +1,13 @@
 <?php
-/**
-*
-*/
-class Login_adm extends CI_Controller
-{
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+class Login_adm extends CI_Controller {
+
     public function __construct() {
           parent::__construct();
-          $this->load->model('Admin_Dashboard');
+          $this->load->model('K_jamur');
      }
+
 
     public function index(){
         $this->load->view('admin/login');
@@ -21,15 +21,17 @@ class Login_adm extends CI_Controller
             'password_admin' => $password,
         );
 
-        $cek = $this->Admin_Dashboard->cek_login("admin",$where);
+        $cek = $this->K_jamur->cek_login("admin",$where);
         if ($cek > 0) {
+            $data_admin=$this->K_jamur->selectwhere("admin", $where)->row();
             $data_session = array(
-                'nama' => $email,
+                'id_admin' => $data_admin->id_admin,
+                'nama_admin' => $email,
                 'status' => "login"
             );
 
             $this->session->set_userdata($data_session);
-            redirect(base_url("admin/dashboard"));
+            redirect(base_url('admin/Dashboard'));
             //$this->session->set_flashdata("Pesan",$this->core->alert_success("Login Success"));
             ?>
             <script type="text/javascript">
@@ -40,19 +42,17 @@ class Login_adm extends CI_Controller
             //$this->session->set_flashdata("Pesan",$this->core->alert_time("E-Mail dan Password tidak terdaftar"));
             ?>
             <script type="text/javascript">
-                alert("login Success");
+                alert("login Failed");
             </script>
             <?php
-            redirect(base_url("admin/login_adm"));
+            redirect(base_url('admin/login'));
         }
 
     }
 
     function logout(){
-        $this->session->session_destroy();
-        redirect(base_url('admin/login_adm'));
+        $this->session->sess_destroy();
+        redirect(base_url());
     }
 
 }
-
-?>

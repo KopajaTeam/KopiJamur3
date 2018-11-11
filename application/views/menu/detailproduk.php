@@ -18,7 +18,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			<?php $this->load->view('user/header') ?>
 			<?php $this->load->view('user/mainnav') ?>
 
-			<div id="custom-header">
+			<div id="custom-header" >
 				<div class="custom-header-content">
 					<div class="container">
 						<h1 class="page-title">Produk</h1>
@@ -49,13 +49,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											<div class="col-grid-6">
 												<h2><strong><?php echo $produk->nama_produk; ?></strong> (<?php echo $produk->nama_kategori_produk; ?>)</h2>
 												<h5>Harga : Rp. <?php echo $produk->harga_produk; ?></h5>
+												<hr style="margin-top: -2px; margin-bottom: 10px;">
 												<h5>Deskripsi Produk : </h5>
 												<p style="font-size: 19px"><?php echo $produk->detail_produk; ?></p> <br>
 											</div>
 										</div>
+										<button style="float: right;">Beli</button>
 									</div><!-- .container -->
 								</section><!-- .portfolio-single-main -->
-								
 							</main> <!-- #main -->
 						</div> <!-- #primary -->
 					</div> <!-- .inner-wrapper -->

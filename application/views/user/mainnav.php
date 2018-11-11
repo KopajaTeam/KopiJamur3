@@ -20,7 +20,7 @@
 		</nav> <!-- .site-navigation -->
 		<?php if ($this->session->userdata('status')=="login") { ?>
 		<div id="troli">
-			<a href="<?php echo base_url("KopiJamur/bayar") ?>"><i class="fa fa-shopping-cart" style="color: #fff"></i> <span class="badge badge-light">0</span></a>
+			<a href="<?php echo base_url("Keranjang") ?>"><i class="fa fa-shopping-cart" style="color: #fff"></i> <span class="badge badge-light">0</span></a>
 		</div>
 		<?php } ?>
 		<div id="header-search" style="margin-right: 1%;">

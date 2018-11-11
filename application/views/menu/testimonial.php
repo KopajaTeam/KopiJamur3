@@ -56,66 +56,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 													</div><!-- .testimonial-summary -->
 												</div> <!-- .testimonial-wrapper -->
 											</div> <!-- .testimonial-item  -->
-											<div class="testimonial-item col-grid-6">
-												<div class="testimonial-wrapper">
-													<div class="testimonial-thumb">
-														<a href="#"><img alt="" src="<?php echo base_url('assets/images/team')?>/cak.jpg"> </a>
-													</div><!-- .testimonial-thumb -->
-													<div class="testimonial-summary">
-														<p>Wow, I'm so happy with your service. You managed to exceed my expectatio</p>
-														<div class="testimonial-rating">
-															<i class="fas fa-star"></i>
-															<i class="fas fa-star"></i>
-															<i class="fas fa-star"></i>
-															<i class="fas fa-star"></i>
-															<i class="fas fa-star"></i>
-														</div>
-														<h3 class="testimonial-title"><a href="#">Manusia Kipas</a></h3>
-														<p class="testimonial-position">(CEO & Founder)</p>
-													</div><!-- .testimonial-summary -->
-												</div> <!-- .testimonial-wrapper -->
-											</div> <!-- .testimonial-item  -->
-											<div class="testimonial-item col-grid-6">
-												<div class="testimonial-wrapper">
-													<div class="testimonial-thumb">
-														<a href="#"><img alt="" src="<?php echo base_url('assets/images/team')?>/cak.jpg"> </a>
-													</div><!-- .testimonial-thumb -->
-													<div class="testimonial-summary">
-														<p>Wow, I'm so happy with your service. You managed to exceed my expectatio</p>
-														<div class="testimonial-rating">
-															<i class="fas fa-star"></i>
-															<i class="fas fa-star"></i>
-															<i class="fas fa-star"></i>
-															<i class="fas fa-star"></i>
-															<i class="fas fa-star"></i>
-														</div>
-														<h3 class="testimonial-title"><a href="#">Manusia Kipas</a></h3>
-														<p class="testimonial-position">(CEO & Founder)</p>
-													</div><!-- .testimonial-summary -->
-												</div> <!-- .testimonial-wrapper -->
-											</div> <!-- .testimonial-item  -->
-											<div class="testimonial-item col-grid-6">
-												<div class="testimonial-wrapper">
-													<div class="testimonial-thumb">
-														<a href="#"><img alt="" src="<?php echo base_url('assets/images/team')?>/cak.jpg"> </a>
-													</div><!-- .testimonial-thumb -->
-													<div class="testimonial-summary">
-														<p>Wow, I'm so happy with your service. You managed to exceed my expectatio</p>
-														<div class="testimonial-rating">
-															<i class="fas fa-star"></i>
-															<i class="fas fa-star"></i>
-															<i class="fas fa-star"></i>
-															<i class="fas fa-star"></i>
-															<i class="fas fa-star"></i>
-														</div>
-														<h3 class="testimonial-title"><a href="#">Manusia Kipas</a></h3>
-														<p class="testimonial-position">(CEO & Founder)</p>
-													</div><!-- .testimonial-summary -->
-												</div> <!-- .testimonial-wrapper -->
-											</div> <!-- .testimonial-item  -->
+									
 										</div> <!-- .testimonial-carousel-wrapper -->
 									</div><!-- .container -->
 								</aside> <!-- .section section-testimonial-carousel -->
+								
 <?php $this->load->view('user/wiget') ?>
 <?php $this->load->view('user/sosmed') ?>
 

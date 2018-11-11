@@ -50,7 +50,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 										<p class="team-position"><?php echo $data_produk->nama_kategori_produk; ?></p>
 									</div><!-- .team-text-wrap -->
 									<!--  -->
-									<a class="custom-button" href="Produk/detail_produk">Detail Produk</a>
+									<a class="custom-button" href="Produk/detail_produk/<?php echo $data_produk->id_produk; ?>">Detail Produk</a>
 									<!-- .social-links -->
 								</div> <!-- .team-item -->
 							</div> <!-- .team-item  -->
