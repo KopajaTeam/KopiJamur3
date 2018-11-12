@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					<div class="container">
 						<h1 class="page-title">Produk</h1>
 						<div id="breadcrumb">
-							<div  aria-label="Breadcrumbs" class="breadcrumbs breadcrumb-trail">
+							<div aria-label="Breadcrumbs" class="breadcrumbs breadcrumb-trail">
 								<ul class="trail-items">
 									<li class="trail-item trail-begin"><span><u>Home</u></span></a></li>
 									<li class="trail-item"><span>Produk</span></li>

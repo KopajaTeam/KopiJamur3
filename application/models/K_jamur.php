@@ -28,7 +28,6 @@
 			return $this->db->get_where($table,$where);
 		}
 
-			// Forum
 		public function detailforum($id_forum){
 			//ambil data FORUM dari table forum
 			$this->db->join('user','forum.id_user = user.id_user', "LEFT");
@@ -47,9 +46,6 @@
 			$this->db->join('kategori_forum','forum.id_kategori_forum = kategori_forum.id_kategori_forum', "LEFT");
 			return $this->db->get('forum');
 		}
-
-		//endofforum
-
 		
 	public function detailproduk($id_produk){
 		$this->db->join('kategori_produk','produk.id_kategori_produk = kategori_produk.id_kategori_produk', "LEFT");

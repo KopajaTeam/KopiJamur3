@@ -4,6 +4,7 @@
 */
 	class M_testi extends CI_Model{
 
+<<<<<<< HEAD
 		//List testi
 		public function testi()
 		{
@@ -23,3 +24,6 @@
 
 	}
 ?>
+=======
+	}
+>>>>>>> 20309434b95f8d3681aa98ec625e51e00ff0a33c
