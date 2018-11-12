@@ -33,7 +33,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		</div> <!-- .container -->
 	</div>  <!-- .custom-header-content -->
 </div> <!-- .custom-header -->
-
+<?php foreach ($data as $testimoni) { ?>
 							<aside class="section section-testimonial dark-background">
 									<div class="container"><br><br>
 										<div class="testimonial-carousel-wrapper iteam-col-3 section-carousel-enabled">
@@ -60,6 +60,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 										</div> <!-- .testimonial-carousel-wrapper -->
 									</div><!-- .container -->
 								</aside> <!-- .section section-testimonial-carousel -->
+<?php } ?>
 								
 <?php $this->load->view('user/wiget') ?>
 <?php $this->load->view('user/sosmed') ?>

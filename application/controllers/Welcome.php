@@ -19,9 +19,9 @@ class Welcome extends CI_Controller {
 		function gambar(){
 			$this->load->view('menu/galery');
 		}
-		function testi(){
-			$this->load->view('menu/testimonial');
-		}
+		//function testi(){
+		//	$this->load->view('menu/testimonial');
+		//}
 		//function forum(){
 		//	$this->load->view('menu/forum');
 		//}
