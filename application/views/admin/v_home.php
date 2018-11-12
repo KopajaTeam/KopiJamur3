@@ -1,3 +1,10 @@
+<?php
+  if ($this->session->userdata('status')=="login") {
+    $where=array('id_admin' => $this->session->userdata('id_admin'));
+    $data_admin=$this->admin_dashboard->selectwhere("admin", $where)->row();
+  }
+?>
+
 <?php $this->load->view("admin/side/header") ?>
 <?php $this->load->view("admin/side/sidebar") ?>
 <div class="content">

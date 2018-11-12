@@ -2,15 +2,22 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Forum extends CI_Controller {
+		public function __construct()
+    {
+        parent::__construct();
+        $this->load->model('K_jamur');
+    }
 
 
 	public function index(){
-		$this->load->view('menu/forum');
+
+		$data ["forum"] = $this->K_jamur->beforeforum()->result();
+		$this->load->view('menu/forum', $data);
+
+
 	}
 	function Detail_forum($id_forum){
-		//konten forum
-		$this->load->model('K_jamur');
-
+		//konten forum	
 		$data = array(
 			"jml_forum" => $this->K_jamur->detailforum($id_forum)->num_rows(),
 			"forum" => $this->K_jamur->detailforum($id_forum)->row(),

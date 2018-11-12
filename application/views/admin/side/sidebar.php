@@ -146,7 +146,7 @@
               </a>
             </li>
             <li class="nav-item <?php if($this->uri->segment(2)=='Log-Out'){echo 'active';}?> ">
-              <a class="nav-link" href="<?php echo base_url("admin/Profile"); ?>">
+              <a class="nav-link" href="<?php echo base_url('Login_user/logout')?>">
                 <i class="material-icons"> undo </i>
                 <span class="sidebar-normal"> Log-Out </span>
               </a>
