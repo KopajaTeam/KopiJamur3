@@ -44,22 +44,20 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 									<div class="entry-content">
 										<hr>
 										<h5>Moto Perusahaan</h5>
-										<blockquote><p>Belum Tau<cite>Owner</cite></p></blockquote>
+										<blockquote><p>Kerja, Kerja, Kerja<cite>Owner</cite></p></blockquote>
 										<hr>
-										<h1>Profil Perusahaan</h1>
-										<p>Hai sahabat pecinta kopi.</p>
+										<h1>Sejarah Perusahaan</h1>
+										<p>Jamur umumnya diolah sebagai campuran masakan pasta, sup, atau piza. Namun dengan sedikit sentuhan kreativitas, jamur kini bisa diolah menjadi campuran kopi. Tetapi jangan bayangkan anda minum kopi dengan potongan-potongan jamur.</p>
 
-										<p>Pernah denger tentang kopi jamur ?, jadi kopi jamur ini adalah kopi yang terbuat dari campuran biji kopi dengan jamur spesial yang dapat dikombinasikan dengan biji kopi.</p>
+										<p>Jamur yang dicampur dengan kopi sudah diproses terlebih dahulu menjadi berbentuk serbuk. Kopi yang disilangkan dengan bubuk jamur ini ternyata punya banyak manfaat bagi kesehatan. Hal itu tidak mengherankan karena jamur adalah salah satu bahan penting dalam sejarah pengobatan tradisional Cina.</p>
 
-										<p>Sebenarnya trand kopi jamur di mancanegara sudah cukup terkenal, kami di Indonesia pertama kali dengan produk kopi jamur Indonesia yang tidak kalah dengan kualitas kopi jamur dari manca negara</p>
+										<p>Four Sigmatic, produsen kopi jamur yang berbasis di Amerika Serikat, menyarankan waktu yang tepat untuk mengonsumsi minuman ini. Waktu terbaik untuk minum kopi jamur adalah sore hari antara pukul 16.00 sampai 18.00. Dengan meminumnya di saat yang tepat, kopi jamur mampu meningkatkan konsentrasi, kreativitas, daya ingat, dan kesehatan otak.</p>
 
-										<p>Berawal dari tuguas perkuliahan saya sebagai owner, M. Zainudin. saya mencoba untuk berkreasi untuk memberanikan diri membuat produk kopi jamur. Ternyata ketika dipasarkan produk saya dan tim kecil saya mendapat respon yang baik dari masyarakat Jember saat itu.</p>
+										<p>Dilansir dari Indian Express, ada beberapa keuntungan yang dipetik dari mengonsumsi kopi dicampur jamur. Jamur dikenal sebagai peningkat imunitas tubuh serta kaya akan antioksidan.</p>
 
-										<p>Kami juga memberitahukan manfaat dari kopi jamur yang kami buat. Jamur juga merupakan sumber vitamin dan mineral seperti selenium dan potasium. Jamur juga mengandung kalsium yang membantu merawat kesehatan tulang dan mencegah komplikasi. Kopi yang dicampur jamur akan berkurang keasamannya daripada kopi biasa. Oleh karena itu, kopi jamur aman diminum oleh orang yang memiliki perut sensitif. Kopi jamur juga dikenal rendah kafein.</p>
+										<p>Jamur juga merupakan sumber vitamin dan mineral seperti selenium dan potasium. Jamur juga mengandung kalsium yang membantu merawat kesehatan tulang dan mencegah komplikasi. Kopi yang dicampur jamur akan berkurang keasamannya daripada kopi biasa. Oleh karena itu, kopi jamur aman diminum oleh orang yang memiliki perut sensitif. Kopi jamur juga dikenal rendah kafein.</p>
 
 										<p>Bagi mereka yang ingin menurunkan berat badan, kopi jamur juga pilihan yang bagus karena tidak mengandung kolesterol dan lemak. Karena karakternya yang tidak berlemak, jamur juga baik bagi pasien diabetes dan penderita tekanan darah rendah. Satu lagi, jamur juga bisa mendorong pertumbuhan rambut, menghilangkan jerawat, dan menyembuhkan aneka masalah kulit.</p>
-
-										<p>Jadi jangan ragu lagi, coba dan nikmati kopi jamur prestasi. Dijamin tidak akan bikin kembung</p>
 										
 										<hr>
 										<h5>Prestasi</h5>

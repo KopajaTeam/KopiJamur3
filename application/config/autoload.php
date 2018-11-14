@@ -124,4 +124,4 @@ $autoload['language'] = array();
 |
 |	$autoload['model'] = array('first_model' => 'first');
 */
-$autoload['model'] = array('admin_dashboard','k_jamur');
+$autoload['model'] = array('Admin_Dashboard','k_jamur');

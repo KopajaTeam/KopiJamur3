@@ -37,7 +37,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 			<section class="cart bgwhite p-t-70 p-b-100">
 				<div class="container">
-					<div class="container-table-cart pos-relative">
 						<div class="wrap-table-shopping-cart bgwhite">
 							<table class="table-shopping-cart">
 								<tr class="table-head">
@@ -97,8 +96,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 								</tr>
 							</table>
 						</div>
-					</div>
-					<div class="flex-w flex-sb-m p-t-25 p-b-25 bo8 p-l-35 p-lr-15-sm" style="padding-right: 35px">
+					<div class="flex-w flex-sb-m p-t-25 p-b-25 bo8 p-l-35 p-lr-15-sm" style="padding-right: 35px; margin-top: -17px">
 						<h2 class="m-text15" style="padding-left: 800px">Harga Total :</h2> <h2 class="m-text15 w-full-sm">Rp. 1.000.000</h2>
 					</div>
 
@@ -175,16 +173,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 								Rp.27.000
 							</span>
 						</div>
-						<div class="form-group" style="font-size: 13px">
-							<span for="exampleInputFile">Silakan upload bukti pembayaran pada rekening (XXXXXXXX) Bank X, Atas Nama Kopi Jamur Prestasi</span>
-							<input type="file" id="exampleInputFile" style="margin-top: 10px">
-
-						</div>
-
 						<div class="size15 trans-0-4">
 							<!-- Button -->
 							<button class="flex-c-m bg1 bo-rad-23 hov1 s-text1 trans-0-4" style="margin-left: 400px; margin-top: 70px;">
-								Konfirmasi Pembayaran
+								Konfirmasi Pemesanan
 							</button>
 						</div>
 					</div>

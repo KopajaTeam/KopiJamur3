@@ -942,7 +942,7 @@ a.button,
 	width: auto;
 	cursor: pointer;
 	display: inline-block;
-	min-width: 135px;
+	/*min-width: 135px;*/
 	text-align: center;
 	margin: 0;
 	position: relative;
