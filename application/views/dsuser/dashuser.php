@@ -15,7 +15,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			<!-- Mobile main menu -->
 			<a href="#" id="mobile-trigger"><i class="fa fa-list" aria-hidden="true"></i></a>
 
-			
+
+
+<!-- Panji ini dashboard user -->
 <?php $this->load->view('dsuser/kontends')?>
 
 <?php $this->load->view('user/mainnav') ?>

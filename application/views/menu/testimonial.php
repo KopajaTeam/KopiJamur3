@@ -33,17 +33,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		</div> <!-- .container -->
 	</div>  <!-- .custom-header-content -->
 </div> <!-- .custom-header -->
-<?php foreach ($data as $testimoni) { ?>
 							<aside class="section section-testimonial dark-background">
 									<div class="container"><br><br>
 										<div class="testimonial-carousel-wrapper iteam-col-3 section-carousel-enabled">
+<?php foreach ($testimoni as $testi) { ?>
 											<div class="testimonial-item col-grid-6">
 												<div class="testimonial-wrapper">
 													<div class="testimonial-thumb">
 														<a href="#"><img alt="" src="<?php echo base_url('assets/images/team')?>/cak.jpg"></a>
 													</div><!-- .testimonial-thumb -->
 													<div class="testimonial-summary">
-														<p>Wow, I'm so happy with your service. You managed to exceed my expectatio</p>
+														<p><?php echo $testi->nama; ?></p>
 														<div class="testimonial-rating">
 															<i class="fas fa-star"></i>
 															<i class="fas fa-star"></i>
@@ -51,16 +51,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 															<i class="fas fa-star"></i>
 															<i class="fas fa-star"></i>
 														</div>
-														<h3 class="testimonial-title"><a href="#">Manusia Kipas</a></h3>
-														<p class="testimonial-position">(CEO & Founder)</p>
+														<h3 class="testimonial-title"><a href="#"><?php echo $testi->nama_produk; ?></a></h3>
+														<p class="testimonial-position"><?php echo $testi->komentar; ?></p>
 													</div><!-- .testimonial-summary -->
 												</div> <!-- .testimonial-wrapper -->
 											</div> <!-- .testimonial-item  -->
-									
+<?php } ?>
 										</div> <!-- .testimonial-carousel-wrapper -->
 									</div><!-- .container -->
 								</aside> <!-- .section section-testimonial-carousel -->
-<?php } ?>
+
 								
 <?php $this->load->view('user/wiget') ?>
 <?php $this->load->view('user/sosmed') ?>
