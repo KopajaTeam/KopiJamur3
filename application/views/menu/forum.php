@@ -59,7 +59,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 												</div><!-- .entry-meta -->
 												<div class="entry-content">
 													<p>aliquet Aenean sollicitudin, lorem quis bibendum auctor, nisi elit.Proin gravida nibh vel velit auctor aliquet.</p>
-													<a href="<?php echo base_url('Forum/detail_forum/'.$forum_det->id_forum)?>" class="custom-button">Read More</a>
+													<a href="<?php echo base_url('Forum/detail_forum')?>" class="custom-button">Read More</a>
 												</div><!-- .entry-content -->
 											</div><!-- .entry-content-wrapper -->
 									</article><!-- .post -->
