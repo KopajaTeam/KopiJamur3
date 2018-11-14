@@ -5,7 +5,7 @@ class Login_adm extends CI_Controller {
 
     public function __construct() {
           parent::__construct();
-          $this->load->model('Admin_Dashboard');
+          $this->load->model('K_jamur');
      }
 
 
@@ -21,9 +21,15 @@ class Login_adm extends CI_Controller {
             'password_admin' => $password,
         );
 
+<<<<<<< HEAD
         $cek = $this->Admin_Dashboard->cek_login("admin",$where);
         if ($cek == 1) {
             $data_admin=$this->Admin_Dashboard->selectwhere("admin", $where)->row();
+=======
+        $cek = $this->K_jamur->cek_login("admin",$where);
+        if ($cek > 0) {
+            $data_admin=$this->K_jamur->selectwhere("admin", $where)->row();
+>>>>>>> 6cd8d15ff996bce617abfb03fce86ab99763bb8a
             $data_session = array(
                 'id_admin' => $data_admin->id_admin,
                 'nama_admin' => $email,
@@ -45,14 +51,22 @@ class Login_adm extends CI_Controller {
                 alert("login Failed");
             </script>
             <?php
+<<<<<<< HEAD
             redirect(base_url('admin/Login_adm'));
+=======
+            redirect(base_url('admin/login'));
+>>>>>>> 6cd8d15ff996bce617abfb03fce86ab99763bb8a
         }
 
     }
 
     function logout(){
         $this->session->sess_destroy();
+<<<<<<< HEAD
         redirect('admin/Login_adm');
+=======
+        redirect(base_url());
+>>>>>>> 6cd8d15ff996bce617abfb03fce86ab99763bb8a
     }
 
 }

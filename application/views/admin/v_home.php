@@ -1,9 +1,19 @@
+<<<<<<< HEAD
 <?php 
 
 if (!isset($_SESSION['nama_admin'])) {
   redirect('admin/Login_adm');
 }
 ?>
+=======
+<?php
+  if ($this->session->userdata('status')=="login") {
+    $where=array('id_admin' => $this->session->userdata('id_admin'));
+    $data_admin=$this->admin_dashboard->selectwhere("admin", $where)->row();
+  }
+?>
+
+>>>>>>> 6cd8d15ff996bce617abfb03fce86ab99763bb8a
 <?php $this->load->view("admin/side/header") ?>
 <?php $this->load->view("admin/side/sidebar") ?>
 <div class="content">

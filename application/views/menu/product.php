@@ -39,6 +39,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				<div class="container"> <br>
 					<div class="teams-section">
 						<div class="inner-wrapper">
+							
 							<?php foreach ($produk as $data_produk) { ?>
 							<div class="col-grid-3 team-item">
 								<div class="thumb-summary-wrap box-shadow-block">
@@ -50,6 +51,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 										<p class="team-position"><?php echo $data_produk->nama_kategori_produk; ?></p>
 									</div><!-- .team-text-wrap -->
 									<!--  -->
+<<<<<<< HEAD
 									<div class="row" style="margin-top: -30px;margin-bottom: -50px">
 										<div class="col-grid-12">
 											<a class="custom-button col-grid-6" style="margin-right: 10px" href="Produk/detail_produk/<?php echo $data_produk->id_produk; ?>"><i class="fas fa-eye"></i> Detail</a>
@@ -58,6 +60,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 										</div>
 									</div>
 									
+=======
+									<a class="custom-button" href="Produk/detail_produk/<?php echo $data_produk->id_produk; ?>">Detail Produk</a>
+>>>>>>> 6cd8d15ff996bce617abfb03fce86ab99763bb8a
 									<!-- .social-links -->
 								</div> <!-- .team-item -->
 							</div> <!-- .team-item  -->
