@@ -39,6 +39,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				<div class="container"> <br>
 					<div class="teams-section">
 						<div class="inner-wrapper">
+							
 							<?php foreach ($produk as $data_produk) { ?>
 							<div class="col-grid-3 team-item">
 								<div class="thumb-summary-wrap box-shadow-block">
