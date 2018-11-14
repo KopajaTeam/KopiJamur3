@@ -21,8 +21,8 @@ class Login_user extends CI_Controller {
             'password' => $password,
         );
 
-        $cek = $this->K_jamur->cek_login("user",$where);
-        if ($cek > 0) {
+        $cek = $this->K_jamur->cek_login("user",$where)->num_rows();
+        if ($cek == 1) {
         	$data_user=$this->K_jamur->selectwhere("user", $where)->row();
             $data_session = array(
             	'id_user' => $data_user->id_user,
@@ -42,10 +42,10 @@ class Login_user extends CI_Controller {
             //$this->session->set_flashdata("Pesan",$this->core->alert_time("E-Mail dan Password tidak terdaftar"));
             ?>
             <script type="text/javascript">
-                alert("login Success");
+                alert("login Error");
             </script>
             <?php
-            redirect(base_url());
+            redirect(base_url("Login_user"));
         }
 
     }

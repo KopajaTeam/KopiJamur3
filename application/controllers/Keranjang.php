@@ -8,4 +8,8 @@ class Keranjang extends CI_Controller {
 		$this->load->view('menu/bayar');
 	}
 
+	public function invoice(){
+		$this->load->view('menu/invoice');
+	}
+
 }

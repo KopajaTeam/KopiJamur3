@@ -1,3 +1,10 @@
+<?php
+  if ($this->session->userdata('status')=="login") {
+    $where=array('id_admin' => $this->session->userdata('id_admin'));
+    $data_admin=$this->admin_dashboard->selectwhere("admin", $where)->row();
+  }
+?>
+
 <?php $this->load->view("admin/side/header") ?>
 <?php $this->load->view("admin/side/js") ?>
 
@@ -27,15 +34,7 @@
                         <div class="card-header card-header-rose text-center">
                             <h4 class="card-title">Log in</h4>
                             <div class="social-line">
-                                <a href="#pablo" class="btn btn-just-icon btn-link btn-white">
-                                    <i class="fa fa-facebook-square"></i>
-                                </a>
-                                <a href="#pablo" class="btn btn-just-icon btn-link btn-white">
-                                    <i class="fa fa-twitter"></i>
-                                </a>
-                                <a href="#pablo" class="btn btn-just-icon btn-link btn-white">
-                                    <i class="fa fa-google-plus"></i>
-                                </a>
+                                Kopi Jamur Prestasi
                             </div>
                         </div>
                         <div class="card-body ">
@@ -71,7 +70,7 @@
     </div>
 </div>
 
-  <script type="text/javascript">
+<script type="text/javascript">
     $().ready(function(){
         demo.checkFullPageBackgroundImage();
 

@@ -1,3 +1,9 @@
+<?php 
+
+if (!isset($_SESSION['nama_admin'])) {
+  redirect('admin/Login_adm');
+}
+?>
 <?php $this->load->view("admin/side/header") ?>
 <?php $this->load->view("admin/side/sidebar") ?>
 <div class="content">
@@ -26,7 +32,7 @@
             <div class="card-icon">
               <i class="material-icons">assignment_ind</i>
             </div>
-            <p class="card-category">User</p>
+            <p class="card-category">User </p>
             <h3 class="card-title">75.521</h3>
           </div>
           <div class="card-footer">
