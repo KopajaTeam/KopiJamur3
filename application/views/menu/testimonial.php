@@ -40,7 +40,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 							<div class="testimonial-item col-grid-6">
 								<div class="testimonial-wrapper">
 									<div class="testimonial-thumb">
-										<a href="#"><img style="margin-bottom: -20px" alt="" src="<?php echo base_url('assets/images/team')?>/cak.jpg"></a>
+										<a href="#"><img style="margin-bottom: -20px" alt="" src="<?php echo base_url($testi->foto); ?>"></a>
 									</div><!-- .testimonial-thumb -->
 									<div class="testimonial-summary">
 										<p><?php echo $testi->nama; ?></p>
