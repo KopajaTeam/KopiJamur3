@@ -8,8 +8,8 @@
 		//List testi
 		public function testi()
 		{
-			$this->db->join('user','testimoni.id_user = user.id_user');
-			$this->db->join('produk','testimoni.id_produk = produk.id_produk');
+			$this->db->join('user','testimoni.id_user = user.id_user',"LEFT");
+			$this->db->join('produk','testimoni.id_produk = produk.id_produk',"LEFT");
 			// $this->db->where('id_testimoni',$id_testimoni);
 			return $this->db->get('testimoni');
 		}
