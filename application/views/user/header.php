@@ -44,7 +44,7 @@
 					</div>
 					<div class="header-box-info">
 						<strong>Welcome,</strong>
-						<a href="#"><?php echo $data_user->nama; ?></a>
+						<a href="<?php echo base_url('Dashboard_user')?>"><?php echo $data_user->nama; ?></a>
 					</div>
 				</li>
 				<?php } ?>
