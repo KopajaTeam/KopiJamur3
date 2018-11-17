@@ -22,7 +22,7 @@ class Admin_Dashboard extends CI_Model
 	public function update($table,$data,$where){
 		$this->db->update($table,$data,$where);
 	}
-	public function insert($table,$data){
+	public function insert($table,$date){
 		$this->db->insert($table,$data);
 	}
 	function cek_login($table,$where){
