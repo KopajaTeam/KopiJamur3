@@ -44,22 +44,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 									</div><!-- .testimonial-thumb -->
 									<div class="testimonial-summary">
 										<p><?php echo $testi->nama; ?></p>
-												<!-- 		<div class="testimonial-rating">
-															<i class="fas fa-star"></i>
-															<i class="fas fa-star"></i>
-															<i class="fas fa-star"></i>
-															<i class="fas fa-star"></i>
-															<i class="fas fa-star"></i>
-														</div> -->
+												
 														<h3 class="testimonial-title"><?php echo $testi->nama_produk; ?></h3>
 														
 													</div><!-- .testimonial-summary -->
 													<div class="portfolio-item  graphic-design"  style="border-radius: 0;">
 														<div class="item-inner-wrapper" >
-															<img style="border-radius: 0"  src="<?php echo base_url('assets/images/portfolio')?>/portfolio-6.jpg" alt="Portfolio" class="portfolio-thumb">
+															<img style="border-radius: 0"  src="<?php echo base_url($testi->gambar_testi); ?>" alt="Portfolio" class="portfolio-thumb">
 															<div class="overlay"></div>
 															<div class="portfolio-content">
-																<a data-gal="prettyPhoto[product-gallery]" rel="bookmark" href="<?php echo base_url('assets/images/portfolio')?>/portfolio-6.jpg"><i class="fas fa-search" aria-hidden="true"></i></a>
+																<a data-gal="prettyPhoto[product-gallery]" rel="bookmark" href="<?php echo base_url($testi->gambar_testi); ?>"><i class="fas fa-search" aria-hidden="true"></i></a>
 																<h3><a href="#" ></a></h3>
 																<p></p>
 															</div>
