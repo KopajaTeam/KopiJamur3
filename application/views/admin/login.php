@@ -1,7 +1,7 @@
 <?php
   if ($this->session->userdata('status')=="login") {
     $where=array('id_admin' => $this->session->userdata('id_admin'));
-    $data_admin=$this->admin_dashboard->selectwhere("admin", $where)->row();
+    $data_admin=$this->Admin_Dashboard->selectwhere("admin", $where)->row();
   }
 ?>
 

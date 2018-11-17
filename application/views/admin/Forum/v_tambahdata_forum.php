@@ -2,57 +2,66 @@
 <?php $this->load->view("admin/side/sidebar") ?>
 
 <div class="content">
-  <div class="container-fluid">
-  	<div class="card ">
-                <div class="card-header card-header-rose card-header-text">
-                    <div class="card-text">
-                        <h4 class="card-title">Tambah Forum</h4>
-                    </div>
-                </div>
-                   <div class="card-body">
-		<form method="post" action="" enctype="multipart/form-data">
-			<div class="row">
-				<div class="col-lg-9">
-					<div class="form-group">
-						<input type="text" placeholder="Masukkan Judul Forum" name="judul" class="form-control">
-					</div>
-				</div>
-				<div class="col-lg-1">
-					<button type="submit" name="tambah" class="btn btn-primary">Publish</button>
+	<div class="container-fluid">
+		<div class="card ">
+			<div class="card-header card-header-rose card-header-text">
+				<div class="card-text">
+					<h4 class="card-title">Tambah Forum</h4>
 				</div>
 			</div>
-			<hr>
-			<div class="row">
-				<div class="col-lg-9">
-					<div class="form-group">
-						<textarea class="form-control" name="isi_berita" id="wysiwyg"></textarea>
+			<div class="card-body">
+				<form method="post" action="<?php echo base_url('admin/Forum/simpan') ?>" enctype="multipart/form-data">
+					<div class="row">
+						<div class="col-lg-9">
+							<div class="form-group">
+								<input type="text" placeholder="Masukkan Judul Forum" name="judul_forum" class="form-control" name="judul">
+							</div>
+						</div>
+						<div class="col-lg-1">
+							<button type="submit" name="publish" class="btn btn-primary">Publish</button>
+						</div>
 					</div>
-				</div>
-				<div class="col-lg-3">
-					<div class="form-group">
-						<label for="kategoriberita">Kategori</label>
-						<select required data-plugin="select2" class="form-control" name="Kategori" style="width: 100%">
-							<option>--Pilih Kategori Forum--</option>
-						</select>
+					<hr>
+					<div class="row">
+						<div class="col-lg-9">
+							<div class="form-group">
+								<textarea class="form-control" name="isi_forum" id="wysiwyg"></textarea>
+							</div>
+						</div>
+						<div class="col-lg-3">
+							<div class="col-lg-12 col-md-6 col-sm-3">
+								<select class="selectpicker" data-style="btn select-with-transition" title="Pilih Kategori" data-size="7" name="kategori_forum">
+									<?php foreach ($kategori_forum as $data_kategori_forum): ?>
+										<option value="<?php echo $data_kategori_forum->id_kategori_forum ?>"> <?php echo $data_kategori_forum->nama_kategori; ?></option>
+									<?php endforeach ?>
+								</select>
+							</div>
+							<div class="row">
+								<div class="col-md-12 col-sm-12 text-center">
+									<br>
+									<div class="fileinput fileinput-new text-center" data-provides="fileinput">
+										<div class="fileinput-new thumbnail">
+											<img src="<?php echo base_url(); ?>master/admin/img/image_placeholder.jpg" alt="...">
+										</div>
+										<div class="fileinput-preview fileinput-exists thumbnail"></div>
+										<div>
+											<span class="btn btn-rose btn-file">
+												<span class="fileinput-new">Select image</span>
+												<span class="fileinput-exists">Change</span>
+												<input type="file" name="foto_forum" />
+											</span>
+											<a href="#pablo" class="btn btn-danger fileinput-exists" data-dismiss="fileinput"><i class="fa fa-times"></i> Remove</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
-					<div class="form-group">
-						<label for="gambar-ikan">Gambar Headline Forum</label>
-	      				<img class="card-img-top img-thumbnail mb-2" src="<?php echo base_url(); ?>master/admin/img/image_placeholder.jpg" alt="Card image cap" id="preview_fp">
-					</div>
-					<div class="form-group">
-						<label class="custom-file">
-						  <input type="file" id="file2" name="headline_berita" accept="image/*"  onchange="tampilkanPreview(this,'preview_fp')" class="custom-file-input">
-						  <span class="custom-file-control btn btn-success">Pilih Gambar</span>
-						</label>
-					</div>
-					
-				</div>
+				</form>
 			</div>
-		</form>
-	</div>
-            </div>
+		</div>
 
-</div>
+	</div>
 </div>
 <?php $this->load->view("admin/side/footer") ?>
 <?php $this->load->view("admin/side/js") ?>
