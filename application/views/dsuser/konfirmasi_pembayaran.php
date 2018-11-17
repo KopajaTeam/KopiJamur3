@@ -1,5 +1,5 @@
 <?php $this->load->view('user/head') ?>
-<?php $this->load->view('user/header')?>>
+<?php $this->load->view('user/header')?>
 <?php $this->load->view('user/mainnav') ?>
 
 <div id="custom-header">
@@ -18,8 +18,7 @@
 	</div>  <!-- .custom-header-content -->
 </div> <!-- .custom-header -->
 <aside class="section section-services service-layout-1">
-	<div class="container">
-		<hr class="">
+	<div class="container" style="margin-top: 35px">
 		<div class="container target">
 			<div class="row">
 				<?php $this->load->view('dsuser/sidenav_dashuser') ?>
