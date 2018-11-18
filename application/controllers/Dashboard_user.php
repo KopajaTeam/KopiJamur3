@@ -26,4 +26,10 @@ public function tentang_saya(){
 public function forum_view(){
 		$this->load->view('dsuser/forum_view');
 }
+public function testimonial_view(){
+		$this->load->view('dsuser/testimonial_view');
+}
+public function tambah_testimonial(){
+		$this->load->view('dsuser/tambah_testimonial');
+}
 }

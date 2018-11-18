@@ -174,10 +174,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 							</span>
 						</div>
 						<div class="size15 trans-0-4">
-							<!-- Button -->
-							<button class="flex-c-m bg1 bo-rad-23 hov1 s-text1 trans-0-4" style="margin-left: 400px; margin-top: 70px;">
+							<a href="#"><button class="flex-c-m bg1 bo-rad-23 hov1 s-text1 trans-0-4" style="margin-left: 400px; margin-top: 70px;">
 								Konfirmasi Pemesanan
-							</button>
+							</button></a>
 						</div>
 					</div>
 				</div>
