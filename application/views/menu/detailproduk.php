@@ -44,7 +44,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 									<div class="container">
 										<div class="inner-wrapper">
 											<div class="col-grid-6">
-												<img style="width: 1000px; height: 350px " src=<?php echo base_url().$produk->gambar_produk; ?>
+												<img style="width: 1000px; height: 350px " src="<?php echo base_url().$produk->gambar_produk; ?>">
 											</div>
 											<div class="col-grid-6">
 												<h2><strong><?php echo $produk->nama_produk; ?></strong> (<?php echo $produk->nama_kategori_produk; ?>)</h2>
