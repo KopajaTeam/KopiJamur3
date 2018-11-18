@@ -48,6 +48,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											</div>
 											<div class="col-grid-6">
 												<h2><strong><?php echo $produk->nama_produk; ?></strong> (<?php echo $produk->nama_kategori_produk; ?>)</h2>
+												<h5>Berat : <?php echo $produk->berat_produk; ?> <?php echo $produk->satuan_produk; ?> /<?php echo $produk->jenis_satuan_produk; ?></h5>
 												<h5>Harga : Rp. <?php echo $produk->harga_produk; ?></h5>
 												<hr style="margin-top: -2px; margin-bottom: 10px;">
 												<h5>Deskripsi Produk : </h5>
