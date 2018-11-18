@@ -23,4 +23,7 @@ public function konfirmasi_pembayaran(){
 public function tentang_saya(){
 		$this->load->view('dsuser/tentang_saya');
 }
+public function forum_view(){
+		$this->load->view('dsuser/forum_view');
+}
 }
