@@ -1,10 +1,10 @@
 <div class="col-sm-3">
 	<!--left col-->
 	<ul class="list-group">
-		<li class="list-group-item text-muted" contenteditable="false">History Activity</li>
-		<li class="list-group-item text-right"><span class="pull-left"><strong class="">Total Transaksi</strong></span> 100</li>
-		<li class="list-group-item text-right"><span class="pull-left"><strong class="">Total Forum</strong></span> 66</li>
-		<li class="list-group-item text-right"><span class="pull-left"><strong class="">Total Testimonial</strong></span> 100</li>
+		<li class="list-group-item text-muted" contenteditable="false" style="color: #323232;text-align: center;"><strong>History Activity</strong></li>
+		<li class="list-group-item text-right" style="color: #323232"><span class="pull-left">Total Transaksi</span> 100</li>
+		<li class="list-group-item text-right" style="color: #323232"><span class="pull-left">Total Forum</span> 66</li>
+		<li class="list-group-item text-right" style="color: #323232"><span class="pull-left">Total Testimonial</span> 100</li>
 	</ul>
 	<ul class="list-group">
 		<a href="<?php echo base_url('Dashboard_user')?>" class="list-group-item"><i class="fa fa-smile" aria-hidden="true"></i> Panel Akun </a>
