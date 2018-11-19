@@ -33,25 +33,31 @@
 										<div class="panel-body">
 											<form class="form-horizontal row-border" action="#">
 												<div class="form-group">
-													<label class="col-md-3 control-label">Default input field</label>
+													<label class="col-md-3 control-label">Nama Produk</label>
 													<div class="col-md-9">
 														<input type="text" name="regular" class="form-control">
 													</div>
 												</div>
 												<div class="form-group">
-													<label class="col-md-3 control-label">Password</label>
+													<label class="col-md-3 control-label">Komentar Produk</label>
 													<div class="col-md-9">
-														<input class="form-control" type="text" name="pass">
+														<input type="text" name="regular1" class="form-control">
 													</div>
 												</div>
-												<div class="form-group">
-													<label class="col-md-3 control-label">Password</label>
-													<div class="col-md-9">
-														<input class="form-control" type="text" name="pass">
-													</div>
-												</div>
+<!-- <div class="form-group">
+	<label class="col-md-3 control-label">Password</label>
+	<div class="col-md-9">
+		<input class="form-control" type="text" name="pass">
+	</div>
+</div>
+<div class="form-group">
+	<label class="col-md-3 control-label">Password</label>
+	<div class="col-md-9">
+		<input class="form-control" type="text" name="pass">
+	</div>
+</div> -->
 												<div class="form-group row">
-													<label class="col-md-3 control-label" for="kode_order">Bukti Pembayaran*</label>
+													<label class="col-md-3 control-label" for="kode_order">Foto Testimoni produk</label>
 													<div class="col-lg-8">
 														<div class="row">
 															<div class="col-lg-4">

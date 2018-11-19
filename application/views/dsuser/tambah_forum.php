@@ -55,8 +55,18 @@
 												<hr style="margin-top: -30px;margin-bottom: 15px">
 												<div class="row">
 													<div class="col-lg-9">
+															<input type="text" placeholder="Masukkan Deskripsi Forum" name="desc_forum" class="form-control" name="judul">
+														</div>
+														<br>
+														<br>
+												<!-- <div class="col-lg-9">
 														<div class="form-group">
-															<textarea class="form-control" name="isi_forum" id="wysiwyg"></textarea>
+															<textarea class="form-control" name="desc_forum" id="desc"></textarea>
+														</div>
+													</div> -->
+													<div class="col-lg-9">
+														<div class="form-group">
+															<textarea class="form-control" name="isi_forum" id="inputforum"></textarea>
 														</div>
 													</div>
 													<div class="col-lg-3">
