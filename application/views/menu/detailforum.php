@@ -53,6 +53,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 									<footer class="entry-footer">
 									</footer><!-- .entry-footer -->
 								</article>
+								
 								<div class="authorbox ">
 									<div class="author-avatar">
 										<img alt="" src="<?php echo base_url('assets/images/blog-single')?>/author-1.jpg" class="avatar img-circle">
