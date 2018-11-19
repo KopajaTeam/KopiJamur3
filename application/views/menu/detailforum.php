@@ -30,7 +30,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 								<main id="main" class="site-main" >
 									<article class="hentry">
 										<div class="entry-thumb">
-											<img class="aligncenter" src="<?php echo base_url('assets/images/blog-single')?>/blog-single.jpg" alt="Blog">
+											<img class="aligncenter" src="<?php echo base_url($forum->gambar_headline); ?>" alt="Blog">
 										</div>
 										<div class="entry-content-wrapper">
 											<header class="entry-header">

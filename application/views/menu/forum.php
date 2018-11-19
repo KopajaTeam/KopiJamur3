@@ -47,18 +47,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 										<div class="entry-content-wrapper box-shadow-block">
 											<div class="entry-thumb aligncenter">
 												<a  href="#" >
-													<img  src="<?php echo base_url('assets/images/blog')?>/blog-1.jpg" alt="Blog">
+													<img  src="<?php echo base_url($forum_det->gambar_headline); ?>" alt="Blog">
 												</a>
 											</div> <!-- .entry-thumb -->
 												<header class="entry-header">
 													<h2 class="entry-title"><a href="#" rel="bookmark"><?php echo $forum_det->judul; ?></a></h2>
 												</header><!-- .entry-header -->
 												<div class="entry-meta">
-													<span class="posted-on">June 13, 2017</span>
-													<span class="cat-links"><a href="#" rel="category tag">Agency</a></span>
+													<span class="posted-on"><?php echo $forum_det->tanggal; ?></span>
+													<span class="cat-links"><a href="" rel="category tag"><?php echo $forum_det->nama_kategori; ?></a></span>
 												</div><!-- .entry-meta -->
 												<div class="entry-content">
-													<p>aliquet Aenean sollicitudin, lorem quis bibendum auctor, nisi elit.Proin gravida nibh vel velit auctor aliquet.</p>
+													<p><?php echo $forum_det->desc_forum; ?></p>
 													<a href="Forum/detail_forum/<?php echo $forum_det->id_forum; ?>" class="custom-button">Read More</a>
 												</div><!-- .entry-content -->
 											</div><!-- .entry-content-wrapper -->
