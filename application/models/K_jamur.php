@@ -57,6 +57,7 @@
 		$this->db->join('kategori_produk','produk.id_kategori_produk = kategori_produk.id_kategori_produk', "LEFT");
 		return $this->db->get('produk');
 	}
+	
 
 }
 

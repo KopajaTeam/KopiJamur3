@@ -73,8 +73,8 @@
 														</div>
 													</div>
 												</div>
-											</div>
-										</form>
+											</form>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -82,33 +82,35 @@
 					</div>
 				</div>
 			</div>
-		</aside>
-		<?php $this->load->view("admin/side/js") ?>
-		<?php $this->load->view('user/wiget') ?>
-		<?php $this->load->view('user/sosmed') ?>
-		<?php $this->load->view('user/footer') ?>
-		<script>
-			function tampilkanPreview(gambar,idpreview){
-				var gb = gambar.files;
+		</div>
+	</div>
+</aside>
+<?php $this->load->view("admin/side/js") ?>
+<?php $this->load->view('user/wiget') ?>
+<?php $this->load->view('user/sosmed') ?>
+<?php $this->load->view('user/footer') ?>
+<script>
+	function tampilkanPreview(gambar,idpreview){
+		var gb = gambar.files;
 
-				for (var i = 0; i < gb.length; i++){
-					var gbPreview = gb[i];
-					var imageType = /image.*/;
-					var preview=document.getElementById(idpreview);            
-					var reader = new FileReader();
+		for (var i = 0; i < gb.length; i++){
+			var gbPreview = gb[i];
+			var imageType = /image.*/;
+			var preview=document.getElementById(idpreview);            
+			var reader = new FileReader();
 
-					if (gbPreview.type.match(imageType)) {
-						preview.file = gbPreview;
-						reader.onload = (function(element) { 
-							return function(e) { 
-								element.src = e.target.result; 
-							}; 
-						})(preview);
+			if (gbPreview.type.match(imageType)) {
+				preview.file = gbPreview;
+				reader.onload = (function(element) { 
+					return function(e) { 
+						element.src = e.target.result; 
+					}; 
+				})(preview);
 
-						reader.readAsDataURL(gbPreview);
-					}else{
-						alert("Type file tidak sesuai. Khusus image.");
-					}
-				}    
+				reader.readAsDataURL(gbPreview);
+			}else{
+				alert("Type file tidak sesuai. Khusus image.");
 			}
-		</script>
+		}    
+	}
+</script>

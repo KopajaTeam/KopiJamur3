@@ -32,4 +32,10 @@ public function testimonial_view(){
 public function tambah_testimonial(){
 		$this->load->view('dsuser/tambah_testimonial');
 }
+public function invoice(){
+		$this->load->view('dsuser/invoice');
+}
+public function checkout(){
+		$this->load->view('dsuser/checkout');
+}
 }

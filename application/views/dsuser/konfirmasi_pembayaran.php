@@ -31,18 +31,36 @@
 								<div class="card-body">
 									<form action="#" method="post" enctype="multipart/form-data">
 										<div class="form-group row">
+											<label class="col-form-label col-lg-4" for="kode_order">Nama User</label>
+											<div class="col-lg-8">
+												<div class="input-group">
+													<span class="input-group-addon">@</span>
+													<input type="text"  class="form-control" name="kode_order" id="kode_order" placeholder="Nama User">
+												</div>
+											</div>
+										</div>
+										<div class="form-group row">
+											<label class="col-form-label col-lg-4" for="kode_order">Alamat User</label>
+											<div class="col-lg-8">
+												<div class="input-group">
+													<span class="input-group-addon">@</span>
+													<input type="text"  class="form-control" name="kode_order" id="kode_order" placeholder="Alamat">
+												</div>
+											</div>
+										</div>
+										<div class="form-group row">
 											<label class="col-form-label col-lg-4" for="kode_order">Kode Order / No Invoice*</label>
 											<div class="col-lg-8">
 												<div class="input-group">
 													<span class="input-group-addon">#</span>
-													<input type="text" required class="form-control" name="kode_order" id="kode_order" placeholder="Kode Order / No Invoice ">
+													<input type="text"  class="form-control" name="kode_order" id="kode_order" placeholder="Kode Order / No Invoice ">
 												</div>
 											</div>
 										</div>
 										<div class="form-group row">
 											<label class="col-form-label col-lg-4" for="nama">Bank*</label>
 											<div class="col-lg-8">
-												<select class="select2 form-control" name="bank" required id="select2" style="width: 100%">
+												<select class="select2 form-control" name="bank"  id="select2" style="width: 100%">
 													<option value="">--Pilih Bank--</option>
 													<option value="madiri">Mandiri</option>
 													<option value="bni">BNI</option>
@@ -54,7 +72,7 @@
 										<div class="form-group row">
 											<label class="col-form-label col-lg-4" for="nama">Atas Nama*</label>
 											<div class="col-lg-8">
-												<input type="text" required class="form-control" name="nama" id="nama" placeholder="Atas Nama">
+												<input type="text"  name="nama" id="nama" placeholder="Atas Nama">
 											</div>
 										</div>
 										<div class="form-group row">
@@ -62,14 +80,14 @@
 											<div class="col-lg-8">
 												<div class="input-group">
 													<span class="input-group-addon">Rp. </span>
-													<input type="number" required class="form-control text-right" name="jumlah" id="jumlah" placeholder="Jumlah Transfer">
+													<input type="number"  name="jumlah" id="jumlah" placeholder="Jumlah Transfer" style="text-align: left;">
 												</div>
 											</div>
 										</div>
 										<div class="form-group row">
 											<label class="col-form-label col-lg-4" for="tgl_transfer">Tanggal Transfer*</label>
 											<div class="col-lg-8">
-												<input type="datetime-local" required class="form-control" name="tgl_transfer" id="tgl_transfer" placeholder="Tanggal Transfer">
+												<input type="datetime-local"  name="tgl_transfer" id="tgl_transfer" placeholder="Tanggal Transfer">
 											</div>
 										</div>
 										<div class="form-group row">
@@ -83,7 +101,7 @@
 												<div class="row" style="margin-top: -40px">
 													<div class="col-lg-6">
 														<label class="custom-file">
-															<input type="file" id="file2" required name="filebukti" accept="image/*"  onchange="tampilkanPreview(this,'preview_fp')" class="custom-file-input" style="margin-top: -30px">
+															<input type="file" id="file2"  name="filebukti" accept="image/*"  onchange="tampilkanPreview(this,'preview_fp')" class="custom-file-input" style="margin-top: -30px">
 															<span class="custom-file-control"></span>
 														</label>
 													</div>
@@ -92,7 +110,7 @@
 										</div>
 										<div class="row justify-content-center">
 											<div class="col-lg-4" style="margin-left: 270px">
-												<button type="submit" name="kirim" class="btn btn-primary mt-3 form-control">Kirim</button>
+												<a style="color: #FFFFFF; width: 300px" href="<?php echo base_url('Dashboard_user/invoice')?>" class="btn btn-info" role="button">Simpan</a>
 											</div>
 										</div>
 									</form>
