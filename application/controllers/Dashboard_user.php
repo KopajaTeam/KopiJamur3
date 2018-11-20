@@ -14,15 +14,14 @@ class Dashboard_user extends CI_Controller {
 		$this->load->view('dsuser/sidenav_dashuser');
 	}
 	public function konfirmasi_pembayaran(){
-		$this->load->view('dsuser/konfirmasi_pembayaran')
+		$this->load->view('dsuser/konfirmasi_pembayaran');
 	}
 	public function tambah_forum(){
 		$this->load->view('dsuser/tambah_forum');
 	}
-	public function konfirmasi_pembayaran(){
-
-		$this->load->view('dsuser/konfirmasi_pembayaran');
-	}
+// ada2	// public function konfirmasi_pembayaran(){
+	// 	$this->load->view('dsuser/konfirmasi_pembayaran');
+	// }
 	public function tentang_saya(){
 		$this->load->view('dsuser/tentang_saya');
 	}
