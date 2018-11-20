@@ -71,7 +71,7 @@
 													</div>
 													<div class="col-lg-3">
 															<div class="dropdown">
-																<button id="dLabel" style="margin-top: 0px;width: 172px;color: #000" class="dropdown-select" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+																<button id="dLabel" style="margin-top: -55px;width: 172px;color: #000;height: 35px;padding: 0.5px 16px" class="dropdown-select" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 																	Pilih Kategori
 																	<span class="caret"></span>
 																</button>
