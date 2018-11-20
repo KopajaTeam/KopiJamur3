@@ -17,7 +17,6 @@ class Dashboard_user extends CI_Controller {
 		$this->load->view('dsuser/tambah_forum');
 	}
 	public function konfirmasi_pembayaran(){
-
 		$this->load->view('dsuser/konfirmasi_pembayaran');
 	}
 	public function tentang_saya(){
