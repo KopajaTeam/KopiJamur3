@@ -13,12 +13,10 @@ class Dashboard_user extends CI_Controller {
 	public function sidenav(){
 		$this->load->view('dsuser/sidenav_dashuser');
 	}
-	public function konfirmasi_pembayaran(){
-		$this->load->view('dsuser/konfirmasi_pembayaran');
-	}
 	public function tambah_forum(){
 		$this->load->view('dsuser/tambah_forum');
 	}
+<<<<<<< HEAD
 	function simpan_forum(){
 		$simpanforum = array(
 			'judul' =>$this->input->post('judul_forum'),
@@ -32,6 +30,11 @@ class Dashboard_user extends CI_Controller {
 // ada2	// public function konfirmasi_pembayaran(){
 	// 	$this->load->view('dsuser/konfirmasi_pembayaran');
 	// }
+=======
+	public function konfirmasi_pembayaran(){
+		$this->load->view('dsuser/konfirmasi_pembayaran');
+	}
+>>>>>>> 21c825e81034f6a1461bd49671995d60d98cc45f
 	public function tentang_saya(){
 		$this->load->view('dsuser/tentang_saya');
 	}
