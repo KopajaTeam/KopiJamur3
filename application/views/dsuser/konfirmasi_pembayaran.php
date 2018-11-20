@@ -31,24 +31,6 @@
 								<div class="card-body">
 									<form action="#" method="post" enctype="multipart/form-data">
 										<div class="form-group row">
-											<label class="col-form-label col-lg-4" for="kode_order">Nama User</label>
-											<div class="col-lg-8">
-												<div class="input-group">
-													<span class="input-group-addon">@</span>
-													<input type="text"  class="form-control" name="kode_order" id="kode_order" placeholder="Nama User">
-												</div>
-											</div>
-										</div>
-										<div class="form-group row">
-											<label class="col-form-label col-lg-4" for="kode_order">Alamat User</label>
-											<div class="col-lg-8">
-												<div class="input-group">
-													<span class="input-group-addon">@</span>
-													<input type="text"  class="form-control" name="kode_order" id="kode_order" placeholder="Alamat">
-												</div>
-											</div>
-										</div>
-										<div class="form-group row">
 											<label class="col-form-label col-lg-4" for="kode_order">Kode Order / No Invoice*</label>
 											<div class="col-lg-8">
 												<div class="input-group">

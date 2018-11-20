@@ -13,9 +13,6 @@ class Dashboard_user extends CI_Controller {
 	public function sidenav(){
 		$this->load->view('dsuser/sidenav_dashuser');
 	}
-	public function konfirmasi_pembayaran(){
-		$this->load->view('dsuser/konfirmasi_pembayaran')
-	}
 	public function tambah_forum(){
 		$this->load->view('dsuser/tambah_forum');
 	}
