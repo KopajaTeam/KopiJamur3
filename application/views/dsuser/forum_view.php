@@ -41,18 +41,18 @@
 							<table class="table table-bordered table-list">
 								<thead>
 									<tr>
-										<th>Judul Forum</th>
-										<th>Kategori</th>
-										<th>Statistik</th>
-										<th>Action</th>
+										<th style="text-align: center;">Judul Forum</th>
+										<th style="text-align: center;">Kategori</th>
+										<th style="text-align: center;">Statistik</th>
+										<th style="text-align: center;">Action</th>
 									</tr> 
 								</thead>
 								<tbody>
 									<tr>
-										<td>Mengapa Kopi Berbeda?</td>
-										<td>Information</td>
-										<td class="hidden-xs">View : 100 <br>Reply : 100</td>
-										<td align="center">
+										<td style="text-align: center;">Mengapa Kopi Berbeda?</td>
+										<td style="text-align: center;">Information</td>
+										<td style="text-align: center;"class="hidden-xs">View : 100 <br>Reply : 100</td>
+										<td style="text-align: center;" align="center">
 											<a class="btn btn-default"><i class="fas fa-pencil-alt"></i></a>
 											<a class="btn btn-danger"><em class="fa fa-trash"></em></a>
 										</td>
