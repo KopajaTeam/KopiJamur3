@@ -33,7 +33,7 @@
 									<h3 class="panel-title">Forum Anda</h3>
 								</div>
 								<div class="col col-xs-6 text-right">
-									<a href="<?php echo base_url('Dashboard_user/tambah_forum')?>" class="btn btn-info" role="button">Tambah Forum</a>
+									<a href="<?php echo base_url('Forum/insert_f')?>" class="btn btn-info" role="button">Tambah Forum</a>
 								</div>
 							</div>
 						</div>

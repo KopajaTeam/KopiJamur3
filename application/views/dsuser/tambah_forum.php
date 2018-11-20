@@ -1,3 +1,4 @@
+<?php echo form_open('Forum/insert_f'); ?>
 <?php $this->load->view('user/head') ?>
 <?php $this->load->view('user/header')?>>
 <?php $this->load->view('user/mainnav') ?>
@@ -140,3 +141,4 @@
 	<?php $this->load->view('user/sosmed') ?>
 
 	<?php $this->load->view('user/footer') ?>
+	<?php echo form_close(''); ?>
