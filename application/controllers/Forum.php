@@ -28,9 +28,6 @@ class Forum extends CI_Controller {
 		$this->load->view('menu/detailforum',$data);
 	}
 	
-	// insert
-	function insert_f(){
-		$this->load->view('dsuser/tambah_forum');
-	}
+	
 
 }
