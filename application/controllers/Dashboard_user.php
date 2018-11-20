@@ -50,4 +50,7 @@ class Dashboard_user extends CI_Controller {
 	public function pesanan_saya(){
 		$this->load->view('dsuser/pesanan_saya');
 	}
+	public function detail_pesanan(){
+		$this->load->view('dsuser/detail_pesanan');
+	}
 }
