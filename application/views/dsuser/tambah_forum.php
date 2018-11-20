@@ -1,4 +1,4 @@
-<?php echo form_open('Forum/insert_f'); ?>
+<?php echo form_open('Dashboard_user/tambah_forum'); ?>
 <?php $this->load->view('user/head') ?>
 <?php $this->load->view('user/header')?>>
 <?php $this->load->view('user/mainnav') ?>
@@ -42,11 +42,16 @@
 										<div class="card-header card-header-rose card-header-text">
 										</div>
 										<div class="card-body">
-											<form method="post" action="<?php echo base_url('admin/Forum/simpan') ?>" enctype="multipart/form-data">
+											<!-- button simpan -->
+
+											<form method="post" action="<?php echo base_url('Dashboard_user/simpan_forum') ?>" enctype="multipart/form-data">
 												<div class="row">
 													<div class="col-lg-9">
 														<div class="form-group">
+															<!-- disini judul -->
+
 															<input type="text" placeholder="Masukkan Judul Forum" name="judul_forum" class="form-control" name="judul">
+
 														</div>
 													</div>
 													<div class="col-lg-1">
@@ -55,6 +60,8 @@
 												</div>
 												<hr style="margin-top: -30px;margin-bottom: 15px">
 												<div class="row">
+													<!-- disini deskripsi forum -->
+
 													<div class="col-lg-9">
 															<input type="text" placeholder="Masukkan Deskripsi Forum" name="desc_forum" class="form-control" name="judul">
 														</div>
@@ -66,6 +73,8 @@
 														</div>
 													</div> -->
 													<div class="col-lg-9">
+														<!-- input forum disnni -->
+
 														<div class="form-group">
 															<textarea class="form-control" name="isi_forum" id="inputforum"></textarea>
 														</div>
@@ -75,6 +84,8 @@
 																<button id="dLabel" style="margin-top: -55px;width: 172px;color: #000;height: 35px;padding: 0.5px 16px" class="dropdown-select" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 																	Pilih Kategori
 																	<span class="caret"></span>
+																	<!--  untuk option -->
+
 																</button>
 																<ul class="dropdown-menu" aria-labelledby="dLabel">
 																	<li>Option 1</li>

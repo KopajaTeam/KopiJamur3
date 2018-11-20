@@ -19,6 +19,16 @@ class Dashboard_user extends CI_Controller {
 	public function tambah_forum(){
 		$this->load->view('dsuser/tambah_forum');
 	}
+	function simpan_forum(){
+		$simpanforum = array(
+			'judul' =>$this->input->post('judul_forum'),
+			'desc_forum' =>$this->input->post('deskripsi_forum'),
+			'isi_forum' =>$this->input->post('isi'),
+			'gambar_headline' =>$this->input->post('gambar'),
+			'nama_kategori' =>$this->input->post('kategori'));
+			$this->db->insert('forum',$simpanforum);
+			redirec('forum');
+	}
 // ada2	// public function konfirmasi_pembayaran(){
 	// 	$this->load->view('dsuser/konfirmasi_pembayaran');
 	// }
