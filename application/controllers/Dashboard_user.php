@@ -13,17 +13,17 @@ class Dashboard_user extends CI_Controller {
 	public function sidenav(){
 		$this->load->view('dsuser/sidenav_dashuser');
 	}
-<<<<<<< HEAD
+
 // 	public function tambah_forum(){
 // 		$this->load->view('dsuser/tambah_forum');
 // }
 public function konfirmasi_pembayaran(){
-=======
+
 	public function tambah_forum(){
 		$this->load->view('dsuser/tambah_forum');
 	}
 	public function konfirmasi_pembayaran(){
->>>>>>> 7e68022a064662a35f039f766bc2e089da2cb334
+
 		$this->load->view('dsuser/konfirmasi_pembayaran');
 	}
 	public function tentang_saya(){
