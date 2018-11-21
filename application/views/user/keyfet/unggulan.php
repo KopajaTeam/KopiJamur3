@@ -19,6 +19,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <?php $this->load->view('user/mainnav') ?>
 <?php $this->load->view('user/headnav') ?>
 			<div id="content" class="site-content global-layout-no-sidebar">
+				<?php foreach ($key_features as $data_key) { ?>
 				<div class="container">
 					<div class="inner-wrapper">
 						<div id="primary" class="content-area">
@@ -27,11 +28,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 									<div class="container">
 										<div class="inner-wrapper">
 											<div class="col-grid-6">
-												<img src="<?php echo base_url();?>assets/images/portfolio/portfolio-1.jpg">
+												<img src="<?php echo base_url($data_key->gambar_features )?>">
 											</div>
 											<div class="col-grid-6">
-												<h3>Project Details</h3>
-												<p>Phasellus fringilla suscipit risus nec eleifend. Pellentesque eu quam sem, ac malesuada leo sem quam pellente. Awesome sliders give you the opportunity to showcase your content. Advanced theme options panel to easily customize your website.</p>
+												<h3><?php echo $data_key->judul_key;?></h3>
+												<p><?php echo $data_key->isi_key;?></p>
 												
 												<div class="social-links circle brand-color">
 													<h4> Share:</h4>
@@ -66,7 +67,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 							</main> <!-- #main -->
 						</div> <!-- #primary -->
 					</div> <!-- .inner-wrapper -->
+				<?php } ?>	
 				</div> <!-- .container -->
+
 			</div> <!-- #content-->
 <?php $this->load->view('user/wiget') ?>
 

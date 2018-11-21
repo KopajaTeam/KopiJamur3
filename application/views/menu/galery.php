@@ -51,74 +51,19 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 										</nav>
 
 										<div id="portfolio" class="masonry-wrapper row-fluid wow fadeInUp">
+											<?php foreach ($gallery as $data_galeri) { ?>
 											<div class="portfolio-item  photography">
 												<div class="item-inner-wrapper">
-													<img src="<?php echo base_url('assets/images/portfolio')?>/portfolio-1.jpg" alt="Portfolio" class="portfolio-thumb">
+													<img src="<?php echo base_url($data_galeri->gambar_galeri )?>" alt="Portfolio" class="portfolio-thumb">
 													<div class="overlay"></div>
 													<div class="portfolio-content">
-														<a data-gal="prettyPhoto[product-gallery]" rel="bookmark" href="<?php echo base_url('assets/images/portfolio')?>/portfolio-1.jpg"><i class="fas fa-search" aria-hidden="true"></i></a>
-														<h3><a href="#" >Works Title</a></h3>
-														<p>Web Design, Business, Photography</p>
+														<a data-gal="prettyPhoto[product-gallery]" rel="bookmark" href="<?php echo base_url($data_galeri->gambar_galeri)?>"><i class="fas fa-search" aria-hidden="true"></i></a>
+														<h3><a href="#" ><?php echo $data_galeri->nama_gallery;?></a></h3>
+														<p><?php echo $data_galeri->deskripsi_gallery;?></p>
 													</div>
 												</div>
 											</div><!-- end item -->
-											<div class="portfolio-item  graphic-design">
-												<div class="item-inner-wrapper">
-													<img src="<?php echo base_url('assets/images/portfolio')?>/portfolio-2.jpg" alt="Portfolio" class="portfolio-thumb">
-													<div class="overlay"></div>
-													<div class="portfolio-content">
-														<a data-gal="prettyPhoto[product-gallery]" rel="bookmark" href="<?php echo base_url('assets/images/portfolio')?>/portfolio-2.jpg"><i class="fas fa-search" aria-hidden="true"></i></a>
-														<h3><a href="#" >Works Title</a></h3>
-														<p>Kegiatan Perusahaan</p>
-													</div>
-												</div>
-											</div><!-- end item -->
-											<div class="portfolio-item  photography">
-												<div class="item-inner-wrapper">
-													<img src="<?php echo base_url('assets/images/portfolio')?>/portfolio-3.jpg" alt="Portfolio" class="portfolio-thumb">
-													<div class="overlay"></div>
-													<div class="portfolio-content">
-														<a data-gal="prettyPhoto[product-gallery]" rel="bookmark" href="<?php echo base_url('assets/images/portfolio')?>/portfolio-3.jpg"><i class="fas fa-search" aria-hidden="true"></i></a>
-														<h3><a href="#" >Works Title</a></h3>
-														<p>Kegiatan Perusahaan</p>
-													</div>
-												</div>
-											</div><!-- end item -->
-											<div class="portfolio-item  web-design">
-												<div class="item-inner-wrapper">
-													<img src="<?php echo base_url('assets/images/portfolio')?>/portfolio-4.jpg" alt="Portfolio" class="portfolio-thumb">
-													<div class="overlay"></div>
-													<div class="portfolio-content">
-														<a data-gal="prettyPhoto[product-gallery]" rel="bookmark" href="<?php echo base_url('assets/images/portfolio')?>/portfolio-4.jpg"><i class="fas fa-search" aria-hidden="true"></i></a>
-														<h3><a href="#" >Works Title</a></h3>
-														<p>Web Design, Business, Photography</p>
-
-													</div>
-												</div>
-											</div><!-- end item -->
-											<div class="portfolio-item  photography">
-												<div class="item-inner-wrapper">
-													<img src="<?php echo base_url('assets/images/portfolio')?>/portfolio-5.jpg" alt="Portfolio" class="portfolio-thumb">
-													<div class="overlay"></div>
-													<div class="portfolio-content">
-														<a data-gal="prettyPhoto[product-gallery]" rel="bookmark" href="<?php echo base_url('assets/images/portfolio')?>/portfolio-5.jpg"><i class="fas fa-search" aria-hidden="true"></i></a>
-														<h3><a href="#" >Works Title</a></h3>
-														<p>Web Design, Business, Photography</p>
-
-													</div>
-												</div>
-											</div><!-- end item -->
-											<div class="portfolio-item  graphic-design">
-												<div class="item-inner-wrapper">
-													<img src="<?php echo base_url('assets/images/portfolio')?>/portfolio-6.jpg" alt="Portfolio" class="portfolio-thumb">
-													<div class="overlay"></div>
-													<div class="portfolio-content">
-														<a data-gal="prettyPhoto[product-gallery]" rel="bookmark" href="<?php echo base_url('assets/images/portfolio')?>/portfolio-6.jpg"><i class="fas fa-search" aria-hidden="true"></i></a>
-														<h3><a href="#" >Works Title</a></h3>
-														<p>Web Design, Business, Photography</p>
-													</div>
-												</div>
-											</div><!-- end item -->
+											<?php } ?>
 										</div>
 										<div class="more-wrapper">
 											<a href="#" class="custom-button">Explore More</a>
