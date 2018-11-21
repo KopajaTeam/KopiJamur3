@@ -47,7 +47,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 										<div class="entry-content-wrapper box-shadow-block">
 											<div class="entry-thumb aligncenter">
 												<a  href="#" >
-													<img src="<?php echo base_url($forum_det->gambar_headline); ?>" alt="Blog">
 													<img style="height: 225px" src="<?php echo base_url($forum_det->gambar_headline); ?>" alt="Blog">
 												</a>
 											</div> <!-- .entry-thumb -->
