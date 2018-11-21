@@ -58,8 +58,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 										<p>Jamur juga merupakan sumber vitamin dan mineral seperti selenium dan potasium. Jamur juga mengandung kalsium yang membantu merawat kesehatan tulang dan mencegah komplikasi. Kopi yang dicampur jamur akan berkurang keasamannya daripada kopi biasa. Oleh karena itu, kopi jamur aman diminum oleh orang yang memiliki perut sensitif. Kopi jamur juga dikenal rendah kafein.</p>
 
 										<p>Bagi mereka yang ingin menurunkan berat badan, kopi jamur juga pilihan yang bagus karena tidak mengandung kolesterol dan lemak. Karena karakternya yang tidak berlemak, jamur juga baik bagi pasien diabetes dan penderita tekanan darah rendah. Satu lagi, jamur juga bisa mendorong pertumbuhan rambut, menghilangkan jerawat, dan menyembuhkan aneka masalah kulit.</p>
-										
 										<hr>
+										<!-- 
+										
 										<h5>Prestasi</h5>
 										<ul>
 											<li>prestasi 1</li>
@@ -72,7 +73,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											<li>pencapaian 1</li>
 											<li>pencapaian 2</li>
 											<li>pencapaian 3</li>
-										</ol>
+										</ol> -->
 										</div>
 									</article>
 								</main>

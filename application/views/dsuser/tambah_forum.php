@@ -1,6 +1,6 @@
 <?php echo form_open('Dashboard_user/tambah_forum'); ?>
 <?php $this->load->view('user/head') ?>
-<?php $this->load->view('user/header')?>>
+<?php $this->load->view('user/header')?>
 <?php $this->load->view('user/mainnav') ?>
 
 <!-- Include CSS for icons. -->
