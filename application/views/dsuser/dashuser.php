@@ -1,3 +1,4 @@
+<?php $this->load->model('K_jamur') ?>
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
@@ -43,14 +44,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				<div class="container">
 					<hr class="">
 					<div class="container target">
+						<?php 
+						$where = array('id_user' => $this->session->userdata('id_user'), );
+						$dat= $this->K_jamur->selectwhere('user',$where)->row(); ?>
 						<div class="row">
 							<div class="col-sm-10">
-								<h1 class="">Starfox221</h1>
+								<h1 class=""><?php echo $dat->nama; ?></h1>
 
 								<button type="button" class="btn btn-success">Ganti Password</button>  <button type="button" class="btn btn-info">Edit Profile</button>
 								<br>
 							</div>
-							<div class="col-sm-2"><a href="/users" class="pull-right"><img title="profile image" class="img-circle img-responsive" src="http://www.rlsandbox.com/img/profile.jpg"></a>
+							<div class="col-sm-2"><a href="/users" class="pull-right"><img title="profile image" class="img-circle img-responsive" src="<?php echo base_url().$dat->foto; ?>"></a>
 
 							</div>
 						</div>
@@ -62,10 +66,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 								<div class="panel panel-default">
 									<div class="panel-heading">User Identity</div>
 									<div class="panel-body">
-										<h6>Nama Lengkap   : Panji Budi Satria</h6>
-										<h6>Alamat Lengkap : Jl. Basuki Rahmat Gg SMAN 3 Jember</h6>
+										<h6>Nama Lengkap   : <?php echo $dat->nama; ?></h6>
+										<h6>Alamat Lengkap : <?php echo $dat->alamat;?></h6>
 										<h6>No. HP         : 082143211521</h6>
-										<h6>Alamat E-Mail  : panjibudi467@gmail.com</h6>
+										<h6>Alamat E-Mail  : <?php echo $dat->email;?></h6>
 									</div>
 								</div>
 								<div class="panel panel-default target">
