@@ -28,7 +28,7 @@
 						<div class="panel-heading">Detail Pesanan</div>
 						<div class="panel-body">
 							<div class="content">
-								<table cellpadding="10">
+								<table cellpadding="10" class="tdborderless">
 									<tr class="font-weight-bold">
 										<td valign="top">NO. INVOICE</td>
 										<td valign="top">:</td>
@@ -89,9 +89,9 @@
 											</tr>
 										</tfoot>
 									</table>
-									<button style="margin-left: 640px">
+									<a href="<?php echo base_url('Dashboard_user/invoice')?>"><button style="margin-left: 640px">
 										Cetak Invoice
-									</button>
+									</button></a>
 								</div>
 							</div>
 						</div>

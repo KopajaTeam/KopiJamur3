@@ -6557,7 +6557,9 @@ section.error-404 input.search-submit {
     /* symbol for "collapsed" panels */
     content: "\e080";    /* adjust as needed, taken from bootstrap.css */
 }
-
+.tdborderless td{
+	border:none;
+}
 
 /*--------------------------------------------------------------
 Main css ends form here

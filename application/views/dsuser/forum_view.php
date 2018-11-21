@@ -1,5 +1,5 @@
 <?php $this->load->view('user/head') ?>
-<?php $this->load->view('user/header')?>>
+<?php $this->load->view('user/header')?>
 <?php $this->load->view('user/mainnav') ?>
 
 <div id="custom-header">

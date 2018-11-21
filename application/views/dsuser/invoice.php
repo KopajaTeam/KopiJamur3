@@ -62,47 +62,27 @@
 													<tr class="titles">
 														<th>Nama Barang</th>
 														<th>Quantity</th>
-														<th>Enhet</th>
-														<th>Enhetspris</th>
-														<th>Rabatt</th>
-														<th>MVA</th>
-														<th>Sum eks MVA</th>
+														<th>Harga</th>
 													</tr>
 													<tr class="item" id="ProductList">
-														<td id="Product"><span id="ProuductName">Medium Hosting<span></span></span></td>
-														<td><span id="ProductNumUnits">6<span></span></span></td>
-														<td><span id="ProductUnit">KG<span></span></span></td>
-														<td><span id="ProductUnitPrice">300kr</span></td>
-														<td><span id="ProductDiscount">Rabatt</span></td>
-														<td><span id="ProductTax">20%</span></td>
-														<td><span id="ProductCost">900 KR</span></td>
+														<td id="Product"><span id="ProuductName">Kopi Jamur 1<span></span></span></td>
+														<td><span id="ProductNumUnits">2<span></span></span></td>
+														<td><span id="ProductUnitPrice">Rp. 30000</span></td>
 													</tr>
 													<tr class="item">
-														<td><span id="ProuductName">Medium Hosting<span></span></span></td>
-														<td><span id="ProductNumUnits">6<span></span></span></td>
-														<td><span id="ProductUnit">KG<span></span></span></td>
-														<td><span id="ProductUnitPrice">300kr</span></td>
-														<td><span id="ProductDiscount">Rabatt</span></td>
-														<td><span id="ProductTax">20%</span></td>
-														<td><span id="ProductCost">900 KR</span></td>
+														<td><span id="ProuductName">Kopi Jamur 2<span></span></span></td>
+														<td><span id="ProductNumUnits">3<span></span></span></td>
+														<td><span id="ProductUnitPrice">Rp. 15000</span></td>
 													</tr>
 													<tr class="item">
-														<td><span id="ProuductName">Medium Hosting<span></span></span></td>
+														<td><span id="ProuductName">Kopi Jamur 3<span></span></span></td>
 														<td><span id="ProductNumUnits">6<span></span></span></td>
-														<td><span id="ProductUnit">KG<span></span></span></td>
-														<td><span id="ProductUnitPrice">300kr</span></td>
-														<td><span id="ProductDiscount">Rabatt</span></td>
-														<td><span id="ProductTax">20</span>%</td>
-														<td><span id="ProductCost">900</span> <span id="InvoiceCurrency">KR</span></td>
+														<td><span id="ProductUnitPrice">Rp. 40000</span></td>
 													</tr>
 													<tr class="item">
-														<td><span id="ProuductName">Soup<span></span></span></td>
-														<td><span id="ProductNumUnits">6 <span></span></span></td>
-														<td><span id="ProductUnit">Liter <span></span></span></td>
-														<td><span id="ProductUnitPrice">300kr</span></td>
-														<td><span id="ProductDiscount">90%</span></td>
-														<td><span id="ProductTax">20%</span></td>
-														<td><span id="ProductCost">900 KR</span></td>
+														<td><span id="ProuductName">Kopi Jamur 4<span></span></span></td>
+														<td><span id="ProductNumUnits">1 <span></span></span></td>
+														<td><span id="ProductUnitPrice">Rp. 5000</span></td>
 													</tr>
 												</table>
 											</div>
@@ -111,22 +91,22 @@
 													<div class="equalHW eq">
 														<table class="right">
 															<tr>
-																<td><span style="display:inline-block;margin-right:10px;"><strong>Total MVA:</strong></span></td>
-																<td><span id="InvoceTotalVat">202</span> <span id="InvoiceCurrency1">KR</span><br></td>
+																<td><span style="display:inline-block;margin-right:10px;"><strong>Sub Total Harga:</strong></span></td>
+																<td><span id="InvoceTotalVat">Rp. 90000</span>
 															</tr>
 															<tr>
-																<td><span style="display:inline-block;margin-right:10px;"><strong>Sum eks MVA:</strong></span></td>
-																<td><span id="InvoiceSumExVat">900</span> <span id="InvoiceCurrency2">KR</span></td>
+																<td><span style="display:inline-block;margin-right:10px;"><strong>Ongkos Kirim:</strong></span></td>
+																<td><span id="InvoiceSumExVat">Rp. 15000</span>
 															</tr>
 															<tr>
-																<td><span style="display:inline-block;margin-right:10px;"><strong>Å betale:</strong></span></td>
-																<td><span id="ProductCost">1102</span> <span id="InvoiceCurrency3">KR</span></td>
+																<td><span style="display:inline-block;margin-right:10px;"><strong>Total Harga:</strong></span></td>
+																<td><span id="ProductCost">Rp. 105000</span>
 															</tr>
 														</table>
 													</div>
 												</div>
 												<div class="center">
-													<a href="https://sequra.no" style="text-decoration:none;">Prøv gratis fakturerings program - rett i nettleseren <span style="border-bottom:1px solid #000;">Sequra</span></a>
+													<p>Terima Kasih telah Membeli Produk Kami</p>
 												</div>
 											</div>
 										</div>
