@@ -3,82 +3,129 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
 <!DOCTYPE html>
 <html lang="en">
-	
+
 <?php $this->load->view('user/head') ?>
 
-	<body class="home header-v1">
-		<!-- <div id="fakeloader"></div> -->
-		<!-- <div class="color-switcher" id="choose_color"> -->
-			<!-- <a href="#." class="picker_close"><i class="fas fa-cog fa-spin"></i></a> -->
+<body class="home header-v1">
+	<!-- <div id="fakeloader"></div> -->
+	<!-- <div class="color-switcher" id="choose_color"> -->
+		<!-- <a href="#." class="picker_close"><i class="fas fa-cog fa-spin"></i></a> -->
 		<!-- </div> -->
 		<div id="page" class="site">
 			<!-- Mobile main menu -->
 			<a href="#" id="mobile-trigger"><i class="fa fa-list" aria-hidden="true"></i></a>
 
-			
-<?php $this->load->view('dsuser/kontends')?>
 
-<?php $this->load->view('user/mainnav') ?>
-<!-- <?php //$this->load->view('user/slide') ?> -->
-<aside class="section section-services service-layout-1">
-<div class="container">
-										<div class="section-title-wrap">
-											<h2 class="section-title">Hi Bahrul</h2>
-											<span class="divider"></span>
-											<p class="section-subtitle"> Selamat Berbelanja </p>
-										</div>
-										<div class="service-block-list">
-											<div class="inner-wrapper">
-												<div class="col-grid-4 service-block-item">
-													<div class="service-block-inner box-shadow-block">
-														<a class="service-icon" href="#" ><i class="icon-tools"></i></a>
-														<div class="service-block-inner-content">
-															<h3 class="service-item-title"><a href="#" >Riwayat Pembelian</a></h3>
-															<div class="service-block-item-excerpt">
-																<p></p>
-																<a href="#" class="more-link">Klik Here</a>
-															</div><!-- .service-block-item-excerpt -->
-														</div><!-- .service-block-inner-content -->
-													</div> <!-- .service-block-inner -->
-												</div> <!-- .service-block-item -->
-												<div class="col-grid-4 service-block-item">
-													<div class="service-block-inner box-shadow-block">
-														<a class="service-icon" href="#" ><i class="icon-clipboard"></i></a>
-														<div class="service-block-inner-content">
-															<h3 class="service-item-title"><a href="#" >Data Diri</a>  </h3>
-															<div class="service-block-item-excerpt">
-																<p></p>
-																<a href="#" class="more-link">Klik Here</a>
-															</div><!-- .service-block-item-excerpt -->
-														</div><!-- .service-block-inner-content -->
-													</div> <!-- .service-block-inner -->
-												</div> <!-- .service-block-item -->
-												<div class="col-grid-4 service-block-item">
-													<div class="service-block-inner box-shadow-block">
-														<a class="service-icon" href="#" ><i class="icon-mobile"></i></a>
-														<div class="service-block-inner-content">
-															<h3 class="service-item-title"><a href="#" >Testimoni</a>  </h3>
-															<div class="service-block-item-excerpt">
-																<p></p>
-																<a href="#" class="more-link">Klik Here</a>
-															</div><!-- .service-block-item-excerpt -->
-														</div><!-- .service-block-inner-content -->
-													</div> <!-- .service-block-inner -->
-												</div> <!-- .service-block-item -->
+
+			<!-- Panji ini dashboard user -->
+			<?php $this->load->view('user/header')?>
+
+			<?php $this->load->view('user/mainnav') ?>
+			<!-- <?php //$this->load->view('user/slide') ?> -->
+
+			<div id="custom-header">
+				<div class="custom-header-content">
+					<div class="container">
+						<h1 class="page-title">Dashboard User</h1>
+						<div id="breadcrumb">
+							<div  aria-label="Breadcrumbs" class="breadcrumbs breadcrumb-trail">
+								<ul class="trail-items">
+									<li class="trail-item trail-begin"><span><u>Home</u></span></a></li>
+									<li class="trail-item trail-end"><span>Manggil Nama User</span></li>
+								</ul>
+							</div> <!-- .breadcrumbs -->
+						</div> <!-- #breadcrumb -->
+					</div> <!-- .container -->
+				</div>  <!-- .custom-header-content -->
+			</div> <!-- .custom-header -->
+
+			<aside class="section section-services service-layout-1">
+				<div class="container">
+					<hr class="">
+					<div class="container target">
+						<div class="row">
+							<div class="col-sm-10">
+								<h1 class="">Starfox221</h1>
+
+								<button type="button" class="btn btn-success">Ganti Password</button>  <button type="button" class="btn btn-info">Edit Profile</button>
+								<br>
+							</div>
+							<div class="col-sm-2"><a href="/users" class="pull-right"><img title="profile image" class="img-circle img-responsive" src="http://www.rlsandbox.com/img/profile.jpg"></a>
+
+							</div>
+						</div>
+						<br>
+						<div class="row">
+							<?php $this->load->view('dsuser/sidenav_dashuser') ?>
+							<!--/col-3-->
+							<div class="col-sm-9" style="" contenteditable="false">
+								<div class="panel panel-default">
+									<div class="panel-heading">User Identity</div>
+									<div class="panel-body">
+										<h6>Nama Lengkap   : Panji Budi Satria</h6>
+										<h6>Alamat Lengkap : Jl. Basuki Rahmat Gg SMAN 3 Jember</h6>
+										<h6>No. HP         : 082143211521</h6>
+										<h6>Alamat E-Mail  : panjibudi467@gmail.com</h6>
+									</div>
+								</div>
+								<div class="panel panel-default target">
+									<div class="panel-heading" contenteditable="false">Pesanan Saya</div>
+									<div class="panel-body">
+										<div class="panel-group" id="accordion">
+											<div class="panel panel-default">
+												<div class="panel-heading">
+													<h4 class="panel-title">
+														<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+															Pesanan #1
+														</a>
+													</h4>
+												</div>
+												<div id="collapseOne" class="panel-collapse collapse in">
+													<div class="panel-body">
+														<img src="<?php echo base_url(); ?>master/admin/img/image_placeholder.jpg" style="margin-bottom: 15px;height: 150px;width: 180px">
+													</div>
+												</div>
+											</div>
+											<div class="panel panel-default">
+												<div class="panel-heading">
+													<h4 class="panel-title">
+														<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+															Pesanan #2
+														</a>
+													</h4>
+												</div>
+												<div id="collapseTwo" class="panel-collapse collapse">
+													<div class="panel-body">
+														<img src="<?php echo base_url(); ?>master/admin/img/image_placeholder.jpg" style="margin-bottom: 15px;height: 150px;width: 180px">
+													</div>
+												</div>
+											</div>
+											<div class="panel panel-default">
+												<div class="panel-heading">
+													<h4 class="panel-title">
+														<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+															Pesanan #3
+														</a>
+													</h4>
+												</div>
+												<div id="collapseThree" class="panel-collapse collapse">
+													<div class="panel-body">
+														<img src="<?php echo base_url(); ?>master/admin/img/image_placeholder.jpg" style="margin-bottom: 15px;height: 150px;width: 180px">
+													</div>
+												</div>
 											</div>
 										</div>
 									</div>
-</aside>
-<?php $this->load->view('user/wiget') ?>
-<?php $this->load->view('user/sosmed') ?>
+								</div>
+							</div>
+						</div>
+					</div>
+				</aside>
+				<?php $this->load->view('user/wiget') ?>
+				<?php $this->load->view('user/sosmed') ?>
 
-<?php $this->load->view('user/footer') ?>	
-		
-		</div> <!--#page-->
-		<div id="btn-scrollup">
-			<a  title="Go Top"  class="scrollup" href="#"><i class="fas fa-angle-up"></i></a>
-		</div>
-<?php $this->load->view('user/jscript') ?>	
-	</body>
+				<?php $this->load->view('user/footer') ?>	
+				<?php $this->load->view('user/jscript') ?>	
+			</body>
 
-</html>
+			</html>

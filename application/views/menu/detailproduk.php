@@ -44,10 +44,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 									<div class="container">
 										<div class="inner-wrapper">
 											<div class="col-grid-6">
-												<img style="width: 1000px; height: 350px " src=<?php echo base_url().$produk->gambar_produk; ?>>
+												<img style="width: 1000px; height: 350px " src="<?php echo base_url().$produk->gambar_produk; ?>">
 											</div>
 											<div class="col-grid-6">
 												<h2><strong><?php echo $produk->nama_produk; ?></strong> (<?php echo $produk->nama_kategori_produk; ?>)</h2>
+												<h5>Berat : <?php echo $produk->berat_produk; ?> <?php echo $produk->satuan_produk; ?> /<?php echo $produk->jenis_satuan_produk; ?></h5>
 												<h5>Harga : Rp. <?php echo $produk->harga_produk; ?></h5>
 												<hr style="margin-top: -2px; margin-bottom: 10px;">
 												<h5>Deskripsi Produk : </h5>

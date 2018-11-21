@@ -27,5 +27,7 @@ class Forum extends CI_Controller {
 
 		$this->load->view('menu/detailforum',$data);
 	}
+	
+	
 
 }

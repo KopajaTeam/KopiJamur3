@@ -1,3 +1,9 @@
+<?php
+  if ($this->session->userdata('status')=="login") {
+    $where=array('id_admin' => $this->session->userdata('id_admin'));
+    $data_admin=$this->Admin_Dashboard->selectwhere("admin", $where)->row();
+  }
+?>    
     </head>
 
     <body class="">
@@ -22,12 +28,12 @@
              <div class="sidebar-wrapper">
               <div class="user">
                 <div class="photo">
-                  <img src="<?php echo base_url(); ?>master/admin/img/faces/avatar.jpg" />
+                  <img src="<?php echo base_url($data_admin->foto); ?>" />
                 </div>
                 <div class="user-info">
                   <a  class="username">
                     <span>
-                     Tania Andrew
+                     <?php echo $data_admin->nama_admin; ?>
                    </span>
                  </a>
                </div>
@@ -146,7 +152,7 @@
               </a>
             </li>
             <li class="nav-item <?php if($this->uri->segment(2)=='Log-Out'){echo 'active';}?> ">
-              <a class="nav-link" href="<?php echo base_url('Login_user/logout')?>">
+              <a class="nav-link" href="<?php echo base_url('admin/Login_adm/logout')?>">
                 <i class="material-icons"> undo </i>
                 <span class="sidebar-normal"> Log-Out </span>
               </a>

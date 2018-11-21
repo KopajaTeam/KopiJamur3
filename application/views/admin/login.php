@@ -1,3 +1,10 @@
+<?php
+  if ($this->session->userdata('status')=="login") {
+    $where=array('id_admin' => $this->session->userdata('id_admin'));
+    $data_admin=$this->Admin_Dashboard->selectwhere("admin", $where)->row();
+  }
+?>
+
 <?php $this->load->view("admin/side/header") ?>
 <?php $this->load->view("admin/side/js") ?>
 
@@ -63,7 +70,7 @@
     </div>
 </div>
 
-  <script type="text/javascript">
+<script type="text/javascript">
     $().ready(function(){
         demo.checkFullPageBackgroundImage();
 

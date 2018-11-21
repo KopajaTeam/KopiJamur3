@@ -21,7 +21,7 @@
 		public function update($table,$data,$where){
 			$this->db->update($table,$data,$where);
 		}
-		public function insert($table,$date){
+		public function insert($table,$data){
 			$this->db->insert($table,$data);
 		}
 		function cek_login($table,$where){
@@ -57,6 +57,7 @@
 		$this->db->join('kategori_produk','produk.id_kategori_produk = kategori_produk.id_kategori_produk', "LEFT");
 		return $this->db->get('produk');
 	}
+	
 
 }
 

@@ -84,7 +84,7 @@ $autoload['drivers'] = array();
 |
 |	$autoload['helper'] = array('url', 'file');
 */
-$autoload['helper'] = array('url', 'file');
+$autoload['helper'] = array('url', 'file','form');
 /*
 | -------------------------------------------------------------------
 |  Auto-load Config files
@@ -124,4 +124,4 @@ $autoload['language'] = array();
 |
 |	$autoload['model'] = array('first_model' => 'first');
 */
-$autoload['model'] = array('admin_dashboard','k_jamur');
+$autoload['model'] = array('Admin_Dashboard','k_jamur');
