@@ -1,4 +1,3 @@
-<?php echo form_open('Dashboard_user/tambah_forum'); ?>
 <?php $this->load->view('user/head') ?>
 <?php $this->load->view('user/header')?>
 <?php $this->load->view('user/mainnav') ?>
@@ -63,7 +62,7 @@
 													<!-- disini deskripsi forum -->
 
 													<div class="col-lg-9">
-															<input type="text" placeholder="Masukkan Deskripsi Forum" name="desc_forum" class="form-control" name="judul">
+															<input type="text" placeholder="Masukkan Deskripsi Forum" name="desc_forum" class="form-control">
 														</div>
 														<br>
 														<br>
@@ -99,7 +98,7 @@
 													</div>
 													<div class="col-lg-3" style="margin-top: 10px">
 														<img id="blah" src="<?php echo base_url(); ?>master/admin/img/image_placeholder.jpg" alt="your image" / style="margin-bottom: 15px;height: 185px;width: 180px">
-														<input style="" type='file' onchange="readURL(this);" />
+														<input type='file' name="gambar_headline" onchange="readURL(this);" />
 													</div>
 												</div>
 											</form>
@@ -152,4 +151,3 @@
 	<?php $this->load->view('user/sosmed') ?>
 
 	<?php $this->load->view('user/footer') ?>
-	<?php echo form_close(''); ?>
