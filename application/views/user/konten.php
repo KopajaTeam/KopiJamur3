@@ -86,52 +86,7 @@
 													</div> <!-- .latest-posts-text-content-wrapper -->
 												</div> <!-- .latest-posts-wrapper -->
 											</div> <!-- .latest-posts-item  -->
-											<div class="col-grid-4  latest-posts-item">
-												<div class="latest-posts-wrapper box-shadow-block">
-													<div class="latest-posts-thumb">
-														<a href="#" ><img alt="Recent Post" src="<?php echo base_url('assets/images/latest-posts')?>/conto.jpg"></a>
-													</div>
-													<div class="latest-posts-text-content-wrapper">
-														<div class="latest-posts-text-content">
-															<h3 class="latest-posts-title">
-																<a href="#">Kopi dimata dunia</a>
-															</h3>
-
-															<div class="entry-meta latest-posts-meta">
-																<span class="posted-on">June 13, 2017</span>
-																<span class="cat-links">Coffee</span>
-															</div>
-															<div class="latest-posts-summary">
-																<p>Wenak Tenan Boss</p>
-															</div>
-															<a href="<?php echo base_url('Forum/Detail_forum')?>" class="custom-button">Read More</a>
-
-														</div> <!-- .latest-posts-text-content -->
-													</div>
-												</div> <!-- .latest-posts-wrapper -->
-											</div> <!-- .latest-posts-item  -->
-											<div class="col-grid-4 latest-posts-item">
-												<div class="latest-posts-wrapper box-shadow-block">
-													<div class="latest-posts-thumb">
-														<a href="#" ><img alt="Recent Post" src="<?php echo base_url('assets/images/latest-posts')?>/conto.jpg"></a>
-													</div>
-													<div class="latest-posts-text-content-wrapper">
-														<div class="latest-posts-text-content">
-															<h3 class="latest-posts-title">
-																<a href="#">Kopi Dimata Dunia</a>
-															</h3>
-															<div class="entry-meta latest-posts-meta">
-																<span class="posted-on">June 13, 2017</span>
-																<span class="cat-links">Coffee</span>
-															</div>
-															<div class="latest-posts-summary">
-																<p>Wenak Tenan Boss</p>
-															</div> <!-- .latest-posts-summary -->
-															<a href="<?php echo base_url('Forum/Detail_forum')?>" class="custom-button">Read More</a>
-														</div> <!-- .latest-posts-text-content -->
-													</div> <!-- .latest-posts-text-content-wrapper -->
-												</div> <!-- .latest-posts-wrapper -->
-											</div> <!-- .latest-posts-item  -->
+											
 											<div class="more-wrapper">
 												<a href="<?php echo base_url("Forum") ?>" class="custom-button">Explore More</a>
 											</div>

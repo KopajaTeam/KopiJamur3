@@ -21,8 +21,11 @@ class Dashboard_user extends CI_Controller {
 			'judul' 			=>$this->input->post('judul_forum'),
 			'desc_forum' 		=>$this->input->post('deskripsi_forum'),
 			'isi_forum' 		=>$this->input->post('isi'),
-			'gambar_headline'	=>$this->input->post('gambar'),
-			'nama_kategori' 	=>$this->input->post('kategori'));
+			'gambar_headline'	=>$this->input->post('gambar'));
+
+		$impanforum1 = array('nama_kategori' 	=>$this->input->post('kategori'));
+
+		$this->db->insert();
 		$this->db->insert('forum',$simpanforum);
 		redirec('forum');
 	}
