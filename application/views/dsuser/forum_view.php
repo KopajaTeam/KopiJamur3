@@ -57,33 +57,6 @@
 											<a class="btn btn-danger"><em class="fa fa-trash"></em></a>
 										</td>
 									</tr>
-									<tr>
-										<td>Mengapa Kopi Berbeda?</td>
-										<td>Information</td>
-										<td class="hidden-xs">View : 100 <br>Reply : 100</td>
-										<td align="center">
-											<a class="btn btn-default"><i class="fas fa-pencil-alt"></i></a>
-											<a class="btn btn-danger"><em class="fa fa-trash"></em></a>
-										</td>
-									</tr>
-									<tr>
-										<td>Mengapa Kopi Berbeda?</td>
-										<td>Information</td>
-										<td class="hidden-xs">View : 100 <br>Reply : 100</td>
-										<td align="center">
-											<a class="btn btn-default"><i class="fas fa-pencil-alt"></i></a>
-											<a class="btn btn-danger"><em class="fa fa-trash"></em></a>
-										</td>
-									</tr>
-									<tr>
-										<td>Mengapa Kopi Berbeda?</td>
-										<td>Information</td>
-										<td class="hidden-xs">View : 100 <br>Reply : 100</td>
-										<td align="center">
-											<a class="btn btn-default"><i class="fas fa-pencil-alt"></i></a>
-											<a class="btn btn-danger"><em class="fa fa-trash"></em></a>
-										</td>
-									</tr>
 								</tbody>
 							</table>
 						</div>

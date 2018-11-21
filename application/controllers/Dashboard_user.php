@@ -18,16 +18,16 @@ class Dashboard_user extends CI_Controller {
 	}
 	function simpan_forum(){
 		$simpanforum = array(
-			'judul' 			=>$this->input->post('judul_forum'),
-			'desc_forum' 		=>$this->input->post('deskripsi_forum'),
-			'isi_forum' 		=>$this->input->post('isi'),
-			'gambar_headline'	=>$this->input->post('gambar'));
-
-		$simpanforum1 = array('nama_kategori' => $this->input->post('kategori'));
+			'judul' 			=> $this->input->post('judul_forum'),
+			'id_user'			=> $this->session->userdata("id_user"),
+			'id_kategori_forum'	=> 1,
+			'desc_forum' 		=> $this->input->post('desc_forum'),
+			'isi_forum' 		=> $this->input->post('isi_forum'),
+			'gambar_headline'	=> ""
+		);
 
 		$this->db->insert('forum',$simpanforum);
-		$this->db->insert('kategori_forum',$simpanforum1);
-		redirec('forum');
+		redirect('forum');
 	}
 	public function konfirmasi_pembayaran(){
 		$this->load->view('dsuser/konfirmasi_pembayaran');

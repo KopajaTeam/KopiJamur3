@@ -48,9 +48,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											<div class="entry-thumb aligncenter">
 												<a  href="#" >
 													<img src="<?php echo base_url($forum_det->gambar_headline); ?>" alt="Blog">
+													<img style="height: 225px" src="<?php echo base_url($forum_det->gambar_headline); ?>" alt="Blog">
 												</a>
 											</div> <!-- .entry-thumb -->
-												<header class="entry-header">
+												<header class="entry-header" style="min-height: 100px">
 													<h2 class="entry-title"><a href="#" rel="bookmark"><?php echo $forum_det->judul; ?></a></h2>
 												</header><!-- .entry-header -->
 												<div class="entry-meta">
@@ -58,7 +59,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 													<span class="cat-links"><a href="" rel="category tag"><?php echo $forum_det->nama_kategori; ?></a></span>
 												</div><!-- .entry-meta -->
 												<div class="entry-content">
-													<p><?php echo $forum_det->desc_forum; ?></p>
+													<p><?php echo substr($forum_det->isi_forum, 0, 150); ?>........</p>
 													<a href="Forum/detail_forum/<?php echo $forum_det->id_forum; ?>" class="custom-button">Read More</a>
 												</div><!-- .entry-content -->
 											</div><!-- .entry-content-wrapper -->
