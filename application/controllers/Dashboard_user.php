@@ -23,10 +23,10 @@ class Dashboard_user extends CI_Controller {
 			'isi_forum' 		=>$this->input->post('isi'),
 			'gambar_headline'	=>$this->input->post('gambar'));
 
-		$impanforum1 = array('nama_kategori' 	=>$this->input->post('kategori'));
+		$simpanforum1 = array('nama_kategori' => $this->input->post('kategori'));
 
-		$this->db->insert();
 		$this->db->insert('forum',$simpanforum);
+		$this->db->insert('kategori_forum',$simpanforum1);
 		redirec('forum');
 	}
 	public function konfirmasi_pembayaran(){
