@@ -20,17 +20,27 @@ class Dashboard_user extends CI_Controller {
 		$this->load->view('dsuser/tambah_forum',$data);
 	}
 	function simpan_forum(){
-		$simpanforum = array(
-			'judul' 			=> $this->input->post('judul_forum'),
-			'id_user'			=> $this->session->userdata("id_user"),	
-			'id_kategori_forum' => $this->input->post('kategori_forum'),
-			'desc_forum' 		=> $this->input->post('desc_forum'),
-			'isi_forum' 		=> $this->input->post('isi_forum'),
-			'gambar_headline'	=> ""
-		);
+		$dir = 'assets/images_upload/foto_forum/';
+        $config['upload_path']      = 'assets/images_upload/foto_forum/';
+        $config['allowed_types']    = 'jpg|png|jpeg';
+        $config['max_size']         = '2048';
+        $this->load->library('upload', $config);
+        $this->upload->initialize($config); 
+        if (!$this->upload->do_upload('gambar_headline')) {
+            echo $this->upload->display_errors();
+        }else{
+			$simpanforum = array(
+				'judul' 			=> $this->input->post('judul_forum'),
+				'id_user'			=> $this->session->userdata("id_user"),	
+				'id_kategori_forum' => $this->input->post('kategori_forum'),
+				'desc_forum' 		=> $this->input->post('desc_forum'),
+				'isi_forum' 		=> $this->input->post('isi_forum'),
+				'gambar_headline'	=> $dir.$this->upload->data('file_name'),
+			);
 
-		$this->db->insert('forum',$simpanforum);
-		redirect('forum');
+			$this->db->insert('forum',$simpanforum);
+		}
+		redirect('Dashboard_user/forum_view');
 	}
 	public function konfirmasi_pembayaran(){
 		$this->load->view('dsuser/konfirmasi_pembayaran');
