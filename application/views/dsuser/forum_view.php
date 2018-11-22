@@ -43,20 +43,22 @@
 									<tr>
 										<th style="text-align: center;">Judul Forum</th>
 										<th style="text-align: center;">Kategori</th>
-										<th style="text-align: center;">Statistik</th>
+										<th style="text-align: center;">Tanggal</th>
 										<th style="text-align: center;">Action</th>
 									</tr> 
 								</thead>
 								<tbody>
+									<?php foreach ($forum as $forem) {?>
 									<tr>
-										<td style="text-align: center;">Mengapa Kopi Berbeda?</td>
-										<td style="text-align: center;">Information</td>
-										<td style="text-align: center;"class="hidden-xs">View : 100 <br>Reply : 100</td>
+										<td style="text-align: center;"><?php echo $forem->judul; ?></td>
+										<td style="text-align: center;"><?php echo $forem->nama_kategori; ?></td>
+										<td style="text-align: center;"class="hidden-xs"><?php echo $forem->tanggal; ?></td>
 										<td style="text-align: center;" align="center">
-											<a class="btn btn-default"><i class="fas fa-pencil-alt"></i></a>
+											<a class="btn btn-default" href="<?php echo base_url('Dashboard_user/actfor') ?>"><i class="fas fa-pencil-alt"></i></a>
 											<a class="btn btn-danger"><em class="fa fa-trash"></em></a>
 										</td>
 									</tr>
+								<?php } ?>
 								</tbody>
 							</table>
 						</div>

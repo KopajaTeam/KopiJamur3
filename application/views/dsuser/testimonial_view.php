@@ -41,49 +41,26 @@
 							<table class="table table-bordered table-list">
 								<thead>
 									<tr>
-										<th>Judul Forum</th>
-										<th>Kategori</th>
-										<th>Statistik</th>
+										<th>Nama Produk</th>
+										<th>Isi testimoni</th>
+										
 										<th>Action</th>
 									</tr> 
 								</thead>
 								<tbody>
-									<tr>
-										<td>Mengapa Kopi Berbeda?</td>
-										<td>Information</td>
-										<td class="hidden-xs">View : 100 <br>Reply : 100</td>
-										<td align="center">
-											<a class="btn btn-default"><i class="fas fa-pencil-alt"></i></a>
-											<a class="btn btn-danger"><em class="fa fa-trash"></em></a>
-										</td>
-									</tr>
-									<tr>
-										<td>Mengapa Kopi Berbeda?</td>
-										<td>Information</td>
-										<td class="hidden-xs">View : 100 <br>Reply : 100</td>
-										<td align="center">
-											<a class="btn btn-default"><i class="fas fa-pencil-alt"></i></a>
-											<a class="btn btn-danger"><em class="fa fa-trash"></em></a>
-										</td>
-									</tr>
-									<tr>
-										<td>Mengapa Kopi Berbeda?</td>
-										<td>Information</td>
-										<td class="hidden-xs">View : 100 <br>Reply : 100</td>
-										<td align="center">
-											<a class="btn btn-default"><i class="fas fa-pencil-alt"></i></a>
-											<a class="btn btn-danger"><em class="fa fa-trash"></em></a>
-										</td>
-									</tr>
-									<tr>
-										<td>Mengapa Kopi Berbeda?</td>
-										<td>Information</td>
-										<td class="hidden-xs">View : 100 <br>Reply : 100</td>
-										<td align="center">
-											<a class="btn btn-default"><i class="fas fa-pencil-alt"></i></a>
-											<a class="btn btn-danger"><em class="fa fa-trash"></em></a>
-										</td>
-									</tr>
+									<?php foreach ($testimoni as $testie) {?>
+										
+										<!-- <?php //foreach ($Dashboard_user as $testtab) { ?> -->
+										<tr>
+											<td><?php echo $testie->nama_produk; ?></td>
+											<td><?php echo $testie->komentar; ?></td>
+											
+											<td align="center">
+												<a class="btn btn-default" href="<?php echo base_url('Dashboard_user/testiact')?>"><i class="fas fa-pencil-alt"></i></a>
+												<a class="btn btn-danger"><em class="fa fa-trash"></em></a>
+											</td>
+										</tr>
+									<?php  } ?>
 								</tbody>
 							</table>
 						</div>

@@ -6,6 +6,7 @@ class Dashboard_user extends CI_Controller {
 	{
 		parent::__construct();
 		$this->load->model('K_jamur');
+		$this->load->model('M_testi');
 	}
 	public function index(){
 		$this->load->view('dsuser/dashuser');
@@ -49,15 +50,19 @@ class Dashboard_user extends CI_Controller {
 		$this->load->view('dsuser/tentang_saya');
 	}
 	public function forum_view(){
-		$this->load->view('dsuser/forum_view');
+		$data ["forum"] = $this->K_jamur->beforeforum()->result();
+		$this->load->view('dsuser/forum_view', $data);
 	}
 	public function testimonial_view(){
-		$this->load->view('dsuser/testimonial_view');
+		
+		$data ["testimoni"] = $this->M_testi->testi()->result();
+	
+		$this->load->view('dsuser/testimonial_view',$data);
 	}
 	public function tambah_testimonial(){
 		if ($this->input->post('komentar_produk')!="") {
-			$gam = 'assets/images_upload/fototesti/';
-			$config['upload_path']      = 'assets/images_upload/fototesti/';
+			$gam = 'assets/images/portfolio/';
+			$config['upload_path']      = 'assets/images/portfolio/';
 			$config['allowed_types']    = 'jpg|png|jpeg';
 			$config['max_size']         = '2048';
 			$this->load->library('upload', $config);
@@ -96,4 +101,14 @@ class Dashboard_user extends CI_Controller {
 	public function detail_pesanan(){
 		$this->load->view('dsuser/detail_pesanan');
 	}
+
+
+//Function Baru hati - hati ini penting
+	public function testiact(){
+		$this->load->view('dsuser/tambah_testimonial');
+	}
+	public function actfor(){
+		$this->load->view('dsuser/tambah_forum');	
+	}
+
 }
