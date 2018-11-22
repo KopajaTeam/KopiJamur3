@@ -14,13 +14,15 @@ class Dashboard_user extends CI_Controller {
 		$this->load->view('dsuser/sidenav_dashuser');
 	}
 	public function tambah_forum(){
-		$kategori_forum= $this->input->post('forum');
-		$this->load->view('dsuser/tambah_forum');
+		$data = array(
+		'kategori_forum'  => $this->Admin_Dashboard->select('kategori_forum')->result(),
+	);
+		$this->load->view('dsuser/tambah_forum',$data);
 	}
 	function simpan_forum(){
 		$simpanforum = array(
 			'judul' 			=> $this->input->post('judul_forum'),
-			'id_user'			=> $this->session->userdata("id_user"),
+			'id_user'			=> $this->session->userdata("id_user"),	
 			'id_kategori_forum' => $this->input->post('kategori_forum'),
 			'desc_forum' 		=> $this->input->post('desc_forum'),
 			'isi_forum' 		=> $this->input->post('isi_forum'),

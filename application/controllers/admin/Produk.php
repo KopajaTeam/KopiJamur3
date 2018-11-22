@@ -11,7 +11,8 @@ class Produk extends CI_Controller
 
   function tambah_produk(){
   	$data = array(
-            'kategori_produk'  => $this->Admin_Dashboard->select('kategori_produk')->result(),);
+            'kategori_produk'  => $this->Admin_Dashboard->select('kategori_produk')->result(),
+        );
     $this->load->view('admin/Produk/v_tambahdata_produk',$data);
   }
   function insert(){
