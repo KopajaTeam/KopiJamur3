@@ -32,26 +32,25 @@
 								<div class="col-md-12 col-sm-6 col-xs-12">
 									<div class="panel panel-default">
 										<div class="panel-body">
-											<form class="form-horizontal row-border" action="#">
+											<form class="form-horizontal row-border" method="post" action="<?php echo base_url('Dashboard_user/tambah_testimonial') ?>">
 												<div class="form-group" >
 													<div class="col-md-9">
 														<label>Masukan Nama Produk</label>
-														<select class="form-control select2" style="margin-top: -40px; margin-left: 200px;  ">
-															<option selected="selected">-</option>
-															<option>KOPI JAMUR CAIR</option>
-															<option>White Masshrom Coffe</option>
-															<option>Black Masshrom Coffe</option>
+															<select name="id_produk" class="form-control select2" style="margin-top: -40px; margin-left: 200px;  ">
+																<?php foreach ($produk as $data_nama_produk) {?>
+																	<option selected="selected" value="<?php echo $data_nama_produk->id_produk?>"><?php echo $data_nama_produk->nama_produk ?></option>
+																<?php } ?>
 														</select>
 													</div>
 												</div>
 												<div class="form-group">
-													<label class="col-md-3 control-label">Komentar Produk</label>
+													<label class="col-md-3 control-label" name="komentar_produk" >Komentar Produk</label>
 													<div class="col-md-9">
 														<input type="text" name="regular1" class="form-control">
 													</div>
 												</div>
 												<div class="form-group row">
-													<label class="col-md-3 control-label" for="kode_order">Foto Testimoni produk</label>
+													<label class="col-md-3 control-label" for="kode_order" name="gambar_tesi">Foto Testimoni produk</label>
 													<div class="col-lg-8">
 														<div class="row">
 															<div class="col-lg-4">
