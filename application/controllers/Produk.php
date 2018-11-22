@@ -20,4 +20,5 @@ class Produk extends CI_Controller {
 
 		$this->load->view('menu/detailproduk', $data);
     }
+    
 }

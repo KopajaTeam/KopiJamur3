@@ -28,7 +28,7 @@
              <div class="sidebar-wrapper">
               <div class="user">
                 <div class="photo">
-                  <img src="<?php echo base_url($data_admin->foto); ?>" />
+                  <img src="<?php echo base_url($data_admin->foto_admin); ?>" />
                 </div>
                 <div class="user-info">
                   <a  class="username">
@@ -75,13 +75,13 @@
                <ul class="nav">
                 <li class="nav-item <?php if($this->uri->segment(2)=='Prestasi'){echo 'active';}?>">
                   <a class="nav-link" href="<?php echo base_url("admin/Prestasi"); ?>">
-                    <i class="material-icons"> account_circle </i>
+                    <i class="material-icons"> book </i>
                     <span class="sidebar-normal"> Prestasi </span>
                   </a>
                 </li>
                 <li class="nav-item <?php if($this->uri->segment(2)=='Unggulan'){echo 'active';}?> ">
                   <a class="nav-link" href="<?php echo base_url("admin/Unggulan"); ?>">
-                    <i class="material-icons"> account_circle </i>
+                    <i class="material-icons"> book </i>
                     <span class="sidebar-normal"> Unggulan </span>
                   </a>
                 </li>

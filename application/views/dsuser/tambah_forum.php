@@ -62,10 +62,10 @@
 													<!-- disini deskripsi forum -->
 
 													<div class="col-lg-9">
-															<input type="text" placeholder="Masukkan Deskripsi Forum" name="desc_forum" class="form-control">
-														</div>
-														<br>
-														<br>
+														<input type="text" placeholder="Masukkan Deskripsi Forum" name="desc_forum" class="form-control">
+													</div>
+													<br>
+													<br>
 												<!-- <div class="col-lg-9">
 														<div class="form-group">
 															<textarea class="form-control" name="desc_forum" id="desc"></textarea>
@@ -78,23 +78,15 @@
 															<textarea class="form-control" name="isi_forum" id="inputforum"></textarea>
 														</div>
 													</div>
-													<div class="col-lg-3">
-															<div class="dropdown">
-																<button id="dLabel" style="margin-top: -55px;width: 172px;color: #000;height: 35px;padding: 0.5px 16px" class="dropdown-select" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-																	Pilih Kategori
-																	<span class="caret"></span>
-																	<!--  untuk option -->
-
-																</button>
-																<ul class="dropdown-menu" aria-labelledby="dLabel">
-																	<li>Option 1</li>
-																	<li>Option 2</li>
-																	<li>Option 3</li>
-																	<li>Option 4</li>
-																	<li>Option 5</li>
-																	<li>Option 6</li>
-																</ul>
-															</div>
+													<div class="col-lg-3" style="margin-top: -55px">
+														<div class="form-group">
+															<select name="kategori_forum" class="form-control">
+																<option value="">- - Pilih Kategori - -</option>
+																<?php foreach ($kategori_forum as $data_kategori_forum) {?>
+																<option value="<?php echo $data_kategori_forum->id_kategori_forum ?>"><?php echo $data_kategori_forum->nama_kategori ?> </option>
+																<?php } ?>
+															</select>
+														</div>
 													</div>
 													<div class="col-lg-3" style="margin-top: 10px">
 														<img id="blah" src="<?php echo base_url(); ?>master/admin/img/image_placeholder.jpg" alt="your image" / style="margin-bottom: 15px;height: 185px;width: 180px">
@@ -127,18 +119,18 @@
 		});
 	</script>
 	<script>
-		     function readURL(input) {
-            if (input.files && input.files[0]) {
-                var reader = new FileReader();
+		function readURL(input) {
+			if (input.files && input.files[0]) {
+				var reader = new FileReader();
 
-                reader.onload = function (e) {
-                    $('#blah')
-                        .attr('src', e.target.result);
-                };
+				reader.onload = function (e) {
+					$('#blah')
+					.attr('src', e.target.result);
+				};
 
-                reader.readAsDataURL(input.files[0]);
-            }
-        }
+				reader.readAsDataURL(input.files[0]);
+			}
+		}
 	</script>
 	<script>
 		$('.dropdown-menu li').on('click', function() {

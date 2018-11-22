@@ -13,9 +13,6 @@
             <h4 class="card-title">Data Forum</h4>
           </div>
           <div class="card-body">
-            <div class="toolbar">
-              <a href="<?php echo base_url('admin/Forum/tambah_forum') ?>" class="btn btn-success">Tambah</a>
-            </div>
             <div class="material-datatables">
 
               <table id="datatables" class="table table-striped table-no-bordered table-hover" cellspacing="0" width="100%" style="width:100%">
