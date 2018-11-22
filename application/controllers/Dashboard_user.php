@@ -55,9 +55,18 @@ class Dashboard_user extends CI_Controller {
 		$this->load->view('dsuser/testimonial_view');
 	}
 	public function tambah_testimonial(){
+		$produk = $this->input->post("produk");
 		$this->load->view('dsuser/tambah_testimonial');
 		$simpantesti = array(
-			'');
+			"produk"
+			'komentar'		=> $this->input->post('komentar_produk'),
+			'id_user'		=> $this->session->userdata("id_user"),
+			'id_testimoni'	=> 1,
+			'id_produk'		=> $this->input->post("id_produk"),
+			'gambar_testi'	=>	""
+		);
+		$this->db->insert('testimoni',$simpantesti);
+		redirect('testimoni');
 	}
 	public function invoice(){
 		$this->load->view('dsuser/invoice');
