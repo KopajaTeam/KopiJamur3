@@ -16,7 +16,7 @@ class Produk extends CI_Controller
     $this->load->view('admin/Produk/v_tambahdata_produk',$data);
   }
   function insert(){
-    $dir = 'assets/images_upload/foto_produk/';
+    	$dir = 'assets/images_upload/foto_produk/';
         $config['upload_path']      = 'assets/images_upload/foto_produk/';
         $config['allowed_types']    = 'jpg|png|jpeg';
         $config['max_size']         = '2048';
