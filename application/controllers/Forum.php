@@ -27,6 +27,19 @@ class Forum extends CI_Controller {
 
 		$this->load->view('menu/detailforum',$data);
 	}
+
+	function komentar($forumkom){
+		$komen = array(
+			'id_reply'			=> "",
+			'id_user'			=> $this->session->userdata("id_user"),	
+			'id_forum'			=> $forumkom,
+			'isi_reply'			=> $this->input->post('koment'),
+			'tanggal'			=> date("Y-m-d"),
+
+		);
+		$this->K_jamur->insert('reply_forum',$komen);
+		redirect('Forum/detail_forum/'.$forumkom);
+	}
 	
 	
 

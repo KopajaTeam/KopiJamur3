@@ -108,18 +108,19 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 														</div><!-- .comment-content -->
 													<?php } ?>
 												</article><!-- .comment-body -->
+												<?php if($this->session->userdata('id_user')!=""){ ?>
 												<div id="respond" class="comment-respond">
 													<h3 id="reply-title" class="comment-reply-title">Leave a Reply
 														<small><a  id="cancel-comment-reply-link" href="#" >Cancel reply</a></small>
 													</h3>
-													<form action="http://anilbasnet.com/demo/biz-lina/."  id="commentform" class="comment-form">
+													<form action="<?php echo base_url("Forum/komentar/".$forum->id_forum) ?>" method="post" id="commentform" class="comment-form">
 <!-- 													<p class="comment-notes">
 <span id="email-notes">
 </span> R<span class="required">*</span>
 </p> -->
 <p class="comment-form-comment">
 	<label for="comment">Comment</label>
-	<textarea id="comment" name="comment"></textarea>
+	<textarea id="comment" name="koment"></textarea>
 </p>
 <p class="form-submit">
 	<input name="submit" type="submit" id="submit" class="submit" value="Post Comment">
@@ -128,6 +129,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 </p>
 </form>
 </div><!-- #respond -->
+<?php } ?>
 </div>
 </main>
 <?php } ?>
