@@ -32,7 +32,7 @@
 								<div class="col-md-12 col-sm-6 col-xs-12">
 									<div class="panel panel-default">
 										<div class="panel-body">
-											<form class="form-horizontal row-border" method="post" action="<?php echo base_url('Dashboard_user/tambah_testimonial') ?>">
+											<form class="form-horizontal row-border" method="post" action="<?php echo base_url('Dashboard_user/tambah_testimonial') ?>" enctype="multipart/form-data">
 												<div class="form-group" >
 													<div class="col-md-9">
 														<label>Masukan Nama Produk</label>
@@ -61,7 +61,7 @@
 														<div class="row" style="margin-top: -40px">
 															<div class="col-lg-6">
 																<label class="custom-file">
-																	<input type="file" id="file2" required name="filebukti" accept="image/*"  onchange="tampilkanPreview(this,'preview_fp')" class="custom-file-input" style="margin-top: -30px">
+																	<input type="file" id="file2" required name="gambar_testi" accept="image/*"  onchange="tampilkanPreview(this,'preview_fp')" class="custom-file-input" style="margin-top: -30px">
 																	<span class="custom-file-control"></span>
 																</label>
 															</div>
