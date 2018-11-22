@@ -1,6 +1,7 @@
 <?php $this->load->view('user/head') ?>
 <?php $this->load->view('user/header')?>
 <?php $this->load->view('user/mainnav') ?>
+<link rel="stylesheet" href="../../bower_components/select2/dist/css/select2.min.css">
 
 <div id="custom-header">
 	<div class="custom-header-content">
@@ -32,10 +33,15 @@
 									<div class="panel panel-default">
 										<div class="panel-body">
 											<form class="form-horizontal row-border" action="#">
-												<div class="form-group">
-													<label class="col-md-3 control-label">Nama Produk</label>
+												<div class="form-group" >
 													<div class="col-md-9">
-														<input type="text" name="regular" class="form-control">
+														<label>Masukan Nama Produk</label>
+														<select class="form-control select2" style="margin-top: -40px; margin-left: 200px;  ">
+															<option selected="selected">-</option>
+															<option>KOPI JAMUR CAIR</option>
+															<option>White Masshrom Coffe</option>
+															<option>Black Masshrom Coffe</option>
+														</select>
 													</div>
 												</div>
 												<div class="form-group">
@@ -44,18 +50,6 @@
 														<input type="text" name="regular1" class="form-control">
 													</div>
 												</div>
-<!-- <div class="form-group">
-	<label class="col-md-3 control-label">Password</label>
-	<div class="col-md-9">
-		<input class="form-control" type="text" name="pass">
-	</div>
-</div>
-<div class="form-group">
-	<label class="col-md-3 control-label">Password</label>
-	<div class="col-md-9">
-		<input class="form-control" type="text" name="pass">
-	</div>
-</div> -->
 												<div class="form-group row">
 													<label class="col-md-3 control-label" for="kode_order">Foto Testimoni produk</label>
 													<div class="col-lg-8">
