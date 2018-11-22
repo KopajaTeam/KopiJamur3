@@ -36,17 +36,18 @@
 												<div class="form-group" >
 													<div class="col-md-9">
 														<label>Masukan Nama Produk</label>
-															<select name="id_produk" class="form-control select2" style="margin-top: -40px; margin-left: 200px;  ">
-																<?php foreach ($produk as $data_nama_produk) {?>
+															<select name="id_produk" class="form-control select2" style="margin-top: -40px; margin-left: 200px;  " required="">
+																<option value="">-Pilih Produk--</option>
+																<?php foreach ($kproduk as $data_nama_produk) {?>
 																	<option selected="selected" value="<?php echo $data_nama_produk->id_produk?>"><?php echo $data_nama_produk->nama_produk ?></option>
 																<?php } ?>
 														</select>
 													</div>
 												</div>
 												<div class="form-group">
-													<label class="col-md-3 control-label" name="komentar_produk" >Komentar Produk</label>
+													<label class="col-md-3 control-label" >Komentar Produk</label>
 													<div class="col-md-9">
-														<input type="text" name="regular1" class="form-control">
+														<input type="text" name="komentar_produk" class="form-control">
 													</div>
 												</div>
 												<div class="form-group row">
@@ -66,9 +67,9 @@
 															</div>
 														</div>
 														<div class="size15 trans-0-4">
-															<a href="#"><button class="flex-c-m bg1 bo-rad-23 hov1 s-text1 trans-0-4" style="margin-left:120px; margin-top: 70px;">
+															<button type="submit" name="simpan" class="flex-c-m bg1 bo-rad-23 hov1 s-text1 trans-0-4" style="margin-left:120px; margin-top: 70px;">
 																Simpan
-															</button></a>
+															</button>
 														</div>
 													</div>
 												</div>
