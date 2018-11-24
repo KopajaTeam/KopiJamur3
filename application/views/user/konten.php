@@ -80,7 +80,7 @@
 															<div class="latest-posts-summary">
 																<p>Enak Tenan Boss</p>
 															</div>
-															<a href="<?php echo base_url('Forum/Detail_forum')?>" class="custom-button">Read More</a>
+															<a href="<?php echo base_url('Forum/Detail_forum')?>" class="custom-button button-curved">Read More</a>
 
 														</div> <!-- .latest-posts-text-content -->
 													</div> <!-- .latest-posts-text-content-wrapper -->
@@ -88,7 +88,7 @@
 											</div> <!-- .latest-posts-item  -->
 											
 											<div class="more-wrapper">
-												<a href="<?php echo base_url("Forum") ?>" class="custom-button">Explore More</a>
+												<a href="<?php echo base_url("Forum") ?>" class="custom-button button-curved">Explore More</a>
 											</div>
 										</div>
 										<hr class="stylehr">
@@ -278,7 +278,7 @@
 														<input type="text" name="name" id="name" class="form-control" placeholder="Name *">
 														<input type="text" name="email" id="email" class="form-control" placeholder="Email *">
 														<textarea class="form-control" name="comments" id="comments" rows="6" placeholder=""></textarea>
-														<button type="submit" value="SEND" id="submit" class="btn btn-primary btn-lg">SEND MESSAGE</button>
+														<button type="submit" value="SEND" id="submit" class="btn btn-primary btn-lg button-curved">SEND MESSAGE</button>
 													</form>
 												</div><!-- .contact-form -->
 											</div><!-- .contact-form-area -->

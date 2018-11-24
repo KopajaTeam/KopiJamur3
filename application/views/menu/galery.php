@@ -65,9 +65,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											</div><!-- end item -->
 											<?php } ?>
 										</div>
-										<div class="more-wrapper">
-											<a href="#" class="custom-button">Explore More</a>
-										</div>
 									</div><!-- end masonry-wrapper -->
 								</aside><!-- end portfolio -->
 							</main> <!-- #main -->

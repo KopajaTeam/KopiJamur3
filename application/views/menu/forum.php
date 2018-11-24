@@ -59,7 +59,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 												</div><!-- .entry-meta -->
 												<div class="entry-content">
 													<p><?php echo substr($forum_det->isi_forum, 0, 150); ?>........</p>
-													<a href="Forum/detail_forum/<?php echo $forum_det->id_forum; ?>" class="custom-button">Read More</a>
+													<a href="Forum/detail_forum/<?php echo $forum_det->id_forum; ?>" class="custom-button button-curved">Read More</a>
 												</div><!-- .entry-content -->
 											</div><!-- .entry-content-wrapper -->
 									</article><!-- .post -->

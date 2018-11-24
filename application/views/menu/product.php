@@ -43,7 +43,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 							<div class="col-grid-3 team-item">
 								<div class="thumb-summary-wrap box-shadow-block">
 									<div class="team-thumb">
-										<a href="#" target="-sefl"> <img alt="Team" src="<?php echo base_url('assets/images/tea')?>m/gampro.jpg"></a>
+										<a href="#" target="-sefl"> <img style="width: 300px;height: 200px" alt="Team" src="<?php echo $data_produk->gambar_produk; ?>"></a>
 									</div><!-- .team-thumb-->
 									<div class="team-text-wrap">
 										<h3 class="team-title"><a href="#"><?php echo $data_produk->nama_produk; ?></a></h3>
@@ -52,9 +52,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 									<!--  -->
 									<div class="row" style="margin-top: -30px;margin-bottom: -50px">
 										<div class="col-grid-12">
-											<a class="custom-button col-grid-6" style="margin-right: 10px" href="Produk/detail_produk/<?php echo $data_produk->id_produk; ?>"><i class="fas fa-eye"></i> Detail</a>
+											<a class="custom-button button-curved col-grid-6" style="margin-right: 10px" href="Produk/detail_produk/<?php echo $data_produk->id_produk; ?>"><i class="fas fa-eye"></i> Detail</a>
 										
-											<a class="custom-button col-grid-5" style="margin-left: 9px" href="Produk/detail_produk/<?php echo $data_produk->id_produk; ?>"><i class="fas fa-cart-plus"></i> Beli</a>
+											<a class="custom-button button-curved col-grid-5" style="margin-left: 9px" href="Produk/detail_produk/<?php echo $data_produk->id_produk; ?>"><i class="fas fa-cart-plus"></i> Beli</a>
 										</div>
 									</div>
 									
@@ -62,9 +62,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 								</div> <!-- .team-item -->
 							</div> <!-- .team-item  -->
 							<?php } ?>
-							<div class="more-wrapper">
-								<a href="#" class="custom-button">Explore More</a>
-							</div>
 						</div> <!-- .inner-wrapper -->
 					</div> <!-- .teams-section -->
 				</div> <!-- .container -->

@@ -1,3 +1,16 @@
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+?>
+<!DOCTYPE html>
+<html lang="en">
+<body class="home header-v1">
+		<!-- <div id="fakeloader"></div> -->
+		<!-- <div class="color-switcher" id="choose_color"> -->
+			<!-- <a href="#." class="picker_close"><i class="fas fa-cog fa-spin"></i></a> -->
+		<!-- </div> -->
+		<div id="page" class="site">
+			<!-- Mobile main menu -->
+			<a href="#" id="mobile-trigger"><i class="fa fa-list" aria-hidden="true"></i></a>
 <?php $this->load->view('user/head') ?>
 <?php $this->load->view('user/header')?>
 <?php $this->load->view('user/mainnav') ?>
@@ -58,9 +71,17 @@
 											<a class="btn btn-danger"><em class="fa fa-trash"></em></a>
 										</td>
 									</tr>
-								<?php } ?>
+									<?php } ?>
 								</tbody>
 							</table>
+							<nav class="navigation pagination">
+								<div class="nav-links">
+									<span class="page-numbers current">1</span>
+									<a class="page-numbers" href="#" >2</a>
+									<a class="page-numbers" href="#" >3</a>
+									<a class="next page-numbers" href="#" >Next »</a>
+								</div> <!-- .nav-links -->
+							</nav> <!-- .navigation.pagination -->
 						</div>
 					</div>
 				</div>

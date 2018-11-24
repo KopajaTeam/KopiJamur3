@@ -1,3 +1,16 @@
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+?>
+<!DOCTYPE html>
+<html lang="en">
+<body class="home header-v1">
+		<!-- <div id="fakeloader"></div> -->
+		<!-- <div class="color-switcher" id="choose_color"> -->
+			<!-- <a href="#." class="picker_close"><i class="fas fa-cog fa-spin"></i></a> -->
+		<!-- </div> -->
+		<div id="page" class="site">
+			<!-- Mobile main menu -->
+			<a href="#" id="mobile-trigger"><i class="fa fa-list" aria-hidden="true"></i></a>
 <?php $this->load->view('user/head') ?>
 <?php $this->load->view('user/header')?>>
 <?php $this->load->view('user/mainnav') ?>
@@ -31,7 +44,7 @@
 							<h3>Tentang Saya
 							</h3>
 							<div class="card rounded-0 px-5 py-3">
-								<table cellpadding="10">
+								<table cellpadding="10" class="tdborderless">
 									<thead>
 										<tr>
 											<td class="text-muted">Nama</td>
