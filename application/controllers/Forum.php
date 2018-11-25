@@ -13,6 +13,7 @@ class Forum extends CI_Controller {
 
 		$data ["forum"] = $this->K_jamur->beforeforum()->result();
 		$this->load->view('menu/forum', $data);
+		$this->load->view('user/konten',$data);
 
 
 	}
@@ -26,6 +27,7 @@ class Forum extends CI_Controller {
 		);
 
 		$this->load->view('menu/detailforum',$data);
+
 	}
 
 	function komentar($forumkom){
@@ -40,7 +42,4 @@ class Forum extends CI_Controller {
 		$this->K_jamur->insert('reply_forum',$komen);
 		redirect('Forum/detail_forum/'.$forumkom);
 	}
-	
-	
-
 }

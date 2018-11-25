@@ -13,6 +13,7 @@ class Testimonial extends CI_Controller {
 		$data ["testimoni"] = $this->M_testi->testi()->result();
 	
 		$this->load->view('menu/testimonial',$data);
+		$this->load->view('')
 	}
 
 }

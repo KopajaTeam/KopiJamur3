@@ -63,34 +63,29 @@
 											<h2 class="section-title">Forum</h2><span class="divider"></span>
 										</div> <!-- .section-title-wrap -->
 										<div class="inner-wrapper">
-											<div class="col-grid-4 latest-posts-item">
-												<div class="latest-posts-wrapper box-shadow-block">
-													<div class="latest-posts-thumb">
-														<a href="#" ><img alt="Recent Post" src="<?php echo base_url('assets/images/latest-posts')?>/conto.jpg"></a>
-													</div>
-													<div class="latest-posts-text-content-wrapper">
-														<div class="latest-posts-text-content">
-															<h3 class="latest-posts-title">
-																<a href="#">Kopi dimata dunia</a>
-															</h3>
-															<div class="entry-meta latest-posts-meta">
-																<span class="posted-on">June 13, 2017</span>
-																<span class="cat-links">Coffee</span>
-															</div>
-															<div class="latest-posts-summary">
-																<p>Enak Tenan Boss</p>
-															</div>
-															<a href="<?php echo base_url('Forum/Detail_forum')?>" class="custom-button button-curved">Read More</a>
-
-														</div> <!-- .latest-posts-text-content -->
-													</div> <!-- .latest-posts-text-content-wrapper -->
-												</div> <!-- .latest-posts-wrapper -->
-											</div> <!-- .latest-posts-item  -->
-											
-											<div class="more-wrapper">
-												<a href="<?php echo base_url("Forum") ?>" class="custom-button button-curved">Explore More</a>
-											</div>
-										</div>
+									<?php foreach ($forum as $forum_det) { ?>
+									<article class="hentry post col-grid-4">
+										<div class="entry-content-wrapper box-shadow-block">
+											<div class="entry-thumb aligncenter">
+												<a  href="#" >
+													<img style="height: 225px" src="<?php echo base_url($forum_det->gambar_headline); ?>" alt="Blog">
+												</a>
+											</div> <!-- .entry-thumb -->
+												<header class="entry-header" style="min-height: 100px">
+													<h2 class="entry-title"><a href="#" rel="bookmark"><?php echo $forum_det->judul; ?></a></h2>
+												</header><!-- .entry-header -->
+												<div class="entry-meta">
+													<span class="posted-on"><?php echo $forum_det->tanggal; ?></span>
+													<span class="cat-links"><a href="" rel="category tag"><?php echo $forum_det->nama_kategori; ?></a></span>
+												</div><!-- .entry-meta -->
+												<div class="entry-content">
+													<p><?php echo substr($forum_det->isi_forum, 0, 150); ?>........</p>
+													<a href="Forum/detail_forum/<?php echo $forum_det->id_forum; ?>" class="custom-button button-curved">Read More</a>
+												</div><!-- .entry-content -->
+											</div><!-- .entry-content-wrapper -->
+									</article><!-- .post -->
+									<?php } ?>
+								</div> <!-- .inner-wrapper -->
 										<hr class="stylehr">
 									</div>
 								</div>
@@ -110,60 +105,6 @@
 													<div class="team-text-wrap">
 														<h3 class="team-title"><a href="#">Manusia Kipas</a></h3>
 														<p class="team-position">Founder</p>
-													</div><!-- .team-text-wrap -->
-													<div class="social-links circle">
-														<ul>
-															<li><a href="http://facebook.com/" target="_blank">Facebook</a></li>
-															<li><a href="http://twitter.com/" target="_blank">Twitter</a></li>
-															<li><a href="http://instagram.com/" target="_blank">Instagram</a></li>
-														</ul>
-													</div><!-- .social-links -->
-												</div> <!-- .team-item -->
-											</div> <!-- .team-item  -->
-											<div class="col-grid-3 team-item">
-												<div class="thumb-summary-wrap box-shadow-block">
-													<div class="team-thumb">
-														<a href="#" target="-sefl"> <img alt="Team" src="<?php echo base_url('assets/images/team')?>/cak.jpg"></a>
-													</div><!-- .team-thumb-->
-													<div class="team-text-wrap">
-														<h3 class="team-title"><a href="#">Manusia Kipas</a></h3>
-														<p class="team-position">Director</p>
-													</div><!-- .team-text-wrap -->
-													<div class="social-links circle">
-														<ul>
-															<li><a href="http://facebook.com/" target="_blank">Facebook</a></li>
-															<li><a href="http://twitter.com/" target="_blank">Twitter</a></li>
-															<li><a href="http://instagram.com/" target="_blank">Instagram</a></li>
-														</ul>
-													</div><!-- .social-links -->
-												</div> <!-- .team-item -->
-											</div> <!-- .team-item  -->
-											<div class="col-grid-3 team-item">
-												<div class="thumb-summary-wrap box-shadow-block">
-													<div class="team-thumb">
-														<a href="#" target="-sefl"> <img alt="Team" src="<?php echo base_url('assets/images/team')?>/cak.jpg"></a>
-													</div><!-- .team-thumb-->
-													<div class="team-text-wrap">
-														<h3 class="team-title"><a href="#">Manusia Kipas</a></h3>
-														<p class="team-position">Developer</p>
-													</div><!-- .team-text-wrap -->
-													<div class="social-links circle">
-														<ul>
-															<li><a href="http://facebook.com/" target="_blank">Facebook</a></li>
-															<li><a href="http://twitter.com/" target="_blank">Twitter</a></li>
-															<li><a href="http://instagram.com/" target="_blank">Instagram</a></li>
-														</ul>
-													</div><!-- .social-links -->
-												</div> <!-- .team-item -->
-											</div> <!-- .team-item  -->
-											<div class="col-grid-3 team-item">
-												<div class="thumb-summary-wrap box-shadow-block">
-													<div class="team-thumb">
-														<a href="#" target="-sefl"> <img alt="Team" src="<?php echo base_url('assets/images/team')?>/cak.jpg"></a>
-													</div><!-- .team-thumb-->
-													<div class="team-text-wrap">
-														<h3 class="team-title"><a href="#">Manusia Kipas</a></h3>
-														<p class="team-position">Developer</p>
 													</div><!-- .team-text-wrap -->
 													<div class="social-links circle">
 														<ul>
@@ -203,64 +144,6 @@
 													<p class="testimonial-position">(CEO & Founder)</p>
 												</div><!-- .testimonial-summary -->
 											</div> <!-- .testimonial-wrapper -->
-										</div> <!-- .testimonial-item  -->
-										<div class="testimonial-item col-grid-6">
-											<div class="testimonial-wrapper">
-												<div class="testimonial-thumb">
-													<a href="#"><img alt="" src="<?php echo base_url('assets/images/team')?>/cak.jpg"> </a>
-												</div><!-- .testimonial-thumb -->
-												<div class="testimonial-summary">
-													<p>Wow, I'm so happy with your service. You managed to exceed my expectatio</p>
-													<div class="testimonial-rating">
-														<i class="fas fa-star"></i>
-														<i class="fas fa-star"></i>
-														<i class="fas fa-star"></i>
-														<i class="fas fa-star"></i>
-														<i class="fas fa-star"></i>
-													</div>
-													<h3 class="testimonial-title"><a href="#">Manusia Kipas</a></h3>
-													<p class="testimonial-position">(CEO & Founder)</p>
-												</div><!-- .testimonial-summary -->
-											</div> <!-- .testimonial-wrapper -->
-										</div> <!-- .testimonial-item  -->
-										<div class="testimonial-item col-grid-6">
-											<div class="testimonial-wrapper">
-												<div class="testimonial-thumb">
-													<a href="#"><img alt="" src="<?php echo base_url('assets/images/team')?>/cak.jpg"> </a>
-												</div><!-- .testimonial-thumb -->
-												<div class="testimonial-summary">
-													<p>Wow, I'm so happy with your service. You managed to exceed my expectatio</p>
-													<div class="testimonial-rating">
-														<i class="fas fa-star"></i>
-														<i class="fas fa-star"></i>
-														<i class="fas fa-star"></i>
-														<i class="fas fa-star"></i>
-														<i class="fas fa-star"></i>
-													</div>
-													<h3 class="testimonial-title"><a href="#">Manusia Kipas</a></h3>
-													<p class="testimonial-position">(CEO & Founder)</p>
-												</div><!-- .testimonial-summary -->
-											</div> <!-- .testimonial-wrapper -->
-										</div> <!-- .testimonial-item  -->
-										<div class="testimonial-item col-grid-6">
-											<div class="testimonial-wrapper">
-												<div class="testimonial-thumb">
-													<a href="#"><img alt="" src="<?php echo base_url('assets/images/team')?>/cak.jpg"> </a>
-												</div><!-- .testimonial-thumb -->
-												<div class="testimonial-summary">
-													<p>Wow, I'm so happy with your service. You managed to exceed my expectatio</p>
-													<div class="testimonial-rating">
-														<i class="fas fa-star"></i>
-														<i class="fas fa-star"></i>
-														<i class="fas fa-star"></i>
-														<i class="fas fa-star"></i>
-														<i class="fas fa-star"></i>
-													</div>
-													<h3 class="testimonial-title"><a href="#">Manusia Kipas</a></h3>
-													<p class="testimonial-position">(CEO & Founder)</p>
-												</div><!-- .testimonial-summary -->
-											</div> <!-- .testimonial-wrapper -->
-										</div> <!-- .testimonial-item  -->
 									</div> <!-- .testimonial-carousel-wrapper -->
 								</div><!-- .container -->
 							</aside> <!-- .section section-testimonial-carousel -->
