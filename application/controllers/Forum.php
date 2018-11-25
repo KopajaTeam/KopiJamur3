@@ -11,11 +11,12 @@ class Forum extends CI_Controller {
 
 	public function index(){
 
-		$data ["forum"] = $this->K_jamur->beforeforum()->result();
+		$data["forum"] = $this->K_jamur->beforeforum()->result();
 		$this->load->view('menu/forum', $data);
-		$this->load->view('user/konten', $data);
+	
 
 	}
+
 	function Detail_forum($id_forum){
 		//konten forum	
 		$data = array(
