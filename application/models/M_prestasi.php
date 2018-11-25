@@ -6,11 +6,9 @@
 
 		public function feat()
 		{
-			$key_feature = $this->db->get('key_features');
-			return $key_feature;
+			$prestas_i = $this->db->get('prestasi');
+			return $prestas_i;
 		}
-
-
 	}
 
 ?>
