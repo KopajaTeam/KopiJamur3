@@ -63,29 +63,30 @@
 											<h2 class="section-title">Forum</h2><span class="divider"></span>
 										</div> <!-- .section-title-wrap -->
 										<div class="inner-wrapper">
-									<?php foreach ($forum as $forum_det) { ?>
-									<article class="hentry post col-grid-4">
-										<div class="entry-content-wrapper box-shadow-block">
-											<div class="entry-thumb aligncenter">
-												<a  href="#" >
-													<img style="height: 225px" src="<?php echo base_url($forum_det->gambar_headline); ?>" alt="Blog">
-												</a>
-											</div> <!-- .entry-thumb -->
-												<header class="entry-header" style="min-height: 100px">
-													<h2 class="entry-title"><a href="#" rel="bookmark"><?php echo $forum_det->judul; ?></a></h2>
-												</header><!-- .entry-header -->
-												<div class="entry-meta">
-													<span class="posted-on"><?php echo $forum_det->tanggal; ?></span>
-													<span class="cat-links"><a href="" rel="category tag"><?php echo $forum_det->nama_kategori; ?></a></span>
-												</div><!-- .entry-meta -->
-												<div class="entry-content">
-													<p><?php echo substr($forum_det->isi_forum, 0, 150); ?>........</p>
-													<a href="Forum/detail_forum/<?php echo $forum_det->id_forum; ?>" class="custom-button button-curved">Read More</a>
-												</div><!-- .entry-content -->
-											</div><!-- .entry-content-wrapper -->
-									</article><!-- .post -->
-									<?php } ?>
-								</div> <!-- .inner-wrapper -->
+											<?php foreach ($forum as $forum_det) { ?>
+												<article class="hentry post col-grid-4">
+													<div class="entry-content-wrapper box-shadow-block">
+														<div class="entry-thumb aligncenter">
+															<a  href="#" >
+																<img style="height: 225px" src="<?php echo base_url($forum_det->gambar_headline); ?>" alt="Blog">
+															</a>
+														</div> <!-- .entry-thumb -->
+														<header class="entry-header" style="min-height: 100px">
+															<h2 class="entry-title"><a href="#" rel="bookmark"><?php echo $forum_det->judul; ?></a></h2>
+														</header><!-- .entry-header -->
+														<div class="entry-meta">
+															<span class="posted-on"><?php echo $forum_det->tanggal; ?></span>
+															<span class="cat-links"><a href="" rel="category tag"><?php echo $forum_det->nama_kategori; ?></a></span>
+														</div><!-- .entry-meta -->
+														<div class="entry-content">
+															<p><?php echo substr($forum_det->isi_forum, 0, 150); ?>........</p>
+															<a href="Forum/detail_forum/<?php echo $forum_det->id_forum; ?>" class="custom-button button-curved">Read More</a>
+														</div><!-- .entry-content -->
+													</div><!-- .entry-content-wrapper -->
+												</article><!-- .post -->
+											<?php } ?>
+
+										</div> <!-- .inner-wrapper -->
 										<hr class="stylehr">
 									</div>
 								</div>
@@ -126,66 +127,77 @@
 										<h2 class="section-title">Testimonial</h2><span class="divider"></span>
 									</div> <!-- .section-title-wrap -->
 									<div class="testimonial-carousel-wrapper iteam-col-3 section-carousel-enabled">
-										<div class="testimonial-item col-grid-6">
-											<div class="testimonial-wrapper">
-												<div class="testimonial-thumb">
-													<a href="#"><img alt="" src="<?php echo base_url('assets/images/team')?>/cak.jpg"></a>
-												</div><!-- .testimonial-thumb -->
-												<div class="testimonial-summary">
-													<p>Wow, I'm so happy with your service. You managed to exceed my expectatio</p>
-													<div class="testimonial-rating">
-														<i class="fas fa-star"></i>
-														<i class="fas fa-star"></i>
-														<i class="fas fa-star"></i>
-														<i class="fas fa-star"></i>
-														<i class="fas fa-star"></i>
-													</div>
-													<h3 class="testimonial-title"><a href="#">Manusia Kipas</a></h3>
-													<p class="testimonial-position">(CEO & Founder)</p>
-												</div><!-- .testimonial-summary -->
-											</div> <!-- .testimonial-wrapper -->
+										<?php foreach ($testimoni as $testi) { ?>
+											<div class="testimonial-item col-grid-6">
+												<div class="testimonial-wrapper">
+													<div class="testimonial-thumb">
+														<a href="#"><img style="margin-bottom: -20px" alt="" src="<?php echo base_url($testi->foto); ?>"></a>
+													</div><!-- .testimonial-thumb -->
+													<div class="testimonial-summary">
+														<p><?php echo $testi->nama; ?></p>
+
+														<h3 class="testimonial-title"><?php echo $testi->nama_produk; ?></h3>
+														
+													</div><!-- .testimonial-summary -->
+													<div class="portfolio-item  graphic-design"  style="border-radius: 0;">
+														<div class="item-inner-wrapper" >
+															<img style="border-radius: 0"  src="<?php echo base_url($testi->gambar_testi); ?>" alt="Portfolio" class="portfolio-thumb">
+															<div class="overlay"></div>
+															<div class="portfolio-content">
+																<a data-gal="prettyPhoto[product-gallery]" rel="bookmark" href="<?php echo base_url($testi->gambar_testi); ?>"><i class="fas fa-search" aria-hidden="true"></i></a>
+																<h3><a href="#" ></a></h3>
+																<p></p>
+															</div>
+														</div>
+													</div><!-- end item -->
+													
+													<p class="testimonial-position"  ><?php echo $testi->komentar; ?></p>
+												</div> <!-- .testimonial-wrapper -->
+
+											</div> <!-- .testimonial-item  -->
+
+										<?php } ?>
 									</div> <!-- .testimonial-carousel-wrapper -->
-								</div><!-- .container -->
-							</aside> <!-- .section section-testimonial-carousel -->
-							<hr class="stylehr">
-							<aside  class="section section-Quick-contact lite-background" style="margin-top: -60px">
-								<div class="container">
-									<div class="inner-wrapper">
-										<div class="col-grid-6">
-											<div class="contact-form-area contactdesc">
-												<h3 class="contact-title"> Kritik dan Saran</h3>
-												<p>Beri kami kritik dan saran agar kami dapat mengevaluasi setiap kekurangan kami.</p>
-												<div id="contact-form" class="contact-form">
-													<div id="message"></div>
-													<form id="contactform" action="http://anilbasnet.com/demo/biz-lina/contact.php" name="contactform" method="post">
-														<input type="text" name="name" id="name" class="form-control" placeholder="Name *">
-														<input type="text" name="email" id="email" class="form-control" placeholder="Email *">
-														<textarea class="form-control" name="comments" id="comments" rows="6" placeholder=""></textarea>
-														<button type="submit" value="SEND" id="submit" class="btn btn-primary btn-lg button-curved">SEND MESSAGE</button>
-													</form>
-												</div><!-- .contact-form -->
-											</div><!-- .contact-form-area -->
-										</div>
-										<div class="col-grid-6">
-											<div class="quick-contact-widget">
-												<h3> Quick Contact</h3>
-												<span><i class="fas fa-phone" aria-hidden="true"></i> 085843854928 </span>
-												<span><i class="fas fa-envelope" aria-hidden="true"></i>email.contoemail.com </span>
-												<span><i class="fas fa-map-marker-alt"></i> Jl. Mastrip Timur No. 102, Sumbersari 68121, Jember </span>
-											</div>  <!-- .quick-contact-widget -->
-											<div class="contact-map">
-												<div class="map-inner-wrapper">
-													<iframe class="googlemap" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3949.3830329508232!2d113.72188721410116!3d-8.16410919412367!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd695c919e65981%3A0xa57bb1f8d371bfbe!2sJl.+Mastrip+Timur+No.102%2C+Sumbersari%2C+Kabupaten+Jember%2C+Jawa+Timur+68121!5e0!3m2!1sid!2sid!4v1536931344062"" width="700" height="300"></iframe>
-												</div> <!-- .map-inner-wrapper -->
-											</div><!-- contact-map -->
-										</div>
-									</div><!-- .inner-wrapper -->
-								</div> <!-- .container -->
-							</aside> <!-- .section-Quick-contact -->
-						</div>
-					</aside>
-				</main>
+								</aside> <!-- .section section-testimonial-carousel -->
+								<hr class="stylehr">
+								<aside  class="section section-Quick-contact lite-background" style="margin-top: -60px">
+									<div class="container">
+										<div class="inner-wrapper">
+											<div class="col-grid-6">
+												<div class="contact-form-area contactdesc">
+													<h3 class="contact-title"> Kritik dan Saran</h3>
+													<p>Beri kami kritik dan saran agar kami dapat mengevaluasi setiap kekurangan kami.</p>
+													<div id="contact-form" class="contact-form">
+														<div id="message"></div>
+														<form id="contactform" action="http://anilbasnet.com/demo/biz-lina/contact.php" name="contactform" method="post">
+															<input type="text" name="name" id="name" class="form-control" placeholder="Name *">
+															<input type="text" name="email" id="email" class="form-control" placeholder="Email *">
+															<textarea class="form-control" name="comments" id="comments" rows="6" placeholder=""></textarea>
+															<button type="submit" value="SEND" id="submit" class="btn btn-primary btn-lg button-curved">SEND MESSAGE</button>
+														</form>
+													</div><!-- .contact-form -->
+												</div><!-- .contact-form-area -->
+											</div>
+											<div class="col-grid-6">
+												<div class="quick-contact-widget">
+													<h3> Quick Contact</h3>
+													<span><i class="fas fa-phone" aria-hidden="true"></i> 085843854928 </span>
+													<span><i class="fas fa-envelope" aria-hidden="true"></i>email.contoemail.com </span>
+													<span><i class="fas fa-map-marker-alt"></i> Jl. Mastrip Timur No. 102, Sumbersari 68121, Jember </span>
+												</div>  <!-- .quick-contact-widget -->
+												<div class="contact-map">
+													<div class="map-inner-wrapper">
+														<iframe class="googlemap" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3949.3830329508232!2d113.72188721410116!3d-8.16410919412367!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd695c919e65981%3A0xa57bb1f8d371bfbe!2sJl.+Mastrip+Timur+No.102%2C+Sumbersari%2C+Kabupaten+Jember%2C+Jawa+Timur+68121!5e0!3m2!1sid!2sid!4v1536931344062"" width="700" height="300"></iframe>
+													</div> <!-- .map-inner-wrapper -->
+												</div><!-- contact-map -->
+											</div>
+										</div><!-- .inner-wrapper -->
+									</div> <!-- .container -->
+								</aside> <!-- .section-Quick-contact -->
+							</div>
+						</aside>
+					</main>
+				</div>
 			</div>
 		</div>
 	</div>
-</div>

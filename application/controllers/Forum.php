@@ -13,8 +13,7 @@ class Forum extends CI_Controller {
 
 		$data ["forum"] = $this->K_jamur->beforeforum()->result();
 		$this->load->view('menu/forum', $data);
-		$this->load->view('user/konten',$data);
-
+		$this->load->view('user/konten', $data);
 
 	}
 	function Detail_forum($id_forum){
