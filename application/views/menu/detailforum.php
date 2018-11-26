@@ -99,12 +99,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 															</div><!-- .comment-author -->
 															<div class="comment-metadata">
 																<a href="#">
-																	<span><?php echo $forum ->tanggal; ?></span>
+																	<span><?php echo $data_reply->tanggal_r; ?></span>
 																</a>
 															</div><!-- .comment-metadata -->
 														</footer><!-- .comment-meta -->
 														<div class="comment-content">
-															<p><?php echo "isi komentar"; ?></p>
+															<p><?php echo $data_reply->isi_reply; ?></p>
 														</div><!-- .comment-content -->
 													<?php } ?>
 												</article><!-- .comment-body -->
