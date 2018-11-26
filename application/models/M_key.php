@@ -6,8 +6,8 @@
 
 		public function feat()
 		{
-			$key_feature = $this->db->get('key_features');
-			return $key_feature;
+			$unggula_n = $this->db->get('unggulan');
+			return $unggula_n;
 		}
 
 

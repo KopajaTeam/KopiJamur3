@@ -12,7 +12,7 @@ class Unggulan extends CI_Controller {
 
 	public function index(){
 
-		$data = array('key_features' => $this->M_key->feat()->result(), );
+		$data = array('unggulan' => $this->M_key->feat()->result(), );
 
 		$this->load->view('user/keyfet/unggulan', $data);
 	}
