@@ -28,6 +28,12 @@ class Admin_Dashboard extends CI_Model
 	function cek_login($table,$where){
 		return $this->db->get_where($table,$where);
 	}
+
+	public function select_produk(){
+		$this->db->join('kategori_produk','produk.id_kategori_produk = kategori_produk.id_kategori_produk', "LEFT");
+		return $this->db->get('produk');
+	}
+
 }
 
 ?>

@@ -29,24 +29,30 @@
                     <th>Berat</th>
                     <th>Satuan Berat</th>
                     <th>Jenis Satuan</th>
+                    <th>Gambar</th>
                     <th class="disabled-sorting text-right">Actions</th>
                   </tr>
                 </thead>
-                <?php foreach ($produk as $produks) {?>
                         <tbody>
+
+                          <?php $no=0; foreach ($produk as $produks) {?>
                           <tr>
-                            <th>1</th>
-                            <td><?php echo $forem->judul; ?></td>
-                            <td>System Architect</td>
-                            <td>Edinburgh</td>
-                            <td>61</td>
-                            <td>2011/04/25</td>
+                            <th><?php echo ++$no; ?></th>
+                            <td><?php echo $produks->nama_produk; ?></td>
+                            <td><?php echo $produks->detail_produk; ?></td>
+                            <td><?php echo $produks->nama_kategori_produk; ?></td>
+                            <td><?php echo $produks->harga_produk; ?></td>
+                            <td><?php echo $produks->berat_produk; ?></td>
+                            <td><?php echo $produks->satuan_produk; ?></td>
+                            <td><?php echo $produks->jenis_satuan_produk; ?></td>
+                            <td><img style="width: 150px;height: 150px" src="<?php echo base_url("$produks->gambar_produk"); ?>"></td>
                             <td class="text-right">
                               <a href="#" class="btn btn-simple btn-warning btn-icon like"><i class="material-icons">edit</i></a>
                               <a href="#" class="btn btn-simple btn-danger btn-icon edit"><i class="material-icons">close</i></a>
                               <a href="#" class="btn btn-simple btn-info btn-icon remove"><i class="material-icons">visibility</i></a>
                             </td>
                           </tr>
+                        <?php } ?>
                         </tbody>
                       </table>
                     </div>

@@ -11,7 +11,7 @@ class Produk extends CI_Controller
     }
 
   public function index(){
-    $data = array('produk' => $this->Admin_Dashboard->select()->result(), ); 
+    $data = array('produk' => $this->Admin_Dashboard->select_produk()->result(), ); 
     $this->load->view('admin/Produk/v_produk',$data);
   }
 
