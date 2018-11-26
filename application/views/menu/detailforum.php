@@ -56,7 +56,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 								
 								<div class="authorbox ">
 									<div class="author-avatar">
-										<img alt="" src="<?php echo base_url('assets/images/blog-single')?>/author-1.jpg" class="avatar img-circle">
+										<img alt="" src="<?php echo base_url($forum->foto); ?>" class="avatar img-circle">
 									</div>
 									<div class="author-info">
 										<h4 class="author-header">
@@ -90,7 +90,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 													<?php foreach ($reply as $data_reply) { ?>
 														<footer class="comment-meta">
 															<div class="comment-author vcard">
-																<img alt="Author" src="<?php echo base_url('assets/images/blog-single')?>/author-2.jpg" class="avatar img-circle">
+																<img alt="Author" src="<?php echo base_url($data_reply->foto); ?>" class="avatar img-circle">
 																<b class="fn"><a href="#"  class="url"><?php echo $data_reply->nama; ?></a></b>
 																<span class="says">says:</span>
 																<div class="reply">
