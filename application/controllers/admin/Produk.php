@@ -4,9 +4,15 @@
  */
 class Produk extends CI_Controller
 {
+    public function __construct()
+    {
+        parent::__construct();
+        $this->load->model('Admin_Dashboard');
+    }
 
   public function index(){
-    $this->load->view('admin/Produk/v_produk');
+    $data = array('produk' => $this->Admin_Dashboard->select()->result(), ); 
+    $this->load->view('admin/Produk/v_produk',$data);
   }
 
   function tambah_produk(){
