@@ -20,7 +20,8 @@ class Admin_Dashboard extends CI_Model
 		$this->db->delete($table);
 	}
 	public function update($table,$data,$where){
-		$this->db->update($table,$data,$where);
+		$this->db->update($table,$data);
+		$this->db->where($where);
 	}
 	public function insert($table,$date){
 		$this->db->insert($table,$data);

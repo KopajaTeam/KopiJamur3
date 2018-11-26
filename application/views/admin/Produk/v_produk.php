@@ -23,12 +23,8 @@
                   <tr>
                     <th>No.</th>
                     <th>Nama Produk</th>
-                    <th>Detail Produk</th>
                     <th>Kategori</th>
                     <th>Harga</th>
-                    <th>Berat</th>
-                    <th>Satuan Berat</th>
-                    <th>Jenis Satuan</th>
                     <th>Gambar</th>
                     <th class="disabled-sorting text-right">Actions</th>
                   </tr>
@@ -39,17 +35,12 @@
                           <tr>
                             <th><?php echo ++$no; ?></th>
                             <td><?php echo $produks->nama_produk; ?></td>
-                            <td><?php echo $produks->detail_produk; ?></td>
                             <td><?php echo $produks->nama_kategori_produk; ?></td>
                             <td><?php echo $produks->harga_produk; ?></td>
-                            <td><?php echo $produks->berat_produk; ?></td>
-                            <td><?php echo $produks->satuan_produk; ?></td>
-                            <td><?php echo $produks->jenis_satuan_produk; ?></td>
                             <td><img style="width: 150px;height: 150px" src="<?php echo base_url("$produks->gambar_produk"); ?>"></td>
                             <td class="text-right">
-                              <a href="#" class="btn btn-simple btn-warning btn-icon like"><i class="material-icons">edit</i></a>
-                              <a href="#" class="btn btn-simple btn-danger btn-icon edit"><i class="material-icons">close</i></a>
-                              <a href="#" class="btn btn-simple btn-info btn-icon remove"><i class="material-icons">visibility</i></a>
+                              <a href="<?php echo base_url("admin/Produk/edit/".$produks->id_produk); ?>" class="btn btn-simple btn-warning btn-icon like"><i class="material-icons">edit</i></a>
+                              <a href="<?php echo base_url("admin/Produk/hapus/".$produks->id_produk) ?>" onclick="return confirm('Data Akan Dihapus !')" class="btn btn-simple btn-danger btn-icon edit"><i class="material-icons">close</i></a>
                             </td>
                           </tr>
                         <?php } ?>
@@ -79,27 +70,27 @@ $(document).ready(function() {
   });
 
 
-  var table = $('#datatables').DataTable();
+  // var table = $('#datatables').DataTable();
 
-  // Edit record
-  table.on( 'click', '.edit', function () {
-    $tr = $(this).closest('tr');
+  // // Edit record
+  // table.on( 'click', '.edit', function () {
+  //   $tr = $(this).closest('tr');
 
-    var data = table.row($tr).data();
-    alert( 'You press on Row: ' + data[0] + ' ' + data[1] + ' ' + data[2] + '\'s row.' );
-  } );
+  //   var data = table.row($tr).data();
+  //   alert( 'You press on Row: ' + data[0] + ' ' + data[1] + ' ' + data[2] + '\'s row.' );
+  // } );
 
-  // Delete a record
-  table.on( 'click', '.remove', function (e) {
-    $tr = $(this).closest('tr');
-    table.row($tr).remove().draw();
-    e.preventDefault();
-  } );
+  // // Delete a record
+  // table.on( 'click', '.remove', function (e) {
+  //   $tr = $(this).closest('tr');
+  //   table.row($tr).remove().draw();
+  //   e.preventDefault();
+  // } );
 
-  //Like record
-  table.on( 'click', '.like', function () {
-    alert('You clicked on Like button');
-  });
+  // //Like record
+  // table.on( 'click', '.like', function () {
+  //   alert('You clicked on Like button');
+  // });
 
   $('.card .material-datatables label').addClass('form-group');
 });
