@@ -120,6 +120,60 @@
 														</div><!-- .social-links -->
 													</div> <!-- .team-item -->
 												</div> <!-- .team-item  -->
+												<div class="col-grid-3 team-item">
+													<div class="thumb-summary-wrap box-shadow-block">
+														<div class="team-thumb">
+															<a href="#" target="-sefl"> <img alt="Team" src="<?php echo base_url('assets/images/team')?>/cak.jpg"></a>
+														</div><!-- .team-thumb-->
+														<div class="team-text-wrap">
+															<h3 class="team-title"><a href="#">Manusia Kipas</a></h3>
+															<p class="team-position">Founder</p>
+														</div><!-- .team-text-wrap -->
+														<div class="social-links circle">
+															<ul>
+																<li><a href="http://facebook.com/" target="_blank">Facebook</a></li>
+																<li><a href="http://twitter.com/" target="_blank">Twitter</a></li>
+																<li><a href="http://instagram.com/" target="_blank">Instagram</a></li>
+															</ul>
+														</div><!-- .social-links -->
+													</div> <!-- .team-item -->
+												</div> <!-- .team-item  -->
+												<div class="col-grid-3 team-item">
+													<div class="thumb-summary-wrap box-shadow-block">
+														<div class="team-thumb">
+															<a href="#" target="-sefl"> <img alt="Team" src="<?php echo base_url('assets/images/team')?>/cak.jpg"></a>
+														</div><!-- .team-thumb-->
+														<div class="team-text-wrap">
+															<h3 class="team-title"><a href="#">Manusia Kipas</a></h3>
+															<p class="team-position">Founder</p>
+														</div><!-- .team-text-wrap -->
+														<div class="social-links circle">
+															<ul>
+																<li><a href="http://facebook.com/" target="_blank">Facebook</a></li>
+																<li><a href="http://twitter.com/" target="_blank">Twitter</a></li>
+																<li><a href="http://instagram.com/" target="_blank">Instagram</a></li>
+															</ul>
+														</div><!-- .social-links -->
+													</div> <!-- .team-item -->
+												</div> <!-- .team-item  -->
+												<div class="col-grid-3 team-item">
+													<div class="thumb-summary-wrap box-shadow-block">
+														<div class="team-thumb">
+															<a href="#" target="-sefl"> <img alt="Team" src="<?php echo base_url('assets/images/team')?>/cak.jpg"></a>
+														</div><!-- .team-thumb-->
+														<div class="team-text-wrap">
+															<h3 class="team-title"><a href="#">Manusia Kipas</a></h3>
+															<p class="team-position">Founder</p>
+														</div><!-- .team-text-wrap -->
+														<div class="social-links circle">
+															<ul>
+																<li><a href="http://facebook.com/" target="_blank">Facebook</a></li>
+																<li><a href="http://twitter.com/" target="_blank">Twitter</a></li>
+																<li><a href="http://instagram.com/" target="_blank">Instagram</a></li>
+															</ul>
+														</div><!-- .social-links -->
+													</div> <!-- .team-item -->
+												</div> <!-- .team-item  -->
 											</div> <!-- .inner-wrapper -->
 										</div> <!-- .teams-section -->
 										<hr class="stylehr">
