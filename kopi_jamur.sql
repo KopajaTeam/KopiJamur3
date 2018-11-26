@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 21, 2018 at 03:38 AM
+-- Generation Time: Nov 26, 2018 at 02:13 AM
 -- Server version: 10.1.31-MariaDB
 -- PHP Version: 5.6.35
 
@@ -33,15 +33,17 @@ CREATE TABLE `admin` (
   `nama_admin` varchar(50) NOT NULL,
   `alamat_admin` varchar(100) NOT NULL,
   `email_admin` varchar(30) NOT NULL,
-  `password_admin` varchar(30) NOT NULL
+  `password_admin` varchar(30) NOT NULL,
+  `foto_admin` varchar(1000) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `admin`
 --
 
-INSERT INTO `admin` (`id_admin`, `nama_admin`, `alamat_admin`, `email_admin`, `password_admin`) VALUES
-(2, 'panji', 'rumah jember 123', 'panjibudi467@gmail.com', 'panjibudi123');
+INSERT INTO `admin` (`id_admin`, `nama_admin`, `alamat_admin`, `email_admin`, `password_admin`, `foto_admin`) VALUES
+(2, 'panji', 'rumah jember 123', 'panjibudi467@gmail.com', 'panjibudi123', ''),
+(3, 'toni', 'jl.drsoetome', 'sultonihawk732@gmail.com', 'tonihawk999', 'assets/images_upload/004f4818e2af51c3869b6529886e2e14.jpg');
 
 -- --------------------------------------------------------
 
@@ -175,28 +177,6 @@ INSERT INTO `keranjang` (`kd_keranjang`, `id_produk`, `qty`, `harga`, `total`, `
 -- --------------------------------------------------------
 
 --
--- Table structure for table `key_features`
---
-
-CREATE TABLE `key_features` (
-  `id_key` int(9) NOT NULL,
-  `judul_key` text NOT NULL,
-  `isi_key` text NOT NULL,
-  `gambar_features` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `key_features`
---
-
-INSERT INTO `key_features` (`id_key`, `judul_key`, `isi_key`, `gambar_features`) VALUES
-(1, 'Produk Unggulan', 'Kopi jamur sebenarnya sudah sejak lama digunakan dalam pengobatan tradisional China. Bubuk ekstrak jamur yang kemudian dicampur dengan kopi instan organik ternyata efektif untuk mencegah diabetes dan mengurangi risiko kanker.', 'assets/images/portfolio/gambar2.jpg'),
-(2, 'Sejarah Perusahaan', '', ''),
-(3, 'Prestasi', '', '');
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `kritik_saran`
 --
 
@@ -287,6 +267,28 @@ INSERT INTO `order` (`id_order`, `id_user`, `id_kurir`, `id_kecamatan`, `jumlah_
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `prestasi`
+--
+
+CREATE TABLE `prestasi` (
+  `id_prestasi` int(5) NOT NULL,
+  `judul_prestasi` varchar(45) NOT NULL,
+  `isi_prestasi` varchar(1000) NOT NULL,
+  `gambar_prestasi` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `prestasi`
+--
+
+INSERT INTO `prestasi` (`id_prestasi`, `judul_prestasi`, `isi_prestasi`, `gambar_prestasi`) VALUES
+(1, 'Prestasi', 'Kopi jamur sebenarnya sudah sejak lama digunakan dalam pengobatan tradisional China. Bubuk ekstrak jamur yang kemudian dicampur dengan kopi instan organik ternyata efektif untuk mencegah diabetes dan mengurangi risiko kanker.', 'assets/images/portfolio/gambar6.jpg'),
+(2, 'Prestasi 2', 'Kopi jamur sebenarnya sudah sejak lama digunakan dalam pengobatan tradisional China. Bubuk ekstrak jamur yang kemudian dicampur dengan kopi instan organik ternyata efektif untuk mencegah diabetes dan mengurangi risiko kanker.', 'assets/images/portfolio/gambar7.jpg'),
+(3, 'Prestasi 3', 'Kopi jamur sebenarnya sudah sejak lama digunakan dalam pengobatan tradisional China. Bubuk ekstrak jamur yang kemudian dicampur dengan kopi instan organik ternyata efektif untuk mencegah diabetes dan mengurangi risiko kanker.', 'assets/images/portfolio/gambar8.jpg');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `produk`
 --
 
@@ -329,7 +331,9 @@ CREATE TABLE `reply_forum` (
 
 INSERT INTO `reply_forum` (`id_reply`, `id_forum`, `id_user`, `isi_reply`, `tanggal`) VALUES
 (2, 1, 1, 'Cek Isi Kopi', '2018-07-01'),
-(3, 2, 2, 'Masih dengan kopi jamur', '2018-10-14');
+(3, 2, 2, 'Masih dengan kopi jamur', '2018-10-14'),
+(4, 1, 2, 'knknnkl', '2018-11-22'),
+(5, 1, 2, 'bklklbo;lb;obobb', '2018-11-22');
 
 -- --------------------------------------------------------
 
@@ -351,8 +355,9 @@ CREATE TABLE `testimoni` (
 --
 
 INSERT INTO `testimoni` (`id_testimoni`, `id_user`, `id_produk`, `rate`, `komentar`, `gambar_testi`) VALUES
-(1, 1, 1, 500, 'asasasas', 'assets/images/portfolio/portfolio-3.jpg'),
-(2, 2, 2, 500, 'hohohoho', 'assets/images/portfolio/portfolio-5.jpg');
+(6, 2, 7, 0, 'Ini baru 1', 'assets/images/portfolio/xz.JPG'),
+(7, 2, 7, 0, 'fdsfsfsd', 'assets/images/portfolio/xz1.JPG'),
+(8, 2, 7, 0, 'enak lohj', 'assets/images/portfolio/xz2.JPG');
 
 -- --------------------------------------------------------
 
@@ -430,12 +435,6 @@ ALTER TABLE `keranjang`
   ADD KEY `id_produk` (`id_produk`);
 
 --
--- Indexes for table `key_features`
---
-ALTER TABLE `key_features`
-  ADD PRIMARY KEY (`id_key`);
-
---
 -- Indexes for table `kritik_saran`
 --
 ALTER TABLE `kritik_saran`
@@ -464,6 +463,12 @@ ALTER TABLE `order`
   ADD KEY `id_kecamatan` (`id_kecamatan`);
 
 --
+-- Indexes for table `prestasi`
+--
+ALTER TABLE `prestasi`
+  ADD PRIMARY KEY (`id_prestasi`);
+
+--
 -- Indexes for table `produk`
 --
 ALTER TABLE `produk`
@@ -484,7 +489,11 @@ ALTER TABLE `reply_forum`
 ALTER TABLE `testimoni`
   ADD PRIMARY KEY (`id_testimoni`),
   ADD KEY `id_user` (`id_user`),
-  ADD KEY `id_produk` (`id_produk`);
+  ADD KEY `id_produk` (`id_produk`),
+  ADD KEY `id_produk_2` (`id_produk`),
+  ADD KEY `id_user_2` (`id_user`),
+  ADD KEY `id_user_3` (`id_user`),
+  ADD KEY `id_produk_3` (`id_produk`);
 
 --
 -- Indexes for table `user`
@@ -500,7 +509,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `admin`
 --
 ALTER TABLE `admin`
-  MODIFY `id_admin` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_admin` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `forum`
@@ -533,12 +542,6 @@ ALTER TABLE `kecamatan`
   MODIFY `id_kecamatan` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT for table `key_features`
---
-ALTER TABLE `key_features`
-  MODIFY `id_key` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
---
 -- AUTO_INCREMENT for table `kritik_saran`
 --
 ALTER TABLE `kritik_saran`
@@ -563,6 +566,12 @@ ALTER TABLE `order`
   MODIFY `id_order` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
+-- AUTO_INCREMENT for table `prestasi`
+--
+ALTER TABLE `prestasi`
+  MODIFY `id_prestasi` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
 -- AUTO_INCREMENT for table `produk`
 --
 ALTER TABLE `produk`
@@ -572,13 +581,13 @@ ALTER TABLE `produk`
 -- AUTO_INCREMENT for table `reply_forum`
 --
 ALTER TABLE `reply_forum`
-  MODIFY `id_reply` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_reply` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `testimoni`
 --
 ALTER TABLE `testimoni`
-  MODIFY `id_testimoni` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_testimoni` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `user`
@@ -596,12 +605,6 @@ ALTER TABLE `user`
 ALTER TABLE `forum`
   ADD CONSTRAINT `forum_ibfk_1` FOREIGN KEY (`id_user`) REFERENCES `user` (`id_user`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `forum_ibfk_2` FOREIGN KEY (`id_kategori_forum`) REFERENCES `kategori_forum` (`id_kategori_forum`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
--- Constraints for table `notifikasi`
---
-ALTER TABLE `notifikasi`
-  ADD CONSTRAINT `notifikasi_ibfk_1` FOREIGN KEY (`id_admin`) REFERENCES `admin` (`id_admin`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `order`

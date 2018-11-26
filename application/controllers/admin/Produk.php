@@ -11,12 +11,11 @@ class Produk extends CI_Controller
 
   function tambah_produk(){
   	$data = array(
-            'kategori_produk'  => $this->Admin_Dashboard->select('kategori_produk')->result(),
-        );
+            'kategori_produk'  => $this->Admin_Dashboard->select('kategori_produk')->result(),);
     $this->load->view('admin/Produk/v_tambahdata_produk',$data);
   }
   function insert(){
-    	$dir = 'assets/images_upload/foto_produk/';
+    $dir = 'assets/images_upload/foto_produk/';
         $config['upload_path']      = 'assets/images_upload/foto_produk/';
         $config['allowed_types']    = 'jpg|png|jpeg';
         $config['max_size']         = '2048';

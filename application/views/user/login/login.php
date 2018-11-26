@@ -13,9 +13,7 @@
 
   <nav class="navbar navbar-expand-lg bg-primary navbar-transparent navbar-absolute" color-on-scroll="500">
     <div class="container">
-        <div class="navbar-wrapper">
-          <a class="navbar-brand">Login Admin</a>
-    </div>
+
     </div>
 </nav>
 <div class="wrapper wrapper-full-page">
