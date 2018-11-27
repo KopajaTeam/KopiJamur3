@@ -4,9 +4,15 @@
  */
 class Admin extends CI_Controller
 {
+    public function __construct()
+    {
+        parent::__construct();
+        $this->load->model('Admin_Dashboard');
+    }
 
   public function index(){
-    $this->load->view('admin/Admin/v_admin');
+    $data = array('admin' => $this->Admin_Dashboard->select('admin')->result(), ); 
+    $this->load->view('admin/Admin/v_admin',$data);
   }
 
   function tambah_admin(){
@@ -33,6 +39,11 @@ class Admin extends CI_Controller
         $this->db->insert('admin',$data);
         redirect('admin/Admin');
         }
+    }
+    function hapus($id_admin){
+        $where = array('id_admin' => $id_admin);
+        $this->Admin_Dashboard->delete($where,'admin');
+        redirect('admin/Admin');
     }
 }
 

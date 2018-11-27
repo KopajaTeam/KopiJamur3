@@ -30,7 +30,6 @@
                   </tr>
                 </thead>
                         <tbody>
-
                           <?php $no=0; foreach ($produk as $produks) {?>
                           <tr>
                             <th><?php echo ++$no; ?></th>

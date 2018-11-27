@@ -5,8 +5,14 @@
 class Forum extends CI_Controller
 {
 
+	public function __construct()
+    {
+        parent::__construct();
+        $this->load->model('Admin_Dashboard');
+    }
 	public function index(){
-		$this->load->view('admin/Forum/v_forum');
+		$data = array('forum' => $this->Admin_Dashboard->beforeforum()->result(), );
+		$this->load->view('admin/Forum/v_forum',$data);
 	}
 
 	function tambah_forum(){
