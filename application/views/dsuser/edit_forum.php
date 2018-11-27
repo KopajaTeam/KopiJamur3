@@ -63,7 +63,7 @@
 													<!-- disini deskripsi forum -->
 
 													<div class="col-lg-9">
-														<input type="date" name="tanggal"  class="form-control">
+														<input type="date" name="tanggal" class="form-control"><a href=""></a>
 													</div>
 													<br>
 													<br>
