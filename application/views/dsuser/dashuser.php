@@ -68,7 +68,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 									<div class="panel-body">
 										<h6>Nama Lengkap   : <?php echo $dat->nama; ?></h6>
 										<h6>Alamat Lengkap : <?php echo $dat->alamat;?></h6>
-										<h6>No. HP         : 082143211521</h6>
+										<h6>No. HP         : <?php echo $dat->telp;?></h6>
 										<h6>Alamat E-Mail  : <?php echo $dat->email;?></h6>
 									</div>
 								</div>

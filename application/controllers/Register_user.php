@@ -19,10 +19,14 @@ class Register_user extends CI_Controller {
         }else{
         $data = array(
             'nama' => $this->input->post('nama_user'),
+            'tgl_lahir' => $this->input->post('tgl_lahir'),
+            'jenis_kelamin' => $this->input->post('jenis_kelamin'),
             'alamat' => $this->input->post('alamat_user'),
             'email' => $this->input->post('email_user'),
+            'telp' => $this->input->post('telp'),
             'password' => $this->input->post('password_user'),
             'foto' => $dir.$this->upload->data('file_name'),
+            'member_sejak' => date("Y-m-d"),
         );
         $this->db->insert('user',$data);
         redirect('Register_user');

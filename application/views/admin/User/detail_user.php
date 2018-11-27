@@ -7,7 +7,7 @@
 			<div class="card ">
 				<div class="card-header card-header-rose card-header-text">
 					<div class="card-text">
-						<h4 class="card-title">Tambah Data Admin</h4>
+						<h4 class="card-title">Detail User</h4>
 					</div>
 				</div>
 				<div class="card-body ">
@@ -17,7 +17,7 @@
 								<img src="#" class="card-img-top img-fluid">
 								<div class="card-body text-center">
 									<h2 class="h2">Nama</h2>
-									<i class="text-muted">Level User : ###</i>
+									<i class="text-muted"></i>
 								</div>
 							</div>
 						</div>
@@ -29,7 +29,7 @@
 										<tr>
 											<td>Nama Lengkap</td>
 											<td>:</td>
-											<td>###</td>
+											<td>#</td>
 										</tr>
 										<tr>
 											<td>Tanggal Lahir</td>
@@ -38,11 +38,6 @@
 										</tr>
 										<tr>
 											<td>Jenis Kelamin</td>
-											<td>:</td>
-											<td>###</td>
-										</tr>
-										<tr>
-											<td>Bio</td>
 											<td>:</td>
 											<td>###</td>
 										</tr>

@@ -58,7 +58,7 @@ class Produk extends CI_Controller
         $produk = $this->Admin_Dashboard->selectwhere('produk',$where)->row();
         $data = array(
             'kategori_produk'   => $this->Admin_Dashboard->select('kategori_produk')->result(),
-            'id_kategori_produk' => $produk->id_kategori_produk, 
+            'id_kategori_produk'=> $produk->id_kategori_produk, 
             'id_produk'         => $produk->id_produk, 
             'nama_produk'       => $produk->nama_produk,
             'detail_produk'     => $produk->detail_produk,
@@ -72,7 +72,7 @@ class Produk extends CI_Controller
     }
 
     function update(){        
-        $where = array('id_produk' => $this->input->post('id_produk'));
+        $where = array('id_produk' => $this->input->post('id'));
         $dir = 'assets/images_upload/foto_produk/';
         $config['upload_path']      = 'assets/images_upload/foto_produk/';
         $config['allowed_types']    = 'jpg|png|jpeg';
