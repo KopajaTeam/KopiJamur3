@@ -114,7 +114,14 @@ class Dashboard_user extends CI_Controller {
 		$this->load->view('dsuser/edit_forum',$data);	
 	}
 	public function edit_forum_simpan(){
-		
+
 	}
+
+    function del_for($id_forum){
+        $where = array('id_forum' => $id_forum);
+        $this->Admin_Dashboard->delete($where,'forum');
+        redirect('Dashboard_user/forum_view');
+    }
+
 
 }
