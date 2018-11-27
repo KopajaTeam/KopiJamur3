@@ -39,10 +39,40 @@
 								<div class="input-group">
 									<div class="input-group-prepend">
 										<span class="input-group-text">
+											<i class="material-icons">calendar_today</i>
+										</span>
+									</div>
+									<input type="date" name="tgl_lahir" class="form-control" placeholder="Tanggal Lahir...">
+								</div>
+							</span>
+							<span class="bmd-form-group">
+								<div class="input-group">
+									<div class="input-group-prepend">
+										<span class="input-group-text">
+											<i class="material-icons">wc</i>
+										</span>
+									</div>
+									<input type="text" name="jenis_kelamin" class="form-control" placeholder="Jenis Kelamin...">
+								</div>
+							</span>
+							<span class="bmd-form-group">
+								<div class="input-group">
+									<div class="input-group-prepend">
+										<span class="input-group-text">
 											<i class="material-icons">room</i>
 										</span>
 									</div>
 									<input type="text" name="alamat_user" class="form-control" placeholder="Alamat Lengkap...">
+								</div>
+							</span>
+							<span class="bmd-form-group">
+								<div class="input-group">
+									<div class="input-group-prepend">
+										<span class="input-group-text">
+											<i class="material-icons">phone_android</i>
+										</span>
+									</div>
+									<input type="text" name="telp" class="form-control" placeholder="No.Telepon ...">
 								</div>
 							</span>
 							<span class="bmd-form-group">
@@ -65,16 +95,6 @@
 									<input type="password" name="password_user" class="form-control" placeholder="Password...">
 								</div>
 							</span>
-<!-- 							<span class="bmd-form-group">
-								<div class="input-group">
-									<div class="input-group-prepend">
-										<span class="input-group-text">
-											<i class="material-icons">lock_outline</i>
-										</span>
-									</div>
-									<input type="password" class="form-control" placeholder="Konfirmasi Password...">
-								</div>
-							</span> -->
 							<span class="bmd-form-group">
 								<div class="input-group" style="margin-top: 30px">
 									<div class="input-group-prepend">

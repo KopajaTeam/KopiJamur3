@@ -57,7 +57,7 @@ class Admin extends CI_Controller
     }
 
     function update(){        
-        $where = array('id_admin' => $this->input->post('id_admin'));
+        $where = array('id_admin' => $this->input->post('id'));
         $dir = 'assets/images_upload/foto_admin/';
         $config['upload_path']      = 'assets/images_upload/foto_admin/';
         $config['allowed_types']    = 'jpg|png|jpeg';
@@ -81,7 +81,7 @@ class Admin extends CI_Controller
             );
         }
         $admin = $this->Admin_Dashboard->update('admin',$data,$where);
-        redirect('admin/Admin');
+        redirect('admin/Admin?'.$this->input->post('id'));
     }
 
     function hapus($id_admin){

@@ -11,7 +11,7 @@
                     </div>
                 </div>
                 <div class="card-body ">
-                    <form method="post" action="<?php echo base_url('admin/Produk/insert/') ?>" class="form-horizontal" enctype="multipart/form-data">
+                    <form method="post" action="<?php echo base_url('admin/Admin/update/') ?>" class="form-horizontal" enctype="multipart/form-data">
                         <div class="row">
                             <label class="col-sm-2 col-form-label">Nama Lengkap : </label>
                             <div class="col-sm-9">

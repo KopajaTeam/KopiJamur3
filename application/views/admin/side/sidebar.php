@@ -183,7 +183,7 @@
               <p class="hidden-lg hidden-md">Profile</p>
             </a>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="<?php echo base_url("admin/Admin/edit_admin/".$data_admin->id_admin); ?>">Profile</a>
+              <a class="dropdown-item" href="<?php echo base_url("admin/Admin/edit_admin/".$data_admin->id_admin); ?>">Edit Profile</a>
               <a class="dropdown-item" href="<?php echo base_url('admin/Login_adm/logout') ?>">Sign-Out</a>
             </div>
           </li>
