@@ -45,5 +45,5 @@
         $this->Admin_Dashboard->delete($where,'user');
         redirect('admin/User');
     }
-
+}
      ?>

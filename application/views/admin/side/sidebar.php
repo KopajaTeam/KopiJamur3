@@ -132,33 +132,6 @@
               </ul>
             </div>
           </li>
-          <li class="nav-item <?php if($this->uri->segment(2)=='Profile' or $this->uri->segment(2)
-               =='Log-Out'){echo 'active';} ?> ">
-            <a class="nav-link" data-toggle="collapse" href="#mapsExample">
-              <i class="material-icons">settings</i>
-              <p> Settings
-               <b class="caret"></b>
-             </p>
-           </a>
-         </li>
-           <div class="<?php if($this->uri->segment(2)=='Profile' or $this->uri->segment(2)
-           =='Log-Out'){echo 'show';}
-           else{echo "collapse";}?> ml-4 " id="mapsExample">
-           <ul class="nav">
-            <li class="nav-item <?php if($this->uri->segment(2)=='Profile'){echo 'active';}?> ">
-              <a class="nav-link" href="<?php echo base_url("admin/Profile"); ?>">
-                <i class="material-icons"> account_circle </i>
-                <span class="sidebar-normal"> Profile </span>
-              </a>
-            </li>
-            <li class="nav-item <?php if($this->uri->segment(2)=='Log-Out'){echo 'active';}?> ">
-              <a class="nav-link" href="<?php echo base_url('admin/Login_adm/logout')?>">
-                <i class="material-icons"> undo </i>
-                <span class="sidebar-normal"> Log-Out </span>
-              </a>
-            </li>
-          </ul>
-        </div>
       </li>
     </ul>
   </div>
@@ -210,8 +183,8 @@
               <p class="hidden-lg hidden-md">Profile</p>
             </a>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="<?php echo base_url('Profile') ?>">Profile</a>
-              <a class="dropdown-item" href="<?php echo base_url('#') ?>">Sign-Out</a>
+              <a class="dropdown-item" href="<?php echo base_url("admin/Admin/edit_admin/".$data_admin->id_admin); ?>">Profile</a>
+              <a class="dropdown-item" href="<?php echo base_url('admin/Login_adm/logout') ?>">Sign-Out</a>
             </div>
           </li>
         </ul>

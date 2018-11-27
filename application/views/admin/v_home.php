@@ -16,7 +16,7 @@ if (!isset($_SESSION['nama_admin'])) {
               <i class="material-icons">forum</i>
             </div>
             <p class="card-category">Forum</p>
-            <h3 class="card-title">184</h3>
+            <h3 class="card-title"><?php echo $this->Admin_Dashboard->beforeforum()->num_rows();?></h3>
           </div>
           <div class="card-footer">
             <div class="stats">
@@ -33,7 +33,7 @@ if (!isset($_SESSION['nama_admin'])) {
               <i class="material-icons">assignment_ind</i>
             </div>
             <p class="card-category">User </p>
-            <h3 class="card-title">75.521</h3>
+            <h3 class="card-title"><?php echo $this->K_jamur->select('user')->num_rows();?></h3>
           </div>
           <div class="card-footer">
             <div class="stats">
@@ -50,7 +50,7 @@ if (!isset($_SESSION['nama_admin'])) {
               <i class="material-icons">unarchive</i>
             </div>
             <p class="card-category">Produk</p>
-            <h3 class="card-title">1924</h3>
+            <h3 class="card-title"><?php echo $this->Admin_Dashboard->select_produk()->num_rows();?></h3>
           </div>
           <div class="card-footer">
             <div class="stats">
@@ -67,7 +67,7 @@ if (!isset($_SESSION['nama_admin'])) {
               <i class="material-icons">verified_user</i>
             </div>
             <p class="card-category">Testimonial</p>
-            <h3 class="card-title">8716</h3>
+            <h3 class="card-title"><?php echo $this->M_testi->testi()->num_rows();?></h3>
           </div>
           <div class="card-footer">
             <div class="stats">
