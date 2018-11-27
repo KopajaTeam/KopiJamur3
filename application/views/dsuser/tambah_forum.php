@@ -62,7 +62,7 @@
 													<!-- disini deskripsi forum -->
 
 													<div class="col-lg-9">
-														<input type="text" placeholder="Masukkan Deskripsi Forum" name="desc_forum" class="form-control">
+														<input type="date" name="tanggal" class="form-control">
 													</div>
 													<br>
 													<br>

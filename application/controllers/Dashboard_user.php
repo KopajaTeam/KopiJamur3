@@ -34,8 +34,9 @@ class Dashboard_user extends CI_Controller {
 				'judul' 			=> $this->input->post('judul_forum'),
 				'id_user'			=> $this->session->userdata("id_user"),	
 				'id_kategori_forum' => $this->input->post('kategori_forum'),
-				'desc_forum' 		=> $this->input->post('desc_forum'),
+				// 'desc_forum' 		=> $this->input->post('desc_forum'),
 				'isi_forum' 		=> $this->input->post('isi_forum'),
+				'tanggal'			=> $this->input->post('tanggal'),
 				'gambar_headline'	=> $dir.$this->upload->data('file_name'),
 			);
 
@@ -56,7 +57,7 @@ class Dashboard_user extends CI_Controller {
 	public function testimonial_view(){
 		
 		$data ["testimoni"] = $this->M_testi->testi()->result();
-	
+
 		$this->load->view('dsuser/testimonial_view',$data);
 	}
 	public function tambah_testimonial(){
@@ -107,8 +108,13 @@ class Dashboard_user extends CI_Controller {
 	public function testiact(){
 		$this->load->view('dsuser/tambah_testimonial');
 	}
-	public function actfor(){
-		$this->load->view('dsuser/tambah_forum');	
+	public function edit_forum(){
+		$id_forum = $this->uri->segment(3);
+		$data ['forum'] = $this->Admin_Dashboard->forumedit($id_forum)->row_array();
+		$this->load->view('dsuser/edit_forum',$data);	
+	}
+	public function edit_forum_simpan(){
+		
 	}
 
 }

@@ -54,6 +54,10 @@ class Admin_Dashboard extends CI_Model
 		return $this->db->get('produk');
 	}
 
+	public function forumedit($id_forum){
+		return $this->db->get_where('forum',array('id_forum' => $id_forum));
+	}
+
 }
 
 ?>
