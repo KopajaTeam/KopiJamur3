@@ -35,9 +35,7 @@
                     <td><?php echo $forums->nama_kategori; ?></td>
                     <td>61</td>
                     <td class="text-right">
-                      <a href="#" class="btn btn-simple btn-warning btn-icon like"><i class="material-icons">edit</i></a>
-                      <a href="#" class="btn btn-simple btn-danger btn-icon edit"><i class="material-icons">close</i></a>
-                      <a href="#" class="btn btn-simple btn-info btn-icon remove"><i class="material-icons">visibility</i></a>
+                      <a href="<?php echo base_url("admin/Forum/hapus/".$forums->id_forum) ?>" onclick="return confirm('Data Akan Dihapus !')" class="btn btn-simple btn-danger btn-icon edit"><i class="material-icons">close</i></a>
                     </td>
                   </tr>
                   <?php } ?>

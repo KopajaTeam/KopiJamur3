@@ -54,6 +54,11 @@ class Forum extends CI_Controller
 			redirect('admin/Forum/tambah_forum');
 		}
 	}
+	function hapus($id_forum){
+        $where = array('id_forum' => $id_forum);
+        $this->Admin_Dashboard->delete($where,'forum');
+        redirect('admin/Forum');
+}
 }
 
 ?>

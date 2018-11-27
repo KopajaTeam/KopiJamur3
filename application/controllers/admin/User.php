@@ -40,6 +40,10 @@
             redirect('admin/User');
             }
         }
+        function hapus($id_user){
+        $where = array('id_user' => $id_user);
+        $this->Admin_Dashboard->delete($where,'user');
+        redirect('admin/User');
     }
 
      ?>
