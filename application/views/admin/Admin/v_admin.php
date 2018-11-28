@@ -39,8 +39,7 @@
                     <td><?php echo $admins->email_admin; ?></td>
                     <td><img style="width: 150px;height: 150px" src="<?php echo base_url("$admins->foto_admin"); ?>"></td>
                     <td class="text-right">
-                      <a href="<?php echo base_url("admin/Admin/hapus/".$admins->id_admin) ?>" onclick="return confirm('Data Akan Dihapus !')" class="btn btn-simple btn-danger btn-icon edit"><i class="material-icons">close</i></a>
-                      <a href="<?php echo base_url("admin/User/lihat_user") ?>"  class="btn btn-simple btn-info btn-icon remove"><i class="material-icons">visibility</i></a>
+                      <a href="<?php echo base_url("admin/Admin/hapus/".$admins->id_admin) ?>" onclick="return confirm('Data Akan Dihapus !')" class="btn btn-simple btn-danger btn-icon edit"><i class="material-icons">delete</i></a>
                     </td>
                   </tr>
                   <?php } ?>

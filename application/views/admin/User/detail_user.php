@@ -14,10 +14,10 @@
 					<div class="row mb-3" >
 						<div class="col-lg-4">
 							<div class="card">
-								<img src="#" class="card-img-top img-fluid">
+								<img style="width: 305px;height: 305px" src="<?php echo base_url($foto); ?>" class="card-img-top img-fluid">
 								<div class="card-body text-center">
-									<h2 class="h2">Nama</h2>
-									<i class="text-muted"></i>
+									<b><h2 class="h2"><?php echo $nama; ?></h2></b>
+									<i style="font-size: 20px" class="text-muted">Member Sejak :  <?php echo $member_sejak; ?></i>
 								</div>
 							</div>
 						</div>
@@ -29,22 +29,22 @@
 										<tr>
 											<td>Nama Lengkap</td>
 											<td>:</td>
-											<td>#</td>
+											<td><?php echo $nama; ?></td>
 										</tr>
 										<tr>
 											<td>Tanggal Lahir</td>
 											<td>:</td>
-											<td>###</td>
+											<td><?php echo $tgl_lahir; ?></td>
 										</tr>
 										<tr>
 											<td>Jenis Kelamin</td>
 											<td>:</td>
-											<td>###</td>
+											<td><?php echo $jenis_kelamin; ?></td>
 										</tr>
 										<tr>
 											<td>Member Sejak</td>
 											<td>:</td>
-											<td>###</td>
+											<td><?php echo $member_sejak; ?></td>
 										</tr>
 									</table>
 									<h3 class="h3 mt-4 mb-2">Data Kontak</h3>
@@ -52,18 +52,18 @@
 										<tr>
 											<td>Email</td>
 											<td>:</td>
-											<td>###</td>
+											<td><?php echo $email; ?></td>
 										</tr>
 										<tr>
 											<td>Nomor Telepon</td>
 											<td>:</td>
-											<td>###</td>
+											<td><?php echo $telp; ?></td>
 										</tr>
 										<tr>
 											<td>Alamat</td>
 											<td>:</td>
 											<td>
-												###
+												<?php echo $alamat; ?>
 											</td>
 										</tr>
 									</table>
