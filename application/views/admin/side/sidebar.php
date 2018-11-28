@@ -60,34 +60,6 @@
                   <p>Gallery</p>
                 </a>
               </li>
-                <li class="nav-item <?php if($this->uri->segment(2)=='Prestasi' or $this->uri->segment(2)
-               =='Unggulan'){echo 'active';} ?> ">
-                <a class="nav-link" data-toggle="collapse" href="#pagesExamples">
-                  <i class="material-icons">build</i>
-                  <p> Key Features
-                   <b class="caret"></b>
-                 </p>
-               </a>
-               <div class="<?php if($this->uri->segment(2)=='Prestasi' or $this->uri->segment(2)
-               =='Unggulan'){echo 'show';}
-               else{echo "collapse";}?>  
-               ml-4 " id="pagesExamples">
-               <ul class="nav">
-                <li class="nav-item <?php if($this->uri->segment(2)=='Prestasi'){echo 'active';}?>">
-                  <a class="nav-link" href="<?php echo base_url("admin/Prestasi"); ?>">
-                    <i class="material-icons"> book </i>
-                    <span class="sidebar-normal"> Prestasi </span>
-                  </a>
-                </li>
-                <li class="nav-item <?php if($this->uri->segment(2)=='Unggulan'){echo 'active';}?> ">
-                  <a class="nav-link" href="<?php echo base_url("admin/Unggulan"); ?>">
-                    <i class="material-icons"> book </i>
-                    <span class="sidebar-normal"> Unggulan </span>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </li>
               <li class="nav-item <?php if($this->uri->segment(2)=='User' or $this->uri->segment(2)
                =='Admin' or $this->uri->segment(2)
                =='Produk' or $this->uri->segment(2)
@@ -127,6 +99,34 @@
                   <a class="nav-link" href="<?php echo base_url("admin/Testimonial"); ?>">
                     <i class="material-icons"> verified_user </i>
                     <span class="sidebar-normal"> Testimonial </span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item <?php if($this->uri->segment(2)=='Prestasi' or $this->uri->segment(2)
+               =='Unggulan'){echo 'active';} ?> ">
+                <a class="nav-link" data-toggle="collapse" href="#pagesExamples">
+                  <i class="material-icons">build</i>
+                  <p> Key Features
+                   <b class="caret"></b>
+                 </p>
+               </a>
+               <div class="<?php if($this->uri->segment(2)=='Prestasi' or $this->uri->segment(2)
+               =='Unggulan'){echo 'show';}
+               else{echo "collapse";}?>  
+               ml-4 " id="pagesExamples">
+               <ul class="nav">
+                <li class="nav-item <?php if($this->uri->segment(2)=='Prestasi'){echo 'active';}?>">
+                  <a class="nav-link" href="<?php echo base_url("admin/Prestasi"); ?>">
+                    <i class="material-icons"> book </i>
+                    <span class="sidebar-normal"> Prestasi </span>
+                  </a>
+                </li>
+                <li class="nav-item <?php if($this->uri->segment(2)=='Unggulan'){echo 'active';}?> ">
+                  <a class="nav-link" href="<?php echo base_url("admin/Unggulan"); ?>">
+                    <i class="material-icons"> book </i>
+                    <span class="sidebar-normal"> Unggulan </span>
                   </a>
                 </li>
               </ul>

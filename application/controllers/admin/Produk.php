@@ -8,6 +8,9 @@ class Produk extends CI_Controller
     {
         parent::__construct();
         $this->load->model('Admin_Dashboard');
+        if (!$this->session->userdata('status')=="login") {          
+            redirect('Admin/Login_adm');
+        }
     }
 
   public function index(){

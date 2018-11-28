@@ -40,8 +40,8 @@
                     <td><?php echo $users->telp; ?></td>
                     <td><img style="width: 150px;height: 150px" src="<?php echo base_url("$users->foto"); ?>"></td>
                     <td class="text-right">
-                      <a href="<?php echo base_url("admin/User/hapus/".$users->id_user) ?>" onclick="return confirm('Data Akan Dihapus !')" class="btn btn-simple btn-danger btn-icon edit"><i class="material-icons">close</i></a>
-                      <a href="<?php echo base_url("admin/User/lihat_user") ?>" class="btn btn-simple btn-info btn-icon remove"><i class="material-icons">visibility</i></a>
+                      <a href="<?php echo base_url("admin/User/hapus/".$users->id_user) ?>" onclick="return confirm('Data Akan Dihapus !')" class="btn btn-simple btn-danger btn-icon edit"><i class="material-icons">delete</i></a>
+                      <a href="<?php echo base_url("admin/User/lihat_user/".$users->id_user) ?>" class="btn btn-simple btn-info btn-icon remove"><i class="material-icons">visibility</i></a>
                     </td>
                   </tr>
                   <?php } ?>

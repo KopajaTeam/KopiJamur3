@@ -39,7 +39,7 @@
                             <td><img style="width: 150px;height: 150px" src="<?php echo base_url("$produks->gambar_produk"); ?>"></td>
                             <td class="text-right">
                               <a href="<?php echo base_url("admin/Produk/edit/".$produks->id_produk); ?>" class="btn btn-simple btn-warning btn-icon like"><i class="material-icons">edit</i></a>
-                              <a href="<?php echo base_url("admin/Produk/hapus/".$produks->id_produk) ?>" onclick="return confirm('Data Akan Dihapus !')" class="btn btn-simple btn-danger btn-icon edit"><i class="material-icons">close</i></a>
+                              <a href="<?php echo base_url("admin/Produk/hapus/".$produks->id_produk) ?>" onclick="return confirm('Data Akan Dihapus !')" class="btn btn-simple btn-danger btn-icon edit"><i class="material-icons">delete</i></a>
                             </td>
                           </tr>
                         <?php } ?>

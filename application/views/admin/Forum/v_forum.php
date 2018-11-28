@@ -35,7 +35,7 @@
                     <td><?php echo $forums->nama_kategori; ?></td>
                     <td>61</td>
                     <td class="text-right">
-                      <a href="<?php echo base_url("admin/Forum/hapus/".$forums->id_forum) ?>" onclick="return confirm('Data Akan Dihapus !')" class="btn btn-simple btn-danger btn-icon edit"><i class="material-icons">close</i></a>
+                      <a href="<?php echo base_url("admin/Forum/hapus/".$forums->id_forum) ?>" onclick="return confirm('Data Akan Dihapus !')" class="btn btn-simple btn-danger btn-icon edit"><i class="material-icons">delete</i></a>
                     </td>
                   </tr>
                   <?php } ?>
