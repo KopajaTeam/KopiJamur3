@@ -44,14 +44,13 @@
 										<div class="card-body">
 											<!-- button simpan -->
 
-											<form method="post" action="<?php echo base_url('Dashboard_user/simpan_forum') ?>" enctype="multipart/form-data">
+											<form method="post" action="<?php echo base_url('Dashboard_user/edit_forum_simpan') ?>" enctype="multipart/form-data">
 												<div class="row">
 													<div class="col-lg-9">
 														<div class="form-group">
 															<!-- disini judul -->
-
-															<input type="text" placeholder="<?php echo $forum['judul'] ?>" name="judul_forum" class="form-control" name="judul">
-
+															<input type="hidden" class="form-control" name="id_forum" value="<?php echo $forum['id_forum'] ?>">
+															<input type="text"  name="judul_forum" class="form-control" value="<?php echo $forum['judul'] ?>" name="judul_forum"> 
 														</div>
 													</div>
 													<div class="col-lg-1">
@@ -63,7 +62,7 @@
 													<!-- disini deskripsi forum -->
 
 													<div class="col-lg-9">
-														<input type="date" name="tanggal" class="form-control"><a href=""></a>
+														<input type="date" name="tanggal" class="form-control" value="<?php echo $forum['tanggal'] ?>"><a href=""></a>
 													</div>
 													<br>
 													<br>
@@ -76,7 +75,7 @@
 														<!-- input forum disnni -->
 
 														<div class="form-group">
-															<textarea class="form-control" name="isi_forum" placeholder="<?php echo $forum['isi_forum'] ?>" id="inputforum"></textarea>
+															<textarea class="form-control" name="isi_forum" id="inputforum"><?php echo $forum['isi_forum'] ?></textarea>
 														</div>
 													</div>
 													<div class="col-lg-3" style="margin-top: -55px">
@@ -84,13 +83,16 @@
 															<select name="kategori_forum" class="form-control">
 																<option value="">- - Pilih Kategori - -</option>
 																<?php foreach ($kategori_forum as $data_kategori_forum) {?>
-																<option value="<?php echo $data_kategori_forum->id_kategori_forum ?>"><?php echo $data_kategori_forum->nama_kategori ?> </option>
+																<option <?php if ($data_kategori_forum->id_kategori_forum == $forum ['id_kategori_forum'])
+																 {echo "SELECTED";} ?> 
+																 value="<?php echo $data_kategori_forum->id_kategori_forum ?>">
+																 <?php echo $data_kategori_forum->nama_kategori ?> </option>
 																<?php } ?>
 															</select>
 														</div>
 													</div>
 													<div class="col-lg-3" style="margin-top: 10px">
-														<img id="blah" src="<?php echo base_url(); ?>master/admin/img/image_placeholder.jpg" alt="your image" / style="margin-bottom: 15px;height: 185px;width: 180px">
+														<img id="blah" src="<?php echo base_url($forum['gambar_headline']); ?>" alt="your image" / style="margin-bottom: 15px;height: 185px;width: 180px">
 														<input type='file' name="gambar_headline" onchange="readURL(this);" />
 													</div>
 												</div>

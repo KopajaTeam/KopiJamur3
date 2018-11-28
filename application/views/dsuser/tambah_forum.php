@@ -42,15 +42,12 @@
 										</div>
 										<div class="card-body">
 											<!-- button simpan -->
-
 											<form method="post" action="<?php echo base_url('Dashboard_user/simpan_forum') ?>" enctype="multipart/form-data">
 												<div class="row">
 													<div class="col-lg-9">
 														<div class="form-group">
 															<!-- disini judul -->
-
 															<input type="text" placeholder="Masukkan Judul Forum" name="judul_forum" class="form-control" name="judul">
-
 														</div>
 													</div>
 													<div class="col-lg-1">
@@ -60,7 +57,6 @@
 												<hr style="margin-top: -30px;margin-bottom: 15px">
 												<div class="row">
 													<!-- disini deskripsi forum -->
-
 													<div class="col-lg-9">
 														<input type="date" name="tanggal" class="form-control">
 													</div>
