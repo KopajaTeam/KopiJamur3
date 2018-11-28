@@ -7,52 +7,27 @@
             <div class="card ">
                 <div class="card-header card-header-rose card-header-text">
                     <div class="card-text">
-                        <h4 class="card-title">Tambah Data Produk Unggulan</h4>
+                        <h4 class="card-title">Tambah Data Unggulan</h4>
                     </div>
                 </div>
                 <div class="card-body ">
-                    <form method="get" action="http://demos.creative-tim.com/" class="form-horizontal">
+                    <form method="post" action="<?php echo base_url('admin/Unggulan/insert') ?>" class="form-horizontal" enctype="multipart/form-data">
                         <div class="row">
-                            <label class="col-sm-2 col-form-label">Nama Produk : </label>
+                            <label class="col-sm-2 col-form-label">Judul Unggulan : </label>
                             <div class="col-sm-9">
                                 <div class="form-group">
-                                    <input type="text" class="form-control">
+                                    <input type="text" class="form-control" name="judul_unggulan">
                                 </div>
                             </div>
                         </div>
                         <div class="row">
-                            <label class="col-sm-2 col-form-label">Detail Produk : </label>
+                            <label class="col-sm-2 col-form-label">Isi Unggulan: </label>
                             <div class="col-sm-9">
                                 <div class="form-group">
-                                    <input type="text" class="form-control">
+                                    <input type="text" class="form-control" name="isi_unggulan">
                                 </div>
                             </div>
                         </div>
-                        <div class="row">
-                            <label class="col-sm-2 col-form-label">Jenis : </label>
-                            <div class="col-sm-9">
-                                <div class="form-group">
-                                    <input type="text" class="form-control">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <label class="col-sm-2 col-form-label">Rasa : </label>
-                            <div class="col-sm-9">
-                                <div class="form-group">
-                                    <input type="text" class="form-control">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <label class="col-sm-2 col-form-label">Harga : </label>
-                            <div class="col-sm-9">
-                                <div class="form-group">
-                                    <input type="text" class="form-control">
-                                </div>
-                            </div>
-                        </div>
-
                         <div class="row">
                             <label class="col-sm-2 col-form-label">Pilih Gambar : </label>
                             <div class="fileinput fileinput-new text-center" data-provides="fileinput">
@@ -64,14 +39,14 @@
                                     <span class="btn btn-rose btn-file">
                                         <span class="fileinput-new">Select image</span>
                                         <span class="fileinput-exists">Change</span>
-                                        <input type="file" name="..." />
+                                        <input type="file" name="gambar_unggulan" />
                                     </span>
                                     <a href="#pablo" class="btn btn-danger btn-round fileinput-exists" data-dismiss="fileinput"><i class="fa fa-times"></i> Remove</a>
                                 </div>
                             </div>
                         </div> 
+                        <button type="submit" class="btn btn-rose float-right ">Tambah</button>
                     </form>
-                    <button type="submit" class="btn btn-rose float-right ">Tambah</button>
                 </div>   
             </div>
         </div>

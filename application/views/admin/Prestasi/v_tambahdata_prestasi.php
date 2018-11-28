@@ -13,18 +13,18 @@
                 <div class="card-body ">
                     <form method="post" action="<?php echo base_url('admin/Prestasi/insert') ?>" class="form-horizontal" enctype="multipart/form-data">
                         <div class="row">
-                            <label class="col-sm-2 col-form-label">Nama Prestasi : </label>
+                            <label class="col-sm-2 col-form-label">Judul Prestasi : </label>
                             <div class="col-sm-9">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" name="nama_prestasi">
+                                    <input type="text" class="form-control" name="judul_prestasi">
                                 </div>
                             </div>
                         </div>
                         <div class="row">
-                            <label class="col-sm-2 col-form-label">Deskripsi : </label>
+                            <label class="col-sm-2 col-form-label">Isi Prestasi </label>
                             <div class="col-sm-9">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" name="deskripsi_prestasi">
+                                    <input type="text" class="form-control" name="isi_prestasi">
                                 </div>
                             </div>
                         </div>
