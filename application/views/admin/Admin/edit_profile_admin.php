@@ -33,7 +33,7 @@
                             <label class="col-sm-2 col-form-label">Email : </label>
                             <div class="col-sm-9">
                                 <div class="form-group">
-                                    <input type="email" class="form-control" name="email_admin" value="<?php echo $email_admin ?>">
+                                    <input type="email" disabled="" class="form-control" name="email_admin" value="<?php echo $email_admin ?>">
                                 </div>
                             </div>
                         </div>

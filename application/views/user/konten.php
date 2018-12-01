@@ -88,7 +88,6 @@
 														</div><!-- .entry-content-wrapper -->
 													</article><!-- .post -->
 													<?php } ?>
-
 												</div> <!-- .inner-wrapper -->
 												<hr class="stylehr" style="margin-top: -100px">
 											</div>
@@ -193,9 +192,7 @@
 													</div><!-- .testimonial-thumb -->
 													<div class="testimonial-summary">
 														<p><?php echo $testi->nama; ?></p>
-
 														<h3 class="testimonial-title"><?php echo $testi->nama_produk; ?></h3>
-
 													</div><!-- .testimonial-summary -->
 													<div class="portfolio-item  graphic-design"  style="border-radius: 0;">
 														<div class="item-inner-wrapper" >
@@ -208,12 +205,9 @@
 															</div>
 														</div>
 													</div><!-- end item -->
-
 													<p class="testimonial-position"  ><?php echo $testi->komentar; ?></p>
 												</div> <!-- .testimonial-wrapper -->
-
 											</div> <!-- .testimonial-item  -->
-
 											<?php } ?>
 										</div> <!-- .testimonial-carousel-wrapper -->
 									</aside> <!-- .section section-testimonial-carousel -->

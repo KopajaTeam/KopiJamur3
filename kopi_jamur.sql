@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 26, 2018 at 02:13 AM
+-- Generation Time: Dec 01, 2018 at 11:28 AM
 -- Server version: 10.1.31-MariaDB
 -- PHP Version: 5.6.35
 
@@ -43,7 +43,8 @@ CREATE TABLE `admin` (
 
 INSERT INTO `admin` (`id_admin`, `nama_admin`, `alamat_admin`, `email_admin`, `password_admin`, `foto_admin`) VALUES
 (2, 'panji', 'rumah jember 123', 'panjibudi467@gmail.com', 'panjibudi123', ''),
-(3, 'toni', 'jl.drsoetome', 'sultonihawk732@gmail.com', 'tonihawk999', 'assets/images_upload/004f4818e2af51c3869b6529886e2e14.jpg');
+(3, 'toni', 'jl.drsoetome', 'sultonihawk732@gmail.com', 'tonihawk999', 'assets/images_upload/004f4818e2af51c3869b6529886e2e14.jpg'),
+(4, 'bahrul', 'jember', 'bahrul@e.ac', '1234', '');
 
 -- --------------------------------------------------------
 
@@ -68,7 +69,7 @@ CREATE TABLE `forum` (
 
 INSERT INTO `forum` (`id_forum`, `id_user`, `id_kategori_forum`, `judul`, `isi_forum`, `desc_forum`, `gambar_headline`, `tanggal`) VALUES
 (1, 1, 1, 'Tak Hanya Nikmat, Kopi Jamur yang Lagi Tren Ini Juga Sehat', 'JAKARTA - Produsen dan makanan sehat asal Finlandia, Four Sigmatic berhasil menciptakan kopi jamur atau mushroom coffee. Dengan nama Mushroom Coffee Mix, kopi ini diklaim sebagai kopi sehat dan dapat menjadi pilihan pecinta kopi untuk menikmati kopi tanpa harus khawatir akan kesehatan.\r\n\r\nDilansir The Daily Meal, Mushroom Coffee Mix hadir dalam bentuk bubuk yang terbuat dari campuran jamur Cordyceps, Lion\'s Mane atau Chaga yang telah dihaluskan menjadi satu. Kopi ini juga bisa menjadi latte dengan menambahkan susu sehingga menghasilkan rasa yang lezat. \r\n\r\nPenggunaan biji Arabika bercita rasa ringan asal Amerika Tengah, membuat rasa ekstrak jamur tidak terlalu kuat. Mushroom Coffee Mix diklaim sebagai kopi sehat karena menyimpan banyak manfaat bagi kesehatan dibandingkan kopi lain. Salah satunya meningkatkan energi.\r\n\r\nBuku Herbal Medicine: Bimolecular and Clinical Aspect menyebut bahwa jamur mampu mengobati kanker, mengontrol gula darah, tekanan darah, meningkatkan sistem kekebalan dan kesehatan hati. Jamur pun telah digunakan sejak lama sebagai pengobatan di negara Asia. \r\n\r\nSelain meningkatkan energi, kopi jamur juga baik untuk kesehatan usus lantaran kandungan pH pada kopi ini dapat meningkatkan pertumbuhan bakteri baik dalam melindungi usus. Jamur juga dipercaya bisa mengatasi efek samping dari konsumsi kopi yaitu gelisah hingga rasa panas di perut.\r\n\r\n(tdy)', 'JAKARTA - Produsen dan makanan sehat asal Finlandia, Four Sigmatic berhasil menciptakan kopi jamur aJAKARTA - Produsen dan makanan sehat asal Finlandia, Four Sigmatic berhasil menciptakan kopi jamur atau mushroom coffee. ', 'assets/images_upload/forum/kopis.jpg', '2018-10-07'),
-(2, 2, 2, 'Dia yang Melawan dengan Kopi', 'Liputan6.com, Aceh - Ngopi, bukan sekadar cerita mencecap segelas robusta (Coffea canephora) atau arabica(Coffea arabica) dengan berbagai variannya. Tidak sesimpel itu.\r\n\r\nKarena, di tiap gelas kopi yang diseruput para penikmatnya, tertuang pula harapan petani pemetik biji kopi. Lebih jauh, ada alam yang tak selamanya \'sehat\' dan mesti di konservasi. Agar kopi, alam, dan petani tetap hidup berkemakmuran, dan berkelanjutan.\r\nHal itu, kiranya menstimulus seorang Danurfan (32) untuk berpikir keras melangkahi renungan-renungan para kopiholic yang sejatinya hanya menjadi maniak si hitam ber-kafein tanpa ber-filosofi lebih jauh. Ia ingin menyentuh cakrawala yang selama ini jarang disentuh oleh para penggila kopi lain.\r\n\r\nAlam dan petani kopi, bagi seorang Danurfan adalah satu tubuh yang equilateral. Tak boleh terpilah atau saling tindih namun berdialektika melahirkan sebuah harmonisasi.\r\n\r\nPria kelahiran Bireuen 25 September 1986 ini, suka jika kopi Aceh prestisius dan dikenal dunia. Namun, ia tak suka jika kopi menjadi alasan kalau alam halal di ekploitasi tanpa konservasi. Baginya kopi senjata. Alat untuk melawan.\r\n\r\n\"Kopi menjadi andalan untuk melawan perusakan hutan di sebagian Aceh. Ini menjadi faktor kesejahteraan bagi masyarakat sekitar, tentunya,\" demikian Danurfan, kepada Liputan6.com, Jum\'at, 9 November 2018.\r\n\r\nDidorong kecintaanya terhadap kopi serta tekadnya melestarikan alam, Danurfan mendirikan Leuser Coffee pada 2013 lalu. Warungnya itu menjadi wadah dalam menggandeng para petani kopi di daerahnya.\r\n\r\nAlam yang kian rentan serta kesejahteraan petani kopi yang kian tersudut oleh perubahan iklim yang membuat siklus panen kopi terganggu, menjadi alasan utama pria yang tergabung dalam Gayo Cupper Team ini.\r\nLeuser Coffe yang dinahkodainya diperuntukkan khusus melayani pemesanan kopi yang pengemasannya dikerjakan di rumah saja. Biji-biji kopi tersebut khusus dipesannya dari para petani kopi kelas proletar.\r\n\r\n\"Langkah kita merajut perubahan untuk petani adalah bekerjasama, membeli dengan harga pasar, memberikan premium fee atas komitmen dalam menjaga hutan disekitar,\" ujar pria yang masa kecilnya sebagian besar dihabiskan di dataran tinggi Gayo.\r\n\r\nSelanjutnya, dari setiap kemasan bubuk kopi dengan berat 250 gram yang terjual, Danurfan menyisihkan Rp 2500. Uang inilah yang dia sisihkan untuk menjalankan niatnya melawan kerusakan alam.\r\n\r\n\"Dengan uang itu, kita menggandeng para petani untuk melakukan penanaman tanaman buah kopi sebagai ‘tabungan’ para petani sewaktu-waktu harga kopi anjlok atau mengalami gagal panen,\" ungkapnya.\r\n\r\nKonservasi yang diuji-terapkannya itu bukan tanpa sebab. Masa kecilnya yang dihabiskan bersama petani di dataran tinggi Gayo memantik kegundahan-kegundahan di jiwa seorang Danurfan.\r\n\r\nMata seorang Danurfan kenyang oleh drama bagaimana alam dirajang orang tidak bertanggungjawab. Perambahan kayu ilegal, perburuan satwa langka, pembukaan lahan dengan tidak memandang segenap pakem dan norma alam, membuatnya geram.\r\n\r\nKegundahan itu kiranya mengejawantah menjadi tekad melawan eksploitasi alam kali ia jatuh hati pada kopi. Dia paham betul, Tuhan hanya mencurah berkahnya jika alam baik dan dikelola oleh petani kopi yang baik pula.\r\n\r\nPetani kopi yang baik, tentunya menghasilkan biji kopi terbaik. Biji kopi yang berkualitas pasti dibidik oleh pembeli. Pada titik ini, dirinya tahu betul ekses seperti apa yang akan didapat petani kopi.\r\n\r\n\"Mengelola hutan menjadi sumber daya ekonomi perlu. Namun semua itu perlu dilakukan dengan bijak, sebab apa diambil dari alam harus dikembalikan ke alam,\" cetus Ketua Global March Elephant and Rhino Aceh itu.\r\n\r\nDemikian Danurfan. Baginya, kopi tidak melulu soal eksplorasi rasa, seni meracik, dan menyeduh atau sejumput kisah eksotis kala para pemikir atau seniman duduk di meja kopi lalu mencabar dunia dengan sajak-sajaknya.\r\n\r\nBukan pula sebatas melihat kopi sebagai tanaman yang punya prospek ekonomi yang menggiurkan, baik jika dijual dalam bentuk biji atau disajikan di warung-warung. Danurfan melampaui semua itu. Ia melawan dengan kopi.\r\n\r\n\"Melalui warung kopi Leuser Coffee ini, saya bertekad melestarikan hutan di Aceh. Misalnya, hutan Leuser Aceh, harus terus dikelola secara baik karena ada empat juta lebih penduduk yang bergantung dari sumber air kawasan ekosistem tersebut,\" pungkasnya.', 'Liputan6.com, Aceh - Ngopi, bukan sekadar cerita mencecap segelas robusta (Coffea canephora) atau arabica(Coffea arabica) dengan berbagai variannya. ', 'assets/images_upload/forum/kopis2.jpg', '2018-07-16');
+(6, 2, 1, 'Kopi Jamur, Tren \"Superfood\" Selanjutnya', '<p>KOMPAS.com - Setelah susu kunyit, saat ini sedang naik daun kopi jamur. Menurut Four Sigmatic, perusahaan dari Finlandia yang memproduksi produk minuman seperti kopi dan cokelat yang diinfus jamur, minuman ini bakal jadi superfood baru. Tujuan produksi minuman itu sederhana saja, memudahkan masyarakat mengonsumsi makanan yang berkhasiat sehat. &nbsp;yang dipilih adalah jamur liar yang sehat. Tak ada jamur shitake yang terlihat mengapung pada kopi jamur ini. Untuk membuat kopi, Four Sigmatic membuatnya menjadi ekstrak jamur dengan mengisolasi dan mengeringkan bahan kunci pada jamur. Bubuk itu disebut memiliki senyawa sehat dari jamur liar dalam konsentrasi tinggi. Setelah diuji keamanan dan kualitas, bubuk itu dikombinasikan dengan kopi instan organik menjadi campuran yang siap diberi air panas dan segera dinikmati. Tetapi mengapa kita perlu menambahkan jamur di kopi, bukannya mencampurnya dengan telur dadar? Four Sigmatic mengatakan, produk mereka meningkatkan manfaat sehat secangkir kopi. Jamur maitake, misalnya, dikatakan mengatur kadar gula darah, sedangkan jamur chaga mengurangi keasaman kopi sehingga kopi jadi baik untuk lambung. Kedua jamur ini ditemukan pada kopi tersebut. Menurut ahli gizi Cynthia Sass, klaim itu bukannya tak berdasar. &quot;Ada beberapa riset yang membuktikan jamur maitake mungkin menurunkan gula darah pada pasien diabetes tipe 2,&quot; katanya. Chagas dipercaya punya kemampuan mendukung kesehatan organ pencernaan dan mengusir bakteri serta virus. Tetapi ini tak berarti kita harus mengisi pola makan kita dengan jamur saja. Memang banyak riset mendukung manfaat medis jamur seperti yang sudah dikenal bangsa China kuno berabad-abad silam. &quot;Penting untuk tahu zat-zat medis termasuk dalam bahan alami dan tanaman. Ini juga punya efek samping dan interaksi dengan obat,&quot; jelas Sass. Ketika kita mengonsumsi obat pengencer darah atau pengontrol diabetes maupun tekanan darah, kita sebaiknya menghindari konsumsi jamur maitake, karena interaksi dengan obat-obatan tersebut berpotensi bahaya untuk kesehatan. Begitu pula, chagas ditemukan menurunkan kolesterol jahat, menaikkan kolesterol baik dan mengurangi inflamasi pada tikus. Tetapi studi pada tubuh manusia masih kurang. &quot;Penting untuk dicatat, chagas punya efek mengencerkan darah sehingga tak boleh dikonsumsi menjelang dioperasi,&quot; katanya. Daripada pusing dengan efek medis jamur, lebih baik jika jamur itu dimakan langsung ketimbang mengonsumsi ekstraknya. &quot;Jamur yang dimakan seperti jamur kancing dan portobello termasuk rendah kalori dan kaya antioksidan,&quot; kata Sass. &quot;Di samping itu jamur tersebut merupakan satu-satunya sumber vitamin D dari tumbuhan. Ini vitamin kunci yang seringkali tak cukup kita dapatkan,&quot; katanya. Vitamin D berkaitan dengan menurunnya risiko obesitas, diabetes tipe 2, penyakit jantung, osteoporosis dan bahkan kanker. Untuk mendapatkan kopi jamur yang serupa dengan produksi Four Sigmatic, Sass menyarankan menyerahkannya pada panduan profesional. &quot;Saya tak merekomendasikan untuk membuat kopi jamur sendiri,&quot; katanya. Sebaiknya mengonsumsi jamur dengan khasiat medis, perlu konsultasi pada ahli yang benar-benar paham riwayat kesehatan Anda dan tahu interaksi potensial dengan jamu, suplemen atau obat-obatan yang sedang dikonsumsi.</p>', '', 'assets/images_upload/foto_forum/MRIP3.jpg', '2018-10-22');
 
 -- --------------------------------------------------------
 
@@ -322,18 +323,19 @@ CREATE TABLE `reply_forum` (
   `id_forum` int(11) NOT NULL,
   `id_user` int(11) NOT NULL,
   `isi_reply` varchar(100) NOT NULL,
-  `tanggal` date NOT NULL
+  `tanggal_r` date NOT NULL,
+  `replykom` varchar(1000) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `reply_forum`
 --
 
-INSERT INTO `reply_forum` (`id_reply`, `id_forum`, `id_user`, `isi_reply`, `tanggal`) VALUES
-(2, 1, 1, 'Cek Isi Kopi', '2018-07-01'),
-(3, 2, 2, 'Masih dengan kopi jamur', '2018-10-14'),
-(4, 1, 2, 'knknnkl', '2018-11-22'),
-(5, 1, 2, 'bklklbo;lb;obobb', '2018-11-22');
+INSERT INTO `reply_forum` (`id_reply`, `id_forum`, `id_user`, `isi_reply`, `tanggal_r`, `replykom`) VALUES
+(2, 1, 1, 'Cek Isi Kopi', '2018-07-01', ''),
+(4, 1, 2, 'knknnkl', '2018-11-22', ''),
+(5, 1, 2, 'bklklbo;lb;obobb', '2018-11-22', ''),
+(7, 1, 2, 'hahaha', '2018-11-26', '');
 
 -- --------------------------------------------------------
 
@@ -355,9 +357,33 @@ CREATE TABLE `testimoni` (
 --
 
 INSERT INTO `testimoni` (`id_testimoni`, `id_user`, `id_produk`, `rate`, `komentar`, `gambar_testi`) VALUES
-(6, 2, 7, 0, 'Ini baru 1', 'assets/images/portfolio/xz.JPG'),
+(0, 6, 7, 0, 'Alhamdulilah y', 'assets/images/portfolio/MRIP2.jpg'),
 (7, 2, 7, 0, 'fdsfsfsd', 'assets/images/portfolio/xz1.JPG'),
-(8, 2, 7, 0, 'enak lohj', 'assets/images/portfolio/xz2.JPG');
+(8, 2, 7, 0, 'enak lohj', 'assets/images/portfolio/xz2.JPG'),
+(11, 2, 7, 0, 'Ini baru 1', 'assets/images/portfolio/MRIP.jpg'),
+(12, 2, 7, 0, 'asdasdasdasdasdasdasdasdasdasd', 'assets/images/portfolio/next.jpg');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `unggulan`
+--
+
+CREATE TABLE `unggulan` (
+  `id_unggulan` int(5) NOT NULL,
+  `judul_unggulan` varchar(45) NOT NULL,
+  `isi_unggulan` varchar(1000) NOT NULL,
+  `gambar_unggulan` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `unggulan`
+--
+
+INSERT INTO `unggulan` (`id_unggulan`, `judul_unggulan`, `isi_unggulan`, `gambar_unggulan`) VALUES
+(1, 'Produk Unggulan', 'Kopi jamur sebenarnya sudah sejak lama digunakan dalam pengobatan tradisional China. Bubuk ekstrak jamur yang kemudian dicampur dengan kopi instan organik ternyata efektif untuk mencegah diabetes dan mengurangi risiko kanker.', 'assets/images/portfolio/gambar6.jpg'),
+(2, 'Produk Unggulan 2', 'Kopi jamur sebenarnya sudah sejak lama digunakan dalam pengobatan tradisional China. Bubuk ekstrak jamur yang kemudian dicampur dengan kopi instan organik ternyata efektif untuk mencegah diabetes dan mengurangi risiko kanker.', 'assets/images/portfolio/gambar7.jpg'),
+(3, 'Produk Unggulan 3', 'Kopi jamur sebenarnya sudah sejak lama digunakan dalam pengobatan tradisional China. Bubuk ekstrak jamur yang kemudian dicampur dengan kopi instan organik ternyata efektif untuk mencegah diabetes dan mengurangi risiko kanker. Kopi jamur sebenarnya sudah sejak lama digunakan dalam pengobatan tradisional China. Bubuk ekstrak jamur yang kemudian dicampur dengan kopi instan organik ternyata efektif untuk mencegah diabetes dan mengurangi risiko kanker.', 'assets/images/portfolio/gambar8.jpg');
 
 -- --------------------------------------------------------
 
@@ -370,20 +396,21 @@ CREATE TABLE `user` (
   `email` varchar(100) NOT NULL,
   `password` varchar(100) NOT NULL,
   `nama` char(100) NOT NULL,
+  `tgl_lahir` date NOT NULL,
+  `jenis_kelamin` varchar(25) NOT NULL,
   `alamat` varchar(100) NOT NULL,
   `foto` varchar(100) NOT NULL,
-  `profiluser` varchar(100) NOT NULL,
-  `telp` int(15) NOT NULL
+  `telp` varchar(15) NOT NULL,
+  `member_sejak` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `user`
 --
 
-INSERT INTO `user` (`id_user`, `email`, `password`, `nama`, `alamat`, `foto`, `profiluser`, `telp`) VALUES
-(1, 'panjibudi467@gmail.com', 'blitzkrieg123', 'Panji Budi', 'jvsbkv', 'assets/images_upload/panji.jpg', 'saya sangat suka sekali minumm kopi dan makan roti', 282313214),
-(2, 'bahrularif007@gmail.com', '1234', 'Rangga Akhir', 'jalan baru 123', 'assets/images_upload/rga.jpg', 'makan adalah sebagian dari kebutuhan', 672319312),
-(3, 'panjibudi467@gmail.com', '12345', 'Bahrul Arif', 'jalan baru 123', 'assets/images_upload/author-12.jpg', 'makan dan minum saya selalu utamakan', 807831232);
+INSERT INTO `user` (`id_user`, `email`, `password`, `nama`, `tgl_lahir`, `jenis_kelamin`, `alamat`, `foto`, `telp`, `member_sejak`) VALUES
+(5, 'panjibudi467@gmail.com', '12345', 'panji budi satria', '1997-12-21', 'Laki - Laki', 'jalan baru 123', 'assets/images_upload/author-14.jpg', '082143211521', '2018-11-27'),
+(6, 'bahrul@gmail.com', '1234', 'bahrul', '1998-09-15', 'laki - laki', 'Jember', 'assets/images_upload/xz.JPG', '085746036053', '2018-12-01');
 
 --
 -- Indexes for dumped tables
@@ -496,6 +523,12 @@ ALTER TABLE `testimoni`
   ADD KEY `id_produk_3` (`id_produk`);
 
 --
+-- Indexes for table `unggulan`
+--
+ALTER TABLE `unggulan`
+  ADD PRIMARY KEY (`id_unggulan`);
+
+--
 -- Indexes for table `user`
 --
 ALTER TABLE `user`
@@ -509,13 +542,13 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `admin`
 --
 ALTER TABLE `admin`
-  MODIFY `id_admin` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_admin` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `forum`
 --
 ALTER TABLE `forum`
-  MODIFY `id_forum` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_forum` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `gallery`
@@ -581,19 +614,25 @@ ALTER TABLE `produk`
 -- AUTO_INCREMENT for table `reply_forum`
 --
 ALTER TABLE `reply_forum`
-  MODIFY `id_reply` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_reply` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `testimoni`
 --
 ALTER TABLE `testimoni`
-  MODIFY `id_testimoni` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id_testimoni` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+
+--
+-- AUTO_INCREMENT for table `unggulan`
+--
+ALTER TABLE `unggulan`
+  MODIFY `id_unggulan` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id_user` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_user` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- Constraints for dumped tables
@@ -603,14 +642,12 @@ ALTER TABLE `user`
 -- Constraints for table `forum`
 --
 ALTER TABLE `forum`
-  ADD CONSTRAINT `forum_ibfk_1` FOREIGN KEY (`id_user`) REFERENCES `user` (`id_user`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `forum_ibfk_2` FOREIGN KEY (`id_kategori_forum`) REFERENCES `kategori_forum` (`id_kategori_forum`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `order`
 --
 ALTER TABLE `order`
-  ADD CONSTRAINT `order_ibfk_1` FOREIGN KEY (`id_user`) REFERENCES `user` (`id_user`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `order_ibfk_2` FOREIGN KEY (`id_kurir`) REFERENCES `kurir` (`id_kurir`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `order_ibfk_3` FOREIGN KEY (`id_kecamatan`) REFERENCES `kecamatan` (`id_kecamatan`) ON DELETE CASCADE ON UPDATE CASCADE;
 
@@ -624,14 +661,7 @@ ALTER TABLE `produk`
 -- Constraints for table `reply_forum`
 --
 ALTER TABLE `reply_forum`
-  ADD CONSTRAINT `reply_forum_ibfk_1` FOREIGN KEY (`id_forum`) REFERENCES `forum` (`id_forum`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `reply_forum_ibfk_2` FOREIGN KEY (`id_user`) REFERENCES `user` (`id_user`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
--- Constraints for table `testimoni`
---
-ALTER TABLE `testimoni`
-  ADD CONSTRAINT `testimoni_ibfk_1` FOREIGN KEY (`id_user`) REFERENCES `user` (`id_user`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `reply_forum_ibfk_1` FOREIGN KEY (`id_forum`) REFERENCES `forum` (`id_forum`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
