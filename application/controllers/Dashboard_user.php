@@ -50,6 +50,58 @@ class Dashboard_user extends CI_Controller {
 	public function tentang_saya(){
 		$this->load->view('dsuser/tentang_saya');
 	}
+	public function edit_user(){
+		$this->load->view('dsuser/edit_user');
+	}
+	    function edit_users($id_user){
+        $where = array('id_user' => $id_user);
+        $user = $this->K_jamur->selectwhere('user',$where)->row();
+        $data = array(
+            'nama'				=> $user->nama, 
+            'alamat'         	=> $user->alamat,
+            'email'         	=> $user->email,
+            'password'     		=> $user->password,
+            'tgl_lahir'      	=> $user->tgl_lahir,
+            'jenis_kelamin'     => $user->jenis_kelamin,
+            'telp'      		=> $user->telp,
+            'foto'     			=> $user->foto,
+        );
+        $this->load->view('dsuser/edit_user', $data);
+    }
+
+    function update_users(){        
+        $where = array('id_user' => $this->input->post('id'));
+        $dir = 'assets/images_upload/foto_user/';
+        $config['upload_path']      = 'assets/images_upload/foto_user/';
+        $config['allowed_types']    = 'jpg|png|jpeg';
+        $config['max_size']         = '2048';
+            $this->load->library('upload', $config);
+            $this->upload->initialize($config); 
+        if (!$this->upload->do_upload('foto')) {
+            $data = array(
+                'nama' 				=> $this->input->post('nama'), 
+                'alamat'       		=> $this->input->post('alamat'),
+                'email'     		=> $this->input->post('email'),
+                'password'      	=> $this->input->post('password'),
+                'tgl_lahir'      	=> $this->input->post('tgl_lahir'),
+                'jenis_kelamin'     => $this->input->post('jenis_kelamin'),
+                'telp'     			=> $this->input->post('telp'),
+            );
+        }else{
+            $data = array(
+                'nama' 				=> $this->input->post('nama'), 
+                'alamat'       		=> $this->input->post('alamat'),
+                'email'     		=> $this->input->post('email'),
+                'password'      	=> $this->input->post('password'),
+                'tgl_lahir'      	=> $this->input->post('tgl_lahir'),
+                'jenis_kelamin'     => $this->input->post('jenis_kelamin'),
+                'telp'     			=> $this->input->post('telp'),
+                'foto'     			=> $dir.$this->upload->data('file_name'),
+            );
+        }
+        $produk = $this->K_jamur->update('user',$data,$where);
+        redirect('Dashboard_user');
+    }
 	public function forum_view(){
 		$data ["forum"] = $this->K_jamur->beforeforum()->result();
 		$this->load->view('dsuser/forum_view', $data);
