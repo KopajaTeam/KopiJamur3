@@ -5,6 +5,11 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-12">
+      <!--   <?php if($this->session->flashdata()){?>
+                        <?php echo $this->session->flashdata('message');?>    
+                <?php
+                    }
+                ?> -->
         <div class="card">
           <div class="card-header card-header-primary card-header-icon">
             <div class="card-icon">
@@ -34,11 +39,10 @@
                     <th><?php echo ++$no; ?></th>
                     <td><?php echo $galleries->nama_gallery;  ?></td>
                     <td><?php echo $galleries->deskripsi_gallery;  ?></td>
-                    <td><img style="width: 150px;height: 150px" src="<?php echo base_url("$galleries->gambar_galeri"); ?>"></td>
+                    <td><img style="width: 150px;height: 150px" src="<?php echo base_url("$galleries->gambar_gallery"); ?>"></td>
                     <td class="text-right">
-                      <a href="#" class="btn btn-simple btn-warning btn-icon like"><i class="material-icons">edit</i></a>
-                      <a href="#" class="btn btn-simple btn-danger btn-icon edit"><i class="material-icons">delete</i></a>
-                      <a href="#" class="btn btn-simple btn-info btn-icon remove"><i class="material-icons">visibility</i></a>
+                              <a href="<?php echo base_url("admin/Gallery/edit/".$galleries->id_gallery); ?>" class="btn btn-simple btn-warning btn-icon like"><i class="material-icons">edit</i></a>
+                              <a href="<?php echo base_url("admin/Gallery/hapus/".$galleries->id_gallery) ?>" onclick="return confirm('Data Akan Dihapus !')" class="btn btn-simple btn-danger btn-icon edit"><i class="material-icons">delete</i></a>
                     </td>
                   </tr>
                   <?php } ?>  
