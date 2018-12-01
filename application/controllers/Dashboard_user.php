@@ -9,7 +9,9 @@ class Dashboard_user extends CI_Controller {
 		$this->load->model('M_testi');
 	}
 	public function index(){
-		$this->load->view('dsuser/dashuser');
+		$data["forum"] = $this->K_jamur->beforeforum()->result();
+		$data["produk"]		= $this->K_jamur->produkall()->result();
+		$this->load->view('dsuser/dashuser',$data);
 	}
 	public function sidenav(){
 		$this->load->view('dsuser/sidenav_dashuser');

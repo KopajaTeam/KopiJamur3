@@ -65,7 +65,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 									<tr>
 										<td style="text-align: center;"><?php echo $forem->judul; ?></td>
 										<td style="text-align: center;"><?php echo $forem->nama_kategori; ?></td>
-										<td style="text-align: center;"class="hidden-xs"><?php echo $forem->tanggal; ?></td>
+										<td style="text-align: center;" class="hidden-xs"><?php echo $forem->tanggal; ?></td>
 										<td style="text-align: center;" align="center">
 											<a class="btn btn-default" href="<?php echo base_url('Dashboard_user/edit_forum/'.$forem->id_forum); ?>"><i class="fas fa-pencil-alt"></i></a>
 											<a class="btn btn-danger" href="<?php echo base_url('Dashboard_user/del_for/'.$forem->id_forum); ?>"><em class="fa fa-trash"></em></a>

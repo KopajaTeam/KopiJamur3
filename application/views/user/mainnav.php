@@ -9,8 +9,6 @@
 				<li class=" <?php if($this->uri->segment(1) == "Produk"){echo "current-menu-item";}?> menu-item"><a href="<?php echo base_url("Produk") ?>">Product</a> </li>
 				<li class=" <?php if($this->uri->segment(1) == "Testimonial"){echo "current-menu-item";}?> menu-item"><a href="<?php echo base_url("Testimonial") ?>">Testimonial</a></li>
 
-				<li class=" <?php if($this->uri->segment(1) == "Contact"){echo "current-menu-item";}?> menu-item"><a href="<?php echo base_url("Kontak") ?>" >Contact</a>
-
 				<!-- <li class=" <?php //if($this->uri->segment(2) == "contact"){echo "current-menu-item";}?> menu-item"><a href="#" >Contact</a> -->
 
 				<li class=" <?php if($this->uri->segment(1) == "Forum"){echo "current-menu-item";}?> menu-item"><a href="<?php echo base_url("Forum") ?>">Forum</a></li>	

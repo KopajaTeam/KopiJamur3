@@ -56,7 +56,7 @@
 								</div> <!-- .container -->
 							</aside> <!-- .section-featured-page -->
 							<hr class="stylehr">
-							<div id="content" class="site-content default-full-width blog-grid-layout" style="margin-bottom: -200px;margin-top: -50px">
+							<div id="content" class="site-content default-full-width blog-grid-layout" style="margin-bottom: -200px;margin-top: -50px" id="forum">
 								<div class="container">
 									<div class="section-title-wrap">
 										<h2 class="section-title">Forum</h2>
@@ -64,7 +64,7 @@
 									</div>
 									<div class="inner-wrapper">
 										<div id="primary" class="content-area">
-											<main id="main" class="site-main" style="margin-bottom: -30px">
+											<main id="main" class="site-main" style="margin-bottom: -50px">
 												<div class="inner-wrapper">
 													<?php foreach ($forum as $forum_det) { ?>
 													<article class="hentry post col-grid-4">
@@ -88,6 +88,9 @@
 														</div><!-- .entry-content-wrapper -->
 													</article><!-- .post -->
 													<?php } ?>
+													<div class="more-wrapper" style="margin-top: -45px;margin-bottom: 40px">
+													<a href="#" class="custom-button button-curved">Explore More</a>
+												</div> <!-- .more-wrapper -->
 												</div> <!-- .inner-wrapper -->
 												<hr class="stylehr" style="margin-top: -100px">
 											</div>
