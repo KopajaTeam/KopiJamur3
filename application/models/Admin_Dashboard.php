@@ -53,11 +53,16 @@ class Admin_Dashboard extends CI_Model
 		$this->db->join('kategori_produk','produk.id_kategori_produk = kategori_produk.id_kategori_produk', "LEFT");
 		return $this->db->get('produk');
 	}
-
+//for update forum
 	public function forumedit($id_forum){
+		// $this->db->join('user','forum.id_user = user.id_user', "LEFT");
+		// $this->db->join('kategori_forum','forum.id_kategori_forum = kategori_forum.id_kategori_forum', "LEFT");
 		return $this->db->get_where('forum',array('id_forum' => $id_forum));
 	}
-
+//for update testi
+	public function testiedit($id_testimoni){
+		return $this->db->get_where('testimoni',array('id_testimoni' => $id_testimoni));	
+	}
 }
 
 ?>

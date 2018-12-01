@@ -46,7 +46,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 									<h3 class="panel-title">Testimonial Anda</h3>
 								</div>
 								<div class="col col-xs-6 text-right">
-									<a href="<?php echo base_url('Dashboard_user/tambah_testimonial')?>" class="btn btn-info" role="button">Tambah Testimonial</a>
+									<a href="<?php echo base_url('Dashboard_user/simpan_testi')?>" class="btn btn-info" role="button">Tambah Testimonial</a>
 								</div>
 							</div>
 						</div>
@@ -69,8 +69,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 										<td><?php echo $testie->komentar; ?></td>
 
 										<td align="center">
-											<a class="btn btn-default" href="<?php echo base_url('Dashboard_user/testiact')?>"><i class="fas fa-pencil-alt"></i></a>
-											<a class="btn btn-danger"><em class="fa fa-trash"></em></a>
+											<a class="btn btn-default" href="<?php echo base_url('Dashboard_user/testi_action/'.$testie->id_testimoni)?>"><i class="fas fa-pencil-alt"></i></a>
+											<a class="btn btn-danger" href="<?php echo base_url('Dashboard_user/del_testi/'.$testie->id_testimoni); ?>"><em class="fa fa-trash"></em></a>
 										</td>
 									</tr>
 									<?php  } ?>

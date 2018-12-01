@@ -157,28 +157,91 @@ class Dashboard_user extends CI_Controller {
 
 
 //Function Baru hati - hati ini penting
-	public function testiact(){
-		$this->load->view('dsuser/tambah_testimonial');
+	public function testi_action(){	 
+		$id_testimoni = $this->uri->segment(3);
+		$data ['testimoni'] 		 =  $this->Admin_Dashboard->testiedit($id_testimoni)->row_array();
+		$data ['produk'] =	$this->Admin_Dashboard->select("produk")->result();
+		$this->load->view('dsuser/edit_testimoni',$data);
 	}
+	public function simpan_testi(){
+		if ($this->input->post('komentar_produk')!="") {
+			$gam = 'assets/images/portfolio/';
+			$config['upload_path']      = 'assets/images/portfolio/';
+			$config['allowed_types']    = 'jpg|png|jpeg';
+			$config['max_size']         = '2048';
+			$this->load->library('upload', $config);
+			$this->upload->initialize($config); 
+			if (!$this->upload->do_upload('gambar_testi')) {
+				$id	 = $this->input->post('id_testimoni');
+				$simpantesti = array(
+					'komentar'		=> $this->input->post('komentar_produk'),
+					'id_user'		=> $this->session->userdata("id_user"),
+					'id_testimoni'	=> "",
+					'id_produk'		=> $this->input->post("id_produk"),
+					'rate'			=> "",);
+				$this->db->where('id_testimoni',$id);
+				$this->db->update('testimoni',$simpantesti);
+				redirect('dashboard_user/testimonial_view');
+					
+			}else{
+				$id	 = $this->input->post('id_testimoni');
+				$simpantesti = array(
+					'komentar'		=> $this->input->post('komentar_produk'),
+					'id_user'		=> $this->session->userdata("id_user"),
+					'id_testimoni'	=> "",
+					'id_produk'		=> $this->input->post("id_produk"),
+					'rate'			=> "",
+					'gambar_testi'	=> $gam.$this->upload->data('file_name'),
+				);
+				$this->db->where('id_testimoni',$id);
+				$this->db->update('testimoni',$simpantesti);
+				redirect('dashboard_user/testimonial_view');
+			}
+		}else{
+			$data = array(
+				'kproduk'  => $this->Admin_Dashboard->select('produk')->result()
+			);
+			$this->load->view('dsuser/tambah_testimonial',$data);
+		}
+	}
+
+	function del_testi($id_testimoni){
+		$where = array('id_testimoni' => $id_testimoni);
+		$this->Admin_Dashboard->delete($where,'testimoni');
+		redirect('Dashboard_user/testimonial_view');
+	}
+
 
 	//show data forum sebelum di edit
 	public function edit_forum(){
 		$id_forum = $this->uri->segment(3);
-		$data ['forum'] = $this->Admin_Dashboard->forumedit($id_forum)->row_array();
+		$data ['forum'] 		 =  $this->Admin_Dashboard->forumedit($id_forum)->row_array();
+		$data ['kategori_forum'] =	$this->Admin_Dashboard->select("kategori_forum")->result();
 		$this->load->view('dsuser/edit_forum',$data);	
 	}
 	//simpan data 
 	public function edit_forum_simpan(){
-			$dir = 'assets/images_upload/foto_forum/';
+		$dir = 'assets/images_upload/foto_forum/';
 		$config['upload_path']      = 'assets/images_upload/foto_forum/';
 		$config['allowed_types']    = 'jpg|png|jpeg';
 		$config['max_size']         = '2048';
 		$this->load->library('upload', $config);
 		$this->upload->initialize($config); 
 		if (!$this->upload->do_upload('gambar_headline')) {
-			echo $this->upload->display_errors();
+			$id	 = $this->input->post('id_forum');
+			$simpanforum = array(
+				'judul' 			=> $this->input->post('judul_forum'),
+				'id_user'			=> $this->session->userdata("id_user"),	
+				'id_kategori_forum' => $this->input->post('kategori_forum'),
+				// 'desc_forum' 		=> $this->input->post('desc_forum'),
+				'isi_forum' 		=> $this->input->post('isi_forum'),
+				'tanggal'			=> $this->input->post('tanggal'),
+			);
+			$this->db->where('id_forum',$id);
+			$this->db->update('forum',$simpanforum);
+			redirect('Dashboard_user/forum_view');
 		}else{
-			$id	 = $this->input->post('$id');
+			$id	 = $this->input->post('id_forum');
 			$simpanforum = array(
 				'judul' 			=> $this->input->post('judul_forum'),
 				'id_user'			=> $this->session->userdata("id_user"),	
@@ -190,15 +253,15 @@ class Dashboard_user extends CI_Controller {
 			);
 			$this->db->where('id_forum',$id);
 			$this->db->update('forum',$simpanforum);
+			redirect('Dashboard_user/forum_view');
 		}
-		redirect('Dashboard_user/forum_view');
 	}
 	//delet data
-    function del_for($id_forum){
-        $where = array('id_forum' => $id_forum);
-        $this->Admin_Dashboard->delete($where,'forum');
-        redirect('Dashboard_user/forum_view');
-    }
+	function del_for($id_forum){
+		$where = array('id_forum' => $id_forum);
+		$this->Admin_Dashboard->delete($where,'forum');
+		redirect('Dashboard_user/forum_view');
+	}
 
 
 }
