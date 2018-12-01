@@ -47,10 +47,14 @@ class Dashboard_user extends CI_Controller {
 		redirect('Dashboard_user/forum_view');
 	}
 	public function konfirmasi_pembayaran(){
-		$this->load->view('dsuser/konfirmasi_pembayaran');
+		$data["forum"] = $this->K_jamur->beforeforum()->result();
+		$data["produk"]		= $this->K_jamur->produkall()->result();
+		$this->load->view('dsuser/konfirmasi_pembayaran', $data);
 	}
 	public function tentang_saya(){
-		$this->load->view('dsuser/tentang_saya');
+		$data["forum"] = $this->K_jamur->beforeforum()->result();
+		$data["produk"]		= $this->K_jamur->produkall()->result();
+		$this->load->view('dsuser/tentang_saya', $data);
 	}
 	public function edit_user(){
 		$this->load->view('dsuser/edit_user');
@@ -105,11 +109,14 @@ class Dashboard_user extends CI_Controller {
         redirect('Dashboard_user');
     }
 	public function forum_view(){
+		$data["forum"] = $this->K_jamur->beforeforum()->result();
+		$data["produk"]		= $this->K_jamur->produkall()->result();
 		$data ["forum"] = $this->K_jamur->beforeforum()->result();
 		$this->load->view('dsuser/forum_view', $data);
 	}
 	public function testimonial_view(){
-		
+		$data["forum"] = $this->K_jamur->beforeforum()->result();
+		$data["produk"]		= $this->K_jamur->produkall()->result();
 		$data ["testimoni"] = $this->M_testi->testi()->result();
 
 		$this->load->view('dsuser/testimonial_view',$data);
@@ -148,10 +155,14 @@ class Dashboard_user extends CI_Controller {
 		$this->load->view('dsuser/invoice');
 	}
 	public function checkout(){
-		$this->load->view('dsuser/checkout');
+		$data["forum"] = $this->K_jamur->beforeforum()->result();
+		$data["produk"]		= $this->K_jamur->produkall()->result();
+		$this->load->view('dsuser/checkout', $data);
 	}
 	public function pesanan_saya(){
-		$this->load->view('dsuser/pesanan_saya');
+		$data["forum"] = $this->K_jamur->beforeforum()->result();
+		$data["produk"]		= $this->K_jamur->produkall()->result();
+		$this->load->view('dsuser/pesanan_saya', $data);
 	}
 	public function detail_pesanan(){
 		$this->load->view('dsuser/detail_pesanan');
