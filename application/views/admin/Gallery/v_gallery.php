@@ -34,7 +34,7 @@
                     <th><?php echo ++$no; ?></th>
                     <td><?php echo $galleries->nama_gallery;  ?></td>
                     <td><?php echo $galleries->deskripsi_gallery;  ?></td>
-                    <td><img style="width: 150px;height: 150px" src="<?php echo base_url("$galleries->gambar_gallery"); ?>"></td>
+                    <td><img style="width: 150px;height: 150px" src="<?php echo base_url("$galleries->gambar_galeri"); ?>"></td>
                     <td class="text-right">
                       <a href="#" class="btn btn-simple btn-warning btn-icon like"><i class="material-icons">edit</i></a>
                       <a href="#" class="btn btn-simple btn-danger btn-icon edit"><i class="material-icons">delete</i></a>
