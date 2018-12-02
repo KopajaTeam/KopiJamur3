@@ -9,7 +9,8 @@ class Dashboard_user extends CI_Controller {
 		$this->load->model('M_testi');
 	}
 	public function index(){
-		$data["forum"] = $this->K_jamur->beforeforum()->result();
+		$where = $this->session->userdata('id_user');
+		$data["forum"] = $this->K_jamur->beforeforum1($where)->result();
 		$data["produk"]		= $this->K_jamur->produkall()->result();
 		$this->load->view('dsuser/dashuser',$data);
 	}
@@ -109,18 +110,22 @@ class Dashboard_user extends CI_Controller {
         redirect('Dashboard_user');
     }
 	public function forum_view(){
-		$data["forum"] = $this->K_jamur->beforeforum()->result();
+		$where = $this->session->userdata('id_user');
+		// die($where);
+		$data["forum1"]=$this->K_jamur->beforeforum1($where)->result();
 		$data["produk"]		= $this->K_jamur->produkall()->result();
 		$data ["forum"] = $this->K_jamur->beforeforum()->result();
 		$this->load->view('dsuser/forum_view', $data);
 	}
 	public function testimonial_view(){
+		$where = $this->session->userdata('id_user');
 		$data["forum"] = $this->K_jamur->beforeforum()->result();
 		$data["produk"]		= $this->K_jamur->produkall()->result();
-		$data ["testimoni"] = $this->M_testi->testi()->result();
+		$data ["testimoni"] = $this->M_testi->testmon($where)->result();
 
 		$this->load->view('dsuser/testimonial_view',$data);
 	}
+
 	public function tambah_testimonial(){
 		if ($this->input->post('komentar_produk')!="") {
 			$gam = 'assets/images/portfolio/';
@@ -174,6 +179,7 @@ class Dashboard_user extends CI_Controller {
 		$id_testimoni = $this->uri->segment(3);
 		$data ['testimoni'] 		 =  $this->Admin_Dashboard->testiedit($id_testimoni)->row_array();
 		$data ['produk'] =	$this->Admin_Dashboard->select("produk")->result();
+		$data ["forum"] = $this->K_jamur->beforeforum()->result();
 		$this->load->view('dsuser/edit_testimoni',$data);
 	}
 	public function simpan_testi(){

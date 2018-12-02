@@ -10,7 +10,8 @@ class Login_user extends CI_Controller {
 
 
 	public function index(){
-		$this->load->view('user/login/login');
+    
+        $this->load->view('user/login/login');
 	}
 
 	function proses_login(){

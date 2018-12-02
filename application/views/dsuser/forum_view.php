@@ -60,19 +60,19 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 										<th style="text-align: center;">Action</th>
 									</tr> 
 								</thead>
+								<?php foreach ($forum1 as $key ): ?>
 								<tbody>
-									<?php foreach ($forum as $forem) {?>
-									<tr>
-										<td style="text-align: center;"><?php echo $forem->judul; ?></td>
-										<td style="text-align: center;"><?php echo $forem->nama_kategori; ?></td>
-										<td style="text-align: center;" class="hidden-xs"><?php echo $forem->tanggal; ?></td>
+											<tr>
+										<td style="text-align: center;"><?php echo $key->judul; ?></td>
+										<td style="text-align: center;"><?php echo $key->nama_kategori; ?></td>
+										<td style="text-align: center;" class="hidden-xs"><?php echo $key->tanggal; ?></td>
 										<td style="text-align: center;" align="center">
-											<a class="btn btn-default" href="<?php echo base_url('Dashboard_user/edit_forum/'.$forem->id_forum); ?>"><i class="fas fa-pencil-alt"></i></a>
-											<a class="btn btn-danger" href="<?php echo base_url('Dashboard_user/del_for/'.$forem->id_forum); ?>"><em class="fa fa-trash"></em></a>
+											<a class="btn btn-default" href="<?php echo base_url('Dashboard_user/edit_forum/'.$key->id_forum); ?>"><i class="fas fa-pencil-alt"></i></a>
+											<a class="btn btn-danger" href="<?php echo base_url('Dashboard_user/del_for/'.$key->id_forum); ?>"><em class="fa fa-trash"></em></a>
 										</td>
 									</tr>
-									<?php } ?>
 								</tbody>
+								<?php endforeach ?>
 							</table>
 							<nav class="navigation pagination">
 								<div class="nav-links">
