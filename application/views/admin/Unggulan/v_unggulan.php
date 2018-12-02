@@ -36,9 +36,8 @@
                       <td><?php echo $unggulanes->isi_unggulan;  ?></td>
                       <td><img style="width: 150px;height: 150px" src="<?php echo base_url("$unggulanes->gambar_unggulan"); ?>"></td>
                       <td class="text-right">
-                        <a href="#" class="btn btn-simple btn-warning btn-icon like"><i class="material-icons">edit</i></a>
-                        <a href="#" class="btn btn-simple btn-danger btn-icon edit"><i class="material-icons">delete</i></a>
-                        <a href="#" class="btn btn-simple btn-info btn-icon remove"><i class="material-icons">visibility</i></a>
+                        <a href="<?php echo base_url("admin/Unggulan/edit/".$unggulanes->id_unggulan); ?>" class="btn btn-simple btn-warning btn-icon like"><i class="material-icons">edit</i></a>
+                        <a href="<?php echo base_url("admin/Unggulan/hapus/".$unggulanes->id_unggulan) ?>" onclick="return confirm('Data Akan Dihapus !')" class="btn btn-simple btn-danger btn-icon edit"><i class="material-icons">delete</i></a>
                       </td>
                     </tr>
                   <?php } ?>

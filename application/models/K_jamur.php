@@ -45,6 +45,12 @@
 			$this->db->where('reply_forum.id_forum', $id_forum);
 			return $this->db->get('reply_forum');
 		}
+		public function beforeforum1($id){
+			// $this->db->join('user','forum.id_user = user.id_user', "LEFT");
+			$this->db->join('kategori_forum','forum.id_kategori_forum = kategori_forum.id_kategori_forum');
+			$this->db->where('forum.id_user',$id);
+			return $this->db->get('forum');
+		}
 		public function beforeforum(){
 			$this->db->join('user','forum.id_user = user.id_user', "LEFT");
 			$this->db->join('kategori_forum','forum.id_kategori_forum = kategori_forum.id_kategori_forum', "LEFT");

@@ -17,5 +17,4 @@ class Testimonial extends CI_Controller {
 		$this->load->view('menu/testimonial',$data);
 	
 	}
-
 }
