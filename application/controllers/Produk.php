@@ -21,5 +21,28 @@ class Produk extends CI_Controller {
 
 		$this->load->view('menu/detailproduk', $data);
     }
+    function insertKranjang(){
+    	$id_produk = $this->input->post('idProduk');
+    	$harga =$this->input->post('hrgProduk');
+    	$id_user = $this->session->userdata('id_user');
+    	$date= date("dd/mm/yyy");
+    	$data = array('id_user' =>$id_user ,
+    		'status' =>1 ,
+    	 );
+    	$insert = $this->K_jamur->insert2('transaksi', $data);
+    	if ($insert >= 0) {
+    		$data = array('id_produk' =>$id_produk,
+    	'harga'=> $harga,
+    	'status'=>1,
+    	'id_transaksi'=>$insert );
+    	$insert3 = $this->db->insert('keranjang',$data);;
+    	redirect(base_url('Produk?'));
+
+    	}else{
+    		// flash_data('Gagal Di tambahkan');
+    		redirect(base_url('Produk'));
+
+    	}
+    }
     
 }

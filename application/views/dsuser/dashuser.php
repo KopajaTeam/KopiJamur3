@@ -85,8 +85,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 													</h4>
 												</div>
 												<div id="collapseOne" class="panel-collapse collapse in">
-													<div class="panel-body">
-														<img src="<?php echo base_url(); ?>master/admin/img/image_placeholder.jpg" style="margin-bottom: 15px;height: 150px;width: 180px">
+													<div class="panel-body	">
+														<img class="col-grid-1" src="<?php echo base_url(); ?>master/admin/img/image_placeholder.jpg" style="margin-bottom: 15px;height: 150px;width: 180px">
+														<div class="col-grid-4">
+															<p>nama barang</p> <br>
+															<p>status transaksi</p>
+														</div>
+														<div class="col-grid-4" style="float: right;">
+															<a style="color: #34ace0" href="<?php echo base_url('Dashboard_user/detail_pesanan') ?>">Detail Pesanan</a>
+														</div>
 													</div>
 												</div>
 											</div>
@@ -99,7 +106,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 													</h4>
 												</div>
 												<div id="collapseTwo" class="panel-collapse collapse">
-													<div class="panel-body">
+													<div class="panel-body" c>
 														<img src="<?php echo base_url(); ?>master/admin/img/image_placeholder.jpg" style="margin-bottom: 15px;height: 150px;width: 180px">
 													</div>
 												</div>

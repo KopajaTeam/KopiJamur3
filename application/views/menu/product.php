@@ -33,39 +33,39 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					</div> <!-- .container -->
 				</div>  <!-- .custom-header-content -->
 			</div> <!-- .custom-header -->	
-
-
 			<aside class="section section-teams">
 				<div class="container"> <br>
-					<div class="teams-section">
-						<div class="inner-wrapper">
-							<?php foreach ($produk as $data_produk) { ?>
-							<div class="col-grid-3 team-item">
-								<div class="thumb-summary-wrap box-shadow-block">
-									<div class="team-thumb">
-										<a href="#" target="-sefl"> <img style="width: 300px;height: 200px" alt="Team" src="<?php echo $data_produk->gambar_produk; ?>"></a>
-									</div><!-- .team-thumb-->
-									<div class="team-text-wrap">
-										<h3 class="team-title"><a href="#"><?php echo $data_produk->nama_produk; ?></a></h3>
-										<p class="team-position"><?php echo $data_produk->nama_kategori_produk; ?></p>
-									</div><!-- .team-text-wrap -->
-									<!--  -->
-									<div class="row" style="margin-top: -30px;margin-bottom: -50px">
-										<div class="col-grid-12">
-											<a class="custom-button button-curved col-grid-6" style="margin-right: 10px" href="Produk/detail_produk/<?php echo $data_produk->id_produk; ?>"><i class="fas fa-eye"></i> Detail</a>
-										
-											<a class="custom-button button-curved col-grid-5" style="margin-left: 9px" href="Produk/detail_produk/<?php echo $data_produk->id_produk; ?>"><i class="fas fa-cart-plus"></i> Beli</a>
+						<div class="teams-section">
+							<div class="inner-wrapper">
+								<?php foreach ($produk as $data_produk) { ?>
+								<form method="post" action="<?php echo base_url('Produk/insertKranjang') ?>">
+								<div class="col-grid-3 team-item">
+									<div class="thumb-summary-wrap box-shadow-block">
+										<div class="team-thumb">
+											<a href="#" target="-sefl"> <img style="width: 300px;height: 200px" alt="Team" src="<?php echo $data_produk->gambar_produk; ?>"></a>
+										</div><!-- .team-thumb-->
+										<div class="team-text-wrap">
+											<input type="text"  name="idProduk" value="<?php echo $data_produk->id_produk; ?>" >
+											<input type="text" name="hrgProduk" hidden="" value="<?php echo $data_produk->harga_produk; ?>">
+											<h3 class="team-title"><a href="#"><?php echo $data_produk->nama_produk; ?></a></h3>
+											<p class="team-position"><?php echo $data_produk->nama_kategori_produk; ?></p>
+										</div><!-- .team-text-wrap -->
+										<!--  -->
+										<div class="row" style="margin-top: -30px;margin-bottom: -50px">
+											<div class="col-grid-12">
+												<a class="custom-button button-curved col-grid-6" style="margin-right: 10px" href="Produk/detail_produk/<?php echo $data_produk->id_produk; ?>"><i class="fas fa-eye"></i> Detail</a>
+												<button type="submit" class="custom-button button-curved col-grid-5" style="margin-left: 9px" href=""><i class="fas fa-cart-plus"></i> Beli</button>
+											</div>
 										</div>
-									</div>
-									
-									<!-- .social-links -->
-								</div> <!-- .team-item -->
-							</div> <!-- .team-item  -->
-							<?php } ?>
-						</div> <!-- .inner-wrapper -->
-					</div> <!-- .teams-section -->
+										<!-- .social-links -->
+									</div> <!-- .team-item -->
+								</div> <!-- .team-item  -->
+					</form>
+								<?php } ?>
+							</div> <!-- .inner-wrapper -->
+						</div> <!-- .teams-section -->
 				</div> <!-- .container -->
-			</aside> 
+			</aside>
 
 			<?php $this->load->view('user/wiget') ?>
 			<?php $this->load->view('user/sosmed') ?>

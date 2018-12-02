@@ -24,6 +24,10 @@
 		public function insert($table,$data){
 			$this->db->insert($table,$data);
 		}
+		public function insert2($table,$data){
+			$this->db->insert($table,$data);
+			return $this->db->insert_id();
+		}
 		function cek_login($table,$where){
 			return $this->db->get_where($table,$where);
 		}
@@ -57,8 +61,14 @@
 		$this->db->join('kategori_produk','produk.id_kategori_produk = kategori_produk.id_kategori_produk', "LEFT");
 		return $this->db->get('produk');
 	}
-	
 
+	public function keranjang($id){
+		$this->db->join('produk','produk.id_produk = keranjang.id_produk');
+		$this->db->join('transaksi','keranjang.id_transaksi = transaksi.id_transaksi');
+		$this->db->where('transaksi.id_user',$id);
+		return $this->db->get('keranjang');
+	}
+	
 }
 
 ?>
