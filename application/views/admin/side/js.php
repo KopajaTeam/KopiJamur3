@@ -49,7 +49,7 @@
 
 
 <!-- Include a polyfill for ES6 Promises (optional) for IE11, UC Browser and Android browser support SweetAlert -->
-<script src="../../../cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.js"></script>
 
 <!-- Library for adding dinamically elements -->
 <script src="<?php echo base_url(); ?>master/admin/js/plugins/arrive.min.js" type="text/javascript"></script>
@@ -86,6 +86,8 @@
 
 <!--  Full Calendar Plugin, full documentation here: https://github.com/fullcalendar/fullcalendar    -->
 <script src="<?php echo base_url(); ?>master/admin/js/plugins/fullcalendar.min.js"></script>
+
+
 
 <!-- demo init -->
 <script src="<?php echo base_url(); ?>master/admin/js/plugins/demo.js"></script>

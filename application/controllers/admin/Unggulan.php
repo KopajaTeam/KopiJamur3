@@ -35,12 +35,14 @@ class Unggulan extends CI_Controller
             'gambar_unggulan' => $dir.$this->upload->data('file_name'),
         );
         $this->db->insert('unggulan',$data);
+        $this->session->set_flashdata('message', "<div class=\"alert alert-success alert-dismissible\"><button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-hidden=\"true\">&times;</button>Data Berhasil Ditambahkan</div>");
         redirect('admin/Unggulan');
         }
     }
     function hapus($id_unggulan){
         $where = array('id_unggulan' => $id_unggulan);
         $this->Admin_Dashboard->delete($where,'unggulan');
+        $this->session->set_flashdata('message', "<div class=\"alert alert-danger alert-dismissible\"><button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-hidden=\"true\">&times;</button>Succes, Data Berhasil Dihapus</div>");
         redirect('admin/Unggulan');
     }
  
@@ -80,6 +82,7 @@ class Unggulan extends CI_Controller
             );
         }
         $produk = $this->Admin_Dashboard->update('unggulan',$data,$where);
+        $this->session->set_flashdata('message', "<div class=\"alert alert-success alert-dismissible\"><button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-hidden=\"true\">&times;</button>Succes, Data Berhasil Diperbarui</div>");
         redirect('admin/Unggulan');
     }
 }

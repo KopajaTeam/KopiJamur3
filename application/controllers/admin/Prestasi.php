@@ -36,12 +36,14 @@ class Prestasi extends CI_Controller
             'gambar_prestasi' => $dir.$this->upload->data('file_name'),
         );
         $this->db->insert('prestasi',$data);
+        $this->session->set_flashdata('message', "<div class=\"alert alert-success alert-dismissible\"><button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-hidden=\"true\">&times;</button>Data Berhasil Ditambahkan</div>");
         redirect('admin/Prestasi');
         }
     }
     function hapus($id_prestasi){
         $where = array('id_prestasi' => $id_prestasi);
         $this->Admin_Dashboard->delete($where,'prestasi');
+        $this->session->set_flashdata('message', "<div class=\"alert alert-danger alert-dismissible\"><button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-hidden=\"true\">&times;</button>Succes, Data Berhasil Dihapus</div>");
         redirect('admin/Prestasi');
     }
  
@@ -81,6 +83,7 @@ class Prestasi extends CI_Controller
             );
         }
         $produk = $this->Admin_Dashboard->update('prestasi',$data,$where);
+        $this->session->set_flashdata('message', "<div class=\"alert alert-success alert-dismissible\"><button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-hidden=\"true\">&times;</button>Succes, Data Berhasil Diperbarui</div>");
         redirect('admin/Prestasi');
     }
 }
