@@ -9,36 +9,52 @@ class Keranjang extends CI_Controller {
     }
 
 
-	public function index(){
-		$user=$this->session->userdata('id_user');
-		$data['keranjang'] = $this->K_jamur->keranjang($user);
-		$data["forum"] = $this->K_jamur->beforeforum()->result();
-		$data["produk"]		= $this->K_jamur->produkall()->result();
-		$this->load->view('menu/bayar', $data);
-	}
+    public function index(){
+      $user=$this->session->userdata('id_user');
+      $data['keranjang'] = $this->K_jamur->keranjang($user);
+      $data["forum"] = $this->K_jamur->beforeforum()->result();
+      $data["produk"]		= $this->K_jamur->produkall()->result();
+      $this->load->view('menu/bayar', $data);
+  }
 
-	public function invoice(){
-		$this->load->view('menu/invoice');
-	}
+  public function invoice(){
+      $this->load->view('menu/invoice');
+  }
 
-	function insert_transaksi(){
-    	$id_transaksi = $this->input->post('idProduk');
-    	$tgl = date("dd/mm/yyyy");
-    	$id_user = $this->session->userdata('id_user');
-    	$data = array('id_produk' =>$id_produk,
-    	'tgl_transaksi'=> $tgl,
-    	'id_user'=>$id_user,
-    	'status'=>1 );
-    	$insert = $this->db->insert('transaksi',$data);
-    	if ($insert >= 0) {
-    		// flash_data('Berhasil Di tambahkan ke kranjang');
-    		redirect(base_url('Produk?'));
-
-    	}else{
-    		// flash_data('Gagal Di tambahkan');
-    		redirect(base_url('Produk'));
-
-    	}
+    function insert_transaksi(){
+        if (isset($_POST['minus'])) {
+            $where = array(
+                'id_produk' => $this->input->post('id_produk'), 
+                'id_user'   => $this->session->userdata('id_user')
+            );
+            $qty = $this->input->post('qty');
+            $data = array('qty' =>$qty-1  );
+            $insert=$this->K_jamur->update('keranjang',$data,$where);
+            // die($where);
+            if ($insert  >= 0) {
+                redirect(base_url('Keranjang#cart'));
+            } else {
+                echo "gagal";
+            }
+        }else if (isset($_POST['plus'])) {
+            $where = array(
+                'id_produk' => $this->input->post('id_produk'), 
+                'id_user'   => $this->session->userdata('id_user')
+            );
+            $qty = $this->input->post('qty');
+            $data = array('qty' =>$qty+1  );
+            $insert=$this->K_jamur->update('keranjang',$data,$where);
+            // die($where);
+            if ($insert  >= 0) {
+                redirect(base_url('Keranjang#cart'));
+            } else {
+                echo "gagal";
+            }
+        } 
     }
-
+    function hapus($kd_keranjang){
+        $where = array('kd_keranjang' => $kd_keranjang);
+        $this->Admin_Dashboard->delete($where,'keranjang');
+        redirect(base_url('Keranjang#cart'));
+    }
 }
