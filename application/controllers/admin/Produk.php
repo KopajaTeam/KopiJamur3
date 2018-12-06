@@ -46,6 +46,7 @@ class Produk extends CI_Controller
             'gambar_produk' => $dir.$this->upload->data('file_name'),
         );
         $this->db->insert('produk',$data);
+        $this->session->set_flashdata('message', "<div class=\"alert alert-success alert-dismissible\"><button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-hidden=\"true\">&times;</button>Data Berhasil Ditambahkan</div>");
         redirect('admin/Produk');
         }
     }
@@ -53,6 +54,7 @@ class Produk extends CI_Controller
     function hapus($id_produk){
         $where = array('id_produk' => $id_produk);
         $this->Admin_Dashboard->delete($where,'produk');
+        $this->session->set_flashdata('message', "<div class=\"alert alert-danger alert-dismissible\"><button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-hidden=\"true\">&times;</button>Succes, Data Berhasil Dihapus</div>");
         redirect('admin/Produk');
     }
  
@@ -105,6 +107,7 @@ class Produk extends CI_Controller
             );
         }
         $produk = $this->Admin_Dashboard->update('produk',$data,$where);
+        $this->session->set_flashdata('message', "<div class=\"alert alert-success alert-dismissible\"><button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-hidden=\"true\">&times;</button>Succes, Data Berhasil Diperbarui</div>");
         redirect('admin/Produk');
     }
 }

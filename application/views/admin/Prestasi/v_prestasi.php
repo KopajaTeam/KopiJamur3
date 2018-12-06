@@ -5,6 +5,11 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-12">
+        <?php if($this->session->flashdata()){?>
+          <?php echo $this->session->flashdata('message');?>    
+          <?php
+        }
+        ?>
         <div class="card">
           <div class="card-header card-header-primary card-header-icon">
             <div class="card-icon">
@@ -17,7 +22,6 @@
               <a href="<?php echo base_url('admin/Prestasi/tambah_prestasi') ?>" class="btn btn-success">Tambah</a>
             </div>
             <div class="material-datatables">
-
               <table id="datatables" class="table table-striped table-no-bordered table-hover" cellspacing="0" width="100%" style="width:100%">
                 <thead>
                   <tr>
@@ -36,10 +40,30 @@
                       <td><?php echo $prestasies->isi_prestasi;  ?></td>
                       <td><img style="width: 150px;height: 150px" src="<?php echo base_url("$prestasies->gambar_prestasi"); ?>"></td>
                       <td class="text-right">
-                         <a href="<?php echo base_url("admin/Prestasi/edit/".$prestasies->id_prestasi); ?>" class="btn btn-simple btn-warning btn-icon like"><i class="material-icons">edit</i></a>
-                              <a href="<?php echo base_url("admin/Prestasi/hapus/".$prestasies->id_prestasi) ?>" onclick="return confirm('Data Akan Dihapus !')" class="btn btn-simple btn-danger btn-icon edit"><i class="material-icons">delete</i></a>
+                          <a href="<?php echo base_url("admin/Prestasi/edit/".$prestasies->id_prestasi); ?>" class="btn btn-simple btn-warning btn-icon like"><i class="material-icons">edit</i></a>
+                          <button data-toggle="modal" data-target="#exampleModal<?php echo $prestasies->id_prestasi?>" class="btn btn-simple btn-danger btn-icon edit"><i class="material-icons">delete</i></button>
                       </td>
                     </tr>
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal<?php echo $prestasies->id_prestasi?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Hapus Prestasi</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                            Ketika menekan tombol Hapus maka data prestasi akan dihapus, Apakah anda yakin? 
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-simple" data-dismiss="modal">Tutup</button>
+                            <a href="<?php echo base_url("admin/Prestasi/hapus/".$prestasies->id_prestasi) ?>" class="btn btn-danger">Hapus</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   <?php } ?>
                 </tbody>
               </table>
@@ -66,30 +90,5 @@
 
     });
 
-
-    var table = $('#datatables').DataTable();
-
-  // Edit record
-  table.on( 'click', '.edit', function () {
-    $tr = $(this).closest('tr');
-
-    var data = table.row($tr).data();
-    alert( 'You press on Row: ' + data[0] + ' ' + data[1] + ' ' + data[2] + '\'s row.' );
-  } );
-
-  // Delete a record
-  table.on( 'click', '.remove', function (e) {
-    $tr = $(this).closest('tr');
-    table.row($tr).remove().draw();
-    e.preventDefault();
-  } );
-
-  //Like record
-  table.on( 'click', '.like', function () {
-    alert('You clicked on Like button');
   });
-
-  $('.card .material-datatables label').addClass('form-group');
-});
-
 </script>

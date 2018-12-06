@@ -5,6 +5,11 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-12">
+        <?php if($this->session->flashdata()){?>
+          <?php echo $this->session->flashdata('message');?>    
+          <?php
+        }
+        ?>
         <div class="card">
           <div class="card-header card-header-primary card-header-icon">
             <div class="card-icon">
@@ -39,9 +44,29 @@
                             <td><img style="width: 150px;height: 150px" src="<?php echo base_url("$produks->gambar_produk"); ?>"></td>
                             <td class="text-right">
                               <a href="<?php echo base_url("admin/Produk/edit/".$produks->id_produk); ?>" class="btn btn-simple btn-warning btn-icon like"><i class="material-icons">edit</i></a>
-                              <a href="<?php echo base_url("admin/Produk/hapus/".$produks->id_produk) ?>" onclick="return confirm('Data Akan Dihapus !')" class="btn btn-simple btn-danger btn-icon edit"><i class="material-icons">delete</i></a>
+                              <button data-toggle="modal" data-target="#exampleModal<?php echo $produks->id_produk?>" class="btn btn-simple btn-danger btn-icon edit"><i class="material-icons">delete</i></button>
                             </td>
                           </tr>
+                          <!-- Modal -->
+                          <div class="modal fade" id="exampleModal<?php echo $produks->id_produk?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <h5 class="modal-title" id="exampleModalLabel">Hapus Produk</h5>
+                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                  </button>
+                                </div>
+                                <div class="modal-body">
+                                  Ketika menekan tombol Hapus maka data produk akan dihapus, Apakah anda yakin? 
+                                </div>
+                                <div class="modal-footer">
+                                  <button type="button" class="btn btn-simple" data-dismiss="modal">Tutup</button>
+                                  <a href="<?php echo base_url("admin/Produk/hapus/".$produks->id_produk) ?>" class="btn btn-danger">Hapus</a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
                         <?php } ?>
                         </tbody>
                       </table>

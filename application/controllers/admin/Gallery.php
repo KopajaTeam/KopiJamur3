@@ -14,6 +14,7 @@ class Gallery extends CI_Controller
     $data = array('gallery' => $this->Admin_Dashboard->select('gallery')->result(), ); 
     $this->load->view('admin/Gallery/v_gallery',$data);
     }
+
   function tambah_gallery(){
     $this->load->view('admin/Gallery/v_tambahdata_gallery');
   }
@@ -35,13 +36,14 @@ class Gallery extends CI_Controller
             'gambar_gallery' => $dir.$this->upload->data('file_name'),
         );
         $this->db->insert('gallery',$data);
-        // $this->session->set_flashdata('message', "<div class=\"alert alert-danger alert-dismissible\"><button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-hidden=\"true\">&times;</button>Berhasil Tambah Data</div>");
+        $this->session->set_flashdata('message', "<div class=\"alert alert-success alert-dismissible\"><button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-hidden=\"true\">&times;</button>Data Berhasil Ditambahkan</div>");
         redirect('admin/Gallery');
         }
     }
     function hapus($id_gallery){
         $where = array('id_gallery' => $id_gallery);
         $this->Admin_Dashboard->delete($where,'gallery');
+        $this->session->set_flashdata('message', "<div class=\"alert alert-danger alert-dismissible\"><button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-hidden=\"true\">&times;</button>Succes, Data Berhasil Dihapus</div>");
         redirect('admin/Gallery');
     }
  
@@ -81,6 +83,7 @@ class Gallery extends CI_Controller
             );
         }
         $produk = $this->Admin_Dashboard->update('gallery',$data,$where);
+        $this->session->set_flashdata('message', "<div class=\"alert alert-success alert-dismissible\"><button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-hidden=\"true\">&times;</button>Succes, Data Berhasil Diperbarui</div>");
         redirect('admin/Gallery');
     }
 }
