@@ -54,7 +54,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 								<button type="button" class="btn btn-success">Ganti Password</button>  <a href="<?php echo base_url("Dashboard_user/edit_users/".$dat->id_user) ?>"><button type="button" class="btn btn-info">Edit Profile</button></a>
 								<br>
 							</div>
-							<div class="col-sm-2"><a href="/users" class="pull-right"><img title="profile image" class="img-circle img-responsive" src="<?php echo base_url().$dat->foto; ?>"></a>
+							<div class="col-sm-2"><a class="pull-right"><img title="profile image" class="img-circle img-responsive" src="<?php echo base_url().$dat->foto; ?>"></a>
 
 							</div>
 						</div>
@@ -75,57 +75,31 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 								<div class="panel panel-default target">
 									<div class="panel-heading" contenteditable="false">Pesanan Saya</div>
 									<div class="panel-body">
+										<?php foreach ($transaksi as $detail ){ ?>
+										<?php $det= $this->K_jamur->detail_transaksi($detail->id_transaksi)->result(); ?>
 										<div class="panel-group" id="accordion">
 											<div class="panel panel-default">
 												<div class="panel-heading">
 													<h4 class="panel-title">
 														<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
-															Pesanan #1
+															Transaksi #<?php echo $detail->id_transaksi; ?> <a style="color: #34ace0;margin-left: 530px" href="<?php echo base_url('Dashboard_user/detail_pesanan') ?>">Detail Pesanan</a>
 														</a>
 													</h4>
 												</div>
 												<div id="collapseOne" class="panel-collapse collapse in">
+													<?php foreach ($det as $deta){ ?>
 													<div class="panel-body	">
-														<img class="col-grid-1" src="<?php echo base_url(); ?>master/admin/img/image_placeholder.jpg" style="margin-bottom: 15px;height: 150px;width: 180px">
+														<img class="col-grid-1" src="<?php echo base_url($deta->gambar_produk); ?>" style="margin-bottom: 15px;height: 150px;width: 180px">
 														<div class="col-grid-4">
-															<p>nama barang</p> <br>
-															<p>status transaksi</p>
-														</div>
-														<div class="col-grid-4" style="float: right;">
-															<a style="color: #34ace0" href="<?php echo base_url('Dashboard_user/detail_pesanan') ?>">Detail Pesanan</a>
+															<p><?php echo $deta->nama_produk; ?></p> <br>
+															<p><?php echo $detail->status; ?></p>
 														</div>
 													</div>
-												</div>
-											</div>
-											<div class="panel panel-default">
-												<div class="panel-heading">
-													<h4 class="panel-title">
-														<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
-															Pesanan #2
-														</a>
-													</h4>
-												</div>
-												<div id="collapseTwo" class="panel-collapse collapse">
-													<div class="panel-body" c>
-														<img src="<?php echo base_url(); ?>master/admin/img/image_placeholder.jpg" style="margin-bottom: 15px;height: 150px;width: 180px">
-													</div>
-												</div>
-											</div>
-											<div class="panel panel-default">
-												<div class="panel-heading">
-													<h4 class="panel-title">
-														<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
-															Pesanan #3
-														</a>
-													</h4>
-												</div>
-												<div id="collapseThree" class="panel-collapse collapse">
-													<div class="panel-body">
-														<img src="<?php echo base_url(); ?>master/admin/img/image_placeholder.jpg" style="margin-bottom: 15px;height: 150px;width: 180px">
-													</div>
+													<?php } ?>
 												</div>
 											</div>
 										</div>
+										<?php } ?>
 									</div>
 								</div>
 							</div>

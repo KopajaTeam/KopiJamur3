@@ -12,6 +12,7 @@ class Dashboard_user extends CI_Controller {
 		$where = $this->session->userdata('id_user');
 		$data["forum"] = $this->K_jamur->beforeforum1($where)->result();
 		$data["produk"]		= $this->K_jamur->produkall()->result();
+		$data["transaksi"]	= $this->K_jamur->transaksi($this->session->userdata('id_user'))->result();
 		$this->load->view('dsuser/dashuser',$data);
 	}
 	public function sidenav(){
@@ -159,11 +160,7 @@ class Dashboard_user extends CI_Controller {
 	public function invoice(){
 		$this->load->view('dsuser/invoice');
 	}
-	public function checkout(){
-		$data["forum"] = $this->K_jamur->beforeforum()->result();
-		$data["produk"]		= $this->K_jamur->produkall()->result();
-		$this->load->view('dsuser/checkout', $data);
-	}
+
 	public function pesanan_saya(){
 		$data["forum"] = $this->K_jamur->beforeforum()->result();
 		$data["produk"]		= $this->K_jamur->produkall()->result();

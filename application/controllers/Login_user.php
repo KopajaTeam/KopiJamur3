@@ -27,6 +27,7 @@ class Login_user extends CI_Controller {
         	$data_user=$this->K_jamur->selectwhere("user", $where)->row();
             $data_session = array(
             	'id_user' => $data_user->id_user,
+                'nama_user'=> $data_user->nama,
                 'nama' => $email,
                 'status' => "login"
             );

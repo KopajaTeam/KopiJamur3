@@ -45,7 +45,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											<a href="#" target="-sefl"> <img style="width: 300px;height: 200px" alt="Team" src="<?php echo $data_produk->gambar_produk; ?>"></a>
 										</div><!-- .team-thumb-->
 										<div class="team-text-wrap">
-											<input type="text"  name="idProduk" value="<?php echo $data_produk->id_produk; ?>" >
+											<input type="text"  name="idProduk" hidden="" value="<?php echo $data_produk->id_produk; ?>" >
 											<input type="text" name="hrgProduk" hidden="" value="<?php echo $data_produk->harga_produk; ?>">
 											<h3 class="team-title"><a href="#"><?php echo $data_produk->nama_produk; ?></a></h3>
 											<p class="team-position"><?php echo $data_produk->nama_kategori_produk; ?></p>

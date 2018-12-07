@@ -23,26 +23,40 @@ class Produk extends CI_Controller {
     }
     function insertKranjang(){
     	$id_produk = $this->input->post('idProduk');
-    	$harga =$this->input->post('hrgProduk');
     	$id_user = $this->session->userdata('id_user');
+        $keranjang=$this->K_jamur->selectwhere('keranjang',array('id_user' => $id_user, 'id_produk'=>$id_produk ));
     	$date= date("dd/mm/yyy");
-    	$data = array('id_user' =>$id_user ,
-    		'status' =>1 ,
-    	 );
-    	$insert = $this->K_jamur->insert2('transaksi', $data);
-    	if ($insert >= 0) {
-    		$data = array('id_produk' =>$id_produk,
-    	'harga'=> $harga,
-    	'status'=>1,
-    	'id_transaksi'=>$insert );
-    	$insert3 = $this->db->insert('keranjang',$data);;
-    	redirect(base_url('Produk?'));
+        if ($keranjang->num_rows()==1) {
+            $data = array(
+                'qty'   => $keranjang->row()->qty+1,
+            );
+            $insert = $this->db->update('keranjang',$data,array('id_user' => $id_user, 'id_produk'=>$id_produk ));
+            if ($insert >= 0) {
+                
+               redirect(base_url('Produk?'));
 
-    	}else{
-    		// flash_data('Gagal Di tambahkan');
-    		redirect(base_url('Produk'));
+            }else{
+                // flash_data('Gagal Di tambahkan');
+                redirect(base_url('Produk'));
 
-    	}
+            }
+        }else{
+            $data = array(
+                'id_produk' =>$id_produk,
+                'id_user'=>$id_user,
+                'qty'   => 1,
+            );
+            $insert = $this->db->insert('keranjang',$data);
+            if ($insert >= 0) {
+                
+               redirect(base_url('Produk?'));
+
+            }else{
+                // flash_data('Gagal Di tambahkan');
+                redirect(base_url('Produk'));
+
+            }
+        }
     }
     
 }
