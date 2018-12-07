@@ -6,6 +6,10 @@ class K_jamur extends CI_Model{
 	public function select($table){
 		return $this->db->get($table);
 	}
+	public function select2($id_user){
+		$this->db->where('id_user',$id_user);
+		return $this->db->get('user');
+	}
 	public function selectlimit($table){
 		$this->db->order_by('','');
 		$this->db->limit();
