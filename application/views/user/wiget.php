@@ -3,7 +3,7 @@
 					<div class="inner-wrapper">
 						<aside  class="footer-active-4 footer-widget-area">
 							<h3 class="widget-title">About Us</h3>
-							<p> Kopi jamur prestasi merupakan suatu bisnis kopi yang berawal dari tugas akhir alsdasjdlijasdijasdolijasdljasd ljasdla jsdl djaskl djakl jasdkl jasdkl jasdkl jasdkljadddkl a</p>
+							<p>Berawal dari tugas kulaih dari owner Kopi Jamur Prestasi, Mukhamamd Zaenal Abidin. Kopi Jamur Prestasi ini merupakan perusahaan yang meproduksi minuman kopi yang dicampur dengan extrac jamur bahakan minuman ini terjamin amam dan tidak mebuat perut kembung karena bahan yang dipakai 100% alami bahkan pegawet yang digunakan terbuat dari bahan alami, gula yang digunakan merupakan gula tebu cair.</p>
 						</aside> <!-- .footer-widget-area -->
 						<aside class="footer-active-4 footer-widget-area">
 							<h3 class="widget-title">Popular Threads</h3>
