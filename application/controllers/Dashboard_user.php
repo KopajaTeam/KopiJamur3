@@ -164,6 +164,7 @@ class Dashboard_user extends CI_Controller {
 	public function pesanan_saya(){
 		$data["forum"] = $this->K_jamur->beforeforum()->result();
 		$data["produk"]		= $this->K_jamur->produkall()->result();
+		$data["transaksi"]	= $this->K_jamur->transaksi($this->session->userdata('id_user'))->result();
 		$this->load->view('dsuser/pesanan_saya', $data);
 	}
 	public function detail_pesanan(){

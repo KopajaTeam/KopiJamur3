@@ -43,7 +43,7 @@ class Gallery extends CI_Controller
     function hapus($id_gallery){
         $where = array('id_gallery' => $id_gallery);
         $this->Admin_Dashboard->delete($where,'gallery');
-        $this->session->set_flashdata('message', "<div class=\"alert alert-danger alert-dismissible\"><button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-hidden=\"true\">&times;</button>Succes, Data Berhasil Dihapus</div>");
+        $this->session->set_flashdata('message', "<div class=\"alert alert-danger alert-dismissible\"><button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-hidden=\"true\">&times;</button>Data Berhasil Dihapus</div>");
         redirect('admin/Gallery');
     }
  
@@ -70,13 +70,11 @@ class Gallery extends CI_Controller
             $this->upload->initialize($config); 
         if (!$this->upload->do_upload('gambar_gallery')) {
             $data = array(
-                'id_gallery'        => $this->input->post('id_gallery'), 
                 'nama_gallery'      => $this->input->post('nama_gallery'),
                 'deskripsi_gallery' => $this->input->post('deskripsi_gallery'),
             );
         }else{
             $data = array(
-                'id_gallery'        => $this->input->post('id_gallery'), 
                 'nama_gallery'      => $this->input->post('nama_gallery'),
                 'deskripsi_gallery' => $this->input->post('deskripsi_gallery'),
                 'gambar_gallery'    => $dir.$this->upload->data('file_name'),

@@ -54,7 +54,7 @@ class Produk extends CI_Controller
     function hapus($id_produk){
         $where = array('id_produk' => $id_produk);
         $this->Admin_Dashboard->delete($where,'produk');
-        $this->session->set_flashdata('message', "<div class=\"alert alert-danger alert-dismissible\"><button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-hidden=\"true\">&times;</button>Succes, Data Berhasil Dihapus</div>");
+        $this->session->set_flashdata('message', "<div class=\"alert alert-danger alert-dismissible\"><button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-hidden=\"true\">&times;</button>Data Berhasil Dihapus</div>");
         redirect('admin/Produk');
     }
  

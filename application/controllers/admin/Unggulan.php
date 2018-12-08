@@ -42,7 +42,7 @@ class Unggulan extends CI_Controller
     function hapus($id_unggulan){
         $where = array('id_unggulan' => $id_unggulan);
         $this->Admin_Dashboard->delete($where,'unggulan');
-        $this->session->set_flashdata('message', "<div class=\"alert alert-danger alert-dismissible\"><button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-hidden=\"true\">&times;</button>Succes, Data Berhasil Dihapus</div>");
+        $this->session->set_flashdata('message', "<div class=\"alert alert-danger alert-dismissible\"><button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-hidden=\"true\">&times;</button>Data Berhasil Dihapus</div>");
         redirect('admin/Unggulan');
     }
  
@@ -69,13 +69,11 @@ class Unggulan extends CI_Controller
             $this->upload->initialize($config); 
         if (!$this->upload->do_upload('gambar_unggulan')) {
             $data = array(
-                'id_unggulan'        => $this->input->post('id_unggulan'), 
                 'judul_unggulan'    => $this->input->post('judul_unggulan'),
                 'isi_unggulan'      => $this->input->post('isi_unggulan'),
             );
         }else{
             $data = array(
-                'id_unggulan'        => $this->input->post('id_unggulan'), 
                 'judul_unggulan'    => $this->input->post('judul_unggulan'),
                 'isi_unggulan'      => $this->input->post('isi_unggulan'),
                 'gambar_unggulan'    => $dir.$this->upload->data('file_name'),
