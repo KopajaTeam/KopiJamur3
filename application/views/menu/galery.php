@@ -54,10 +54,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											<?php foreach ($gallery as $data_galeri) { ?>
 											<div class="portfolio-item  photography">
 												<div class="item-inner-wrapper">
-													<img style="width: 500px;height: 300px" src="<?php echo base_url($data_galeri->gambar_galeri )?>" alt="Portfolio" class="portfolio-thumb">
+													<img style="width: 500px;height: 300px" src="<?php echo base_url($data_galeri->gambar_gallery )?>" alt="Portfolio" class="portfolio-thumb">
 													<div class="overlay"></div>
 													<div class="portfolio-content">
-														<a data-gal="prettyPhoto[product-gallery]" rel="bookmark" href="<?php echo base_url($data_galeri->gambar_galeri)?>"><i class="fas fa-search" aria-hidden="true"></i></a>
+														<a data-gal="prettyPhoto[product-gallery]" rel="bookmark" href="<?php echo base_url($data_galeri->gambar_gallery)?>"><i class="fas fa-search" aria-hidden="true"></i></a>
 														<h3 style="color: #ffffff"><u><?php echo $data_galeri->nama_gallery;?></u></h3>
 														<p><?php echo $data_galeri->deskripsi_gallery;?></p>
 													</div>

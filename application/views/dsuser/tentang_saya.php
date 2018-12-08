@@ -45,43 +45,46 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 							</h3>
 							<div class="card rounded-0 px-5 py-3">
 								<table cellpadding="10" class="tdborderless">
+									
+									
 									<thead>
 										<tr>
 											<td class="text-muted">Nama</td>
 											<td>:</td>
-											<td>Nama Lengkap</td>
+											<td><?php echo $user->nama; ?></td>
 										</tr>
 										<tr>
 											<td class="text-muted">Email</td>
 											<td>:</td>
-											<td>Email</td>
+											<td><?php echo $user->email; ?></td>
 										</tr>
 										<tr>
 											<td class="text-muted">Member Sejak</td>
 											<td>:</td>
-											<td>Member Sejak</td>
+											<td><?php echo $user->member_sejak; ?></td>
 										</tr>
 										<tr>
 											<td class="text-muted">Tanggal Lahir</td>
 											<td>:</td>
-											<td>Tanggal Lahir</td>
+											<td><?php echo $user->tgl_lahir; ?></td>
 										</tr>
 										<tr>
 											<td class="text-muted">Jenis Kelamin</td>
 											<td>:</td>
-											<td>Jenis Kelamin</td>
+											<td><?php echo $user->nama; ?></td>
 										</tr>
 										<tr>
 											<td class="text-muted">No.Telepon</td>
 											<td>:</td>
-											<td>No.Telpon</td>
+											<td><?php echo $user->telp; ?></td>
 										</tr>
 										<tr>
 											<td class="text-muted">Alamat</td>
 											<td>:</td>
-											<td>Alamat</td>
+											<td><?php echo $user->alamat; ?></td>
 										</tr>
 									</thead>
+								
 								</table>
 							</div>
 						</div>

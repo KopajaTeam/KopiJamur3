@@ -43,11 +43,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 									<div class="container">
 										<div class="inner-wrapper">
 											<div class="col-grid-6">
-												<img style="width: 1000px; height: 350px " src="<?php echo base_url('assets/images')?>/portfolio/single-portfolio.jpg">
+												<img style="width: 300px; height: 350px;" src="<?php echo base_url('assets/images')?>/portfolio/zaen.jpeg">
 											</div>
 											<div class="col-grid-6">
-											 <h3>M. Zainudin</h3>
-											 <p>Berikut profil singkat saya. M zainudin sebaagai owner Kopi Jamur Prestasi.</p>
+											 <h3>Mukhammad Zaenal Abidin</h3>
+											 <p>Berikut profil singkat saya. Mukhammad Zaenal Abidin sebaagai owner Kopi Jamur Prestasi.</p>
 											 <div class="portfolio-info">
 												 <ul class="list-check">
 												 	 <li><strong><i>Pendidikan Terakhir Di</i></strong>: <span>POLITEKNIK NEGERI JEMBER</span></li> <br>
@@ -60,10 +60,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											 <div class="social-links circle brand-color">
 											 <h4> Sosial media</h4>
 												<ul>
-													<li><a href="http://facebook.com/" target="_blank"></a></li>
-													<li><a href="http://instagram.com/" target="_blank"></a></li>
-													<li><a href="http://youtube.com/" target="_blank"></a></li>
-													<li><a href="http://twitter.com/" target="_blank"></a></li>
+													
+													<li><a href="https://www.instagram.com/zaeyn12/?hl=id" target="_blank"></a></li>
+													<li><a href="https://www.youtube.com/channel/UCK7-HLCIuPCEHgj7TuwCIwg" target="_blank"></a></li>
+													
 													<!-- <li><a href="http://linkedin.com/" target="_blank"></a></li> -->
 												</ul>
 											</div>

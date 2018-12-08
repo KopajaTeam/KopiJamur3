@@ -30,9 +30,14 @@
 								<figure class="gallery-item">
 									<?php foreach ($gallery as $galleries) {?>
 									<div class="gallery-icon landscape">
-										<img style="width: 115px;height: 60px" src="<?php echo base_url("$galleries->gambar_gallery"); ?>">
+										<a href="#"><img style="width: 115px;height: 60px" src="<?php echo base_url("$galleries->gambar_gallery"); ?>"></a>
 									</div>
 									<?php } ?>
+									<!-- <?php foreach ($gallery as $detgal) {?>
+									<div class="gallery-icon landscape">
+										<a href="#"><img  alt="Gallery" src="<?php echo $detgal->gambar_galeri?>"></a>
+									</div>
+								<?php } ?> -->
 								</figure>
 							</div>
 						</aside> <!-- .footer-widget-area -->

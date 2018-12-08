@@ -88,8 +88,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 													<div class="panel-body	">
 														<img class="col-grid-1" src="<?php echo base_url($deta->gambar_produk); ?>" style="margin-bottom: 15px;height: 150px;width: 180px">
 														<div class="col-grid-4">
-															<p><?php echo $deta->nama_produk; ?></p> <br>
-															
+															<p><?php echo $deta->nama_produk; ?></p><br>
 															<p><?php echo $detail->status; ?></p>
 														</div>
 													</div>

@@ -6,6 +6,10 @@ class K_jamur extends CI_Model{
 	public function select($table){
 		return $this->db->get($table);
 	}
+	public function select2($id_user){
+		$this->db->where('id_user',$id_user);
+		return $this->db->get('user');
+	}
 	public function selectlimit($table){
 		$this->db->order_by('','');
 		$this->db->limit();
@@ -86,6 +90,12 @@ class K_jamur extends CI_Model{
 		$this->db->join('produk','detail_transaksi.id_produk = produk.id_produk', "LEFT");
 		$this->db->where('id_transaksi', $id_transaksi);
 		return $this->db->get('detail_transaksi');
+	}
+	public function detail_pemesanan(){
+		$this->db->join('user','transaksi.id_user = user.id_user');
+		$this->db->join('forum', 'reply_forum.id_forum = forum.id_forum');
+		$this->db->where('reply_forum.id_forum', $id_forum);
+		return $this->db->get('reply_forum');
 	}
 	
 }
