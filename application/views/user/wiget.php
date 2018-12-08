@@ -28,34 +28,11 @@
 							<h3 class="widget-title">Gallery</h3>
 							<div id="gallery-1" class="gallery gallery-columns-2">
 								<figure class="gallery-item">
+									<?php foreach ($gallery as $detgal) {?>
 									<div class="gallery-icon landscape">
-										<a href="#"><img  alt="Gallery" src="<?php echo base_url('assets/images/blog')?>/gal.jpg"></a>
+										<a href="#"><img  alt="Gallery" src="<?php echo $detgal->gambar_galeri?>"></a>
 									</div>
-								</figure>
-								<figure class="gallery-item">
-									<div class="gallery-icon landscape">
-										<a href="#"><img  alt="Gallery" src="<?php echo base_url('assets/images/blog')?>/gal.jpg"></a>
-									</div>
-								</figure>
-								<figure class="gallery-item">
-									<div class="gallery-icon landscape">
-										<a href="#"><img alt="Gallery" src="<?php echo base_url('assets/images/blog')?>/gal.jpg"></a>
-									</div>
-								</figure>
-								<figure class="gallery-item">
-									<div class="gallery-icon landscape">
-										<a href="#"><img alt="Gallery" src="<?php echo base_url('assets/images/blog')?>/gal.jpg"></a>
-									</div>
-								</figure>
-								<figure class="gallery-item">
-									<div class="gallery-icon landscape">
-										<a href="#"><img alt="Gallery" src="<?php echo base_url('assets/images/blog')?>/gal.jpg"></a>
-									</div>
-								</figure>
-								<figure class="gallery-item">
-									<div class="gallery-icon landscape">
-										<a href="#"><img alt="Gallery" src="<?php echo base_url('assets/images/blog')?>/gal.jpg"></a>
-									</div>
+								<?php } ?>
 								</figure>
 							</div>
 						</aside> <!-- .footer-widget-area -->

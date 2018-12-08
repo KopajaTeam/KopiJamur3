@@ -55,7 +55,7 @@ class Dashboard_user extends CI_Controller {
 	}
 	public function tentang_saya(){
 		$where = $this->session->userdata('id_user');
-		$data["forum"] 		= $this->K_jamur->beforeforum()->result();
+		$data["forum"] 		= $this->K_jamur->beforeforum1()->result();
 		$data['user'] 		= $this->K_jamur->select2($where)->row();
 		$data["produk"]		= $this->K_jamur->produkall()->result();
 		$this->load->view('dsuser/tentang_saya', $data);
