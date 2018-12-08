@@ -61,12 +61,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 										<tr>
 											<td class="text-muted">Member Sejak</td>
 											<td>:</td>
-											<td><?php echo $user->nama; ?></td>
+											<td><?php echo $user->member_sejak; ?></td>
 										</tr>
 										<tr>
 											<td class="text-muted">Tanggal Lahir</td>
 											<td>:</td>
-											<td><?php echo $user->nama; ?>r</td>
+											<td><?php echo $user->tgl_lahir; ?></td>
 										</tr>
 										<tr>
 											<td class="text-muted">Jenis Kelamin</td>
