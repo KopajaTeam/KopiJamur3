@@ -54,7 +54,9 @@ class Dashboard_user extends CI_Controller {
 		$this->load->view('dsuser/konfirmasi_pembayaran', $data);
 	}
 	public function tentang_saya(){
-		$data["forum"] = $this->K_jamur->beforeforum()->result();
+		$where = $this->session->userdata('id_user');
+		$data["forum"] 		= $this->K_jamur->beforeforum1()->result();
+		$data['user'] 		= $this->K_jamur->select2($where)->row();
 		$data["produk"]		= $this->K_jamur->produkall()->result();
 		$this->load->view('dsuser/tentang_saya', $data);
 	}
