@@ -7,11 +7,14 @@ class Dashboard_user extends CI_Controller {
 		parent::__construct();
 		$this->load->model('K_jamur');
 		$this->load->model('M_testi');
+		$this->load->model('M_galery');
+
 	}
 	public function index(){
 		$where = $this->session->userdata('id_user');
-		$data["forum"] = $this->K_jamur->beforeforum1($where)->result();
+		$data["forum"] = $this->K_jamur->beforeforum()->result();
 		$data["produk"]		= $this->K_jamur->produkall()->result();
+		$data ['gallery']   = $this->M_galery->gal()->result();
 		$data["transaksi"]	= $this->K_jamur->transaksi($this->session->userdata('id_user'))->result();
 		$this->load->view('dsuser/dashuser',$data);
 	}
@@ -51,13 +54,15 @@ class Dashboard_user extends CI_Controller {
 	public function konfirmasi_pembayaran(){
 		$data["forum"] = $this->K_jamur->beforeforum()->result();
 		$data["produk"]		= $this->K_jamur->produkall()->result();
+		$data["gallery"]	= $this->M_galery->gal()->result();
 		$this->load->view('dsuser/konfirmasi_pembayaran', $data);
 	}
 	public function tentang_saya(){
 		$where = $this->session->userdata('id_user');
-		$data["forum"] 		= $this->K_jamur->beforeforum1()->result();
+		$data["forum"] 		= $this->K_jamur->beforeforum()->result();
 		$data['user'] 		= $this->K_jamur->select2($where)->row();
 		$data["produk"]		= $this->K_jamur->produkall()->result();
+		$data["gallery"]	= $this->M_galery->gal()->result();
 		$this->load->view('dsuser/tentang_saya', $data);
 	}
 	public function edit_user(){
@@ -118,12 +123,14 @@ class Dashboard_user extends CI_Controller {
 		$data["forum1"]=$this->K_jamur->beforeforum1($where)->result();
 		$data["produk"]		= $this->K_jamur->produkall()->result();
 		$data ["forum"] = $this->K_jamur->beforeforum()->result();
+		$data["gallery"]	= $this->M_galery->gal()->result();
 		$this->load->view('dsuser/forum_view', $data);
 	}
 	public function testimonial_view(){
 		$where = $this->session->userdata('id_user');
 		$data["forum"] = $this->K_jamur->beforeforum()->result();
 		$data["produk"]		= $this->K_jamur->produkall()->result();
+		$data["gallery"]	= $this->M_galery->gal()->result();
 		$data ["testimoni"] = $this->M_testi->testmon($where)->result();
 
 		$this->load->view('dsuser/testimonial_view',$data);
@@ -164,11 +171,14 @@ class Dashboard_user extends CI_Controller {
 	}
 
 	public function pesanan_saya(){
-		$data["forum"] = $this->K_jamur->beforeforum()->result();
-		$data["produk"]		= $this->K_jamur->produkall()->result();
+		$data['forum'] = $this->K_jamur->beforeforum()->result();
+		$data['produk']		= $this->K_jamur->produkall()->result();
+		$data['gallery']	= $this->M_galery->gal()->result();
 		$this->load->view('dsuser/pesanan_saya', $data);
 	}
 	public function detail_pesanan(){
+		
+
 		$this->load->view('dsuser/detail_pesanan');
 	}
 
@@ -178,6 +188,7 @@ class Dashboard_user extends CI_Controller {
 		$id_testimoni = $this->uri->segment(3);
 		$data ['testimoni'] 		 =  $this->Admin_Dashboard->testiedit($id_testimoni)->row_array();
 		$data ['produk'] =	$this->Admin_Dashboard->select("produk")->result();
+		$data["gallery"]	= $this->M_galery->gal()->result();
 		$data ["forum"] = $this->K_jamur->beforeforum()->result();
 		$this->load->view('dsuser/edit_testimoni',$data);
 	}
@@ -234,6 +245,7 @@ class Dashboard_user extends CI_Controller {
 	public function edit_forum(){
 		$id_forum = $this->uri->segment(3);
 		$data ['forum'] 		 =  $this->Admin_Dashboard->forumedit($id_forum)->row_array();
+		$data["gallery"]	= $this->M_galery->gal()->result();
 		$data ['kategori_forum'] =	$this->Admin_Dashboard->select("kategori_forum")->result();
 		$this->load->view('dsuser/edit_forum',$data);	
 	}
