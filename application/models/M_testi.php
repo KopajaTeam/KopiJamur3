@@ -21,6 +21,6 @@
 			$this->db->where('testimoni.id_user',$id_testimoni);
 			return $this->db->get('testimoni');
 		}
-
+		
 	}
 ?>
