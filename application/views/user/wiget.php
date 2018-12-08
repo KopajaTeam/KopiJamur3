@@ -30,7 +30,7 @@
 								<figure class="gallery-item">
 									<?php foreach ($gallery as $galleries) {?>
 									<div class="gallery-icon landscape">
-										<a href="#"><img style="width: 115px;height: 60px" src="<?php echo base_url("$galleries->gambar_gallery"); ?>"></a>
+										<a href="#"><img style="width: 115px;height: 60px" src="<?php echo base_url("$galleries->gambar_galeri"); ?>"></a>
 									</div>
 									<?php } ?>
 									<!-- <?php foreach ($gallery as $detgal) {?>
