@@ -3,8 +3,8 @@
 	<ul class="list-group">
 		<li class="list-group-item text-muted" contenteditable="false" style="color: #323232;text-align: center;"><strong>History Activity</strong></li>
 		<li class="list-group-item text-right" style="color: #323232"><span class="pull-left">Total Transaksi</span> <?php echo $this->K_jamur->transaksi($this->session->userdata('id_user'))->num_rows();?></li>
-		<li class="list-group-item text-right" style="color: #323232"><span class="pull-left">Total Forum</span> <?php echo $this->K_jamur->beforeforum()->num_rows();?></li>
-		<li class="list-group-item text-right" style="color: #323232"><span class="pull-left">Total Testimonial</span> <?php echo $this->M_testi->testi()->num_rows();?></li>
+		<li class="list-group-item text-right" style="color: #323232"><span class="pull-left">Total Forum</span> <?php echo $this->K_jamur->beforeforum1('id_user')->num_rows();?></li>
+		<li class="list-group-item text-right" style="color: #323232"><span class="pull-left">Total Testimonial</span> <?php echo $this->M_testi->testmon("id_user")->num_rows();?></li>
 	</ul>
 	<ul class="list-group">
 		<a href="<?php echo base_url('Dashboard_user')?>" class="list-group-item"><i class="fa fa-smile" aria-hidden="true"></i> Panel Akun </a>
