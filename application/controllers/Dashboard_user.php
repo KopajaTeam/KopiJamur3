@@ -169,7 +169,6 @@ class Dashboard_user extends CI_Controller {
 	public function invoice(){
 		$this->load->view('dsuser/invoice');
 	}
-}
 
 	public function pesanan_saya(){
 
