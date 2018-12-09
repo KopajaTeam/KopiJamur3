@@ -107,11 +107,11 @@
 												<div class="col-grid-3 team-item">
 													<div class="thumb-summary-wrap box-shadow-block">
 														<div class="team-thumb">
-															<a href="#" target="-sefl"> <img alt="Team" src="<?php echo base_url('assets/images/team')?>/cak.jpg"></a>
+															<a href="#" target="-sefl"> <img style="width: 250px; height: 250px" alt="Team" src="<?php echo base_url('assets/images/team')?>/Zaenal.png"></a>
 														</div><!-- .team-thumb-->
 														<div class="team-text-wrap">
-															<h3 class="team-title"><a href="#">Manusia Kipas</a></h3>
-															<p class="team-position">Founder</p>
+															<h3 class="team-title"><a href="#">Mukhammad Zaenal Abidin</a></h3>
+															<p class="team-position">Direktur Utama</p>
 														</div><!-- .team-text-wrap -->
 														<div class="social-links circle">
 															<ul>
@@ -125,11 +125,11 @@
 												<div class="col-grid-3 team-item">
 													<div class="thumb-summary-wrap box-shadow-block">
 														<div class="team-thumb">
-															<a href="#" target="-sefl"> <img alt="Team" src="<?php echo base_url('assets/images/team')?>/cak.jpg"></a>
+															<a href="#" target="-sefl"> <img style="width: 250px; height: 250px" alt="Team" src="<?php echo base_url('assets/images/team')?>/Aula.png"></a>
 														</div><!-- .team-thumb-->
 														<div class="team-text-wrap">
-															<h3 class="team-title"><a href="#">Manusia Kipas</a></h3>
-															<p class="team-position">Founder</p>
+															<h3 class="team-title"><a href="#">Aula Masfufah</a></h3>
+															<p class="team-position">Direktur Keuangan</p>
 														</div><!-- .team-text-wrap -->
 														<div class="social-links circle">
 															<ul>
@@ -143,11 +143,11 @@
 												<div class="col-grid-3 team-item">
 													<div class="thumb-summary-wrap box-shadow-block">
 														<div class="team-thumb">
-															<a href="#" target="-sefl"> <img alt="Team" src="<?php echo base_url('assets/images/team')?>/cak.jpg"></a>
+															<a href="#" target="-sefl"> <img style="width: 250px; height: 250px" alt="Team" src="<?php echo base_url('assets/images/team')?>/Afdiar.png"></a>
 														</div><!-- .team-thumb-->
 														<div class="team-text-wrap">
-															<h3 class="team-title"><a href="#">Manusia Kipas</a></h3>
-															<p class="team-position">Founder</p>
+															<h3 class="team-title"><a href="#">Afdiar Prambudi</a></h3>
+															<p class="team-position">Divisi Produksi dan R&D</p>
 														</div><!-- .team-text-wrap -->
 														<div class="social-links circle">
 															<ul>
@@ -161,11 +161,11 @@
 												<div class="col-grid-3 team-item">
 													<div class="thumb-summary-wrap box-shadow-block">
 														<div class="team-thumb">
-															<a href="#" target="-sefl"> <img alt="Team" src="<?php echo base_url('assets/images/team')?>/cak.jpg"></a>
+															<a href="#" target="-sefl"> <img style="width: 250px; height: 250px" alt="Team" src="<?php echo base_url('assets/images/team')?>/Vian.png"></a>
 														</div><!-- .team-thumb-->
 														<div class="team-text-wrap">
-															<h3 class="team-title"><a href="#">Manusia Kipas</a></h3>
-															<p class="team-position">Founder</p>
+															<h3 class="team-title"><a href="#">Vian Hidayat</a></h3>
+															<p class="team-position">Divisi Pemasaran</p>
 														</div><!-- .team-text-wrap -->
 														<div class="social-links circle">
 															<ul>

@@ -11,10 +11,10 @@ class Produk extends CI_Controller {
     }
 
 	public function index(){
-		$data["forum"] = $this->K_jamur->beforeforum()->result();
-		$data ['produk']=$this->K_jamur->produkall()->result();
-        $data['gallery']=$this->M_galery->gal()->result();
-		$this->load->view('menu/product', $data);
+		
+		$data1 ['produk']=$this->K_jamur->produkall()->result();
+       
+		$this->load->view('menu/product', $data1);
 	}
 
 	function detail_produk($id_produk){

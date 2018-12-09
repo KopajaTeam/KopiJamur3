@@ -38,7 +38,7 @@
                       <th><?php echo ++$no; ?></th>
                       <td><?php echo $galleries->nama_gallery;  ?></td>
                       <td><?php echo $galleries->deskripsi_gallery;  ?></td>
-                      <td><img style="width: 150px;height: 150px" src="<?php echo base_url("$galleries->gambar_gallery"); ?>"></td>
+                      <td><img style="width: 150px;height: 150px" src="<?php echo base_url("$galleries->gambar_galeri"); ?>"></td>
                       <td class="text-right">
                         <a href="<?php echo base_url("admin/Gallery/edit/".$galleries->id_gallery); ?>" class="btn btn-simple btn-warning btn-icon like"><i class="material-icons">edit</i></a>
                         <button data-toggle="modal" data-target="#exampleModal<?php echo $galleries->id_gallery?>" class="btn btn-simple btn-danger btn-icon edit"><i class="material-icons">delete</i></button>
