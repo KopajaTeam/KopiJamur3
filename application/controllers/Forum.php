@@ -13,8 +13,7 @@ class Forum extends CI_Controller {
 	public function index(){
 
 		$data["forum"] = $this->K_jamur->beforeforum()->result();
-		$data["produk"]		= $this->K_jamur->produkall()->result();
-		$data['gallery'] = $this->M_galery->gal()->result();
+	
 		$this->load->view('menu/forum', $data);
 		
 	
