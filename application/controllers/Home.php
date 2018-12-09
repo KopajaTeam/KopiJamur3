@@ -12,7 +12,7 @@ class Home extends CI_Controller {
 
 	public function index(){
 		$where = $this->session->userdata('id_user');
-		$data ["forum"] 		= $this->K_jamur->beforeforum()->result();
+		$data ["forum"] 	= $this->K_jamur->beforeforum()->result();
 		$data ["testimoni"] = $this->M_testi->testi()->result();
 		$this->load->view('user/home',$data);
 	}

@@ -12,7 +12,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			<!-- Mobile main menu -->
 			<a href="#" id="mobile-trigger"><i class="fa fa-list" aria-hidden="true"></i></a>
 <?php $this->load->view('user/head') ?>
-<?php $this->load->view('user/header')?>>
+<?php $this->load->view('user/header')?>
 <?php $this->load->view('user/mainnav') ?>
 
 <div id="custom-header">

@@ -19,9 +19,7 @@ class Dashboard_user extends CI_Controller {
 		$this->load->view('dsuser/sidenav_dashuser');
 	}
 	public function tambah_forum(){
-		$data["forum"] = $this->K_jamur->beforeforum()->result();
-		$data["produk"]		= $this->K_jamur->produkall()->result();
-		$data ['gallery']   = $this->M_galery->gal()->result();
+	
 		$data ['kategori_forum'] =$this->Admin_Dashboard->select('kategori_forum')->result();
 		$this->load->view('dsuser/tambah_forum',$data);
 	}
@@ -51,7 +49,7 @@ class Dashboard_user extends CI_Controller {
 	}
 	public function konfirmasi_pembayaran(){
 		
-		$this->load->view('dsuser/konfirmasi_pembayaran', $data);
+		$this->load->view('dsuser/konfirmasi_pembayaran');
 	}
 	public function tentang_saya(){
 		$where = $this->session->userdata('id_user');
@@ -162,146 +160,130 @@ class Dashboard_user extends CI_Controller {
 
 	public function pesanan_saya(){
 
-
-		$data["forum"] = $this->K_jamur->beforeforum()->result();
-		$data["produk"]		= $this->K_jamur->produkall()->result();
+		
 		$data["transaksi"]	= $this->K_jamur->transaksi($this->session->userdata('id_user'))->result();
 
-		$data['forum'] = $this->K_jamur->beforeforum()->result();
-		$data['produk']		= $this->K_jamur->produkall()->result();
-		$data['gallery']	= $this->M_galery->gal()->result();
 		$this->load->view('dsuser/pesanan_saya', $data);
 	}
-}
-// <<<<<<< HEAD
-// 	// public function detail_pesanan(){
-		
-
-// 	// 	$this->load->view('dsuser/detail_pesanan');
-// 	// }
-// =======
-	
-// 		$data["transaksi"]	= $this->K_jamur->transaksi($this->session->userdata('id_user'))->result();
-	
-// 		$this->load->view('dsuser/pesanan_saya', $data);
-// 	}
-// 	public function detail_pesanan(){
-		
-
-// 		$this->load->view('dsuser/detail_pesanan');
-// 	}
-// >>>>>>> e8b4a3af9ad744c9da60123020dbca0f74dc16ca
 
 
-// //Function Baru hati - hati ini penting
-// 	public function testi_action(){	 
-// 		$id_testimoni = $this->uri->segment(3);
-// 		$data ['testimoni'] 		 =  $this->Admin_Dashboard->testiedit($id_testimoni)->row_array();
-// 		$data ['produk'] =	$this->Admin_Dashboard->select("produk")->result();
-// 		$this->load->view('dsuser/edit_testimoni',$data);
-// 	}
-// 	public function simpan_testi(){
-// 		if ($this->input->post('komentar_produk')!="") {
-// 			$gam = 'assets/images/portfolio/';
-// 			$config['upload_path']      = 'assets/images/portfolio/';
-// 			$config['allowed_types']    = 'jpg|png|jpeg';
-// 			$config['max_size']         = '2048';
-// 			$this->load->library('upload', $config);
-// 			$this->upload->initialize($config); 
-// 			if (!$this->upload->do_upload('gambar_testi')) {
-// 				$id	 = $this->input->post('id_testimoni');
-// 				$simpantesti = array(
-// 					'komentar'		=> $this->input->post('komentar_produk'),
-// 					// 'id_user'		=> $this->session->userdata("id_user"),
-// 					// 'id_testimoni'	=> "",
-// 					'id_produk'		=> $this->input->post("id_produk"),
-// 					'rate'			=> "",);
-// 				$this->db->where('id_testimoni',$id);
-// 				$this->db->update('testimoni',$simpantesti);
-// 				redirect('dashboard_user/testimonial_view');
+
+ 	
+	public function detail_pesanan(){
+	// $data["transaksi"]	= $this->K_jamur->transaksi($this->session->userdata('id_user'))->result();
+ 	// 	$this->load->view('dsuser/pesanan_saya', $data);
+		$this->load->view('dsuser/detail_pesanan');
+	}
+
+
+
+//Function Baru hati - hati ini penting
+	public function testi_action(){	 
+		$id_testimoni = $this->uri->segment(3);
+		$data ['testimoni'] 		 =  $this->Admin_Dashboard->testiedit($id_testimoni)->row_array();
+		$data ['produk'] =	$this->Admin_Dashboard->select("produk")->result();
+		$this->load->view('dsuser/edit_testimoni',$data);
+	}
+	public function simpan_testi(){
+		if ($this->input->post('komentar_produk')!="") {
+			$gam = 'assets/images/portfolio/';
+			$config['upload_path']      = 'assets/images/portfolio/';
+			$config['allowed_types']    = 'jpg|png|jpeg';
+			$config['max_size']         = '2048';
+			$this->load->library('upload', $config);
+			$this->upload->initialize($config); 
+			if (!$this->upload->do_upload('gambar_testi')) {
+				$id	 = $this->input->post('id_testimoni');
+				$simpantesti = array(
+					'komentar'		=> $this->input->post('komentar_produk'),
+					// 'id_user'		=> $this->session->userdata("id_user"),
+					// 'id_testimoni'	=> "",
+					'id_produk'		=> $this->input->post("id_produk"),
+					'rate'			=> "",);
+				$this->db->where('id_testimoni',$id);
+				$this->db->update('testimoni',$simpantesti);
+				redirect('dashboard_user/testimonial_view');
 					
-// 			}else{
-// 				$id	 = $this->input->post('id_testimoni');
-// 				$simpantesti = array(
-// 					'komentar'		=> $this->input->post('komentar_produk'),
-// 					// 'id_user'		=> $this->session->userdata("id_user"),
-// 					// 'id_testimoni'	=> "",
-// 					'id_produk'		=> $this->input->post("id_produk"),
-// 					'rate'			=> "",
-// 					'gambar_testi'	=> $gam.$this->upload->data('file_name'),
-// 				);
-// 				$where['id_testimoni']=$id;
-// 				$this->db->update('testimoni',$simpantesti,$where);
-// 				redirect('dashboard_user/testimonial_view');
-// 			}
-// 		}else{
-// 			$data = array(
-// 				'kproduk'  => $this->Admin_Dashboard->select('produk')->result()
-// 			);
-// 			$this->load->view('dsuser/tambah_testimonial',$data);
-// 		}
-// 	}
+			}else{
+				$id	 = $this->input->post('id_testimoni');
+				$simpantesti = array(
+					'komentar'		=> $this->input->post('komentar_produk'),
+					// 'id_user'		=> $this->session->userdata("id_user"),
+					// 'id_testimoni'	=> "",
+					'id_produk'		=> $this->input->post("id_produk"),
+					'rate'			=> "",
+					'gambar_testi'	=> $gam.$this->upload->data('file_name'),
+				);
+				$where['id_testimoni']=$id;
+				$this->db->update('testimoni',$simpantesti,$where);
+				redirect('dashboard_user/testimonial_view');
+			}
+		}else{
+			$data = array(
+				'kproduk'  => $this->Admin_Dashboard->select('produk')->result()
+			);
+			$this->load->view('dsuser/tambah_testimonial',$data);
+		}
+	}
 
-// 	function del_testi($id_testimoni){
-// 		$where = array('id_testimoni' => $id_testimoni);
-// 		$this->Admin_Dashboard->delete($where,'testimoni');
-// 		redirect('Dashboard_user/testimonial_view');
-// 	}
-
-
-// 	//show data forum sebelum di edit
-// 	public function edit_forum(){
-// 		$id_forum = $this->uri->segment(3);
-// 		$data 	['forum'] 		 =  $this->Admin_Dashboard->forumedit($id_forum)->row_array();
-// 		$data   ["gallery"]		 = $this->M_galery->gal()->result();
-// 		$data	["produk"]		= $this->K_jamur->produkall()->result();
-// 		// $data 	["forum"] = $this->K_jamur->beforeforum()->result();
-// 		$data 	['kategori_forum'] =	$this->Admin_Dashboard->select("kategori_forum")->result();
-// 		$this->load->view('dsuser/edit_forum',$data);	
-// 	}
-// 	//simpan data 
-// 	public function edit_forum_simpan(){
-// 		$dir = 'assets/images_upload/foto_forum/';
-// 		$config['upload_path']      = 'assets/images_upload/foto_forum/';
-// 		$config['allowed_types']    = 'jpg|png|jpeg';
-// 		$config['max_size']         = '2048';
-// 		$this->load->library('upload', $config);
-// 		$this->upload->initialize($config); 
-// 		if (!$this->upload->do_upload('gambar_headline')) {
-// 			$id	 = $this->input->post('id_forum');
-// 			$simpanforum = array(
-// 				'judul' 			=> $this->input->post('judul_forum'),
-// 				'id_user'			=> $this->session->userdata("id_user"),	
-// 				'id_kategori_forum' => $this->input->post('kategori_forum'),
-// 				// 'desc_forum' 		=> $this->input->post('desc_forum'),
-// 				'isi_forum' 		=> $this->input->post('isi_forum'),
-// 				'tanggal'			=> $this->input->post('tanggal'),
-// 			);
-// 			$this->db->where('id_forum',$id);
-// 			$this->db->update('forum',$simpanforum);
-// 			redirect('Dashboard_user/forum_view');
-// 		}else{
-// 			$id	 = $this->input->post('id_forum');
-// 			$simpanforum = array(
-// 				'judul' 			=> $this->input->post('judul_forum'),
-// 				'id_user'			=> $this->session->userdata("id_user"),	
-// 				'id_kategori_forum' => $this->input->post('kategori_forum'),
-// 				// 'desc_forum' 		=> $this->input->post('desc_forum'),
-// 				'isi_forum' 		=> $this->input->post('isi_forum'),
-// 				'tanggal'			=> $this->input->post('tanggal'),
-// 				'gambar_headline'	=> $dir.$this->upload->data('file_name'),
-// 			);
-// 			$this->db->where('id_forum',$id);
-// 			$this->db->update('forum',$simpanforum);
-// 			redirect('Dashboard_user/forum_view');
-// 		}
-// 	}
-// 	//delet data
-// 	function del_for($id_forum){
-// 		$where = array('id_forum' => $id_forum);
-// 		$this->Admin_Dashboard->delete($where,'forum');
-// 		redirect('Dashboard_user/forum_view');
-// 	}
+	function del_testi($id_testimoni){
+		$where = array('id_testimoni' => $id_testimoni);
+		$this->Admin_Dashboard->delete($where,'testimoni');
+		redirect('Dashboard_user/testimonial_view');
+	}
 
 
-// }
+	//show data forum sebelum di edit
+	public function edit_forum(){
+		$id_forum = $this->uri->segment(3);
+		$data 	['forum'] 		 =  $this->Admin_Dashboard->forumedit($id_forum)->row_array();
+
+		$data 	['kategori_forum'] =	$this->Admin_Dashboard->select("kategori_forum")->result();
+		$this->load->view('dsuser/edit_forum',$data);	
+	}
+	//simpan data 
+	public function edit_forum_simpan(){
+		$dir = 'assets/images_upload/foto_forum/';
+		$config['upload_path']      = 'assets/images_upload/foto_forum/';
+		$config['allowed_types']    = 'jpg|png|jpeg';
+		$config['max_size']         = '2048';
+		$this->load->library('upload', $config);
+		$this->upload->initialize($config); 
+		if (!$this->upload->do_upload('gambar_headline')) {
+			$id	 = $this->input->post('id_forum');
+			$simpanforum = array(
+				'judul' 			=> $this->input->post('judul_forum'),
+				'id_user'			=> $this->session->userdata("id_user"),	
+				'id_kategori_forum' => $this->input->post('kategori_forum'),
+				// 'desc_forum' 		=> $this->input->post('desc_forum'),
+				'isi_forum' 		=> $this->input->post('isi_forum'),
+				'tanggal'			=> $this->input->post('tanggal'),
+			);
+			$this->db->where('id_forum',$id);
+			$this->db->update('forum',$simpanforum);
+			redirect('Dashboard_user/forum_view');
+		}else{
+			$id	 = $this->input->post('id_forum');
+			$simpanforum = array(
+				'judul' 			=> $this->input->post('judul_forum'),
+				'id_user'			=> $this->session->userdata("id_user"),	
+				'id_kategori_forum' => $this->input->post('kategori_forum'),
+				// 'desc_forum' 		=> $this->input->post('desc_forum'),
+				'isi_forum' 		=> $this->input->post('isi_forum'),
+				'tanggal'			=> $this->input->post('tanggal'),
+				'gambar_headline'	=> $dir.$this->upload->data('file_name'),
+			);
+			$this->db->where('id_forum',$id);
+			$this->db->update('forum',$simpanforum);
+			redirect('Dashboard_user/forum_view');
+		}
+	}
+	//delet data
+	function del_for($id_forum){
+		$where = array('id_forum' => $id_forum);
+		$this->Admin_Dashboard->delete($where,'forum');
+		redirect('Dashboard_user/forum_view');
+	}
+
+
+}
