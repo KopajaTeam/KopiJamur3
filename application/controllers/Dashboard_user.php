@@ -169,25 +169,24 @@ class Dashboard_user extends CI_Controller {
 	public function invoice(){
 		$this->load->view('dsuser/invoice');
 	}
-}
 
-// 	public function pesanan_saya(){
-// <<<<<<< HEAD
-// 		$data["forum"] = $this->K_jamur->beforeforum()->result();
-// 		$data["produk"]		= $this->K_jamur->produkall()->result();
-// 		$data["transaksi"]	= $this->K_jamur->transaksi($this->session->userdata('id_user'))->result();
-// =======
-// 		$data['forum'] = $this->K_jamur->beforeforum()->result();
-// 		$data['produk']		= $this->K_jamur->produkall()->result();
-// 		$data['gallery']	= $this->M_galery->gal()->result();
-// >>>>>>> b2fee2f66ca87cdf18811d988e8aca5a29814119
-// 		$this->load->view('dsuser/pesanan_saya', $data);
-// 	}
-// 	public function detail_pesanan(){
+	public function pesanan_saya(){
+
+		$data["forum"] = $this->K_jamur->beforeforum()->result();
+		$data["produk"]		= $this->K_jamur->produkall()->result();
+		$data["transaksi"]	= $this->K_jamur->transaksi($this->session->userdata('id_user'))->result();
+
+		$data['forum'] = $this->K_jamur->beforeforum()->result();
+		$data['produk']		= $this->K_jamur->produkall()->result();
+		$data['gallery']	= $this->M_galery->gal()->result();
+		$this->load->view('dsuser/pesanan_saya', $data);
+	}
+}
+	// public function detail_pesanan(){
 		
 
-// 		$this->load->view('dsuser/detail_pesanan');
-// 	}
+	// 	$this->load->view('dsuser/detail_pesanan');
+	// }
 
 
 // //Function Baru hati - hati ini penting

@@ -6,12 +6,14 @@ class Keranjang extends CI_Controller {
     {
         parent::__construct();
         $this->load->model('K_jamur');
+        $this->load->model('M_galery');
     }
 
 
     public function index(){
       $user=$this->session->userdata('id_user');
       $data['keranjang'] = $this->K_jamur->keranjang($user);
+      $data ['gallery']   = $this->M_galery->gal()->result();
       $data["forum"] = $this->K_jamur->beforeforum()->result();
       $data["produk"]		= $this->K_jamur->produkall()->result();
       $this->load->view('menu/bayar', $data);
