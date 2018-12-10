@@ -39,7 +39,7 @@ class Dashboard_user extends CI_Controller {
 				'id_kategori_forum' => $this->input->post('kategori_forum'),
 				// 'desc_forum' 		=> $this->input->post('desc_forum'),
 				'isi_forum' 		=> $this->input->post('isi_forum'),
-				'tanggal'			=> $this->input->post('tanggal'),
+				'tanggal'			=> date("Y-m-d"),
 				'gambar_headline'	=> $dir.$this->upload->data('file_name'),
 			);
 
@@ -193,9 +193,6 @@ class Dashboard_user extends CI_Controller {
 
 		$this->load->view('dsuser/pesanan_saya', $data);
 	}
-
-
-
  	
 	public function detail_pesanan(){
 		$id = $this->uri->segment(3);
@@ -203,7 +200,6 @@ class Dashboard_user extends CI_Controller {
 		$data['transaksi'] = $this->K_jamur->detail_pemesanan($id)->row();
 		$this->load->view('dsuser/detail_pesanan',$data);
 	}
-
 
 
 //Function Baru hati - hati ini penting

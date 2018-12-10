@@ -57,9 +57,9 @@
 												<hr style="margin-top: -30px;margin-bottom: 15px">
 												<div class="row">
 													<!-- disini deskripsi forum -->
-													<div class="col-lg-9">
+													<!-- <div class="col-lg-9">
 														<input type="date" name="tanggal" class="form-control">
-													</div>
+													</div> -->
 													<br>
 													<br>
 												<!-- <div class="col-lg-9">

@@ -62,7 +62,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											<div class="row" style="margin-top:20px;">
 												<div class="equalHWrap eqWrap nomargin-nopadding to-block">
 													<div class="equalHW eq nomargin-nopadding " style="margin-left: 8px">
-														<strong>Kode Invoice : # 41234124</strong> <i class="fas fa-print" style="float: right;"></i>
+														<p>Kode Invoice : #41234124</strong></p> <i class="fas fa-print" style="float: right;"></i>
 													</div>
 												</div>
 												<div class="equalHWrap eqWrap nomargin-nopadding to-block">
@@ -82,21 +82,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 														<td><span id="ProductNumUnits">2<span></span></span></td>
 														<td><span id="ProductUnitPrice">Rp. 30000</span></td>
 													</tr>
-													<tr class="item">
-														<td><span id="ProuductName">Kopi Jamur 2<span></span></span></td>
-														<td><span id="ProductNumUnits">3<span></span></span></td>
-														<td><span id="ProductUnitPrice">Rp. 15000</span></td>
-													</tr>
-													<tr class="item">
-														<td><span id="ProuductName">Kopi Jamur 3<span></span></span></td>
-														<td><span id="ProductNumUnits">6<span></span></span></td>
-														<td><span id="ProductUnitPrice">Rp. 40000</span></td>
-													</tr>
-													<tr class="item">
-														<td><span id="ProuductName">Kopi Jamur 4<span></span></span></td>
-														<td><span id="ProductNumUnits">1 <span></span></span></td>
-														<td><span id="ProductUnitPrice">Rp. 5000</span></td>
-													</tr>
 												</table>
 											</div>
 											<div class="row">
@@ -104,15 +89,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 													<div class="equalHW eq">
 														<table class="right">
 															<tr>
-																<td><span style="display:inline-block;margin-right:10px;"><strong>Sub Total Harga:</strong></span></td>
-																<td><span id="InvoceTotalVat">Rp. 90000</span>
-															</tr>
-															<tr>
-																<td><span style="display:inline-block;margin-right:10px;"><strong>Ongkos Kirim:</strong></span></td>
-																<td><span id="InvoiceSumExVat">Rp. 15000</span>
-															</tr>
-															<tr>
-																<td><span style="display:inline-block;margin-right:10px;"><strong>Total Harga:</strong></span></td>
+																<td><span style="display:inline-block;margin-right:10px;"><strong>Total Harga + Ongkir *10.000:</strong></span></td>
 																<td><span id="ProductCost">Rp. 105000</span>
 															</tr>
 														</table>
