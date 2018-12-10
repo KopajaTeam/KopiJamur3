@@ -41,7 +41,7 @@
                             <td><?php echo $produks->nama_produk; ?></td>
                             <td><?php echo $produks->nama_kategori_produk; ?></td>
                             <td><?php echo $produks->harga_produk; ?></td>
-                            <td><img style="width: 150px;height: 150px" src="<?php echo base_url("$produks->gambar_produk"); ?>"></td>
+                            <td><img class="img-thumbnail img-fluid" style="width: 150px;height: 150px" src="<?php echo base_url("$produks->gambar_produk"); ?>"></td>
                             <td class="text-right">
                               <a href="<?php echo base_url("admin/Produk/edit/".$produks->id_produk); ?>" class="btn btn-simple btn-warning btn-icon like"><i class="material-icons">edit</i></a>
                               <button data-toggle="modal" data-target="#exampleModal<?php echo $produks->id_produk?>" class="btn btn-simple btn-danger btn-icon edit"><i class="material-icons">delete</i></button>

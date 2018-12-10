@@ -38,7 +38,7 @@
                       <th><?php echo ++$no; ?></th>
                       <td><?php echo $prestasies->judul_prestasi;  ?></td>
                       <td><?php echo $prestasies->isi_prestasi;  ?></td>
-                      <td><img style="width: 150px;height: 150px" src="<?php echo base_url("$prestasies->gambar_prestasi"); ?>"></td>
+                      <td><img class="img-thumbnail img-fluid" style="width: 150px;height: 150px" src="<?php echo base_url("$prestasies->gambar_prestasi"); ?>"></td>
                       <td class="text-right">
                           <a href="<?php echo base_url("admin/Prestasi/edit/".$prestasies->id_prestasi); ?>" class="btn btn-simple btn-warning btn-icon like"><i class="material-icons">edit</i></a>
                           <button data-toggle="modal" data-target="#exampleModal<?php echo $prestasies->id_prestasi?>" class="btn btn-simple btn-danger btn-icon edit"><i class="material-icons">delete</i></button>

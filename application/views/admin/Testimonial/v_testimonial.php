@@ -36,7 +36,7 @@
                               <td><?php echo $testie->nama; ?></td>
                               <td><?php echo $testie->nama_produk; ?></td>
                               <td><?php echo $testie->komentar; ?></td>
-                              <td><img class="img-thumbnail img-fluid mb-5" src="<?php echo base_url($testie->gambar_testi); ?>"></td>
+                              <td><img style="width: 150px;height: 150px" class="img-thumbnail img-fluid"  src="<?php echo base_url($testie->gambar_testi); ?>"></td>
                               <td class="text-right">
                               <a href="<?php echo base_url('Admin/Testimonial/deletdata/'.$testie->id_testimoni); ?>" class="btn btn-simple btn-danger btn-icon edit"><i class="material-icons">close</i></a>
                               </td>

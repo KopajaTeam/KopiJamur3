@@ -114,7 +114,7 @@ if (!isset($_SESSION['nama_admin'])) {
                     <td><?php echo $transaksi_adm->nama; ?></td>
                     <td><?php echo $transaksi_adm->tgl_transfer; ?></td>
                     <td><?php echo $transaksi_adm->jumlah_transfer; ?></td>
-                    <td><img class="img-thumbnail img-fluid mb-5" src="<?php echo base_url($transaksi_adm->bukti); ?>"></td>
+                    <td><img style="width: 150px;height: 100px" class="img-thumbnail img-fluid" src="<?php echo base_url($transaksi_adm->bukti); ?>"></td>
                     <td><?php if($transaksi_adm->status == 0) {?>
                                 <i>Belum Membayar</i>
                                 <?php } elseif($transaksi_adm->status == 1) {?>

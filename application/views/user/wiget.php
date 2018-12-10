@@ -4,7 +4,7 @@
 					<div class="inner-wrapper">
 						<aside  class="footer-active-4 footer-widget-area">
 							<h3 class="widget-title">About Us</h3>
-							<p>Berawal dari tugas kulaih dari owner Kopi Jamur Prestasi, Mukhamamd Zaenal Abidin. Kopi Jamur Prestasi ini merupakan perusahaan yang meproduksi minuman kopi yang dicampur dengan extrac jamur bahakan minuman ini terjamin amam dan tidak mebuat perut kembung karena bahan yang dipakai 100% alami bahkan pegawet yang digunakan terbuat dari bahan alami, gula yang digunakan merupakan gula tebu cair.</p>
+							<p style="text-align: justify;text-indent: 60px">Berawal dari tugas kulaih dari owner Kopi Jamur Prestasi, Mukhamamd Zaenal Abidin. Kopi Jamur Prestasi ini merupakan perusahaan yang meproduksi minuman kopi yang dicampur dengan extrac jamur bahakan minuman ini terjamin amam dan tidak mebuat perut kembung karena bahan yang dipakai 100% alami bahkan pegawet yang digunakan terbuat dari bahan alami, gula yang digunakan merupakan gula tebu cair.</p><a style="margin-left: 45px" href="<?php echo base_url("About_us") ?>">Click here to Know More</a>
 						</aside> <!-- .footer-widget-area -->
 						<aside class="footer-active-4 footer-widget-area">
 							<h3 class="widget-title">Popular Threads</h3>
@@ -33,6 +33,7 @@
 									<div class="gallery-icon landscape">
 										<a href="#"><img style="width: 115px;height: 60px" src="<?php echo base_url("$galleries->gambar_galeri"); ?>"></a>
 									</div>
+									<br>
 									<?php } ?>
 								</figure>
 							</div>

@@ -37,7 +37,7 @@
                     <td><?php echo $admins->nama_admin;  ?></td>
                     <td><?php echo $admins->alamat_admin; ?></td>
                     <td><?php echo $admins->email_admin; ?></td>
-                    <td><img style="width: 150px;height: 150px" src="<?php echo base_url("$admins->foto_admin"); ?>"></td>
+                    <td><img class="img-thumbnail img-fluid" style="width: 150px;height: 150px" src="<?php echo base_url("$admins->foto_admin"); ?>"></td>
                     <td class="text-right">
                       <a href="<?php echo base_url("admin/Admin/hapus/".$admins->id_admin) ?>" onclick="return confirm('Data Akan Dihapus !')" class="btn btn-simple btn-danger btn-icon edit"><i class="material-icons">delete</i></a>
                     </td>
