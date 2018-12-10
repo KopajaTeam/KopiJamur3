@@ -53,6 +53,34 @@ class Dashboard_user extends CI_Controller {
 		$data["produk"]		= $this->K_jamur->produkall()->result();
 		$this->load->view('dsuser/konfirmasi_pembayaran', $data);
 	}
+	function insert_konfirmasi(){
+    $dir = 'assets/images_upload/upload_bukti/';
+        $config['upload_path']      = 'assets/images_upload/upload_bukti/';
+        $config['allowed_types']    = 'jpg|png|jpeg';
+        $config['max_size']         = '2048';
+            $this->load->library('upload', $config);
+            $this->upload->initialize($config); 
+        if (!$this->upload->do_upload('bukti')) {
+            echo $this->upload->display_errors();
+        }else{
+        $data = array(
+            'id_transaksi' => $this->input->post('id_transaksi'),
+            'bank' => $this->input->post('bank'),
+            'atas_nama' => $this->input->post('atas_nama'),
+            'jumlah_transfer' => $this->input->post('jumlah_transfer'),
+            'tgl_transfer' => $this->input->post('tgl_transfer'),
+            'bukti' => $dir.$this->upload->data('file_name'),
+        );
+        $konfirmasi = $this->db->insert('konfirmasi_pembayaran',$data);
+        if ($konfirmasi >=0) {
+        	$where['id_transaksi']=$this->input->post('id_transaksi');
+        	$data = array('status' => 1, );
+        	$this->db->update('transaksi',$data,$where);
+        }
+        // $this->session->set_flashdata('message', "<div class=\"alert alert-success alert-dismissible\"><button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-hidden=\"true\">&times;</button>Data Berhasil Ditambahkan</div>");
+        redirect('Dashboard_user');
+        }
+    }
 	public function tentang_saya(){
 		$where = $this->session->userdata('id_user');
 		$data["forum"] 		= $this->K_jamur->beforeforum1()->result();
@@ -169,7 +197,10 @@ class Dashboard_user extends CI_Controller {
 		$this->load->view('dsuser/pesanan_saya', $data);
 	}
 	public function detail_pesanan(){
-		$this->load->view('dsuser/detail_pesanan');
+		$id = $this->uri->segment(3);
+		// $fg = array('id_transaksi' =>$id);
+		$data['transaksi'] = $this->K_jamur->detail_pemesanan($id)->row();
+		$this->load->view('dsuser/detail_pesanan',$data);
 	}
 
 

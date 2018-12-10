@@ -15,8 +15,8 @@ class Checkout extends CI_Controller {
 		$this->load->view('dsuser/checkout', $data);
 	}
 
-function ckOut(){
-$simpan_checkout = array(
+	function ckOut(){
+		$simpan_checkout = array(
 			'nama' => $this->input->post('nama') ,
 			'alamat' => $this->input->post('alamat'),
 			'telp' => $this->input->post('telp'),
@@ -25,11 +25,11 @@ $simpan_checkout = array(
 			'total_pembayaran' =>$this->input->post('total_pembayaran'),
 			'id_Produk' => $this->input->post('id_produk'),
 
-		 );
+		);
 		$this->db->insert('checkout',$simpan_checkout);
-				redirect('Dashboard_user');
+		redirect('Dashboard_user');
 
-}
+	}
 }
 
- ?>
+?>

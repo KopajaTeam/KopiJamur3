@@ -62,7 +62,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											<div class="row" style="margin-top:20px;">
 												<div class="equalHWrap eqWrap nomargin-nopadding to-block">
 													<div class="equalHW eq nomargin-nopadding " style="margin-left: 8px">
-														<strong>Kode Invoice : 41234124</strong> <i class="fas fa-print" style="float: right;"></i>
+														<strong>Kode Invoice : # 41234124</strong> <i class="fas fa-print" style="float: right;"></i>
 													</div>
 												</div>
 												<div class="equalHWrap eqWrap nomargin-nopadding to-block">

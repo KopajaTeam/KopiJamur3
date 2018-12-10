@@ -32,20 +32,20 @@
 									<tr class="font-weight-bold">
 										<td valign="top">NO. INVOICE</td>
 										<td valign="top">:</td>
-										<td valign="top">141231</td>
+										<td valign="top"># <?php echo $transaksi->id_transaksi; ?></td>
 									</tr>
 									<tr>
 										<td valign="top">TANGGAL TRANSAKSI</td>
 										<td valign="top">:</td>
-										<td valign="top">11 1 2011</td>
+										<td valign="top"><?php echo $transaksi->tgl_transaksi; ?></td>
 									</tr>
 									<tr>
 										<td valign="top">ALAMAT PENGIRIMAN</td>
 										<td valign="top">:</td>
 										<td valign="top">
-											<b>Nama Pengirim</b><br>
-											Alamat yang dituju<br>
-											No Telp : 0821412515
+											<b><?php echo $transaksi->nama; ?></b><br>
+											<?php echo $transaksi->alamat; ?><br>
+											No Telp : <?php echo $transaksi->telp; ?>
 										</td>
 									</tr>
 								</table>
@@ -58,49 +58,63 @@
 												<th class="text-right">Harga</th>
 												<th class="text-center" width="80">Kuantitas</th>
 												<th class="text-right">Total Harga</th>
+												<?php if($transaksi->status == 2) {?>
 												<th class="text-center" width="80">Status</th>
+												<?php } else {?>
+												<i>-</i><?php } ?>
 												<th class="text-center" width="80">Action</th>
 											</tr>
 										</thead>
 										<tbody>
 											<tr>
-												<td class="align-middle">Kode Barang</td>
+												<td class="align-middle"><?php echo $transaksi->id_produk; ?></td>
 												<td class="align-middle border-right-0" width="80px">
 													<a  data-toggle="modal"  href="#gambarmodal" role="button">
-														<img class="img-fluid" src="#" >
+														<img class="img-fluid" src="<?php echo base_url().$transaksi->gambar_produk; ?>" >
 													</a>
 												</td>
-												<td class="align-middle border-left-0">Nama Barang</td>
-												<td class="align-middle text-right">Rp. 1390814</td>
-												<td class="align-middle text-center">11</td>
-												<td class="align-middle text-right">Rp. 516616</td>
+												<td class="align-middle border-left-0"><?php echo $transaksi->nama_produk; ?></td>
+												<td class="align-middle text-right">Rp. <?php echo $transaksi->harga_produk; ?></td>
+												<td class="align-middle text-center"><?php echo $transaksi->qty; ?></td>
+												<td class="align-middle text-right">Rp. <?php echo $transaksi->total_harga; ?></td>
+												<?php if($transaksi->status == 2) {?>
+												<td class="align-middle text-center"><center><i class="fa fa-truck"></i></center></td>
+												<?php } else {?>
+												<i>-</i><?php } ?>
+
 												<td class="align-middle text-center">
-												</td>
-												<td class="align-middle text-center">
-													<a class="btn btn-success" data-toggle="modal"  href="#validmodal" role="button"><span class="fa fa-fa-truck ptooltip" data-toggle="tooltip" data-placement="top" title="Kirim Pesanan"></span></a>
-												</td>
-												<!-- MODAL IMAGES -->
-											</tr> 
-										</tbody>
-										<tfoot>
-											<tr>
-												<td colspan="5" class="text-center align-middle font-weight-bold">SUB TOTAL : </td>
-												<td class="text-right font-weight-bold align-middle" style="font-size: 24px">Rp. 15151151</td>
-											</tr>
-										</tfoot>
-									</table>
-									<a href="<?php echo base_url('Dashboard_user/invoice')?>"><button style="margin-left: 640px">
-										Cetak Invoice
-									</button></a>
+													<p><?php if($transaksi->status == 0) {?>
+														<i>Belum Membayar</i>
+														<?php } elseif($transaksi->status == 1) {?>
+														<i>Belum terkonfirmasi</i><?php } elseif($transaksi->status == 2){ ?>
+														<i>Terkonfirmasi</i><?php } else{ ?>
+														<i>Dibatalkan</i><?php } ?></p>
+													</td>
+													<!-- MODAL IMAGES -->
+												</tr> 
+											</tbody>
+											<tfoot>
+												<tr>
+													<td colspan="5" class="text-center align-middle font-weight-bold">SUB TOTAL : </td>
+													<td class="text-right font-weight-bold align-middle" style="font-size: 24px">Rp. <?php echo $transaksi->total_transaksi; ?></td>
+												</tr>
+											</tfoot>
+										</table>
+										<?php if($transaksi->status == 2) {?>
+										<a href="<?php echo base_url('Dashboard_user/invoice')?>"><button style="margin-left: 640px">
+											Cetak Invoice
+										</button></a>
+										<?php } else {?>
+										<?php } ?>
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-	</aside>
-	<?php $this->load->view("admin/side/js") ?>
-	<?php $this->load->view('user/wiget') ?>
-	<?php $this->load->view('user/sosmed') ?>
-	<?php $this->load->view('user/footer') ?>
+		</aside>
+		<?php $this->load->view("admin/side/js") ?>
+		<?php $this->load->view('user/wiget') ?>
+		<?php $this->load->view('user/sosmed') ?>
+		<?php $this->load->view('user/footer') ?>

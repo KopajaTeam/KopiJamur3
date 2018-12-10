@@ -75,24 +75,29 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 								<div class="panel panel-default target">
 									<div class="panel-heading" contenteditable="false">Pesanan Saya</div>
 									<div class="panel-body">
-										<?php foreach ($transaksi as $detail ){ ?>
+										<?php $no=0; foreach ($transaksi as $detail ){ ++$no; ?>
 										<?php $det= $this->K_jamur->detail_transaksi($detail->id_transaksi)->result(); ?>
 										<div class="panel-group" id="accordion">
 											<div class="panel panel-default">
 												<div class="panel-heading">
 													<h4 class="panel-title">
-														<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
-															Transaksi #<?php echo $detail->id_transaksi; ?> <a style="color: #34ace0;margin-left: 530px" href="<?php echo base_url('Dashboard_user/detail_pesanan') ?>">Detail Pesanan</a>
+														<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse<?php echo $no ?>">
+															Transaksi #<?php echo $detail->id_transaksi; ?> <a style="color: #34ace0;margin-left: 530px" href="<?php echo base_url() ?>Dashboard_user/detail_pesanan/<?php echo $detail->id_transaksi ?>">Detail Pesanan</a>
 														</a>
 													</h4>
 												</div>
-												<div id="collapseOne" class="panel-collapse collapse in">
+												<div id="collapse<?php echo $no ?>" class="panel-collapse collapse in">
 													<?php foreach ($det as $deta){ ?>
 													<div class="panel-body	">
 														<img class="col-grid-1" src="<?php echo base_url($deta->gambar_produk); ?>" style="margin-bottom: 15px;height: 150px;width: 180px">
 														<div class="col-grid-4">
 															<p><?php echo $deta->nama_produk; ?></p> <br>
-															<p><?php echo $detail->status; ?></p>
+															<p><?php if($detail->status == 0) {?>
+																<i>Belum Membayar</i>
+																<?php } elseif($detail->status == 1) {?>
+																<i>Belum terkonfirmasi</i><?php } elseif($detail->status == 2){ ?>
+																<i>Terkonfirmasi</i><?php } else{ ?>
+																<i>Dibatalkan</i><?php } ?></p>
 														</div>
 													</div>
 													<?php } ?>
@@ -110,7 +115,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				<?php $this->load->view('user/sosmed') ?>
 
 				<?php $this->load->view('user/footer') ?>	
-				<?php $this->load->view('user/jscript') ?>	
+				<?php $this->load->view('user/jscript') ?>
+				<script type="text/javascript">
+					$(document).ready(function(){
+					 // alert("coba");
+					    $('.panel-collapse').removeClass('in');
+					 });
+				</script>
 			</body>
 
 			</html>

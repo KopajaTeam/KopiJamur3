@@ -18,43 +18,57 @@ class Keranjang extends CI_Controller {
   }
 
   public function invoice(){
-      $this->load->view('menu/invoice');
-  }
+    $where = array('id_transaksi' => $id_transaksi);
+    $transaksi = $this->K_jamur->selectwhere('transaksi',$where)->row();
+    $data = array(
+        'kategori_produk'   => $this->Admin_Dashboard->select('kategori_produk')->result(),
+        'id_kategori_produk'=> $produk->id_kategori_produk, 
+        'id_produk'         => $produk->id_produk, 
+        'nama_produk'       => $produk->nama_produk,
+        'detail_produk'     => $produk->detail_produk,
+        'jenis_produk'      => $produk->jenis_satuan_produk,
+        'harga_produk'      => $produk->harga_produk,
+        'berat_produk'      => $produk->berat_produk,
+        'satuan_produk'     => $produk->satuan_produk,
+        'gambar_produk'     => $produk->gambar_produk,
+    );
+    $this->load->view('admin/Produk/edit_produk', $data);
+}
 
-    function insert_transaksi(){
-        if (isset($_POST['minus'])) {
-            $where = array(
-                'id_produk' => $this->input->post('id_produk'), 
-                'id_user'   => $this->session->userdata('id_user')
-            );
-            $qty = $this->input->post('qty');
-            $data = array('qty' =>$qty-1  );
-            $insert=$this->K_jamur->update('keranjang',$data,$where);
+function insert_transaksi(){
+    if (isset($_POST['minus'])) {
+        $where = array(
+            'id_produk' => $this->input->post('id_produk'), 
+            'id_user'   => $this->session->userdata('id_user')
+        );
+        $qty = $this->input->post('qty');
+        $data = array('qty' =>$qty-1  );
+        $insert=$this->K_jamur->update('keranjang',$data,$where);
             // die($where);
-            if ($insert  >= 0) {
-                redirect(base_url('Keranjang#cart'));
-            } else {
-                echo "gagal";
-            }
-        }else if (isset($_POST['plus'])) {
-            $where = array(
-                'id_produk' => $this->input->post('id_produk'), 
-                'id_user'   => $this->session->userdata('id_user')
-            );
-            $qty = $this->input->post('qty');
-            $data = array('qty' =>$qty+1  );
-            $insert=$this->K_jamur->update('keranjang',$data,$where);
+        if ($insert  >= 0) {
+            redirect(base_url('Keranjang#cart'));
+        } else {
+            echo "gagal";
+        }
+    }else if (isset($_POST['plus'])) {
+        $where = array(
+            'id_produk' => $this->input->post('id_produk'), 
+            'id_user'   => $this->session->userdata('id_user')
+        );
+        $qty = $this->input->post('qty');
+        $data = array('qty' =>$qty+1  );
+        $insert=$this->K_jamur->update('keranjang',$data,$where);
             // die($where);
-            if ($insert  >= 0) {
-                redirect(base_url('Keranjang#cart'));
-            } else {
-                echo "gagal";
-            }
-        } 
-    }
-    function hapus($kd_keranjang){
-        $where = array('kd_keranjang' => $kd_keranjang);
-        $this->Admin_Dashboard->delete($where,'keranjang');
-        redirect(base_url('Keranjang#cart'));
-    }
+        if ($insert  >= 0) {
+            redirect(base_url('Keranjang#cart'));
+        } else {
+            echo "gagal";
+        }
+    } 
+}
+function hapus($kd_keranjang){
+    $where = array('kd_keranjang' => $kd_keranjang);
+    $this->Admin_Dashboard->delete($where,'keranjang');
+    redirect(base_url('Keranjang#cart'));
+}
 }
