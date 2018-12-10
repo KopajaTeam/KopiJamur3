@@ -7,11 +7,11 @@ class Dashboard_user extends CI_Controller {
 		parent::__construct();
 		$this->load->model('K_jamur');
 		$this->load->model('M_testi');
+		$this->load->model('M_galery');
+
 	}
 	public function index(){
 		$where = $this->session->userdata('id_user');
-		$data["forum"] = $this->K_jamur->beforeforum1($where)->result();
-		$data["produk"]		= $this->K_jamur->produkall()->result();
 		$data["transaksi"]	= $this->K_jamur->transaksi($this->session->userdata('id_user'))->result();
 		$this->load->view('dsuser/dashuser',$data);
 	}
@@ -19,9 +19,8 @@ class Dashboard_user extends CI_Controller {
 		$this->load->view('dsuser/sidenav_dashuser');
 	}
 	public function tambah_forum(){
-		$data = array(
-			'kategori_forum'  => $this->Admin_Dashboard->select('kategori_forum')->result(),
-		);
+	
+		$data ['kategori_forum'] =$this->Admin_Dashboard->select('kategori_forum')->result();
 		$this->load->view('dsuser/tambah_forum',$data);
 	}
 	function simpan_forum(){
@@ -49,9 +48,8 @@ class Dashboard_user extends CI_Controller {
 		redirect('Dashboard_user/forum_view');
 	}
 	public function konfirmasi_pembayaran(){
-		$data["forum"] = $this->K_jamur->beforeforum()->result();
-		$data["produk"]		= $this->K_jamur->produkall()->result();
-		$this->load->view('dsuser/konfirmasi_pembayaran', $data);
+		
+		$this->load->view('dsuser/konfirmasi_pembayaran');
 	}
 	function insert_konfirmasi(){
     $dir = 'assets/images_upload/upload_bukti/';
@@ -83,9 +81,9 @@ class Dashboard_user extends CI_Controller {
     }
 	public function tentang_saya(){
 		$where = $this->session->userdata('id_user');
-		$data["forum"] 		= $this->K_jamur->beforeforum1()->result();
-		$data['user'] 		= $this->K_jamur->select2($where)->row();
-		$data["produk"]		= $this->K_jamur->produkall()->result();
+		
+		$data['user'] = $this->K_jamur->select2($where)->row();
+
 		$this->load->view('dsuser/tentang_saya', $data);
 	}
 	public function edit_user(){
@@ -144,14 +142,11 @@ class Dashboard_user extends CI_Controller {
 		$where = $this->session->userdata('id_user');
 		// die($where);
 		$data["forum1"]=$this->K_jamur->beforeforum1($where)->result();
-		$data["produk"]		= $this->K_jamur->produkall()->result();
-		$data ["forum"] = $this->K_jamur->beforeforum()->result();
+	
 		$this->load->view('dsuser/forum_view', $data);
 	}
 	public function testimonial_view(){
 		$where = $this->session->userdata('id_user');
-		$data["forum"] = $this->K_jamur->beforeforum()->result();
-		$data["produk"]		= $this->K_jamur->produkall()->result();
 		$data ["testimoni"] = $this->M_testi->testmon($where)->result();
 
 		$this->load->view('dsuser/testimonial_view',$data);
@@ -192,10 +187,16 @@ class Dashboard_user extends CI_Controller {
 	}
 
 	public function pesanan_saya(){
-		$data["forum"] = $this->K_jamur->beforeforum()->result();
-		$data["produk"]		= $this->K_jamur->produkall()->result();
+
+		
+		$data["transaksi"]	= $this->K_jamur->transaksi($this->session->userdata('id_user'))->result();
+
 		$this->load->view('dsuser/pesanan_saya', $data);
 	}
+
+
+
+ 	
 	public function detail_pesanan(){
 		$id = $this->uri->segment(3);
 		// $fg = array('id_transaksi' =>$id);
@@ -204,12 +205,12 @@ class Dashboard_user extends CI_Controller {
 	}
 
 
+
 //Function Baru hati - hati ini penting
 	public function testi_action(){	 
 		$id_testimoni = $this->uri->segment(3);
 		$data ['testimoni'] 		 =  $this->Admin_Dashboard->testiedit($id_testimoni)->row_array();
 		$data ['produk'] =	$this->Admin_Dashboard->select("produk")->result();
-		$data ["forum"] = $this->K_jamur->beforeforum()->result();
 		$this->load->view('dsuser/edit_testimoni',$data);
 	}
 	public function simpan_testi(){
@@ -224,8 +225,8 @@ class Dashboard_user extends CI_Controller {
 				$id	 = $this->input->post('id_testimoni');
 				$simpantesti = array(
 					'komentar'		=> $this->input->post('komentar_produk'),
-					'id_user'		=> $this->session->userdata("id_user"),
-					'id_testimoni'	=> "",
+					// 'id_user'		=> $this->session->userdata("id_user"),
+					// 'id_testimoni'	=> "",
 					'id_produk'		=> $this->input->post("id_produk"),
 					'rate'			=> "",);
 				$this->db->where('id_testimoni',$id);
@@ -236,14 +237,14 @@ class Dashboard_user extends CI_Controller {
 				$id	 = $this->input->post('id_testimoni');
 				$simpantesti = array(
 					'komentar'		=> $this->input->post('komentar_produk'),
-					'id_user'		=> $this->session->userdata("id_user"),
-					'id_testimoni'	=> "",
+					// 'id_user'		=> $this->session->userdata("id_user"),
+					// 'id_testimoni'	=> "",
 					'id_produk'		=> $this->input->post("id_produk"),
 					'rate'			=> "",
 					'gambar_testi'	=> $gam.$this->upload->data('file_name'),
 				);
-				$this->db->where('id_testimoni',$id);
-				$this->db->update('testimoni',$simpantesti);
+				$where['id_testimoni']=$id;
+				$this->db->update('testimoni',$simpantesti,$where);
 				redirect('dashboard_user/testimonial_view');
 			}
 		}else{
@@ -264,8 +265,9 @@ class Dashboard_user extends CI_Controller {
 	//show data forum sebelum di edit
 	public function edit_forum(){
 		$id_forum = $this->uri->segment(3);
-		$data ['forum'] 		 =  $this->Admin_Dashboard->forumedit($id_forum)->row_array();
-		$data ['kategori_forum'] =	$this->Admin_Dashboard->select("kategori_forum")->result();
+		$data 	['forum'] 		 =  $this->Admin_Dashboard->forumedit($id_forum)->row_array();
+
+		$data 	['kategori_forum'] =	$this->Admin_Dashboard->select("kategori_forum")->result();
 		$this->load->view('dsuser/edit_forum',$data);	
 	}
 	//simpan data 

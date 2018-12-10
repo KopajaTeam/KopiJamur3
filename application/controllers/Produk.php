@@ -7,12 +7,14 @@ class Produk extends CI_Controller {
     {
         parent::__construct();
         $this->load->model('K_jamur');
+        $this->load->model('M_galery');
     }
 
 	public function index(){
-		$data["forum"] = $this->K_jamur->beforeforum()->result();
-		$data ['produk']=$this->K_jamur->produkall()->result();
-		$this->load->view('menu/product', $data);
+		
+		$data1 ['produk']=$this->K_jamur->produkall()->result();
+       
+		$this->load->view('menu/product', $data1);
 	}
 
 	function detail_produk($id_produk){

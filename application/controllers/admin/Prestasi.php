@@ -43,7 +43,7 @@ class Prestasi extends CI_Controller
     function hapus($id_prestasi){
         $where = array('id_prestasi' => $id_prestasi);
         $this->Admin_Dashboard->delete($where,'prestasi');
-        $this->session->set_flashdata('message', "<div class=\"alert alert-danger alert-dismissible\"><button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-hidden=\"true\">&times;</button>Succes, Data Berhasil Dihapus</div>");
+        $this->session->set_flashdata('message', "<div class=\"alert alert-danger alert-dismissible\"><button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-hidden=\"true\">&times;</button>Data Berhasil Dihapus</div>");
         redirect('admin/Prestasi');
     }
  
@@ -70,13 +70,11 @@ class Prestasi extends CI_Controller
             $this->upload->initialize($config); 
         if (!$this->upload->do_upload('gambar_prestasi')) {
             $data = array(
-                'id_prestasi'        => $this->input->post('id_prestasi'), 
                 'judul_prestasi'    => $this->input->post('judul_prestasi'),
                 'isi_prestasi'      => $this->input->post('isi_prestasi'),
             );
         }else{
             $data = array(
-                'id_prestasi'        => $this->input->post('id_prestasi'), 
                 'judul_prestasi'    => $this->input->post('judul_prestasi'),
                 'isi_prestasi'      => $this->input->post('isi_prestasi'),
                 'gambar_prestasi'    => $dir.$this->upload->data('file_name'),

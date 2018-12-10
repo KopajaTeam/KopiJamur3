@@ -5,6 +5,7 @@ class Forum extends CI_Controller {
 		public function __construct()
     {
         parent::__construct();
+        $this->load->model('M_galery');
         $this->load->model('K_jamur');
     }
 
@@ -12,7 +13,7 @@ class Forum extends CI_Controller {
 	public function index(){
 
 		$data["forum"] = $this->K_jamur->beforeforum()->result();
-		$data["produk"]		= $this->K_jamur->produkall()->result();
+	
 		$this->load->view('menu/forum', $data);
 		
 	
