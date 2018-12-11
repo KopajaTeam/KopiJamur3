@@ -17,21 +17,6 @@ class Keranjang extends CI_Controller {
       $this->load->view('menu/bayar', $data);
   }
 
-  public function invoice(){
-    $where = array('id_transaksi' => $id_transaksi);
-    $transaksi = $this->K_jamur->selectwhere('transaksi',$where)->row();
-    $data = array(
-        'id_transaksi'      => '', 
-        'nama'              => $transaksi->nama, 
-        'alamat'            => $transaksi->alamat,
-        'nama_barang'       => $transaksi->nama_barang,
-        'qty'               => $transaksi->qty,
-        'harga'             => $transaksi->harga,
-        'total_harga'       => $transaksi->total_harga,
-    );
-    $this->load->view('dsuser/invoice', $data);
-}
-
 function insert_transaksi(){
     if (isset($_POST['minus'])) {
         $where = array(

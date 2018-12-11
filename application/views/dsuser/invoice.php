@@ -45,7 +45,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 								<div class="watermark">
 									<span id="watermark" style="display:none;">WATERMARK</span>
 								</div>
-								<div class="invoice-box">
+								<div class="invoice-box" id="printableArea">
 									<div class="container">
 										<div class="row">
 											<div class="equalHWrap eqWrap top">
@@ -62,13 +62,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											<div class="row" style="margin-top:20px;">
 												<div class="equalHWrap eqWrap nomargin-nopadding to-block">
 													<div class="equalHW eq nomargin-nopadding " style="margin-left: 8px">
-														<p>Kode Invoice : #41234124</strong></p> <i class="fas fa-print" style="float: right;"></i>
+														<strong><p>Kode Invoice : #<?php echo $transaksi->id_transaksi; ?></strong></p> <a href="" type="button" onclick="printDiv('printableArea')" value="print a div!"><i class="fas fa-print" style="float: right;"></i></a>
 													</div>
 												</div>
 												<div class="equalHWrap eqWrap nomargin-nopadding to-block">
 													<div class="equalHW eq nomargin-nopadding title">
-														<p style="margin-top: 20px; margin-bottom: 0px">- Nama Pemesan : Panji Budi Satria</p>
-														<p style="margin-bottom: -10px">- Alamat Lengkap : Jalan blabblablal asdasdasdasd asdasdasdasdasdas asdasdasd asddasdasd asdasdadsasdasd asdasda sdasdasd a</p>
+														<p style="margin-top: 20px; margin-bottom: 0px">- Nama Pemesan : <?php echo $transaksi->nama; ?></p>
+														<p style="margin-bottom: -10px">- Alamat Lengkap : <?php echo $transaksi->alamat; ?></p>
 													</div>
 												</div>
 												<table class="table">
@@ -77,11 +77,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 														<th>Quantity</th>
 														<th>Harga</th>
 													</tr>
-													<tr class="item" id="ProductList">
-														<td id="Product"><span id="ProuductName">Kopi Jamur 1<span></span></span></td>
-														<td><span id="ProductNumUnits">2<span></span></span></td>
-														<td><span id="ProductUnitPrice">Rp. 30000</span></td>
+													<?php foreach ($transaksi1 as $detail): ?>
+														<tr class="item" id="ProductList">
+														<td id="Product"><span id="ProuductName"><?php echo $detail->nama_produk; ?><span></span></span></td>
+														<td><span id="ProductNumUnits"><?php echo $detail->qty; ?></span></td>
+														<td><span id="ProductUnitPrice"> Rp. <?php echo number_format($detail->harga_produk); ?></span></td>
 													</tr>
+													<?php endforeach ?>
 												</table>
 											</div>
 											<div class="row">
@@ -90,7 +92,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 														<table class="right">
 															<tr>
 																<td><span style="display:inline-block;margin-right:10px;"><strong>Total Harga + Ongkir *10.000:</strong></span></td>
-																<td><span id="ProductCost">Rp. 105000</span>
+																<td><span id="ProductCost">Rp. <?php echo number_format($transaksi->total_transaksi); ?></span>
 															</tr>
 														</table>
 													</div>
@@ -111,6 +113,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	</div>
 </aside>
 <?php $this->load->view("admin/side/js") ?>
+<script type="text/javascript">
+	function printDiv(divName) {
+     var printContents = document.getElementById(divName).innerHTML;
+     var originalContents = document.body.innerHTML;
+
+     document.body.innerHTML = printContents;
+
+     window.print();
+
+     document.body.innerHTML = originalContents;
+}
+</script>
 
 <?php $this->load->view('user/wiget') ?>
 <?php $this->load->view('user/sosmed') ?>

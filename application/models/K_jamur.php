@@ -6,6 +6,10 @@ class K_jamur extends CI_Model{
 	public function select($table){
 		return $this->db->get($table);
 	}
+	public function select2($id_user){
+        $this->db->where('id_user',$id_user);
+        return $this->db->get('user');
+    }
 	public function selectlimit($table){
 		$this->db->order_by('','');
 		$this->db->limit();
@@ -96,6 +100,13 @@ class K_jamur extends CI_Model{
 		return $this->db->get('transaksi');
 	}
 	public function invoice($id_transaksi){
+		$this->db->join('user','transaksi.id_user = user.id_user');
+		$this->db->join('detail_transaksi','detail_transaksi.id_transaksi = transaksi.id_transaksi');
+		$this->db->join('produk','detail_transaksi.id_produk = produk.id_produk');
+		// $this->db->where('user.id_user', $id_transaksi);
+		return $this->db->get('transaksi');
+	}
+	public function invoice2($id_transaksi){
 		$this->db->join('user','transaksi.id_user = user.id_user');
 		$this->db->join('detail_transaksi','detail_transaksi.id_transaksi = transaksi.id_transaksi');
 		$this->db->join('produk','detail_transaksi.id_produk = produk.id_produk');

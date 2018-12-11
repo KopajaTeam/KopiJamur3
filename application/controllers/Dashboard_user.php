@@ -183,7 +183,15 @@ class Dashboard_user extends CI_Controller {
 		}
 	}
 	public function invoice(){
-		$this->load->view('dsuser/invoice');
+		$id = $this->uri->segment(3);
+        $data = array(
+        	'id_transaksi' =>$this->uri->segment(3),
+        	'nama' => 'nama',
+        	'alamat' => 'alamat',
+        );
+        $data['transaksi'] = $this->K_jamur->invoice($data)->row();
+        $data['transaksi1'] = $this->K_jamur->invoice2($id)->result();
+		$this->load->view('dsuser/invoice',$data);
 	}
 
 	public function pesanan_saya(){
@@ -309,6 +317,5 @@ class Dashboard_user extends CI_Controller {
 		$this->Admin_Dashboard->delete($where,'forum');
 		redirect('Dashboard_user/forum_view');
 	}
-
 
 }

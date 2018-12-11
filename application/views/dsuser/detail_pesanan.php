@@ -74,9 +74,9 @@
 													</a>
 												</td>
 												<td class="align-middle border-left-0"><?php echo $transaksi->nama_produk; ?></td>
-												<td class="align-middle text-right">Rp. <?php echo $transaksi->harga_produk; ?></td>
+												<td class="align-middle text-right">Rp. <?php echo number_format($transaksi->harga_produk); ?></td>
 												<td class="align-middle text-center"><?php echo $transaksi->qty; ?></td>
-												<td class="align-middle text-right">Rp. <?php echo $transaksi->total_harga; ?></td>
+												<td class="align-middle text-right">Rp. <?php echo number_format($transaksi->total_harga); ?></td>
 												<?php if($transaksi->status == 2) {?>
 												<td class="align-middle text-center"><center><i class="fa fa-truck"></i></center></td>
 												<?php } else {?>
@@ -96,12 +96,12 @@
 											<tfoot>
 												<tr>
 													<td colspan="5" class="text-center align-middle font-weight-bold">SUB TOTAL : </td>
-													<td class="text-right font-weight-bold align-middle" style="font-size: 24px">Rp. <?php echo $transaksi->total_transaksi; ?></td>
+													<td class="text-right font-weight-bold align-middle" style="font-size: 24px">Rp. <?php echo number_format($transaksi->total_transaksi); ?></td>
 												</tr>
 											</tfoot>
 										</table>
 										<?php if($transaksi->status == 2) {?>
-										<a href="<?php echo base_url('Dashboard_user/invoice')?>"><button style="margin-left: 640px">
+										<a href="<?php echo base_url() ?>Dashboard_user/Invoice/<?php echo $transaksi->id_transaksi ?>"><button style="margin-left: 640px">
 											Cetak Invoice
 										</button></a>
 										<?php } else {?>
