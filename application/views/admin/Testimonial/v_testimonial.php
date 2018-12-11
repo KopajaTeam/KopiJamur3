@@ -36,11 +36,32 @@
                               <td><?php echo $testie->nama; ?></td>
                               <td><?php echo $testie->nama_produk; ?></td>
                               <td><?php echo $testie->komentar; ?></td>
-                              <td><img style="width: 150px;height: 150px" class="img-thumbnail img-fluid"  src="<?php echo base_url($testie->gambar_testi); ?>"></td>
+                              <td data-toggle="modal" data-target="#myModal<?php echo base_url("$testie->gambar_testi"); ?>">
+                              <img class="img-thumbnail img-fluid" style="width: 150px;height: 150px" src="<?php echo base_url("$testie->gambar_testi"); ?>">
+                              </td>
                               <td class="text-right">
                               <a href="<?php echo base_url('Admin/Testimonial/deletdata/'.$testie->id_testimoni); ?>" class="btn btn-simple btn-danger btn-icon edit"><i class="material-icons">close</i></a>
                               </td>
                           </tr>
+                          <!-- modal gambar -->
+                          <div class="modal fade" id="myModal<?php echo base_url("$testie->gambar_testi"); ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                              <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                  <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                    <h4 class="modal-title" id="myModalLabel"><?php echo ("$testie->nama"); ?></h4>
+                                  </div>
+                                  <div class="modal-body">
+                                    <center>  
+                                      <img alt="Kopi Jamur" class="img-thumbnail img-fluid" style="width: 1500px; height: 400px" src="<?php echo base_url("$testie->gambar_testi"); ?>">
+                                    </center>
+                                  </div>
+                                  <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> 
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
                         <?php  } ?>    
                       </tbody>
                   </table>

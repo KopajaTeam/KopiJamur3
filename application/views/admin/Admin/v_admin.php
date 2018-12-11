@@ -37,11 +37,32 @@
                     <td><?php echo $admins->nama_admin;  ?></td>
                     <td><?php echo $admins->alamat_admin; ?></td>
                     <td><?php echo $admins->email_admin; ?></td>
-                    <td><img class="img-thumbnail img-fluid" style="width: 150px;height: 150px" src="<?php echo base_url("$admins->foto_admin"); ?>"></td>
+                    <td data-toggle="modal" data-target="#myModal<?php echo base_url("$admins->foto_admin"); ?>">
+                      <img class="img-thumbnail img-fluid" style="width: 150px;height: 150px" src="<?php echo base_url("$admins->foto_admin"); ?>">
+                    </td>
                     <td class="text-right">
                       <a href="<?php echo base_url("admin/Admin/hapus/".$admins->id_admin) ?>" onclick="return confirm('Data Akan Dihapus !')" class="btn btn-simple btn-danger btn-icon edit"><i class="material-icons">delete</i></a>
                     </td>
                   </tr>
+                  <!-- modal gambar -->
+                  <div class="modal fade" id="myModal<?php echo base_url("$admins->foto_admin"); ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="myModalLabel"><?php echo ("$admins->nama_admin"); ?></h4>
+                          </div>
+                          <div class="modal-body">
+                            <center>  
+                              <img alt="Kopi Jamur" class="img-thumbnail img-fluid" style="width: 1500px; height: 400px" src="<?php echo base_url("$admins->foto_admin"); ?>">
+                            </center>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> 
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   <?php } ?>
                 </tbody>
               </table>

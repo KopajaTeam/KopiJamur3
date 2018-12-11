@@ -71,7 +71,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 										<tr>
 											<td class="text-muted">Jenis Kelamin</td>
 											<td>:</td>
-											<td><?php echo $user->nama; ?></td>
+											<td><?php echo $user->jenis_kelamin; ?></td>
 										</tr>
 										<tr>
 											<td class="text-muted">No.Telepon</td>

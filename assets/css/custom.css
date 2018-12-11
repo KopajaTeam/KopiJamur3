@@ -392,6 +392,7 @@ a.btn.btn-small.btn-circle.demo-btn {
 .demo-bar div#sidr-quick {
     display: none;
 }
+
 /*demo media*/
 
 @media only screen and (max-width:1230px){

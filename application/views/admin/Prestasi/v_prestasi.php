@@ -38,13 +38,34 @@
                       <th><?php echo ++$no; ?></th>
                       <td><?php echo $prestasies->judul_prestasi;  ?></td>
                       <td><?php echo $prestasies->isi_prestasi;  ?></td>
-                      <td><img class="img-thumbnail img-fluid" style="width: 150px;height: 150px" src="<?php echo base_url("$prestasies->gambar_prestasi"); ?>"></td>
+                      <td data-toggle="modal" data-target="#myModal<?php echo base_url("$prestasies->gambar_prestasi"); ?>">
+                      <img alt="Kopi Jamur" class="img-thumbnail img-fluid" style="width: 150px;height: 150px" src="<?php echo base_url("$prestasies->gambar_prestasi"); ?>">
+                      </td>
                       <td class="text-right">
                           <a href="<?php echo base_url("admin/Prestasi/edit/".$prestasies->id_prestasi); ?>" class="btn btn-simple btn-warning btn-icon like"><i class="material-icons">edit</i></a>
                           <button data-toggle="modal" data-target="#exampleModal<?php echo $prestasies->id_prestasi?>" class="btn btn-simple btn-danger btn-icon edit"><i class="material-icons">delete</i></button>
                       </td>
                     </tr>
-                    <!-- Modal -->
+                    <!-- Modal gambar -->
+                    <div class="modal fade" id="myModal<?php echo base_url("$prestasies->gambar_prestasi"); ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="myModalLabel"><?php echo ("$prestasies->judul_prestasi"); ?></h4>
+                          </div>
+                          <div class="modal-body">
+                            <center>  
+                              <img alt="Kopi Jamur" class="img-thumbnail img-fluid" style="width: 1500px; height: 400px" src="<?php echo base_url("$prestasies->gambar_prestasi"); ?>">
+                            </center>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> 
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- modal -->
                     <div class="modal fade" id="exampleModal<?php echo $prestasies->id_prestasi?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                       <div class="modal-dialog" role="document">
                         <div class="modal-content">

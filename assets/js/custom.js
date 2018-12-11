@@ -259,7 +259,7 @@
         });
         jQuery("a[data-gal^='prettyPhoto']").prettyPhoto({animationSpeed:'slow',slideshow:false,overlay_gallery: false,theme:'light_square',social_tools:false,deeplinking:false});
 
-
+      
 		// Implement go to top.
 		var $scroll_obj = $( '#btn-scrollup' );
 		$( window ).on('scroll',function(){

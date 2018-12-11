@@ -39,12 +39,33 @@
                       <th><?php echo ++$no; ?></th>
                       <td><?php echo $unggulanes->judul_unggulan;  ?></td>
                       <td><?php echo $unggulanes->isi_unggulan;  ?></td>
-                      <td><img class="img-thumbnail img-fluid" style="width: 150px;height: 150px" src="<?php echo base_url("$unggulanes->gambar_unggulan"); ?>"></td>
+                      <td data-toggle="modal" data-target="#myModal<?php echo base_url("$unggulanes->gambar_unggulan"); ?>">
+                      <img class="img-thumbnail img-fluid" style="width: 150px;height: 150px" src="<?php echo base_url("$unggulanes->gambar_unggulan"); ?>">
+                      </td>
                       <td class="text-right">
                         <a href="<?php echo base_url("admin/Unggulan/edit/".$unggulanes->id_unggulan); ?>" class="btn btn-simple btn-warning btn-icon like"><i class="material-icons">edit</i></a>
                         <button data-toggle="modal" data-target="#exampleModal<?php echo $unggulanes->id_unggulan?>" class="btn btn-simple btn-danger btn-icon edit"><i class="material-icons">delete</i></button>
                       </td>
                     </tr>
+                    <!-- Modal gambar -->
+                    <div class="modal fade" id="myModal<?php echo base_url("$unggulanes->gambar_unggulan"); ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="myModalLabel"><?php echo ("$unggulanes->judul_unggulan"); ?></h4>
+                          </div>
+                          <div class="modal-body">
+                            <center>  
+                              <img alt="Kopi Jamur" class="img-thumbnail img-fluid" style="width: 1500px; height: 400px" src="<?php echo base_url("$unggulanes->gambar_unggulan"); ?>">
+                            </center>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> 
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                     <!-- Modal -->
                     <div class="modal fade" id="exampleModal<?php echo $unggulanes->id_unggulan?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog" role="document">

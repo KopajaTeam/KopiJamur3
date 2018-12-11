@@ -52,7 +52,11 @@
 											<i class="material-icons">wc</i>
 										</span>
 									</div>
-									<input type="text" name="jenis_kelamin" class="form-control" placeholder="Jenis Kelamin...">
+									<select name="jenis_kelamin" class="form-control">
+									<option value="Laki-Laki" >Laki-Laki</option>
+									<option value="Perempuan" >Perempuan</option>
+									</select>
+									
 								</div>
 							</span>
 							<span class="bmd-form-group">

@@ -46,17 +46,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				<?php } ?>	
 
 			</div> <!-- #content-->
-			<?php $this->load->view('user/wiget') ?>
+				<?php $this->load->view('user/wiget') ?>
+				<?php $this->load->view('user/sosmed') ?>
 
-			<?php $this->load->view('user/sosmed') ?>
-
-			<?php $this->load->view('user/footer') ?>	
+				<?php $this->load->view('user/footer') ?>	
+				<?php $this->load->view('user/jscript') ?>	
 
 		</div> <!--#page-->
-		<div id="btn-scrollup">
-			<a  title="Go Top"  class="scrollup" href="#"><i class="fas fa-angle-up"></i></a>
-		</div>
-		<?php $this->load->view('user/jscript') ?>	
+		
 	</body>
 
 	</html>

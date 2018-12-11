@@ -6,6 +6,7 @@ class Prestasi extends CI_Controller {
     {
         parent::__construct();
         $this->load->model('M_prestasi');
+        $this->load->model('M_galery');
     }
 
 	public function index(){

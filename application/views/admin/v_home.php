@@ -85,7 +85,7 @@ if (!isset($_SESSION['nama_admin'])) {
             <div class="card-icon">
               <i class="material-icons">assignment</i>
             </div>
-            <h4 class="card-title">Trasaksi</h4>
+            <h4 class="card-title">Transaksi</h4>
           </div>
           <div class="card-body">
             <div class="toolbar">
@@ -114,7 +114,10 @@ if (!isset($_SESSION['nama_admin'])) {
                     <td><?php echo $transaksi_adm->nama; ?></td>
                     <td><?php echo $transaksi_adm->tgl_transfer; ?></td>
                     <td><?php echo $transaksi_adm->jumlah_transfer; ?></td>
-                    <td><img style="width: 150px;height: 100px" class="img-thumbnail img-fluid" src="<?php echo base_url($transaksi_adm->bukti); ?>"></td>
+                    <td data-toggle="modal" data-target="#myModal<?php echo base_url("$transaksi_adm->bukti"); ?>">
+                      <img style="width: 150px;height: 100px" class="img-thumbnail img-fluid" src="<?php echo base_url($transaksi_adm->bukti); ?>">
+                    </td>
+                    <!-- <td><img style="width: 150px;height: 100px" class="img-thumbnail img-fluid" src="<?php echo base_url($transaksi_adm->bukti); ?>"></td> -->
                     <td><?php if($transaksi_adm->status == 0) {?>
                                 <i>Belum Membayar</i>
                                 <?php } elseif($transaksi_adm->status == 1) {?>
@@ -126,6 +129,25 @@ if (!isset($_SESSION['nama_admin'])) {
                       <a href="#" class="btn btn-simple btn-danger btn-icon edit"><i class="material-icons">close</i></a>
                     </td>
                   </tr>
+                  <!-- modal gambar -->
+                  <div class="modal fade" id="myModal<?php echo base_url("$transaksi_adm->bukti"); ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="myModalLabel"><?php echo ("$transaksi_adm->nama"); ?></h4>
+                          </div>
+                          <div class="modal-body">
+                            <center>  
+                              <img alt="Kopi Jamur" class="img-thumbnail img-fluid" style="width: 1500px; height: 400px" src="<?php echo base_url("$transaksi_adm->bukti"); ?>">
+                            </center>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> 
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   <?php endforeach ?>
                 </tbody>
               </table>
