@@ -112,7 +112,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 															</div><!-- .comment-author -->
 															<div class="comment-metadata">
 																<a href="#">
-																	<span><?php echo $data_reply->tanggal_r; ?></span>
+																	<span><?php echo $data_reply->tanggal_reply; ?></span>
 																</a>
 															</div><!-- .comment-metadata -->
 														</footer><!-- .comment-meta -->

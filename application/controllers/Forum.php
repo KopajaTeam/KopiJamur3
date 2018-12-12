@@ -26,6 +26,7 @@ class Forum extends CI_Controller {
 			"jml_forum" => $this->K_jamur->detailforum($id_forum)->num_rows(),
 			"forum" => $this->K_jamur->detailforum($id_forum)->row(),
 			"reply" => $this->K_jamur->reply($id_forum)->result(),
+			'tanggal'			=> date("Y-m-d"),
 
 		);
 
@@ -39,7 +40,7 @@ class Forum extends CI_Controller {
 			'id_user'			=> $this->session->userdata("id_user"),	
 			'id_forum'			=> $forumkom,
 			'isi_reply'			=> $this->input->post('koment'),
-			'tanggal'			=> date("Y-m-d"),
+			'tanggal_reply'			=> date("Y-m-d"),
 
 		);
 		$this->K_jamur->insert('reply_forum',$komen);
