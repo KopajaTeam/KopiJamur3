@@ -64,7 +64,7 @@ class Admin_Dashboard extends CI_Model
 		return $this->db->get_where('testimoni',array('id_testimoni' => $id_testimoni));	
 	}
 	public function detail_transaksi_adm(){
-		$this->db->join('user','transaksi.id_user = transaksi.id_user');
+		$this->db->join('user','user.id_user = transaksi.id_user');
 		$this->db->join('konfirmasi_pembayaran','konfirmasi_pembayaran.id_transaksi = transaksi.id_transaksi');
 		// $this->db->where('id_transaksi');
 		return $this->db->get('transaksi');

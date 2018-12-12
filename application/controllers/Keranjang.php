@@ -6,6 +6,7 @@ class Keranjang extends CI_Controller {
     {
         parent::__construct();
         $this->load->model('K_jamur');
+        $this->load->model('M_galery');
     }
 
 
