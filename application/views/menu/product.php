@@ -49,6 +49,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											<input type="text" name="hrgProduk" hidden="" value="<?php echo $data_produk->harga_produk; ?>">
 											<h3 class="team-title"><a href="#"><?php echo $data_produk->nama_produk; ?></a></h3>
 											<p class="team-position"><?php echo $data_produk->nama_kategori_produk; ?></p>
+											<p>Rp. <?php echo number_format($data_produk->harga_produk	) ; ?></p>
 										</div><!-- .team-text-wrap -->
 										<!--  -->
 										<div class="row" style="margin-top: -30px;margin-bottom: -50px">

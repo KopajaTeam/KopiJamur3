@@ -8,7 +8,7 @@
 	<div class="container">
 		<div class="site-branding">
 			<div id="site-identity">
-				<h1 class="site-title"><a href="home-v1.html"  rel="home"><img alt="logo" src="<?php echo base_url('assets/images')?>/test1.png"></a></h1>
+				<h1 class="site-title"><a href="<?php echo base_url() ?>"  rel="home"><img alt="logo" src="<?php echo base_url('assets/images')?>/test1.png"></a></h1>
 			</div><!-- #site-identity -->
 		</div><!-- .site-branding -->
 		<?php if ($this->session->userdata('status')!="login") { ?>

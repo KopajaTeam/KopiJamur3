@@ -36,6 +36,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			</div> <!-- .custom-header -->	<br>
 
 			<div id="content" class="site-content global-layout-no-sidebar" style="margin-top: -100px">
+				<form method="post" action="<?php echo base_url('Produk/insertKranjang') ?>">
 				<div class="container">
 					<div class="inner-wrapper">
 						<div id="primary" class="content-area">
@@ -55,7 +56,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 												<p style="font-size: 19px"><?php echo $produk->detail_produk; ?></p> <br>
 											</div>
 										</div>
-										<button style="float: right;">Beli</button>
+										<button type="submit" class="custom-button button-curved col-grid-5" style="margin-left: 9px;float: right;" href=""><i class="fas fa-cart-plus"></i> Beli</button>
 									</div><!-- .container -->
 								</section><!-- .portfolio-single-main -->
 							</main> <!-- #main -->
@@ -63,6 +64,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					</div> <!-- .inner-wrapper -->
 				</div> <!-- .container -->
 			</div> <!-- #content-->
+		</form>
 			<?php $this->load->view('user/wiget') ?>
 			<?php $this->load->view('user/sosmed') ?>
 

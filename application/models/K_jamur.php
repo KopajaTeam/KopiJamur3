@@ -58,6 +58,7 @@ class K_jamur extends CI_Model{
 	public function beforeforum(){
 		$this->db->join('user','forum.id_user = user.id_user', "LEFT");
 		$this->db->join('kategori_forum','forum.id_kategori_forum = kategori_forum.id_kategori_forum', "LEFT");
+		$this->db->limit(3);
 		return $this->db->get('forum');
 	}
 

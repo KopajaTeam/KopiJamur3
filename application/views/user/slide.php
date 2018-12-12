@@ -29,7 +29,7 @@
 														<h3><a href="#" >M. Zainnudin</a></h3>
 														<p>Owner Kopi Jamur Prestasi </p>
 														<div class="slider-buttons">
-															<a class="custom-button" href="<?php echo base_url("Profil_owner") ?>">Klik Disini</a>
+															<a href="<?php echo base_url("Profil_owner") ?>"><button type="button" class="custom-button">Klik Kene</button></a>
 															<!-- <a class="custom-button custom-secondary-button" href="#">About Us</a> -->
 														</div> <!-- .slider-buttons -->
 													</div> <!-- .container -->

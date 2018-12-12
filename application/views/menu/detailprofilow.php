@@ -42,18 +42,20 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 								<section class="section portfolio-single-main">
 									<div class="container">
 										<div class="inner-wrapper">
-											<div class="col-grid-6">
+											<div class="col-grid-4">
 												<img style="width: 300px; height: 350px;" src="<?php echo base_url('assets/images')?>/portfolio/zaen.jpeg">
 											</div>
 											<div class="col-grid-6">
-											 <h3>Mukhammad Zaenal Abidin</h3>
+											 <h3>Profile</h3>
 											 <p>Berikut profil singkat saya. Mukhammad Zaenal Abidin sebaagai owner Kopi Jamur Prestasi.</p>
 											 <div class="portfolio-info">
 												 <ul class="list-check">
-												 	 <li><strong><i>Pendidikan Terakhir Di</i></strong>: <span>POLITEKNIK NEGERI JEMBER</span></li> <br>
-													<li><strong><i>Jurusan</i></strong>: <span>Pertanian</span></li><br>
-													<li><strong><i>Prodi </i></strong>: <span>D3 Manajemen Hasil Pertanian</span></li> <br>
-													<li><strong><i>Jabatan Dalam Perusahaan</i></strong> : <span>Owner Kopi Jamur Prestasi</span> </li>
+												 	<li><strong>Nama</strong>: <span>Mukhammad Zaenal Abidin</span></li>
+												 	<li><strong>TTL</strong>: <span>Ngawi,xx-xx-xxxx</span></li>
+												 	 <li><strong>Pendidikan Terakhir</strong>: <span>POLITEKNIK NEGERI JEMBER</span></li>
+													<li><strong>Jurusan</strong>: <span>Pertanian</span></li>
+													<li><strong>Prodi</strong>: <span>D3 Manajemen Hasil Pertanian</span></li>
+													<li><strong>Jabatan Dalam Perusahaan</strong> : <span>Owner Kopi Jamur Prestasi</span> </li>
 												 </ul>
 											 </div>
 											 <br>
