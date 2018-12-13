@@ -15,7 +15,7 @@
 										<div class="service-block-inner box-shadow-block">
 											<a class="service-icon" href="<?php echo base_url("Unggulan") ?>" ><i class="icon-mobile"></i></a>
 											<div class="service-block-inner-content">
-												<h3 class="service-item-title"><a href="#" >Produk Unggulan</a>  </h3>
+												<h3 class="service-item-title"><a href="<?php echo base_url("Unggulan") ?>" >Produk Unggulan</a>  </h3>
 												<div class="service-block-item-excerpt">
 													<p>Kopi jamur sebenarnya sudah sejak lama digunakan dalam pengobatan tradisional China. Bubuk ekstrak jamur yang kemudian dicampur dengan kopi instan organik ternyata efektif untuk mencegah diabetes dan mengurangi risiko kanker ....</p>
 													<a href="<?php echo base_url("Unggulan") ?>" class="more-link">Know More</a>
@@ -27,7 +27,7 @@
 										<div class="service-block-inner box-shadow-block">
 											<a class="service-icon" href="<?php echo base_url("Prestasi") ?>" ><i class="icon-clipboard"></i></a>
 											<div class="service-block-inner-content">
-												<h3 class="service-item-title"><a href="#" >Prestasi</a>  </h3>
+												<h3 class="service-item-title"><a href="<?php echo base_url("Prestasi") ?>" >Prestasi</a>  </h3>
 												<div class="service-block-item-excerpt">
 													<p>Kopi jamur sebenarnya sudah sejak lama digunakan dalam pengobatan tradisional China. Bubuk ekstrak jamur yang kemudian dicampur dengan kopi instan organik ternyata efektif untuk mencegah diabetes dan mengurangi risiko kanker ....</p>
 													<a href="<?php echo base_url("Prestasi") ?>" class="more-link">Know More</a>
