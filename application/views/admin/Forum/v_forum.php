@@ -35,9 +35,30 @@
                     <td><?php echo $forums->nama_kategori; ?></td>
                     <td>61</td>
                     <td class="text-right">
-                      <a href="<?php echo base_url("admin/Forum/hapus/".$forums->id_forum) ?>" onclick="return confirm('Data Akan Dihapus !')" class="btn btn-simple btn-danger btn-icon edit"><i class="material-icons">delete</i></a>
+                      <!-- <a href="<?php echo base_url("admin/Forum/hapus/".$forums->id_forum) ?>" onclick="return confirm('Data Akan Dihapus !')" class="btn btn-simple btn-danger btn-icon edit"><i class="material-icons">delete</i></a> -->
+                      <button data-toggle="modal" data-target="#exampleModal<?php echo $forums->id_forum ?>" class="btn btn-simple btn-danger btn-icon edit"><i class="material-icons">delete</i></button>
                     </td>
                   </tr>
+                  <!-- Modal -->
+                    <div class="modal fade" id="exampleModal<?php echo $forums->id_forum ?>"  tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel<?php echo $forums->id_forum ?>"><?php echo $forums->nama ?></h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                            Ketika menekan tombol Hapus maka data forum akan dihapus, Apakah anda yakin? 
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-simple" data-dismiss="modal">Tutup</button>
+                            <a href="<?php echo base_url("admin/Forum/hapus/".$forums->id_forum) ?>"class="btn btn-danger">Hapus</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   <?php } ?>
                 </tbody>
               </table>

@@ -20,20 +20,20 @@ class Gallery extends CI_Controller
   }
 
    function insert(){
-    $dir = 'assets/images_upload/gambar_gallery/';
-        $config['upload_path']      = 'assets/images_upload/gambar_gallery/';
+    $dir = 'assets/images_upload/gambar_galeri/';
+        $config['upload_path']      = 'assets/images_upload/gambar_galeri/';
         $config['allowed_types']    = 'jpg|png|jpeg';
         $config['max_size']         = '2048';
             $this->load->library('upload', $config);
             $this->upload->initialize($config); 
-        if (!$this->upload->do_upload('gambar_gallery')) {
+        if (!$this->upload->do_upload('gambar_galeri')) {
             echo $this->upload->display_errors();
         }else{
         $data = array(
             'id_gallery' => "",
             'nama_gallery' => $this->input->post('nama_gallery'),
             'deskripsi_gallery' => $this->input->post('deskripsi_gallery'),
-            'gambar_gallery' => $dir.$this->upload->data('file_name'),
+            'gambar_galeri' => $dir.$this->upload->data('file_name'),
         );
         $this->db->insert('gallery',$data);
         $this->session->set_flashdata('message', "<div class=\"alert alert-success alert-dismissible\"><button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-hidden=\"true\">&times;</button>Data Berhasil Ditambahkan</div>");
@@ -55,20 +55,20 @@ class Gallery extends CI_Controller
             'id_gallery'        => $gallery->id_gallery,
             'nama_gallery'      => $gallery->nama_gallery,
             'deskripsi_gallery' => $gallery->deskripsi_gallery,
-            'gambar_gallery'    => $gallery->gambar_gallery,
+            'gambar_galeri'    => $gallery->gambar_galeri,
         );
         $this->load->view('admin/Gallery/edit_gallery', $data);
     }
 
     function update(){        
         $where = array('id_gallery' => $this->input->post('id'));
-        $dir = 'assets/images_upload/gambar_gallery/';
-        $config['upload_path']      = 'assets/images_upload/gambar_gallery/';
+        $dir = 'assets/images_upload/gambar_galeri/';
+        $config['upload_path']      = 'assets/images_upload/gambar_galeri/';
         $config['allowed_types']    = 'jpg|png|jpeg';
         $config['max_size']         = '2048';
             $this->load->library('upload', $config);
             $this->upload->initialize($config); 
-        if (!$this->upload->do_upload('gambar_gallery')) {
+        if (!$this->upload->do_upload('gambar_galeri')) {
             $data = array(
                 'nama_gallery'      => $this->input->post('nama_gallery'),
                 'deskripsi_gallery' => $this->input->post('deskripsi_gallery'),
@@ -77,7 +77,7 @@ class Gallery extends CI_Controller
             $data = array(
                 'nama_gallery'      => $this->input->post('nama_gallery'),
                 'deskripsi_gallery' => $this->input->post('deskripsi_gallery'),
-                'gambar_gallery'    => $dir.$this->upload->data('file_name'),
+                'gambar_galeri'    => $dir.$this->upload->data('file_name'),
             );
         }
         $produk = $this->Admin_Dashboard->update('gallery',$data,$where);

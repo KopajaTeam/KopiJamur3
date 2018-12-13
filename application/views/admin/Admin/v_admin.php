@@ -41,11 +41,11 @@
                       <img class="img-thumbnail img-fluid" style="width: 150px;height: 150px" src="<?php echo base_url("$admins->foto_admin"); ?>">
                     </td>
                     <td class="text-right">
-                      <a href="<?php echo base_url("admin/Admin/hapus/".$admins->id_admin) ?>" onclick="return confirm('Data Akan Dihapus !')" class="btn btn-simple btn-danger btn-icon edit"><i class="material-icons">delete</i></a>
+                      <button data-toggle="modal" data-target="#exampleModal<?php echo $admins->id_admin ?>" class="btn btn-simple btn-danger btn-icon edit"><i class="material-icons">delete</i></button>
                     </td>
                   </tr>
                   <!-- modal gambar -->
-                  <div class="modal fade" id="myModal<?php echo base_url("$admins->foto_admin"); ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                  <div class="modal fade" id="myModal<?php echo base_url ("$admins->foto_admin"); ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
                       <div class="modal-dialog" role="document">
                         <div class="modal-content">
                           <div class="modal-header">
@@ -54,11 +54,31 @@
                           </div>
                           <div class="modal-body">
                             <center>  
-                              <img alt="Kopi Jamur" class="img-thumbnail img-fluid" style="width: 1500px; height: 400px" src="<?php echo base_url("$admins->foto_admin"); ?>">
+                              <img alt="Kopi Jamur" class="img-thumbnail img-fluid" style="width: 1500px; height: 400px" src="<?php echo base_url ("$admins->foto_admin"); ?>">
                             </center>
                           </div>
                           <div class="modal-footer">
                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> 
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal<?php echo $admins->id_admin ?>"  tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel<?php echo $admins->id_admin ?>"><?php echo $admins->nama_admin ?></h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                            Ketika menekan tombol Hapus maka data admin akan dihapus, Apakah anda yakin? 
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-simple" data-dismiss="modal">Tutup</button>
+                            <a href="<?php echo ("admin/Admin/hapus/".$admins->id_admin) ?>"class="btn btn-danger">Hapus</a>
                           </div>
                         </div>
                       </div>

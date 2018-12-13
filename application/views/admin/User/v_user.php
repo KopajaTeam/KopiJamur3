@@ -42,7 +42,8 @@
                       <img class="img-thumbnail img-fluid" style="width: 150px;height: 150px" src="<?php echo base_url("$users->foto"); ?>">
                     </td>
                     <td class="text-right">
-                      <a href="<?php echo base_url("admin/User/hapus/".$users->id_user) ?>" onclick="return confirm('Data Akan Dihapus !')" class="btn btn-simple btn-danger btn-icon edit"><i class="material-icons">delete</i></a>
+                      <button data-toggle="modal" data-target="#exampleModal<?php echo $users->nama ?>" class="btn btn-simple btn-danger btn-icon edit"><i class="material-icons">delete</i></button>
+                      <!-- <a href="<?php echo base_url("admin/User/hapus/".$users->id_user) ?>" onclick="return confirm('Data Akan Dihapus !')" class="btn btn-simple btn-danger btn-icon edit"><i class="material-icons">delete</i></a> -->
                       <a href="<?php echo base_url("admin/User/lihat_user/".$users->id_user) ?>" class="btn btn-simple btn-info btn-icon remove"><i class="material-icons">visibility</i></a>
                     </td>
                   </tr>
@@ -61,6 +62,26 @@
                           </div>
                           <div class="modal-footer">
                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> 
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal<?php echo $users->nama ?>"  tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel<?php echo $users->nama ?>"><?php echo $users->nama ?></h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                            Ketika menekan tombol Hapus maka data user akan dihapus, Apakah anda yakin? 
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-simple" data-dismiss="modal">Tutup</button>
+                            <a href="<?php echo base_url("admin/User/hapus/".$users->id_user) ?>"class="btn btn-danger">Hapus</a>
                           </div>
                         </div>
                       </div>

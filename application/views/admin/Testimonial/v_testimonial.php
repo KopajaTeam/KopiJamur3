@@ -40,7 +40,8 @@
                               <img class="img-thumbnail img-fluid" style="width: 150px;height: 150px" src="<?php echo base_url("$testie->gambar_testi"); ?>">
                               </td>
                               <td class="text-right">
-                              <a href="<?php echo base_url('Admin/Testimonial/deletdata/'.$testie->id_testimoni); ?>" class="btn btn-simple btn-danger btn-icon edit"><i class="material-icons">close</i></a>
+                              <!-- <a href="<?php echo base_url('Admin/Testimonial/deletdata/'.$testie->id_testimoni); ?>" class="btn btn-simple btn-danger btn-icon edit"><i class="material-icons">close</i></a> -->
+                              <button data-toggle="modal" data-target="#exampleModal<?php echo $testie->id_testimoni ?>" class="btn btn-simple btn-danger btn-icon edit"><i class="material-icons">close</i></button>
                               </td>
                           </tr>
                           <!-- modal gambar -->
@@ -62,6 +63,26 @@
                                 </div>
                               </div>
                             </div>
+                            <!-- Modal -->
+                    <div class="modal fade" id="exampleModal<?php echo $testie->id_testimoni ?>"  tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel<?php echo $testie->id_testimoni ?>"><?php echo $testie->nama ?></h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                            Ketika menekan tombol Batalkan maka data testimonial akan dibatalkan, Apakah anda yakin? 
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-simple" data-dismiss="modal">Tutup</button>
+                            <a href="<?php echo base_url('Admin/Testimonial/deletdata/'.$testie->id_testimoni); ?>"class="btn btn-danger">Batalkan</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                         <?php  } ?>    
                       </tbody>
                   </table>

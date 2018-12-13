@@ -23,5 +23,10 @@ class Dashboard extends CI_Controller {
           $this->db->update('transaksi',$data,$where);
           redirect('admin/Dashboard');
   }
+  function hapus($id_transaksi){
+        $where = array('id_transaksi' => $id_transaksi);
+        $this->Admin_Dashboard->delete($where,'transaksi');
+        redirect('admin/Dashboard');
+    }
 
 }

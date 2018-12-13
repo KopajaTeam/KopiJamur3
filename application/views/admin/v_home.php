@@ -126,7 +126,7 @@ if (!isset($_SESSION['nama_admin'])) {
                                 <i>Dibatalkan</i><?php } ?></td>
                     <td class="text-right">
                       <a href="<?php echo base_url('admin/Dashboard/konfirmasi_transaksi/'.$transaksi_adm->id_transaksi) ?>" class="btn btn-simple btn-success btn-icon like"><i class="material-icons">check</i></a>
-                      <a href="#" class="btn btn-simple btn-danger btn-icon edit"><i class="material-icons">close</i></a>
+                      <button data-toggle="modal" data-target="#exampleModal<?php echo $transaksi_adm->id_transaksi ?>" class="btn btn-simple btn-danger btn-icon edit"><i class="material-icons">close</i></button>
                     </td>
                   </tr>
                   <!-- modal gambar -->
@@ -144,6 +144,26 @@ if (!isset($_SESSION['nama_admin'])) {
                           </div>
                           <div class="modal-footer">
                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> 
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal<?php echo $transaksi_adm->id_transaksi ?>"  tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel<?php echo $transaksi_adm->id_transaksi ?>"><?php echo $transaksi_adm->nama ?></h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                            Ketika menekan tombol Batalkan maka data transaksi akan dibatalkan, Apakah anda yakin? 
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-simple" data-dismiss="modal">Tutup</button>
+                            <a href="<?php echo base_url("admin/Dashboard/hapus/".$transaksi_adm->id_transaksi) ?>"class="btn btn-danger">Batalkan</a>
                           </div>
                         </div>
                       </div>

@@ -7,6 +7,7 @@ class Keranjang extends CI_Controller {
         parent::__construct();
         $this->load->model('K_jamur');
         $this->load->model('M_galery');
+
     }
 
 
@@ -15,6 +16,7 @@ class Keranjang extends CI_Controller {
       $data['keranjang'] = $this->K_jamur->keranjang($user);
       $data["forum"] = $this->K_jamur->beforeforum()->result();
       $data["produk"]		= $this->K_jamur->produkall()->result();
+      $data['jml_keranjang'] = $this->K_jamur->keranjang($user)->num_rows();
       $this->load->view('menu/bayar', $data);
   }
 
