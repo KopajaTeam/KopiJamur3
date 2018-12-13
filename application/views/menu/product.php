@@ -33,7 +33,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					</div> <!-- .container -->
 				</div>  <!-- .custom-header-content -->
 			</div> <!-- .custom-header -->	
-			<aside class="section section-teams">
+ 			<aside class="section section-teams">
 				<div class="container"> <br>
 						<div class="teams-section">
 							<div class="inner-wrapper">
@@ -61,13 +61,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 										<!-- .social-links -->
 									</div> <!-- .team-item -->
 								</div> <!-- .team-item  -->
-					</form>
+								</form>
 								<?php } ?>
 							</div> <!-- .inner-wrapper -->
 						</div> <!-- .teams-section -->
 				</div> <!-- .container -->
 			</aside>
-
 			<?php $this->load->view('user/wiget') ?>
 			<?php $this->load->view('user/sosmed') ?>
 
