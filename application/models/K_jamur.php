@@ -73,6 +73,10 @@ class K_jamur extends CI_Model{
 		return $this->db->get('produk');
 	}
 
+	public function produkall1(){
+		$this->db->join('kategori_produk','produk.id_kategori_produk = kategori_produk.id_kategori_produk', "LEFT");
+	}
+
 	public function keranjang($id){
 		$this->db->join('produk','produk.id_produk = keranjang.id_produk');
 		$this->db->where('keranjang.id_user',$id);

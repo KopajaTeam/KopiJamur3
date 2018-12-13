@@ -14,6 +14,7 @@ class Home extends CI_Controller {
 		$where = $this->session->userdata('id_user');
 		$data ["forum"] 	= $this->K_jamur->beforeforum()->result();
 		$data ["testimoni"] = $this->M_testi->testi()->result();
+		$data ["produk"]	= $this->K_jamur->produkall()->result();
 		$this->load->view('user/home',$data);
 	}
 
