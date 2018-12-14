@@ -126,7 +126,8 @@ if (!isset($_SESSION['nama_admin'])) {
                                 <i>Dibatalkan</i><?php } ?></td>
                     <td class="text-right">
                       <a href="<?php echo base_url('admin/Dashboard/konfirmasi_transaksi/'.$transaksi_adm->id_transaksi) ?>" class="btn btn-simple btn-success btn-icon like"><i class="material-icons">check</i></a>
-                      <button data-toggle="modal" data-target="#exampleModal<?php echo $transaksi_adm->id_transaksi ?>" class="btn btn-simple btn-danger btn-icon edit"><i class="material-icons">close</i></button>
+                      <a href="<?php echo base_url('admin/Dashboard/batal_transaksi/'.$transaksi_adm->id_transaksi) ?>" class="btn btn-simple btn-warning btn-icon like"><i class="material-icons">close</i></a>
+                      <button data-toggle="modal" data-target="#exampleModal<?php echo $transaksi_adm->id_transaksi ?>" class="btn btn-simple btn-danger btn-icon edit"><i class="material-icons">delete</i></button>
                     </td>
                   </tr>
                   <!-- modal gambar -->

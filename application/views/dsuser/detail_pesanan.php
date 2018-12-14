@@ -44,8 +44,8 @@
 										<td valign="top">:</td>
 										<td valign="top">
 											<b><?php echo $transaksi->nama; ?></b><br>
-											<?php echo $transaksi->alamat; ?><br>
-											No Telp : <?php echo $transaksi->telp; ?>
+											<?php echo $transaksi->alamat_pengiriman; ?><br>
+											No Telp : <?php echo $transaksi->no_telp; ?>
 										</td>
 									</tr>
 								</table>

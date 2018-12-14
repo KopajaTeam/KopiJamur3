@@ -33,12 +33,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					</div> <!-- .container -->
 				</div>  <!-- .custom-header-content -->
 			</div> <!-- .custom-header -->	
- 			<aside class="section section-teams">
+			<aside class="section section-teams">
 				<div class="container"> <br>
-						<div class="teams-section">
-							<div class="inner-wrapper">
-								<?php foreach ($produk as $data_produk) { ?>
-								<form method="post" action="<?php echo base_url('Produk/insertKranjang') ?>">
+					<div class="teams-section">
+						<div class="inner-wrapper">
+							<?php foreach ($produk as $data_produk) { ?>
+							<form method="post" action="<?php echo base_url('Produk/insertKranjang') ?>">
 								<div class="col-grid-3 team-item">
 									<div class="thumb-summary-wrap box-shadow-block">
 										<div class="team-thumb">
@@ -61,15 +61,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 										<!-- .social-links -->
 									</div> <!-- .team-item -->
 								</div> <!-- .team-item  -->
-								</form>
-								<?php } ?>
-							</div> <!-- .inner-wrapper -->
-						</div> <!-- .teams-section -->
+							</form>
+							<?php } ?>
+						</div> <!-- .inner-wrapper -->
+					</div> <!-- .teams-section -->
 				</div> <!-- .container -->
 			</aside>
 			<?php $this->load->view('user/wiget') ?>
 			<?php $this->load->view('user/sosmed') ?>
-
 			<?php $this->load->view('user/footer') ?>	
 
 		</div> <!--#page-->

@@ -34,37 +34,40 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					</div> <!-- .container -->
 				</div>  <!-- .custom-header-content -->
 			</div> <!-- .custom-header -->	<br>
-
 			<div id="content" class="site-content global-layout-no-sidebar" style="margin-top: -100px">
 				<form method="post" action="<?php echo base_url('Produk/insertKranjang') ?>">
-				<div class="container">
-					<div class="inner-wrapper">
-						<div id="primary" class="content-area">
-							<main id="main" class="site-main" >
-								<section class="section portfolio-single-main">
-									<div class="container">
-										<div class="inner-wrapper">
-											<div class="col-grid-6">
-												<img style="width: 1000px; height: 350px " src="<?php echo base_url().$produk->gambar_produk; ?>">
-											</div>
-											<div class="col-grid-6">
-												<h2><strong><?php echo $produk->nama_produk; ?></strong> (<?php echo $produk->nama_kategori_produk; ?>)</h2>
-												<h5>Berat : <?php echo $produk->berat_produk; ?> <?php echo $produk->satuan_produk; ?> /<?php echo $produk->jenis_satuan_produk; ?></h5>
-												<h5>Harga : Rp. <?php echo $produk->harga_produk; ?></h5>
-												<hr style="margin-top: -2px; margin-bottom: 10px;">
-												<h5>Deskripsi Produk : </h5>
-												<p style="font-size: 19px"><?php echo $produk->detail_produk; ?></p> <br>
-											</div>
-										</div>
-										<button type="submit" class="custom-button button-curved col-grid-5" style="margin-left: 9px;float: right;" href=""><i class="fas fa-cart-plus"></i> Beli</button>
-									</div><!-- .container -->
-								</section><!-- .portfolio-single-main -->
-							</main> <!-- #main -->
-						</div> <!-- #primary -->
-					</div> <!-- .inner-wrapper -->
-				</div> <!-- .container -->
-			</div> <!-- #content-->
-		</form>
+					<div class="container">
+						<div class="inner-wrapper">
+							<div id="primary" class="content-area">
+								<main id="main" class="site-main" >
+									<section class="section portfolio-single-main">
+										<div class="container">
+											<form method="post" action="<?php echo base_url('Produk/insertKranjang') ?>">
+												<div class="inner-wrapper">
+													<div class="col-grid-6">
+														<img style="width: 1000px; height: 350px " src="<?php echo base_url().$produk->gambar_produk; ?>">
+													</div>
+													<div class="col-grid-6">
+														<input type="text"  name="idProduk" hidden="" value="<?php echo $produk->id_produk; ?>" >
+														<input type="text" name="hrgProduk" hidden="" value="<?php echo $produk->harga_produk; ?>">
+														<h2><strong><?php echo $produk->nama_produk; ?></strong> (<?php echo $produk->nama_kategori_produk; ?>)</h2>
+														<h5>Berat : <?php echo $produk->berat_produk; ?> <?php echo $produk->satuan_produk; ?> /<?php echo $produk->jenis_satuan_produk; ?></h5>
+														<h5>Harga : Rp. <?php echo $produk->harga_produk; ?></h5>
+														<hr style="margin-top: -2px; margin-bottom: 10px;">
+														<h5>Deskripsi Produk : </h5>
+														<p style="font-size: 19px"><?php echo $produk->detail_produk; ?></p> <br>
+													</div>
+												</div>
+												<button type="submit" class="custom-button button-curved" style="margin-left: 9px;float: right;" href=""><i class="fas fa-cart-plus"></i> Beli</button>
+											</form>
+										</div><!-- .container -->
+									</section><!-- .portfolio-single-main -->
+								</main> <!-- #main -->
+							</div> <!-- #primary -->
+						</div> <!-- .inner-wrapper -->
+					</div> <!-- .container -->
+				</div> <!-- #content-->
+			</form>
 			<?php $this->load->view('user/wiget') ?>
 			<?php $this->load->view('user/sosmed') ?>
 
