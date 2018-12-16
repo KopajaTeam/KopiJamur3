@@ -4,8 +4,6 @@
 			<ul>
 				<li class="<?php if($this->uri->segment(1) == "KopiJamur" and $this->uri->segment(1) ==""){echo "current-menu-item";}?> menu-item""><a class="scroll" href="<?php echo base_url("") ?>">Home</a>
 				</li>
-				<li class="<?php if($this->uri->segment(1) == "Features" and $this->uri->segment(1) ==""){echo "current-menu-item";}?> menu-item""><a class="scroll" href="#keyfeat">Features</a>
-				</li>
 				<li class=" <?php if($this->uri->segment(1) == "About_us" ){echo "current-menu-item";}?> menu-item"><a class="scroll" href="<?php echo base_url("About_us") ?>">About Us</a>
 				</li>
 				<li class=" <?php if($this->uri->segment(1) == "Produk"){echo "current-menu-item";}?> menu-item"><a href="<?php echo base_url("Produk") ?>">Product</a> </li>
@@ -37,7 +35,7 @@
 		<div class="header-social-wrapper">
 			<div class="social-links" >
 				<ul>
-					<li><a href="https://www.facebook.com/panji.arekmarchingband" ></a></li>
+					<li><a href="https://www.facebook.com/Kopi-Jamur-Prestasi-127838291248042/" ></a></li>
 					<li><a href="http://youtube.com/" target="_blank"></a></li>
 					<li><a href="http://twitter.com/" target="_blank"></a></li>
 					<li><a href="http://instagram.com/" target="_blank"></a></li>
