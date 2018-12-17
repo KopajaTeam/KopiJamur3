@@ -105,7 +105,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 										</div>
 										<div class="row justify-content-center">
 											<div class="col-lg-4" style="margin-left: 270px">
-												<a href=""><button type="submit" class="btn btn-info" role="button">Simpan</button></a>
+												<a href=""><button type="submit" class="btn btn-info" role="button">Kirim</button></a>
 											</div>
 										</div>
 									</form>

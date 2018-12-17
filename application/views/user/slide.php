@@ -43,10 +43,10 @@
 											<div class="caption">
 												<div class="cycle-caption text-aligncenter">
 													<div class="container">
-														<h3><a href="#" >Apa Itu Kopi Jamur Prestasi?</a></h3>
-														<p>Kopi Jamur Prestasi Merupakan produk kopi jamur (kopi campuran dengan jamur) menggunakan bahan bahan terbaik.</p>
+														<h3><a href="#" >Temukan Produk Kopi Jamur Anda Disini!</a></h3>
+														<p>Produk Produk dari Kopi Jamur Prestasi Merupakan Produk yang higienis dan terbuat dari bahan bahan alami.</p>
 														<div class="slider-buttons">
-															<a class="custom-button" href="#">Klik Disini</a>
+															<a class="custom-button" href="<?php echo base_url("Produk") ?>">Klik Disini</a>
 															<!-- <a class="custom-button custom-secondary-button" href="#">About Us</a> -->
 														</div> <!-- .slider-buttons -->
 													</div> <!-- .container -->
@@ -60,10 +60,10 @@
 											<div class="caption">
 												<div class="cycle-caption text-alignleft">
 													<div class="container">
-														<h3><a href="#" >Apa Itu Kopi Jamur Prestasi?</a></h3>
-														<p>Kopi Jamur Prestasi Merupakan produk kopi jamur (kopi campuran dengan jamur) menggunakan bahan bahan terbaik.</p>
+														<h3><a href="#" >Berdiskusi Membangun Suatu Komunitas menjadi Sangat Kuat</a></h3>
+														<p>Jangan Malu bertanya pada kami Mengenai Pertanyaan Seputar Kopi Disini!</p>
 														<div class="slider-buttons">
-															<a class="custom-button" href="#">Klik Disini</a>
+															<a class="custom-button" href="<?php echo base_url("Forum") ?>">Klik Disini</a>
 															<!-- <a class="custom-button custom-secondary-button" href="#">About Us</a> -->
 														</div> <!-- .slider-buttons -->
 													</div> <!-- .container -->
