@@ -60,6 +60,12 @@
                   <p>Gallery</p>
                 </a>
               </li>
+              <li class="nav-item <?php if($this->uri->segment(2)=='Kritik_saran'){echo 'active';}?> ">
+                <a class="nav-link" href="<?php echo base_url("admin/Kritik_saran"); ?>">
+                  <i class="material-icons">mail_outline</i>
+                  <p>Kritik dan Saran</p>
+                </a>
+              </li>
               <li class="nav-item <?php if($this->uri->segment(2)=='User' or $this->uri->segment(2)
                =='Admin' or $this->uri->segment(2)
                =='Produk' or $this->uri->segment(2)

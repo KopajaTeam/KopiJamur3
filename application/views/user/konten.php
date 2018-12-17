@@ -178,7 +178,7 @@
 														<div class="social-links circle">
 															<ul>
 																<li><a href="http://facebook.com/" target="_blank">Facebook</a></li>
-																<li><a href="http://twitter.com/" target="_blank">Twitter</a></li>
+																<li><a href="https://twitter.com/AulaMasfufah" target="_blank">Twitter</a></li>
 																<li><a href="http://instagram.com/" target="_blank">Instagram</a></li>
 															</ul>
 														</div><!-- .social-links -->
@@ -267,12 +267,11 @@
 														<h3 class="contact-title"> Kritik dan Saran</h3>
 														<p>Beri kami kritik dan saran agar kami dapat mengevaluasi setiap kekurangan kami.</p>
 														<div id="contact-form" class="contact-form">
-															<div id="message"></div>
-															<form id="contactform" action="http://anilbasnet.com/demo/biz-lina/contact.php" name="contactform" method="post">
-																<input type="text" name="name" id="name" class="form-control" placeholder="Name *">
-																<input type="text" name="email" id="email" class="form-control" placeholder="Email *">
-																<textarea class="form-control" name="comments" id="comments" rows="6" placeholder=""></textarea>
-																<button type="submit" value="SEND" id="submit" class="btn btn-primary btn-lg button-curved">SEND MESSAGE</button>
+															<form action="<?php echo base_url('Kritik_saran/insert') ?>" method="post">
+																<input type="text" name="nama_kritik_saran" id="name" class="form-control" placeholder="Name *">
+																<input type="text" name="email_kritik_saran" id="email_kritik_saran" class="form-control" placeholder="Email *">
+																<textarea class="form-control" name="isi_kritik_saran" id="comments" rows="6"></textarea>
+																<button type="submit" name="submit" class="btn btn-primary btn-lg button-curved">SEND MESSAGE</button>
 															</form>
 														</div><!-- .contact-form -->
 													</div><!-- .contact-form-area -->
