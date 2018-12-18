@@ -50,7 +50,7 @@
 												<div class="inner-wrapper">
 													<?php foreach ($produk as $data_produk) { ?>
 													<form method="post" action="<?php echo base_url('Produk/insertKranjang') ?>">
-														<div class="col-grid-3 team-item">
+														<div class="col-grid-6 team-item">
 															<div class="thumb-summary-wrap box-shadow-block">
 																<div class="team-thumb">
 																	<a href="#" target="-sefl"> <img style="width: 300px;height: 200px" alt="Team" src="<?php echo $data_produk->gambar_produk; ?>"></a>
