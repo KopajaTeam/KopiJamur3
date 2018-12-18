@@ -160,11 +160,11 @@ if (!isset($_SESSION['nama_admin'])) {
                             </button>
                           </div>
                           <div class="modal-body">
-                            Ketika menekan tombol Hapus maka data transaksi akan dihapus, Apakah anda yakin? 
+                            Ketika menekan tombol Batalkan maka data transaksi akan dibatalkan, Apakah anda yakin? 
                           </div>
                           <div class="modal-footer">
                             <button type="button" class="btn btn-simple" data-dismiss="modal">Tutup</button>
-                            <a href="<?php echo base_url("admin/Dashboard/hapus/".$transaksi_adm->id_transaksi) ?>"class="btn btn-danger">Hapus</a>
+                            <a href="<?php echo base_url("admin/Dashboard/hapus/".$transaksi_adm->id_transaksi) ?>"class="btn btn-danger">Batalkan</a>
                           </div>
                         </div>
                       </div>
