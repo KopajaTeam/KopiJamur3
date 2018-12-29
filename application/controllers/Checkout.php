@@ -25,7 +25,7 @@ class Checkout extends CI_Controller {
 			'id_user' => $this->session->userdata('id_user'),
 			'tgl_transaksi' => date('Y-m-d'),
 			'total_transaksi' => $this->input->post('total_transaksi'),
-			'alamat' => $this->input->post('alamat'),
+			'alamat_pengiriman' => $this->input->post('alamat'),
 			'no_telp' =>$this->input->post('no_telp'),
 			'status' => 0,
 
