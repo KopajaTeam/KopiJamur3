@@ -51,7 +51,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											 <div class="portfolio-info">
 												 <ul class="list-check">
 												 	<li><strong>Nama</strong>: <span>Mukhammad Zaenal Abidin</span></li>
-												 	<li><strong>TTL</strong>: <span>Ngawi,xx-xx-xxxx</span></li>
+												 	<li><strong>TTL</strong>: <span>Demak, 12 Juni 1997</span></li>
 												 	 <li><strong>Pendidikan Terakhir</strong>: <span>POLITEKNIK NEGERI JEMBER</span></li>
 													<li><strong>Jurusan</strong>: <span>Pertanian</span></li>
 													<li><strong>Prodi</strong>: <span>D3 Manajemen Hasil Pertanian</span></li>

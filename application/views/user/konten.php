@@ -157,13 +157,13 @@
 															<h3 class="team-title"><a href="#">Mukhammad Zaenal Abidin</a></h3>
 															<p class="team-position">Direktur Utama</p>
 														</div><!-- .team-text-wrap -->
-														<div class="social-links circle">
+														<!-- <div class="social-links circle">
 															<ul>
 																<li><a href="http://facebook.com/" target="_blank">Facebook</a></li>
 																<li><a href="http://twitter.com/" target="_blank">Twitter</a></li>
 																<li><a href="http://instagram.com/" target="_blank">Instagram</a></li>
 															</ul>
-														</div><!-- .social-links -->
+														</div --><!-- .social-links -->
 													</div> <!-- .team-item -->
 												</div> <!-- .team-item  -->
 												<div class="col-grid-3 team-item">
@@ -175,13 +175,13 @@
 															<h3 class="team-title"><a href="#">Aula Masfufah</a></h3>
 															<p class="team-position">Direktur Keuangan</p>
 														</div><!-- .team-text-wrap -->
-														<div class="social-links circle">
+														<!-- <div class="social-links circle">
 															<ul>
 																<li><a href="http://facebook.com/" target="_blank">Facebook</a></li>
 																<li><a href="https://twitter.com/AulaMasfufah" target="_blank">Twitter</a></li>
 																<li><a href="http://instagram.com/" target="_blank">Instagram</a></li>
 															</ul>
-														</div><!-- .social-links -->
+														</div> --><!-- .social-links -->
 													</div> <!-- .team-item -->
 												</div> <!-- .team-item  -->
 												<div class="col-grid-3 team-item">
@@ -193,13 +193,13 @@
 															<h3 class="team-title"><a href="#">Afdiar Prambudi</a></h3>
 															<p class="team-position">Divisi Produksi dan R&D</p>
 														</div><!-- .team-text-wrap -->
-														<div class="social-links circle">
+														<!-- div class="social-links circle">
 															<ul>
 																<li><a href="http://facebook.com/" target="_blank">Facebook</a></li>
 																<li><a href="http://twitter.com/" target="_blank">Twitter</a></li>
 																<li><a href="http://instagram.com/" target="_blank">Instagram</a></li>
 															</ul>
-														</div><!-- .social-links -->
+														</div> --><!-- .social-links -->
 													</div> <!-- .team-item -->
 												</div> <!-- .team-item  -->
 												<div class="col-grid-3 team-item">
@@ -211,13 +211,13 @@
 															<h3 class="team-title"><a href="#">Vian Hidayat</a></h3>
 															<p class="team-position">Divisi Pemasaran</p>
 														</div><!-- .team-text-wrap -->
-														<div class="social-links circle">
+														<!-- <div class="social-links circle">
 															<ul>
 																<li><a href="http://facebook.com/" target="_blank">Facebook</a></li>
 																<li><a href="http://twitter.com/" target="_blank">Twitter</a></li>
 																<li><a href="http://instagram.com/" target="_blank">Instagram</a></li>
 															</ul>
-														</div><!-- .social-links -->
+														</div> --><!-- .social-links -->
 													</div> <!-- .team-item -->
 												</div> <!-- .team-item  -->
 											</div> <!-- .inner-wrapper -->
