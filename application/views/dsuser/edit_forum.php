@@ -18,7 +18,7 @@
 				<div  aria-label="Breadcrumbs" class="breadcrumbs breadcrumb-trail">
 					<ul class="trail-items">
 						<li class="trail-item trail-begin"><span><u>Home</u></span></a></li>
-						<li class="trail-item trail-end"><span>Manggil Nama User</span></li>
+						<li class="trail-item trail-end"><span>Edit Forum</span></li>
 					</ul>
 				</div> <!-- .breadcrumbs -->
 			</div> <!-- #breadcrumb -->
