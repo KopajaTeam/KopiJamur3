@@ -51,7 +51,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 							<div class="col-sm-10">
 								<h1 class=""><?php echo $dat->nama; ?></h1>
 
-								<button type="button" class="btn btn-success">Ganti Password</button>  <a href="<?php echo base_url("Dashboard_user/edit_users/".$dat->id_user) ?>"><button type="button" class="btn btn-info">Edit Profile</button></a>
+								<a href="<?php echo base_url("Dashboard_user/edit_users/".$dat->id_user) ?>"><button type="button" class="btn btn-info">Edit Profile</button></a>
 								<br>
 							</div>
 							<div class="col-sm-2"><a class="pull-right"><img title="profile image" class="img-circle img-responsive" src="<?php echo base_url().$dat->foto; ?>"></a>
