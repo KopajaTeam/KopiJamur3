@@ -7,7 +7,7 @@
 			<div class="card ">
 				<div class="card-header card-header-rose card-header-text">
 					<div class="card-text">
-						<h4 class="card-title">Detail User</h4>
+						<h4 class="card-title">Detail Pesanan</h4>
 					</div>
 				</div>
 				<aside class="section section-services service-layout-1" style="margin-top: -50px">
