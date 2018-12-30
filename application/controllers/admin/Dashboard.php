@@ -34,5 +34,11 @@ class Dashboard extends CI_Controller {
         $this->Admin_Dashboard->delete($where,'transaksi');
         redirect('admin/Dashboard');
     }
+  public function detail_pesanan(){
+    $id = $this->uri->segment(4);
+    // $fg = array('id_transaksi' =>$id);
+    $data['transaksi'] = $this->K_jamur->detail_pemesanan($id)->row();
+    $this->load->view('dsuser/detail_pesanan_adm',$data);
+  }
 
 }

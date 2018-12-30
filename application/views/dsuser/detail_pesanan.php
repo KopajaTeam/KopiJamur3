@@ -40,10 +40,14 @@
 										<td valign="top"><?php echo $transaksi->tgl_transaksi; ?></td>
 									</tr>
 									<tr>
+										<td valign="top">ATAS NAMA</td>
+										<td valign="top">:</td>
+										<td valign="top"><b><?php echo $transaksi->nama; ?></b></td>
+									</tr>
+									<tr>
 										<td valign="top">ALAMAT PENGIRIMAN</td>
 										<td valign="top">:</td>
 										<td valign="top">
-											<b><?php echo $transaksi->nama; ?></b><br>
 											<?php echo $transaksi->alamat_pengiriman; ?><br>
 											No Telp : <?php echo $transaksi->no_telp; ?>
 										</td>
