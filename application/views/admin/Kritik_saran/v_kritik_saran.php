@@ -37,7 +37,7 @@
                       <td><?php echo $komen->email_kritik_saran;  ?></td>
                       <td><?php echo $komen->isi_kritik_saran;  ?></td>
                       <td class="text-right">
-                        <button href="#exampleModal<?php echo $komen->id_kritik_saran?>" class="btn btn-simple btn-danger btn-icon edit"><i class="material-icons">delete</i></button>
+                        <button d="#exampleModal<?php echo $komen->id_kritik_saran?>" class="btn btn-simple btn-danger btn-icon edit"><i class="material-icons">delete</i></button>
                       </td>
                     </tr>
                   <?php } ?>  
