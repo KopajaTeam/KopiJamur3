@@ -44,9 +44,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 								</div><!-- .testimonial-thumb -->
 								<div class="testimonial-summary">
 									<p><?php echo $testi->nama; ?></p>
-
 									<h3 class="testimonial-title"><?php echo $testi->nama_produk; ?></h3>
-
 								</div><!-- .testimonial-summary -->
 								<div class="portfolio-item  graphic-design"  style="border-radius: 0;">
 									<div class="item-inner-wrapper" >
