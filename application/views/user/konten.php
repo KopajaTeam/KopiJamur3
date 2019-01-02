@@ -280,7 +280,7 @@
 													<div class="quick-contact-widget">
 														<h3> Quick Contact</h3>
 														<span><i class="fas fa-phone" aria-hidden="true"></i> 085843854928 </span>
-														<span><i class="fas fa-envelope" aria-hidden="true"></i>email.contoemail.com </span>
+														<!-- <span><i class="fas fa-envelope" aria-hidden="true"></i>email.contoemail.com </span> -->
 														<span><i class="fas fa-map-marker-alt"></i> Jl. Mastrip Timur No. 102, Sumbersari 68121, Jember </span>
 													</div>  <!-- .quick-contact-widget -->
 													<div class="contact-map">
