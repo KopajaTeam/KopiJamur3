@@ -37,7 +37,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				<div class="container"><br><br>
 					<div class="testimonial-carousel-wrapper iteam-col-3 section-carousel-enabled">
 						<?php foreach ($testimoni as $testi) { ?>
-							<?php if ($this->session->userdata('status')=="login") { ?>
+							<!-- <?php //if ($this->session->userdata('status')=="login") { ?> -->
 							<div class="testimonial-item col-grid-6">
 								<div class="testimonial-wrapper">
 									<div class="testimonial-thumb">
@@ -65,7 +65,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 												</div> <!-- .testimonial-wrapper -->
 
 											</div> <!-- .testimonial-item  -->
-										<?php } ?>
+										<!-- <?php// } ?> -->
 										<?php } ?>
 									</div> <!-- .testimonial-carousel-wrapper -->
 
