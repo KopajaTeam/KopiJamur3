@@ -266,7 +266,7 @@
 													<div class="contact-form-area contactdesc">
 														<h3 class="contact-title"> Kritik dan Saran</h3>
 														<p>Beri kami kritik dan saran agar kami dapat mengevaluasi setiap kekurangan kami.</p>
-														<p>Silakan Login terlebih dahulu</p>
+														
 														<div id="contact-form" class="contact-form">
 															<form action="<?php echo base_url('Kritik_saran/insert') ?>" method="post">
 																<input type="text" name="nama_kritik_saran" id="name" class="form-control" placeholder="Name *">
