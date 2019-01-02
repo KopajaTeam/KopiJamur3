@@ -41,7 +41,7 @@
                               </td>
                               <td class="text-right">
                               <!-- <a href="<?php echo base_url('Admin/Testimonial/deletdata/'.$testie->id_testimoni); ?>" class="btn btn-simple btn-danger btn-icon edit"><i class="material-icons">close</i></a> -->
-                              <button data-toggle="modal" data-target="#exampleModal<?php echo $testie->id_testimoni ?>" class="btn btn-simple btn-danger btn-icon edit"><i class="material-icons">close</i></button>
+                              <button data-toggle="modal" data-target="#exampleModal<?php echo $testie->id_testimoni ?>" class="btn btn-simple btn-danger btn-icon edit"><i class="material-icons">delete</i></button>
                               </td>
                           </tr>
                           <!-- modal gambar -->

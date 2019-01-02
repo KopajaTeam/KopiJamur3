@@ -1,14 +1,14 @@
 <?php
-  if ($this->session->userdata('status')=="login") {
+if ($this->session->userdata('status')=="login") {
     $where=array('id_admin' => $this->session->userdata('id_admin'));
     $data_admin=$this->Admin_Dashboard->selectwhere("admin", $where)->row();
-  }
+}
 ?>
 
 <?php $this->load->view("admin/side/header") ?>
 <?php $this->load->view("admin/side/js") ?>
 
-  <script type="text/javascript">
+<script type="text/javascript">
     if (document.readyState === 'complete') {
         if (window.location != window.parent.location) {
           const elements = document.getElementsByClassName("iframe-extern");
@@ -16,14 +16,14 @@
             // $(".iframe-extern").remove();
         }
     };
-  </script>
+</script>
 
-  <nav class="navbar navbar-expand-lg bg-primary navbar-transparent navbar-absolute" color-on-scroll="500">
+<nav class="navbar navbar-expand-lg bg-primary navbar-transparent navbar-absolute" color-on-scroll="500">
     <div class="container">
         <div class="navbar-wrapper">
           <a class="navbar-brand">Login Admin</a>
-    </div>
-    </div>
+      </div>
+  </div>
 </nav>
 <div class="wrapper wrapper-full-page">
     <div class="page-header login-page header-filter" filter-color="black" style="background-image: url('<?php echo base_url(); ?>master/admin/img/login.jpg'); background-size: cover; background-position: top center;">

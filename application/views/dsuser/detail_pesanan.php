@@ -10,7 +10,7 @@
 				<div  aria-label="Breadcrumbs" class="breadcrumbs breadcrumb-trail">
 					<ul class="trail-items">
 						<li class="trail-item trail-begin"><span><u>Home</u></span></a></li>
-						<li class="trail-item trail-end"><span>Manggil Nama User</span></li>
+						<li class="trail-item trail-end"><span>Detail Pesanan</span></li>
 					</ul>
 				</div> <!-- .breadcrumbs -->
 			</div> <!-- #breadcrumb -->
@@ -40,10 +40,14 @@
 										<td valign="top"><?php echo $transaksi->tgl_transaksi; ?></td>
 									</tr>
 									<tr>
+										<td valign="top">ATAS NAMA</td>
+										<td valign="top">:</td>
+										<td valign="top"><b><?php echo $transaksi->nama; ?></b></td>
+									</tr>
+									<tr>
 										<td valign="top">ALAMAT PENGIRIMAN</td>
 										<td valign="top">:</td>
 										<td valign="top">
-											<b><?php echo $transaksi->nama; ?></b><br>
 											<?php echo $transaksi->alamat_pengiriman; ?><br>
 											No Telp : <?php echo $transaksi->no_telp; ?>
 										</td>

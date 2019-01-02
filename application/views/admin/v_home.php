@@ -100,6 +100,7 @@ if (!isset($_SESSION['nama_admin'])) {
                     <th>Kode Order</th>
                     <th>Nama User</th>
                     <th>Tanggal Transfer</th>
+                    <th>Alamat Pengiriman</th>
                     <th>Jumlah Transfer</th>
                     <th>Foto Bukti</th>
                     <th>Status</th>
@@ -113,6 +114,7 @@ if (!isset($_SESSION['nama_admin'])) {
                     <td><?php echo $transaksi_adm->id_transaksi; ?></td>
                     <td><?php echo $transaksi_adm->nama; ?></td>
                     <td><?php echo $transaksi_adm->tgl_transfer; ?></td>
+                    <td><?php echo $transaksi_adm->alamat_pengiriman; ?></td>
                     <td><?php echo $transaksi_adm->jumlah_transfer; ?></td>
                     <td data-toggle="modal" data-target="#myModal<?php echo base_url("$transaksi_adm->bukti"); ?>">
                       <img style="width: 150px;height: 100px" class="img-thumbnail img-fluid" src="<?php echo base_url($transaksi_adm->bukti); ?>">
@@ -127,6 +129,7 @@ if (!isset($_SESSION['nama_admin'])) {
                     <td class="text-right">
                       <a href="<?php echo base_url('admin/Dashboard/konfirmasi_transaksi/'.$transaksi_adm->id_transaksi) ?>" class="btn btn-simple btn-success btn-icon like"><i class="material-icons">check</i></a>
                       <a href="<?php echo base_url('admin/Dashboard/batal_transaksi/'.$transaksi_adm->id_transaksi) ?>" class="btn btn-simple btn-warning btn-icon like"><i class="material-icons">close</i></a>
+                      <a href="<?php echo base_url('admin/Dashboard/detail_pesanan/'.$transaksi_adm->id_transaksi) ?>" class="btn btn-simple btn-info btn-icon like"><i class="material-icons">visibility</i></a>
                       <button data-toggle="modal" data-target="#exampleModal<?php echo $transaksi_adm->id_transaksi ?>" class="btn btn-simple btn-danger btn-icon edit"><i class="material-icons">delete</i></button>
                     </td>
                   </tr>
