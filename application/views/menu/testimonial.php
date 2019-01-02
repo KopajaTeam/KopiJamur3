@@ -37,52 +37,50 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				<div class="container"><br><br>
 					<div class="testimonial-carousel-wrapper iteam-col-3 section-carousel-enabled">
 						<?php foreach ($testimoni as $testi) { ?>
-							<?php if ($this->session->userdata('status')=="login") { ?>
-							<div class="testimonial-item col-grid-6">
-								<div class="testimonial-wrapper">
-									<div class="testimonial-thumb">
-										<a href="#"><img style="margin-bottom: -20px" alt="" src="<?php echo base_url($testi->foto); ?>"></a>
-									</div><!-- .testimonial-thumb -->
-									<div class="testimonial-summary">
-										<p><?php echo $testi->nama; ?></p>
-												
-														<h3 class="testimonial-title"><?php echo $testi->nama_produk; ?></h3>
-														
-													</div><!-- .testimonial-summary -->
-													<div class="portfolio-item  graphic-design"  style="border-radius: 0;">
-														<div class="item-inner-wrapper" >
-															<img style="border-radius: 0"  src="<?php echo base_url($testi->gambar_testi); ?>" alt="Portfolio" class="portfolio-thumb">
-															<div class="overlay"></div>
-															<div class="portfolio-content">
-																<a data-gal="prettyPhoto[product-gallery]" rel="bookmark" href="<?php echo base_url($testi->gambar_testi); ?>"><i class="fas fa-search" aria-hidden="true"></i></a>
-																<h3><a href="#" ></a></h3>
-																<p></p>
-															</div>
-														</div>
-													</div><!-- end item -->
-													
-													<p class="testimonial-position"  ><?php echo $testi->komentar; ?></p>
-												</div> <!-- .testimonial-wrapper -->
+						<div class="testimonial-item col-grid-6">
+							<div class="testimonial-wrapper">
+								<div class="testimonial-thumb">
+									<a href="#"><img style="margin-bottom: -20px" alt="" src="<?php echo base_url($testi->foto); ?>"></a>
+								</div><!-- .testimonial-thumb -->
+								<div class="testimonial-summary">
+									<p><?php echo $testi->nama; ?></p>
 
-											</div> <!-- .testimonial-item  -->
-										<?php } ?>
-										<?php } ?>
-									</div> <!-- .testimonial-carousel-wrapper -->
+									<h3 class="testimonial-title"><?php echo $testi->nama_produk; ?></h3>
 
-								</div><!-- .container -->
-							</aside> <!-- .section section-testimonial-carousel -->
+								</div><!-- .testimonial-summary -->
+								<div class="portfolio-item  graphic-design"  style="border-radius: 0;">
+									<div class="item-inner-wrapper" >
+										<img style="border-radius: 0"  src="<?php echo base_url($testi->gambar_testi); ?>" alt="Portfolio" class="portfolio-thumb">
+										<div class="overlay"></div>
+										<div class="portfolio-content">
+											<a data-gal="prettyPhoto[product-gallery]" rel="bookmark" href="<?php echo base_url($testi->gambar_testi); ?>"><i class="fas fa-search" aria-hidden="true"></i></a>
+											<h3><a href="#" ></a></h3>
+											<p></p>
+										</div>
+									</div>
+								</div><!-- end item -->
+
+								<p class="testimonial-position"  ><?php echo $testi->komentar; ?></p>
+							</div> <!-- .testimonial-wrapper -->
+
+						</div> <!-- .testimonial-item  -->
+						<?php } ?>
+					</div> <!-- .testimonial-carousel-wrapper -->
+
+				</div><!-- .container -->
+			</aside> <!-- .section section-testimonial-carousel -->
 
 
-							<?php $this->load->view('user/wiget') ?>
-							<?php $this->load->view('user/sosmed') ?>
+			<?php $this->load->view('user/wiget') ?>
+			<?php $this->load->view('user/sosmed') ?>
 
-							<?php $this->load->view('user/footer') ?>	
+			<?php $this->load->view('user/footer') ?>	
 
-						</div> <!--#page-->
-						<div id="btn-scrollup">
-							<a  title="Go Top"  class="scrollup" href="#"><i class="fas fa-angle-up"></i></a>
-						</div>
-						<?php $this->load->view('user/jscript') ?>	
-					</body>
+		</div> <!--#page-->
+		<div id="btn-scrollup">
+			<a  title="Go Top"  class="scrollup" href="#"><i class="fas fa-angle-up"></i></a>
+		</div>
+		<?php $this->load->view('user/jscript') ?>	
+	</body>
 
-					</html>
+	</html>
