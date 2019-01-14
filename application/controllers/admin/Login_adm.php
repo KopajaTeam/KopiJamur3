@@ -1,4 +1,4 @@
-_<?php
+<?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Login_adm extends CI_Controller {

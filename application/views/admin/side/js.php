@@ -1,4 +1,4 @@
- </body>
+</body>
 
     <!--   Core JS Files   -->
 <script src="<?php echo base_url(); ?>master/admin/js/core/jquery.min.js"></script>
