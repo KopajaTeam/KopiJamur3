@@ -27,6 +27,7 @@ class Kritik_saran extends CI_Controller
     $this->db->insert('Kritik_saran',$data);
     redirect(base_url());
 }
+
 }
 
 ?>
