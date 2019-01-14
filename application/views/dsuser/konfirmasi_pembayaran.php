@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				<div  aria-label="Breadcrumbs" class="breadcrumbs breadcrumb-trail">
 					<ul class="trail-items">
 						<li class="trail-item trail-begin"><span><u>Home</u></span></a></li>
-						<li class="trail-item trail-end"><span>Manggil Nama User</span></li>
+						<li class="trail-item trail-end"><span>Konfirmasi Pembayaran</span></li>
 					</ul>
 				</div> <!-- .breadcrumbs -->
 			</div> <!-- #breadcrumb -->
@@ -62,6 +62,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 													<option value="bca">BCA</option>
 													<option value="bri">BRI</option>
 												</select>
+											</div>
+										</div>
+										<div class="form-group row">
+											<label class="col-form-label col-lg-4" for="nama">No. Rekening</label>
+											<div class="col-lg-8">
+												<input type="text"  name="atas_nama" id="nama">
 											</div>
 										</div>
 										<div class="form-group row">

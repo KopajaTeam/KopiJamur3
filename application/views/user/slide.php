@@ -26,7 +26,7 @@
 											<div class="caption">
 												<div class="cycle-caption text-alignright">
 													<div class="container">
-														<h3><a href="#" >M. Zainnudin</a></h3>
+														<h3><a href="#" >M Zaenal Abidin</a></h3>
 														<p>Owner Kopi Jamur Prestasi </p>
 														<div class="slider-buttons">
 															<a href="<?php echo base_url("Profil_owner") ?>"><button type="button" class="custom-button">Click Here</button></a>

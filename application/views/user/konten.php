@@ -157,13 +157,13 @@
 															<h3 class="team-title"><a href="#">Mukhammad Zaenal Abidin</a></h3>
 															<p class="team-position">Direktur Utama</p>
 														</div><!-- .team-text-wrap -->
-														<div class="social-links circle">
+														<!-- <div class="social-links circle">
 															<ul>
 																<li><a href="http://facebook.com/" target="_blank">Facebook</a></li>
 																<li><a href="http://twitter.com/" target="_blank">Twitter</a></li>
 																<li><a href="http://instagram.com/" target="_blank">Instagram</a></li>
 															</ul>
-														</div><!-- .social-links -->
+														</div --><!-- .social-links -->
 													</div> <!-- .team-item -->
 												</div> <!-- .team-item  -->
 												<div class="col-grid-3 team-item">
@@ -175,13 +175,13 @@
 															<h3 class="team-title"><a href="#">Aula Masfufah</a></h3>
 															<p class="team-position">Direktur Keuangan</p>
 														</div><!-- .team-text-wrap -->
-														<div class="social-links circle">
+														<!-- <div class="social-links circle">
 															<ul>
 																<li><a href="http://facebook.com/" target="_blank">Facebook</a></li>
 																<li><a href="https://twitter.com/AulaMasfufah" target="_blank">Twitter</a></li>
 																<li><a href="http://instagram.com/" target="_blank">Instagram</a></li>
 															</ul>
-														</div><!-- .social-links -->
+														</div> --><!-- .social-links -->
 													</div> <!-- .team-item -->
 												</div> <!-- .team-item  -->
 												<div class="col-grid-3 team-item">
@@ -193,13 +193,13 @@
 															<h3 class="team-title"><a href="#">Afdiar Prambudi</a></h3>
 															<p class="team-position">Divisi Produksi dan R&D</p>
 														</div><!-- .team-text-wrap -->
-														<div class="social-links circle">
+														<!-- div class="social-links circle">
 															<ul>
 																<li><a href="http://facebook.com/" target="_blank">Facebook</a></li>
 																<li><a href="http://twitter.com/" target="_blank">Twitter</a></li>
 																<li><a href="http://instagram.com/" target="_blank">Instagram</a></li>
 															</ul>
-														</div><!-- .social-links -->
+														</div> --><!-- .social-links -->
 													</div> <!-- .team-item -->
 												</div> <!-- .team-item  -->
 												<div class="col-grid-3 team-item">
@@ -211,13 +211,13 @@
 															<h3 class="team-title"><a href="#">Vian Hidayat</a></h3>
 															<p class="team-position">Divisi Pemasaran</p>
 														</div><!-- .team-text-wrap -->
-														<div class="social-links circle">
+														<!-- <div class="social-links circle">
 															<ul>
 																<li><a href="http://facebook.com/" target="_blank">Facebook</a></li>
 																<li><a href="http://twitter.com/" target="_blank">Twitter</a></li>
 																<li><a href="http://instagram.com/" target="_blank">Instagram</a></li>
 															</ul>
-														</div><!-- .social-links -->
+														</div> --><!-- .social-links -->
 													</div> <!-- .team-item -->
 												</div> <!-- .team-item  -->
 											</div> <!-- .inner-wrapper -->
@@ -266,11 +266,14 @@
 													<div class="contact-form-area contactdesc">
 														<h3 class="contact-title"> Kritik dan Saran</h3>
 														<p>Beri kami kritik dan saran agar kami dapat mengevaluasi setiap kekurangan kami.</p>
+														
 														<div id="contact-form" class="contact-form">
 															<form action="<?php echo base_url('Kritik_saran/insert') ?>" method="post">
 																<input type="text" name="nama_kritik_saran" id="name" class="form-control" placeholder="Name *">
+																<br>
 																<input type="text" name="email_kritik_saran" id="email_kritik_saran" class="form-control" placeholder="Email *">
 																<textarea class="form-control" name="isi_kritik_saran" id="comments" rows="6"></textarea>
+																<br>
 																<button type="submit" name="submit" class="btn btn-primary btn-lg button-curved">SEND MESSAGE</button>
 															</form>
 														</div><!-- .contact-form -->
@@ -280,7 +283,7 @@
 													<div class="quick-contact-widget">
 														<h3> Quick Contact</h3>
 														<span><i class="fas fa-phone" aria-hidden="true"></i> 085843854928 </span>
-														<span><i class="fas fa-envelope" aria-hidden="true"></i>email.contoemail.com </span>
+														<!-- <span><i class="fas fa-envelope" aria-hidden="true"></i>email.contoemail.com </span> -->
 														<span><i class="fas fa-map-marker-alt"></i> Jl. Mastrip Timur No. 102, Sumbersari 68121, Jember </span>
 													</div>  <!-- .quick-contact-widget -->
 													<div class="contact-map">

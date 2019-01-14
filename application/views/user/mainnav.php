@@ -36,9 +36,9 @@
 			<div class="social-links" >
 				<ul>
 					<li><a href="https://www.facebook.com/Kopi-Jamur-Prestasi-127838291248042/" ></a></li>
-					<li><a href="http://youtube.com/" target="_blank"></a></li>
+					<li><a href="https://www.youtube.com/channel/UCK7-HLCIuPCEHgj7TuwCIwg/" target="_blank"></a></li>
 					<li><a href="http://twitter.com/" target="_blank"></a></li>
-					<li><a href="http://instagram.com/" target="_blank"></a></li>
+					<li><a href="https://instagram.com/ukir_prestasi?utm_source=ig_profile_share&igshid=4057nisgz5wo" target="_blank"></a></li>
 				</ul>
 			</div> <!-- .social-links -->
 		</div><!-- .header-social-wrapper -->
