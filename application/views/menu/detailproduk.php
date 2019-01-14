@@ -51,13 +51,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 														<input type="text"  name="idProduk" hidden="" value="<?php echo $produk->id_produk; ?>" >
 														<input type="text" name="hrgProduk" hidden="" value="<?php echo $produk->harga_produk; ?>">
 														<h2><strong><?php echo $produk->nama_produk; ?></strong> (<?php echo $produk->nama_kategori_produk; ?>)</h2>
-														<h5>Berat : <?php echo $produk->berat_produk; ?> <?php echo $produk->satuan_produk; ?> /<?php echo $produk->jenis_satuan_produk; ?></h5>
+														<h5>Netto : <?php echo $produk->berat_produk; ?> <?php echo $produk->satuan_produk; ?> /<?php echo $produk->jenis_satuan_produk; ?></h5>
 														<h5>Harga : Rp. <?php echo $produk->harga_produk; ?></h5>
 														<hr style="margin-top: -2px; margin-bottom: 10px;">
 														<h5>Deskripsi Produk : </h5>
 														<p style="font-size: 19px"><?php echo $produk->detail_produk; ?></p> <br>
+														<p style="opacity: 1">*produk akan dikirim setelah 3 hari setelah order dilakukan karena produk ini tidak ready stock</p>
 													</div>
+
 												</div>
+
 												<button type="submit" class="custom-button button-curved" style="margin-left: 9px;float: right;" href=""><i class="fas fa-cart-plus"></i> Beli</button>
 											</form>
 										</div><!-- .container -->

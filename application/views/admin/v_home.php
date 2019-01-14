@@ -20,7 +20,7 @@ if (!isset($_SESSION['nama_admin'])) {
           </div>
           <div class="card-footer">
             <div class="stats">
-              <i class="material-icons">arrow_right_alt</i>
+              <!-- <i class="material-icons">arrow_right_alt</i> -->
               <a href="forum">Click Me...!!!</a>
             </div>
           </div>
@@ -37,7 +37,7 @@ if (!isset($_SESSION['nama_admin'])) {
           </div>
           <div class="card-footer">
             <div class="stats">
-              <i class="material-icons">arrow_right_alt</i>
+              <!-- <i class="material-icons">arrow_right_alt</i> -->
               <a href="user">Click Me...!!!</a>
             </div>
           </div>
@@ -54,7 +54,7 @@ if (!isset($_SESSION['nama_admin'])) {
           </div>
           <div class="card-footer">
             <div class="stats">
-              <i class="material-icons">arrow_right_alt</i>
+              <!-- <i class="material-icons">arrow_right_alt</i> -->
               <a href="produk">Click Me...!!!</a>
             </div>
           </div>
@@ -71,7 +71,7 @@ if (!isset($_SESSION['nama_admin'])) {
           </div>
           <div class="card-footer">
             <div class="stats">
-              <i class="material-icons">arrow_right_alt</i>
+              <!-- <i class="material-icons">arrow_right_alt</i> -->
               <a href="testimonial">Click Me...!!!</a>
             </div>
           </div>
@@ -119,7 +119,7 @@ if (!isset($_SESSION['nama_admin'])) {
                     <td data-toggle="modal" data-target="#myModal<?php echo base_url("$transaksi_adm->bukti"); ?>">
                       <img style="width: 150px;height: 100px" class="img-thumbnail img-fluid" src="<?php echo base_url($transaksi_adm->bukti); ?>">
                     </td>
-                    <!-- <td><img style="width: 150px;height: 100px" class="img-thumbnail img-fluid" src="<?php echo base_url($transaksi_adm->bukti); ?>"></td> -->
+                    <!-- <td><img style="width: 150px;height: 100px" class="img-thumbnail img-fluid" src="<?php //echo base_url($transaksi_adm->bukti); ?>"></td> -->
                     <td><?php if($transaksi_adm->status == 0) {?>
                                 <i>Belum Membayar</i>
                                 <?php } elseif($transaksi_adm->status == 1) {?>
@@ -157,17 +157,17 @@ if (!isset($_SESSION['nama_admin'])) {
                       <div class="modal-dialog" role="document">
                         <div class="modal-content">
                           <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel<?php echo $transaksi_adm->id_transaksi ?>"><?php echo $transaksi_adm->nama ?></h5>
+                            <h5 class="modal-title" id="exampleModalLabel<?php echo $transaksi_adm->id_transaksi ?>"></h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                               <span aria-hidden="true">&times;</span>
                             </button>
                           </div>
                           <div class="modal-body">
-                            Ketika menekan tombol Batalkan maka data transaksi akan dibatalkan, Apakah anda yakin? 
+                            Ketika menekan tombol Hapus maka data transaksi akan dihapus, Apakah anda yakin? 
                           </div>
                           <div class="modal-footer">
                             <button type="button" class="btn btn-simple" data-dismiss="modal">Tutup</button>
-                            <a href="<?php echo base_url("admin/Dashboard/hapus/".$transaksi_adm->id_transaksi) ?>"class="btn btn-danger">Batalkan</a>
+                            <a href="<?php echo base_url("admin/Dashboard/hapus/".$transaksi_adm->id_transaksi) ?>"class="btn btn-danger">Hapus</a>
                           </div>
                         </div>
                       </div>

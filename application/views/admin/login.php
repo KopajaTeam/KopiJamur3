@@ -6,6 +6,7 @@ if ($this->session->userdata('status')=="login") {
 ?>
 
 <?php $this->load->view("admin/side/header") ?>
+
 <?php $this->load->view("admin/side/js") ?>
 
 <script type="text/javascript">
@@ -24,7 +25,7 @@ if ($this->session->userdata('status')=="login") {
           <a class="navbar-brand">Login Admin</a>
       </div>
   </div>
-</nav>
+</nav> 
 <div class="wrapper wrapper-full-page">
     <div class="page-header login-page header-filter" filter-color="black" style="background-image: url('<?php echo base_url(); ?>master/admin/img/login.jpg'); background-size: cover; background-position: top center;">
         <div class="container">

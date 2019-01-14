@@ -64,7 +64,7 @@
 
 
 <link rel="stylesheet" href="<?php echo base_url(); ?>master/admin/css/material-dashboard.min790f.css?v=2.0.1">
-
+<link rel="stylesheet" href="<?php echo base_url(); ?>assets/material-design-icons-3.0.1/iconfont/material-icons.css">
 <!-- Include external CSS. -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.25.0/codemirror.min.css">
