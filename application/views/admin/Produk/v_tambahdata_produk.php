@@ -56,7 +56,7 @@
                             </div>
                         </div>
                         <div class="row">
-                            <label class="col-sm-2 col-form-label">Berat : </label>
+                            <label class="col-sm-2 col-form-label">Netto : </label>
                             <div class="col-sm-9">
                                 <div class="form-group">
                                     <input type="number" class="form-control" name="berat_produk">
@@ -64,7 +64,7 @@
                             </div>
                         </div>
                         <div class="row">
-                            <label class="col-sm-2 col-form-label">Satuan Berat Produk : </label>
+                            <label class="col-sm-2 col-form-label">Satuan Netto : </label>
                             <div class="col-sm-9">
                                 <div class="form-group">
                                     <input type="text" class="form-control" name="satuan_produk">
