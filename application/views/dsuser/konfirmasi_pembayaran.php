@@ -65,6 +65,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											</div>
 										</div>
 										<div class="form-group row">
+											<label class="col-form-label col-lg-4" for="nama">No. Rekening</label>
+											<div class="col-lg-8">
+												<input type="text"  name="atas_nama" id="nama">
+											</div>
+										</div>
+										<div class="form-group row">
 											<label class="col-form-label col-lg-4" for="nama">Atas Nama*</label>
 											<div class="col-lg-8">
 												<input type="text"  name="atas_nama" id="nama" placeholder="Atas Nama">
