@@ -38,7 +38,6 @@ if ($this->session->userdata('status')=="login") {
                             </div>
                         </div>
                         <div class="card-body ">
-                            <p class="card-description text-center">Or Be Classical</p>
                             <span class="bmd-form-group">
                                 <div class="input-group">
                                     <div class="input-group-prepend">
